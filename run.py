@@ -290,6 +290,7 @@ def merge(result, batch, companies, layers, deals, run_id, report):
             if x.get("usd") and x["usd"] != old.get("usd") and it["published"] >= str(old.get("date", "")):
                 old.setdefault("history", []).append({"usd": old.get("usd"), "usd_text": old.get("usd_text"), "until": run_id})
                 old["usd"], old["usd_text"] = x["usd"], x["usd_text"]
+                old["summary"] = x["summary"]  # the old sentence still names the old amount
                 changed = True
             if x.get("status") and x["status"] != old.get("status"):
                 old["status"] = x["status"]
