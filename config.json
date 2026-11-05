@@ -1,0 +1,22 @@
+{
+  "holdings": [
+    "IREN",
+    "CRWV"
+  ],
+  "model": "sonnet",
+  "batch_size": 120,
+  "first_run_days": 7,
+  "news_searches": [
+    "AI data center deal billion",
+    "AI compute contract billion",
+    "invests billion AI startup",
+    "GPU supply agreement billion",
+    "data center lease hyperscaler",
+    "power purchase agreement data center",
+    "neocloud contract",
+    "OpenAI deal billion",
+    "Anthropic deal billion",
+    "xAI funding billion",
+    "HBM supply agreement"
+  ]
+}

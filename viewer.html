@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Capital Map</title>
+<style>
+:root {
+  --bg: #0e1116; --panel: #161a21; --panel2: #1d222b; --line: #2a303b;
+  --text: #e6e8eb; --dim: #8b93a1; --accent: #f5c542; --new: #3ee6a8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+  font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; }
+#app { display: grid; grid-template-columns: 280px 1fr 360px; grid-template-rows: 52px 1fr; height: 100vh; }
+header { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; padding: 0 14px;
+  border-bottom: 1px solid var(--line); background: var(--panel); }
+header h1 { font-size: 15px; margin: 0 8px 0 0; font-weight: 650; letter-spacing: .2px; white-space: nowrap; }
+header .sub { color: var(--dim); font-size: 12px; white-space: nowrap; }
+header .grow { flex: 1; }
+input, select, button { font: inherit; color: var(--text); background: var(--panel2);
+  border: 1px solid var(--line); border-radius: 6px; padding: 5px 9px; }
+button { cursor: pointer; }
+button:hover, select:hover { border-color: #46505f; }
+button.on { border-color: var(--new); color: var(--new); }
+#search { width: 220px; }
+aside { overflow-y: auto; background: var(--panel); padding: 12px 14px 30px; }
+aside.left { border-right: 1px solid var(--line); }
+aside.right { border-left: 1px solid var(--line); }
+h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .8px; color: var(--dim);
+  margin: 18px 0 8px; font-weight: 600; }
+h2:first-child { margin-top: 2px; }
+label.row { display: flex; align-items: center; gap: 8px; padding: 2px 0; cursor: pointer; }
+.sw { width: 14px; height: 4px; border-radius: 2px; display: inline-block; flex: none; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+.legend-row { display: flex; align-items: center; gap: 8px; padding: 2px 0; color: var(--dim); }
+#cy { position: relative; background:
+  radial-gradient(circle at 1px 1px, #1a1f27 1px, transparent 0) 0 0 / 22px 22px; }
+#zoom { position: absolute; right: 12px; bottom: 12px; display: flex; flex-direction: column; gap: 6px; z-index: 5; }
+#zoom button { width: 34px; height: 34px; padding: 0; font-size: 17px; }
+#hint { position: absolute; left: 12px; bottom: 12px; color: var(--dim); font-size: 11.5px; z-index: 5;
+  background: #0e1116cc; padding: 4px 8px; border-radius: 6px; }
+.empty { color: var(--dim); }
+.card { background: var(--panel2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin: 8px 0; }
+.title { font-size: 17px; font-weight: 650; margin: 0; }
+.muted { color: var(--dim); }
+.pill { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 10px; border: 1px solid var(--line);
+  color: var(--dim); margin-right: 4px; white-space: nowrap; }
+.pill.new { color: var(--new); border-color: var(--new); }
+.pill.hold { color: var(--accent); border-color: var(--accent); }
+.pill.unv { color: #e0a060; border-color: #6b4d2c; }
+.deal { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding: 7px 0; border-top: 1px solid var(--line);
+  cursor: pointer; }
+.deal:hover .cp { text-decoration: underline; }
+.deal .cp { font-weight: 600; }
+.deal .amt { font-variant-numeric: tabular-nums; text-align: right; }
+.deal .meta { grid-column: 1 / -1; color: var(--dim); font-size: 12px; }
+.kv { display: grid; grid-template-columns: 84px 1fr; gap: 3px 10px; margin: 8px 0; }
+.kv div:nth-child(odd) { color: var(--dim); }
+.src { border-top: 1px solid var(--line); padding: 8px 0; }
+.src q { display: block; color: #c9cfd8; font-style: italic; margin: 3px 0; }
+a { color: #7cb7ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.newlist .deal { grid-template-columns: 1fr auto; }
+.totals { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.totals .card { margin: 0; }
+.big { font-size: 18px; font-weight: 650; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>AI Capital Map</h1>
+    <span class="sub" id="stamp"></span>
+    <span class="grow"></span>
+    <input id="search" list="names" placeholder="Find a company…  ( / )">
+    <datalist id="names"></datalist>
+    <label class="muted" for="since">Highlight changes since</label>
+    <select id="since"></select>
+    <select id="layout" title="Layout">
+      <option value="columns">Columns by layer</option>
+      <option value="force">Force layout</option>
+    </select>
+  </header>
+
+  <aside class="left">
+    <h2>What's new <span id="newcount" class="pill new"></span></h2>
+    <div id="newlist" class="newlist"></div>
+
+    <h2>Deal types</h2>
+    <div id="types"></div>
+
+    <h2>Filters</h2>
+    <label class="row">Min amount
+      <select id="minusd">
+        <option value="0">any</option>
+        <option value="1e9">$1B+</option>
+        <option value="1e10">$10B+</option>
+        <option value="5e10">$50B+</option>
+      </select>
+    </label>
+    <label class="row"><input type="checkbox" id="showundisclosed" checked> Deals with no $ amount</label>
+    <label class="row"><input type="checkbox" id="showseed" checked> Unverified seed deals (dashed)</label>
+    <label class="row"><input type="checkbox" id="showterminated"> Terminated deals (dotted)</label>
+    <label class="row"><input type="checkbox" id="onlynew"> Only what's new</label>
+    <label class="row"><input type="checkbox" id="hideisolated" checked> Hide companies with no deals shown</label>
+
+    <h2>Layers</h2>
+    <div id="layers"></div>
+    <div class="legend-row" style="margin-top:8px"><span class="dot" style="background:transparent;border:2px solid var(--accent)"></span> your holding</div>
+    <div class="legend-row"><span class="dot" style="background:transparent;border:2px solid var(--new)"></span> new or changed</div>
+  </aside>
+
+  <div id="cy">
+    <div id="zoom">
+      <button id="zin" title="Zoom in">+</button>
+      <button id="zout" title="Zoom out">−</button>
+      <button id="zfit" title="Fit all (F)">⤢</button>
+    </div>
+    <div id="hint">Scroll or pinch to zoom · drag to pan · click a company or arrow for details · arrow = money flows from → to</div>
+  </div>
+
+  <aside class="right" id="detail"></aside>
+</div>
+
+<script>/*__CYTOSCAPE__*/</script>
+<script>
+const DATA = /*__DATA__*/;
+
+const TYPE_COLORS = {
+  equity: "#5b8def", compute: "#3ec7c1", chips: "#b07cf0", lease: "#e3a33b",
+  power: "#e8d84a", financing: "#e86a8a", acquisition: "#f0f0f0", partnership: "#7c8594"
+};
+const TYPE_NAMES = {
+  equity: "Equity investment", compute: "Compute / cloud contract", chips: "Chips & hardware",
+  lease: "Data-center lease", power: "Power deal", financing: "Financing / backstop",
+  acquisition: "Acquisition", partnership: "Partnership"
+};
+const LAYER_COLORS = ["#8a6df0", "#e85d8a", "#4f8ff0", "#2fb8a8", "#6fbf5a", "#76b900", "#d9a43a", "#c46a3a", "#e8c547"];
+
+const comps = DATA.companies, deals = DATA.deals, layers = DATA.layers;
+const byId = Object.fromEntries(comps.map(c => [c.id, c]));
+const dealById = Object.fromEntries(deals.map(d => [d.id, d]));
+const layerIdx = Object.fromEntries(layers.map((l, i) => [l.id, i]));
+const holdings = new Set(DATA.holdings || []);
+const runIds = DATA.runs.map(r => r.id);   // sorted ascending
+const rank = id => (!id || id === "seed") ? 0 : runIds.indexOf(id) + 1;
+
+function fmt(usd) {
+  if (usd == null) return null;
+  if (usd >= 1e12) return "$" + (usd / 1e12).toFixed(usd >= 1e13 ? 0 : 1) + "T";
+  if (usd >= 1e9) return "$" + (usd / 1e9).toFixed(usd >= 1e11 ? 0 : 1).replace(/\.0$/, "") + "B";
+  if (usd >= 1e6) return "$" + Math.round(usd / 1e6) + "M";
+  return "$" + usd;
+}
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// ---- totals per company, for node size and the panel ----
+const flow = {};
+comps.forEach(c => flow[c.id] = { in: 0, out: 0, deg: 0 });
+deals.forEach(d => {
+  if (!flow[d.from] || !flow[d.to]) return;
+  flow[d.from].deg++; flow[d.to].deg++;
+  if (d.usd && d.status !== "terminated") { flow[d.from].out += d.usd; flow[d.to].in += d.usd; }
+});
+const nodeSize = id => {
+  const f = flow[id], v = f.in + f.out;
+  return Math.max(42, Math.min(130, 42 + Math.sqrt(v / 1e9) * 4.6 + f.deg * 1.8));
+};
+const edgeWidth = d => d.usd ? Math.max(1.5, Math.min(14, 1.5 + 2.6 * Math.log10(d.usd / 5e8 + 1) * 1.6)) : 1.4;
+
+// ---- column layout: layers left to right, busiest companies in the middle ----
+function columnPositions() {
+  const pos = {}, colW = 270, rowH = 125, maxRows = 10;
+  let x = 0;
+  layers.forEach(l => {
+    const members = comps.filter(c => c.layer === l.id).sort((a, b) => flow[b.id].deg - flow[a.id].deg);
+    // Busiest in the centre of the column, alternating up and down.
+    const ordered = [];
+    members.forEach((c, i) => i % 2 ? ordered.push(c) : ordered.unshift(c));
+    const sub = Math.max(1, Math.ceil(ordered.length / maxRows));
+    const per = Math.ceil(ordered.length / sub);
+    for (let s = 0; s < sub; s++) {
+      const chunk = ordered.slice(s * per, (s + 1) * per);
+      chunk.forEach((c, i) => pos[c.id] = { x: x + s * 150, y: (i - (chunk.length - 1) / 2) * rowH + (s % 2) * rowH / 2 });
+    }
+    x += colW + (sub - 1) * 150;
+  });
+  return pos;
+}
+
+// ---- graph ----
+const elements = [];
+layers.forEach((l, i) => elements.push({ group: "nodes", data: { id: "L:" + l.id, label: l.name.toUpperCase() }, classes: "layerlabel", selectable: false, grabbable: false }));
+comps.forEach(c => elements.push({
+  group: "nodes",
+  data: { id: c.id, label: c.name + (c.ticker ? "\n" + c.ticker : ""), color: LAYER_COLORS[layerIdx[c.layer] % LAYER_COLORS.length], size: nodeSize(c.id) },
+  classes: holdings.has(c.id) || holdings.has(c.ticker) ? "hold" : ""
+}));
+deals.forEach(d => {
+  if (!byId[d.from] || !byId[d.to]) return;
+  elements.push({
+    group: "edges",
+    data: { id: d.id, source: d.from, target: d.to, color: TYPE_COLORS[d.type] || "#888", width: edgeWidth(d), label: d.usd_text || "" },
+    classes: (d.verified ? "" : "unverified") + (d.status === "terminated" ? " terminated" : "")
+  });
+});
+
+const cy = cytoscape({
+  container: document.getElementById("cy"),
+  elements,
+  minZoom: 0.08, maxZoom: 4, wheelSensitivity: 0.25,
+  layout: { name: "preset" },
+  style: [
+    { selector: "node", style: {
+      "background-color": "data(color)", "width": "data(size)", "height": "data(size)",
+      "label": "data(label)", "color": "#e6e8eb", "font-size": 15, "font-weight": 600,
+      "text-wrap": "wrap", "text-valign": "bottom", "text-margin-y": 5, "text-halign": "center",
+      "text-outline-color": "#0e1116", "text-outline-width": 3, "min-zoomed-font-size": 5,
+      "border-width": 2, "border-color": "#0e1116", "transition-property": "opacity", "transition-duration": "150ms"
+    }},
+    { selector: "node.hold", style: { "border-width": 5, "border-color": "#f5c542" }},
+    { selector: "node.isnew", style: { "underlay-color": "#3ee6a8", "underlay-padding": 7, "underlay-opacity": 0.35, "underlay-shape": "ellipse" }},
+    { selector: "node.layerlabel", style: {
+      "background-opacity": 0, "border-width": 0, "label": "data(label)", "font-size": 22, "font-weight": 700,
+      "color": "#5d6573", "text-valign": "center", "min-zoomed-font-size": 4, "width": 1, "height": 1, "events": "no"
+    }},
+    { selector: "edge", style: {
+      "curve-style": "bezier", "control-point-step-size": 26,
+      "line-color": "data(color)", "target-arrow-color": "data(color)", "target-arrow-shape": "triangle",
+      "arrow-scale": 0.9, "width": "data(width)", "opacity": 0.7,
+      "label": "data(label)", "font-size": 11, "color": "#cfd5de", "text-rotation": "autorotate",
+      "text-background-color": "#0e1116", "text-background-opacity": 0.85, "text-background-padding": 2,
+      "min-zoomed-font-size": 9, "transition-property": "opacity", "transition-duration": "150ms"
+    }},
+    { selector: "edge.unverified", style: { "line-style": "dashed", "line-dash-pattern": [6, 4], "opacity": 0.55 }},
+    { selector: "edge.terminated", style: { "line-style": "dotted", "opacity": 0.35, "target-arrow-shape": "tee" }},
+    { selector: "edge.isnew", style: { "opacity": 1, "underlay-color": "#3ee6a8", "underlay-padding": 4, "underlay-opacity": 0.4 }},
+    { selector: ".faded", style: { "opacity": 0.08, "text-opacity": 0.15 }},
+    { selector: "edge.hl", style: { "opacity": 1 }},
+    { selector: ":selected", style: { "overlay-color": "#ffffff", "overlay-opacity": 0.12, "overlay-padding": 6 }},
+    { selector: ".hidden", style: { "display": "none" }}
+  ]
+});
+
+function placeLayerLabels() {
+  layers.forEach(l => {
+    const ns = cy.nodes().filter(n => byId[n.id()] && byId[n.id()].layer === l.id && !n.hasClass("hidden"));
+    const lab = cy.getElementById("L:" + l.id);
+    if (!ns.length || cy.scratch("layout") !== "columns") { lab.addClass("hidden"); return; }
+    const bb = ns.boundingBox();
+    lab.removeClass("hidden").position({ x: (bb.x1 + bb.x2) / 2, y: bb.y1 - 60 });
+  });
+}
+function runLayout(name) {
+  cy.scratch("layout", name);
+  const real = cy.nodes().not(".layerlabel").not(".hidden");
+  if (name === "columns") {
+    const p = columnPositions();
+    real.forEach(n => n.position(p[n.id()]));
+    placeLayerLabels();
+    cy.fit(cy.elements().not(".hidden"), 40);
+  } else {
+    cy.nodes(".layerlabel").addClass("hidden");
+    real.union(cy.edges().not(".hidden")).layout({
+      name: "cose", animate: true, animationDuration: 600, nodeRepulsion: () => 90000,
+      idealEdgeLength: () => 140, gravity: 0.25, numIter: 1500, padding: 40, randomize: false
+    }).run();
+  }
+}
+
+// ---- "since" picker and highlight ----
+const sinceSel = document.getElementById("since");
+sinceSel.innerHTML = `<option value="-1">nothing (no highlight)</option><option value="0">the seed (all news finds)</option>` +
+  DATA.runs.map((r, i) => `<option value="${i + 1}">run ${esc(r.id)}</option>`).join("");
+sinceSel.value = String(Math.max(0, runIds.length - 1)); // default: what the latest run added
+if (!runIds.length) sinceSel.value = "-1";
+
+function isNew(d, s) { return s >= 0 && (rank(d.first_seen) > s || rank(d.updated_in) > s); }
+
+// ---- filters ----
+const typesBox = document.getElementById("types");
+const typeCounts = {};
+deals.forEach(d => typeCounts[d.type] = (typeCounts[d.type] || 0) + 1);
+typesBox.innerHTML = Object.keys(TYPE_COLORS).filter(t => typeCounts[t]).map(t =>
+  `<label class="row"><input type="checkbox" data-type="${t}" checked><span class="sw" style="background:${TYPE_COLORS[t]}"></span>${TYPE_NAMES[t]} <span class="muted">${typeCounts[t]}</span></label>`
+).join("");
+document.getElementById("layers").innerHTML = layers.map((l, i) =>
+  `<div class="legend-row"><span class="dot" style="background:${LAYER_COLORS[i % LAYER_COLORS.length]}"></span>${esc(l.name)}</div>`).join("");
+
+function apply() {
+  const s = +sinceSel.value;
+  const types = new Set([...typesBox.querySelectorAll("input:checked")].map(i => i.dataset.type));
+  const minusd = +document.getElementById("minusd").value;
+  const showUnd = document.getElementById("showundisclosed").checked;
+  const showSeed = document.getElementById("showseed").checked;
+  const onlyNew = document.getElementById("onlynew").checked;
+  const showTerm = document.getElementById("showterminated").checked;
+  const hideIso = document.getElementById("hideisolated").checked;
+
+  cy.batch(() => {
+    cy.edges().forEach(e => {
+      const d = dealById[e.id()];
+      const nw = isNew(d, s);
+      const show = types.has(d.type) && (d.usd ? d.usd >= minusd : showUnd && minusd === 0)
+        && (d.verified || showSeed) && (!onlyNew || nw) && (showTerm || d.status !== "terminated");
+      e.toggleClass("hidden", !show).toggleClass("isnew", nw);
+    });
+    cy.nodes().not(".layerlabel").forEach(n => {
+      const c = byId[n.id()];
+      const nw = s >= 0 && rank(c.first_seen) > s && c.first_seen;
+      n.toggleClass("isnew", !!nw);
+      const visibleEdges = n.connectedEdges().not(".hidden").length;
+      n.toggleClass("hidden", hideIso && !visibleEdges && !nw);
+    });
+  });
+  if (cy.scratch("layout") === "columns") placeLayerLabels();
+  renderNew(s);
+}
+
+function renderNew(s) {
+  const list = deals.filter(d => isNew(d, s)).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  document.getElementById("newcount").textContent = list.length;
+  const box = document.getElementById("newlist");
+  if (s < 0) { box.innerHTML = `<div class="empty">Pick a run in "Highlight changes since".</div>`; return; }
+  if (!list.length) { box.innerHTML = `<div class="empty">Nothing new or changed since then.</div>`; return; }
+  box.innerHTML = list.map(d => dealRow(d, null, s)).join("");
+}
+
+function dealRow(d, viewpoint, s = +sinceSel.value) {
+  const from = byId[d.from]?.name || d.from, to = byId[d.to]?.name || d.to;
+  const cp = viewpoint ? (d.from === viewpoint ? "→ " + to : "← " + from) : `${from} → ${to}`;
+  const tags = [
+    `<span class="pill" style="color:${TYPE_COLORS[d.type]};border-color:${TYPE_COLORS[d.type]}55">${d.type}</span>`,
+    isNew(d, s) ? `<span class="pill new">${rank(d.first_seen) > s ? "new" : "updated"}</span>` : "",
+    d.verified ? "" : `<span class="pill unv">unverified</span>`,
+    d.status === "terminated" ? `<span class="pill">terminated</span>` : ""
+  ].join("");
+  return `<div class="deal" data-deal="${d.id}"><span class="cp">${esc(cp)}</span><span class="amt">${esc(d.usd_text || fmt(d.usd) || "")}</span>
+    <span class="meta">${tags} ${esc(d.date || "")}</span></div>`;
+}
+
+// ---- detail panel ----
+const detail = document.getElementById("detail");
+function showIntro() {
+  const total = deals.filter(d => d.usd && d.status !== "terminated").reduce((a, d) => a + d.usd, 0);
+  detail.innerHTML = `<h2>Overview</h2>
+    <div class="totals">
+      <div class="card"><div class="muted">Companies</div><div class="big">${comps.length}</div></div>
+      <div class="card"><div class="muted">Deals</div><div class="big">${deals.length}</div></div>
+      <div class="card"><div class="muted">Verified by news</div><div class="big">${deals.filter(d => d.verified).length}</div></div>
+      <div class="card"><div class="muted">Disclosed $</div><div class="big">${fmt(total) || "$0"}</div></div>
+    </div>
+    <h2>Biggest receivers</h2>${rankList("in")}
+    <h2>Biggest payers</h2>${rankList("out")}
+    <h2>Runs</h2>${DATA.runs.length ? DATA.runs.slice().reverse().map(r =>
+      `<div class="card"><b>${esc(r.id)}</b> <span class="muted">news ${esc(r.since)} → ${esc(r.until)}</span><br>
+      ${r.new_deals.length} new · ${r.updated_deals.length} updated · ${r.new_companies.length} new companies · ${r.candidates} items read</div>`).join("")
+      : `<div class="empty">No runs yet: everything shown is the seed. Run <code>python3 run.py</code>.</div>`}
+    <p class="muted" style="margin-top:16px">Dashed arrows are seed deals from Claude's training knowledge (to mid 2026), not yet matched by a news item. Treat their amounts as approximate.</p>`;
+  bindDealClicks(detail);
+  detail.querySelectorAll("[data-node]").forEach(el => el.onclick = () => focusNode(el.dataset.node));
+}
+function rankList(dir) {
+  return comps.filter(c => flow[c.id][dir] > 0).sort((a, b) => flow[b.id][dir] - flow[a.id][dir]).slice(0, 8)
+    .map(c => `<div class="deal" data-node="${c.id}"><span class="cp">${esc(c.name)}</span><span class="amt">${fmt(flow[c.id][dir])}</span></div>`).join("");
+}
+
+function showNode(id) {
+  const c = byId[id], f = flow[id];
+  const mine = deals.filter(d => d.from === id || d.to === id).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const undIn = mine.filter(d => d.to === id && !d.usd).length, undOut = mine.filter(d => d.from === id && !d.usd).length;
+  const layer = layers.find(l => l.id === c.layer);
+  detail.innerHTML = `
+    <p class="title">${esc(c.name)}</p>
+    <div style="margin:6px 0">${c.ticker ? `<span class="pill">${esc(c.ticker)}</span>` : `<span class="pill">private</span>`}
+      <span class="pill">${esc(layer ? layer.name : c.layer)}</span>
+      ${holdings.has(c.id) || holdings.has(c.ticker) ? `<span class="pill hold">your holding</span>` : ""}
+      ${c.first_seen && c.first_seen !== "seed" ? `<span class="pill new">added ${esc(c.first_seen)}</span>` : ""}</div>
+    <p>${esc(c.does)}</p>
+    <div class="totals">
+      <div class="card"><div class="muted">Money in</div><div class="big">${fmt(f.in) || "—"}</div>${undIn ? `<div class="muted">+ ${undIn} undisclosed</div>` : ""}</div>
+      <div class="card"><div class="muted">Money out</div><div class="big">${fmt(f.out) || "—"}</div>${undOut ? `<div class="muted">+ ${undOut} undisclosed</div>` : ""}</div>
+    </div>
+    <h2>Money in · ${mine.filter(d => d.to === id).length}</h2>${mine.filter(d => d.to === id).map(d => dealRow(d, id)).join("") || `<div class="empty">None recorded.</div>`}
+    <h2>Money out · ${mine.filter(d => d.from === id).length}</h2>${mine.filter(d => d.from === id).map(d => dealRow(d, id)).join("") || `<div class="empty">None recorded.</div>`}`;
+  bindDealClicks(detail);
+}
+
+function showDeal(id) {
+  const d = dealById[id];
+  const from = byId[d.from], to = byId[d.to];
+  const src = d.sources && d.sources.length ? d.sources.map(s => `<div class="src">
+      <div><b>${esc(s.source || "")}</b> <span class="muted">${esc(s.published || "")}${s.run ? " · run " + esc(s.run) : ""}</span></div>
+      ${s.quote ? `<q>${esc(s.quote)}</q>` : ""}
+      ${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title || s.url)}</a>` : esc(s.title || "")}</div>`).join("")
+    : `<div class="card"><span class="pill unv">unverified seed</span><br>From Claude's training knowledge (to mid 2026), not from a fetched article. A later run that finds this deal in the news attaches the source and marks it verified.</div>`;
+  detail.innerHTML = `
+    <p class="title"><a href="#" data-node="${d.from}">${esc(from.name)}</a> → <a href="#" data-node="${d.to}">${esc(to.name)}</a></p>
+    <div style="margin:6px 0"><span class="pill" style="color:${TYPE_COLORS[d.type]};border-color:${TYPE_COLORS[d.type]}55">${esc(TYPE_NAMES[d.type] || d.type)}</span>
+      ${isNew(d, +sinceSel.value) ? `<span class="pill new">${rank(d.first_seen) > +sinceSel.value ? "new" : "updated"}</span>` : ""}</div>
+    <div class="big">${esc(d.usd_text || fmt(d.usd) || "amount not disclosed")}</div>
+    <p>${esc(d.summary)}</p>
+    <div class="kv">
+      <div>Announced</div><div>${esc(d.date || "—")}</div>
+      <div>Status</div><div>${esc(d.status || "—")}</div>
+      <div>First seen</div><div>${esc(d.first_seen)}</div>
+      ${d.updated_in ? `<div>Updated</div><div>${esc(d.updated_in)}</div>` : ""}
+      ${(d.history || []).map(h => `<div>Was</div><div>${esc(h.usd_text || fmt(h.usd))} <span class="muted">until ${esc(h.until)}</span></div>`).join("")}
+    </div>
+    <h2>Sources · ${(d.sources || []).length}</h2>${src}`;
+  detail.querySelectorAll("[data-node]").forEach(el => el.onclick = e => { e.preventDefault(); focusNode(el.dataset.node); });
+}
+
+function bindDealClicks(root) {
+  root.querySelectorAll("[data-deal]").forEach(el => el.onclick = () => focusDeal(el.dataset.deal));
+}
+document.getElementById("newlist").addEventListener("click", e => {
+  const el = e.target.closest("[data-deal]"); if (el) focusDeal(el.dataset.deal);
+});
+
+function focusNode(id) {
+  const n = cy.getElementById(id); if (!n.length) return;
+  n.removeClass("hidden");
+  cy.elements().unselect(); n.select();
+  cy.animate({ center: { eles: n }, zoom: Math.max(cy.zoom(), 1.1) }, { duration: 350 });
+  showNode(id);
+}
+function focusDeal(id) {
+  const e = cy.getElementById(id); if (!e.length) return;
+  e.removeClass("hidden"); e.connectedNodes().removeClass("hidden");
+  cy.elements().unselect(); e.select();
+  cy.animate({ fit: { eles: e.union(e.connectedNodes()), padding: 140 } }, { duration: 350 });
+  showDeal(id);
+}
+
+// ---- interactions ----
+cy.on("tap", "node", e => { if (!e.target.hasClass("layerlabel")) showNode(e.target.id()); });
+cy.on("tap", "edge", e => showDeal(e.target.id()));
+cy.on("tap", e => { if (e.target === cy) showIntro(); });
+cy.on("mouseover", "node", e => {
+  const n = e.target; if (n.hasClass("layerlabel")) return;
+  const hood = n.closedNeighborhood();
+  cy.elements().not(hood).not(".layerlabel").addClass("faded");
+  hood.edges().addClass("hl");
+});
+cy.on("mouseout", "node", () => cy.elements().removeClass("faded hl"));
+cy.on("mouseover", "edge", e => { e.target.addClass("hl"); });
+cy.on("mouseout", "edge", e => { e.target.removeClass("hl"); });
+
+const z = f => cy.animate({ zoom: { level: cy.zoom() * f, renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 } } }, { duration: 180 });
+document.getElementById("zin").onclick = () => z(1.35);
+document.getElementById("zout").onclick = () => z(1 / 1.35);
+document.getElementById("zfit").onclick = () => cy.animate({ fit: { eles: cy.elements().not(".hidden"), padding: 40 } }, { duration: 300 });
+
+const search = document.getElementById("search");
+document.getElementById("names").innerHTML = comps.map(c => `<option value="${esc(c.name)}">${esc(c.ticker || "")}</option>`).join("");
+search.addEventListener("change", () => {
+  const q = search.value.trim().toLowerCase();
+  const c = comps.find(c => c.name.toLowerCase() === q || (c.ticker || "").toLowerCase() === q || c.id.toLowerCase() === q)
+    || comps.find(c => c.name.toLowerCase().includes(q) || (c.aliases || []).some(a => a.toLowerCase().includes(q)));
+  if (c) focusNode(c.id);
+});
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+  if (e.key === "/") { e.preventDefault(); search.focus(); search.select(); }
+  if (e.key === "f" || e.key === "F") document.getElementById("zfit").click();
+  if (e.key === "+" || e.key === "=") z(1.35);
+  if (e.key === "-") z(1 / 1.35);
+});
+
+document.querySelectorAll("aside.left input, #minusd, #since").forEach(el => el.addEventListener("change", apply));
+document.getElementById("layout").addEventListener("change", e => runLayout(e.target.value));
+
+document.getElementById("stamp").textContent =
+  `${comps.length} companies · ${deals.length} deals · built ${DATA.built_at}` + (runIds.length ? ` · last run ${runIds[runIds.length - 1]}` : " · seed only");
+
+cy.scratch("layout", "columns");
+apply();
+runLayout("columns");
+showIntro();
+</script>
+</body>
+</html>
