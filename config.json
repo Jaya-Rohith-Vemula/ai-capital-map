@@ -4,8 +4,7 @@
     "CRWV"
   ],
   "model": "sonnet",
-  "batch_size": 120,
-  "first_run_days": 7,
+  "batch_size": 25,
   "news_searches": [
     "AI data center deal billion",
     "AI compute contract billion",
@@ -17,6 +16,18 @@
     "OpenAI deal billion",
     "Anthropic deal billion",
     "xAI funding billion",
+    "HBM supply agreement"
+  ],
+  "start": "2024-11-01",
+  "press_sites": "site:prnewswire.com OR site:globenewswire.com",
+  "press_searches": [
+    "AI data center agreement",
+    "AI infrastructure agreement",
+    "GPU cloud agreement",
+    "AI compute capacity agreement",
+    "data center lease agreement",
+    "power purchase agreement data center",
+    "strategic investment AI",
     "HBM supply agreement"
   ]
 }

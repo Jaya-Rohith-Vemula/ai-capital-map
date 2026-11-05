@@ -5,16 +5,17 @@ memory, foundries, power. An interactive, zoomable map that a weekly run keeps
 up to date from the news.
 
 ```bash
-python3 run.py              # weekly: news since the last run → Claude extracts deals → map
+./backfill.sh               # bring the ledger up to date, in the background, Mac kept awake
+tail -f logs/<latest>.log   # watch it: timestamped, with a heartbeat every minute
 python3 build.py --open     # just redraw and open out/map.html
-python3 run.py --dry-run    # see what a run would add, write nothing
-python3 run.py --strict --since 2026-05-01   # long backfill, headline must carry $B or GW
 ```
 
-Needs Python 3.9+, the `claude` CLI signed in (extraction runs on the Claude
-Code plan, `claude -p`), and `FINNHUB_API_KEY` in `.env` (Google News needs no
-key). A weekly run reads ~8,000 headlines, filters to several hundred, and
-sends them to Claude in batches of 120: expect 15–30 minutes.
+No schedule: each run continues from where the last completed one ended
+(first time: 2024-11-01, from `config.json`), a month at a time, and resumes
+if it stops. It searches Google News, reads every article it can (paywalled
+ones stay headline-only), and Claude extracts the deals. Needs Python 3.9+
+and the `claude` CLI signed in; `FINNHUB_API_KEY` in `.env` is optional and
+only used for short windows.
 
 In the map: scroll or pinch to zoom, drag to pan, `/` to search, `F` to fit.
 Click a company for what it does and its money in and out; click an arrow for

@@ -1,78 +1,103 @@
 # AI Capital Map: design
 
 Who is paying whom to build AI: labs, hyperscalers, neoclouds, chips, memory,
-foundries, power. One weekly command reads the news, finds new deals, adds
-them to a ledger and redraws an interactive map that highlights what changed
-since the last run.
+foundries, power. One script brings a ledger of deals up to date from the
+news and redraws an interactive map of it.
 
 Research only. Nothing here trades, and nothing in portfolio-pilot reads it;
 that is why it lives in its own repo.
 
-## The weekly run
+## Running it
 
 ```
-python3 run.py            # news since the last run → extract → merge → build
-python3 build.py          # redraw out/map.html from the ledger, no news, no Claude
+./backfill.sh             # run.py in the background, Mac kept awake (caffeinate -i)
+python3 run.py            # the same, in the foreground
+python3 run.py --until 2025-01-31   # stop early, e.g. to try one month
+python3 build.py --open   # redraw out/map.html from the ledger, no news, no Claude
+tail -f logs/<latest>.log # follow a run
 ```
 
-1. **Fetch.** Finnhub company news for every company with a US ticker
-   (`FINNHUB_API_KEY` in `.env`), plus Google News RSS searches from
-   `config.json` (they catch private companies: OpenAI, Anthropic, xAI,
-   Fluidstack). Window: from the last run's end to now; the first run (or
-   `--since`) can backfill.
-2. **Filter.** Items already processed (`data/seen.json`) are dropped. The rest
-   must mention money or scale (`$`, billion, GW, MW) *and* a deal word
-   (invest, stake, contract, agreement, lease, backstop, PPA...). Cheap, and
-   keeps the Claude calls small.
-3. **Extract.** `claude -p` on the Claude Code plan, tools off, structured
-   output (`--json-schema`), in batches. It gets the company list, a compact
-   ledger and the items; it returns deals, each pointing at the item it came
-   from, with a verbatim quote, and `same_as` when the ledger already holds it.
-4. **Check in code.** A deal is rejected unless its quote really occurs in the
-   item's title or summary, and both ends resolve to a known company or one the
-   same response defines. Rejections are listed in the run record, not dropped
-   silently.
-5. **Merge.** New deals get `first_seen = run id`. A `same_as` match adds the
-   source to the existing deal, marks it `verified` and, if the amount changed,
-   keeps the old one in `history` and sets `updated_in = run id`.
-6. **Build.** `out/map.html`, one file, works offline (Cytoscape is inlined).
+There is no schedule. A run always continues from where coverage ends: from
+`config.json` `start` (2024-11-01), the end of the unbroken chain of completed
+runs. Run it after a week or after three months; it catches up either way.
 
-## Data (plain JSON, in git, so `git log` is the history)
+## A run
 
-| file | what | read by |
+The window is cut into calendar months. For each month:
+
+1. **Search.** Google News RSS for each query in `config.json`: the deal
+   searches, plus press-release searches limited to PR Newswire and
+   GlobeNewswire (primary sources, and readable). Long windows use
+   `after:/before:`; Google returns ~100 results per search, hence months.
+   Finnhub company news is added only for short windows (≤ 3 weeks, within its
+   1-year free history): its summaries are written from the full article, so
+   they help most when the article is paywalled.
+2. **Filter.** A headline is a candidate if it names money or scale *and* a
+   deal word, and is not commentary (price targets, "if you invested", ETF
+   flows...).
+3. **Read.** For each candidate: resolve Google's redirect to the publisher
+   URL, fetch the page, keep the paragraphs. Outlets known to refuse scripts
+   (Bloomberg, Reuters, WSJ, FT, Barron's, Forbes, Business Wire) are not
+   asked; a domain that answers 401/403 three times is not asked again. We do
+   not try to get around a paywall.
+4. **Extract.** `claude -p` on the Claude Code plan, tools off, structured
+   output, 25 items a batch. Each item: title, Finnhub summary if any, and the
+   article's opening and money/deal paragraphs (≤ 3,500 chars).
+5. **Check and merge** (`extract.py`). The quote Claude gives must occur in the
+   item, and where it occurs is the deal's **evidence**: `press release`,
+   `article`, `summary` or `headline`. Both parties must resolve to known
+   companies or ones the same response defines. A repeat (`same_as`) adds the
+   source, keeps the best evidence, and lets better-evidenced or newer terms
+   replace the old ones (kept in `history`).
+6. **Record.** `runs/<month end>-<HHMM>.json` is written, `completed: true`,
+   only when the month is fully done. The ledger is saved after every batch.
+
+### Stopping and resuming
+
+Google rate limiting, Claude failing twice, Ctrl-C or a crash stop the run
+cleanly. Nothing done is lost: searched items, fetched articles and extracted
+flags are in the store, deals in the ledger. The next run starts at the same
+month; searches repeat (deduplicated), fetched articles are not fetched
+again, extracted items are not sent again.
+
+### The log
+
+`logs/<started>.log`, every line timestamped: each search, each article read
+(read / blocked / failed / short), each batch, each deal. A heartbeat every
+minute repeats what it is doing. A sleeping Mac freezes the process, so a
+heartbeat that arrives late says "resumed after N min gap: the laptop was
+probably asleep". `backfill.sh` runs under `caffeinate -i` to prevent idle
+sleep; a closed lid on battery still sleeps.
+
+## Data
+
+| where | what | in git |
 | --- | --- | --- |
-| `data/companies.json` | id, name, ticker, layer, what it does, aliases | run (matching, prompt), build |
-| `data/deals.json` | the ledger: one row per deal | run (dedupe), build |
-| `data/seen.json` | hashes of news items already sent to Claude, kept 120 days | run |
-| `runs/<id>.json` | per run: window, counts, new/updated deal ids, rejections | build (the "since" picker and the What's new panel) |
-| `config.json` | holdings to highlight, news searches, model, batch size | run, build |
+| `data/companies.json` | id, name, ticker, layer, what it does, aliases | yes |
+| `data/deals.json` | the ledger, one row per deal | yes |
+| `runs/*.json` | one per month or run: window, counts, new/updated deals, rejections | yes |
+| `store/news.db` | SQLite: every headline, real URL, fetch outcome, article text | **no**: publishers' text stays local |
+| `logs/` | run logs | no |
+| `config.json` | start date, searches, holdings, model, batch size | yes |
 
-A deal: `from` pays `to`. Investor → company for equity; customer → provider
-for compute and leases; buyer → supplier for chips and power. Types:
-`equity`, `compute`, `chips`, `lease`, `power`, `financing`, `acquisition`,
-`partnership`.
+A deal: `from` pays `to` (investor → company, customer → provider, buyer →
+supplier). Types: `equity`, `compute`, `chips`, `lease`, `power`,
+`financing`, `acquisition`, `partnership`. Status: `announced` (signed,
+confirmed), `loi` (letter of intent, MOU, milestone-based "up to"),
+`reported` (media, unconfirmed), `completed`, `terminated`.
 
 **Seed deals** (`origin: seed`) came from Claude's training knowledge (to mid
-2026), not a fetched article: drawn dashed and labelled unverified until a
-news item matches them.
+2026), not a fetched article: unverified until a news item matches them.
+
+## Limits
+
+- Paywalled-only stories stay `headline` evidence until a readable copy or a
+  press release turns up.
+- Google News coverage thins for older months.
+- Private companies have no SEC filings; for listed ones, 8-K material
+  agreements would be a stronger primary source (not built).
 
 ## The map
 
-- Columns by layer (capital → labs → hyperscalers → neoclouds → servers →
-  chips → memory → foundry → power), or a force layout.
-- Wheel or pinch to zoom, drag to pan, `+ / − / fit` buttons. Labels shrink
-  away when zoomed out so a big graph stays readable.
-- Arrow width grows with the dollar amount (log scale), colour is the deal
-  type, dashed means unverified seed.
-- Click a company: what it does, money in and out, every deal with sources.
-  Click an arrow: the deal, the quote and the links.
-- "Since" picks a past run; deals new or changed after it glow, and the What's
-  new panel lists them.
-- Holdings in `config.json` get a gold ring.
-
-## Not yet
-
-- SEC 8-K material agreements (needs a User-Agent with a real contact).
-- A money-flow (Sankey) view between layers.
-- Full article text: extraction reads the headline and summary only, so an
-  amount that is only in the body is missed.
+Rebuilt after every month. To be redesigned: the current one works (zoom,
+pan, search, filters, what's new) but is cluttered.

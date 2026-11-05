@@ -28,6 +28,8 @@ def build():
     for name in sorted(os.listdir(runs_dir)) if os.path.isdir(runs_dir) else []:
         if name.endswith(".json"):
             r = json.loads(read("runs", name))
+            if not r.get("completed", True):
+                continue
             runs.append({k: r.get(k) for k in ("id", "at", "since", "until", "candidates", "new_deals", "updated_deals", "new_companies")})
     data = {
         "layers": cdoc["layers"], "companies": cdoc["companies"], "deals": ddoc["deals"], "runs": runs,
