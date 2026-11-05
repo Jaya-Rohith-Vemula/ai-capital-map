@@ -129,12 +129,24 @@ def fetch_finnhub(companies, since, until, key, log):
     return items
 
 
-def fetch_google_news(queries, since, log):
+def google_windows(since, until):
+    # Google News returns ~100 items per search, so a long window is asked
+    # month by month or the older months are crowded out.
+    if (until - since).days <= 21:
+        yield f"when:{max(1, (dt.date.today() - since).days)}d"
+        return
+    a = since
+    while a <= until:
+        b = min(until, a + dt.timedelta(days=30))
+        yield f"after:{a.isoformat()} before:{(b + dt.timedelta(days=1)).isoformat()}"
+        a = b + dt.timedelta(days=1)
+
+
+def fetch_google_news(queries, since, until, log):
     items = []
-    days = max(1, (dt.date.today() - since).days)
-    for q in queries:
+    for q, w in [(q, w) for w in google_windows(since, until) for q in queries]:
         url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
-            {"q": f"{q} when:{days}d", "hl": "en-US", "gl": "US", "ceid": "US:en"})
+            {"q": f"{q} {w}", "hl": "en-US", "gl": "US", "ceid": "US:en"})
         try:
             root = ET.fromstring(http_get(url))
         except Exception as e:
@@ -156,7 +168,7 @@ def fetch_google_news(queries, since, log):
                 "published": day.isoformat(), "feed": "google:" + q,
             })
             n += 1
-        log(f"  google  {n:4} items  '{q}'")
+        log(f"  google  {n:4} items  '{q}' {w}")
         time.sleep(1.0)
     return items
 
@@ -330,11 +342,15 @@ def main():
 
     key = env_key("FINNHUB_API_KEY")
     items = []
-    if key:
+    if (today - since).days > 21:
+        # Six months of Finnhub for 38 tickers is ~an hour of paging at the
+        # free tier's 60 calls a minute; deal searches cover a backfill.
+        log("  long window: Finnhub skipped, Google News searched month by month")
+    elif key:
         items += fetch_finnhub(companies, since, today, key, log)
     else:
         log("  FINNHUB_API_KEY not set: company news skipped")
-    items += fetch_google_news(cfg.get("news_searches", []), since, log)
+    items += fetch_google_news(cfg.get("news_searches", []), since, today, log)
 
     fetched = len(items)
     uniq = {}
