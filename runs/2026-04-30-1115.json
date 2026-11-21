@@ -1,0 +1,51 @@
+{
+ "id": "2026-04-30-1115",
+ "since": "2026-04-01",
+ "until": "2026-04-30",
+ "completed": true,
+ "started": "2026-11-05T11:15:13",
+ "searched": 427,
+ "candidates": 87,
+ "read": {
+  "blocked": 28,
+  "failed": 1,
+  "read": 57,
+  "short": 1
+ },
+ "new_deals": [
+  "d146",
+  "d147",
+  "d148",
+  "d149",
+  "d150",
+  "d151",
+  "d152",
+  "d153",
+  "d154",
+  "d155",
+  "d156",
+  "d157",
+  "d158",
+  "d159",
+  "d160",
+  "d161"
+ ],
+ "updated_deals": [
+  "d117"
+ ],
+ "new_companies": [
+  "SHARONAI",
+  "ESDS",
+  "JANESTREET",
+  "CELESTIALAI",
+  "DATABANK",
+  "CURSOR",
+  "BOOSTRUN",
+  "ANAN",
+  "MARA",
+  "LONGRIDGE"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T11:21:18"
+}

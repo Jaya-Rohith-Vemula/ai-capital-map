@@ -1,0 +1,32 @@
+{
+ "id": "2025-02-28-1017",
+ "since": "2025-02-01",
+ "until": "2025-02-28",
+ "completed": true,
+ "started": "2026-11-05T10:17:33",
+ "searched": 194,
+ "candidates": 36,
+ "read": {
+  "blocked": 9,
+  "read": 27
+ },
+ "new_deals": [
+  "d068",
+  "d069"
+ ],
+ "updated_deals": [
+  "d003"
+ ],
+ "new_companies": [
+  "SMBC"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "SoftBank has committed to spending $3 billion per year for itself and its subsidiaries to use OpenAI's tech, according to a joint announcement on Monday.",
+   "title": "SoftBank commits to joint venture with OpenAI, will spend $3 billion per year on OpenAI's tech - CNBC"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-05T10:20:31"
+}

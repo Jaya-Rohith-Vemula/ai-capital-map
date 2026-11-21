@@ -1,0 +1,29 @@
+{
+ "id": "2025-01-31-1012",
+ "since": "2025-01-01",
+ "until": "2025-01-31",
+ "completed": true,
+ "started": "2026-11-05T10:12:41",
+ "searched": 394,
+ "candidates": 63,
+ "read": {
+  "blocked": 10,
+  "failed": 1,
+  "read": 51,
+  "short": 1
+ },
+ "new_deals": [
+  "d066",
+  "d067"
+ ],
+ "updated_deals": [
+  "d024"
+ ],
+ "new_companies": [
+  "MACQUARIE",
+  "HPE"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:17:33"
+}

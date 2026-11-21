@@ -1,0 +1,29 @@
+{
+ "id": "2024-11-30-1006",
+ "since": "2024-11-01",
+ "until": "2024-11-30",
+ "completed": true,
+ "started": "2026-11-05T10:06:48",
+ "searched": 198,
+ "candidates": 37,
+ "read": {
+  "blocked": 7,
+  "read": 30
+ },
+ "new_deals": [
+  "d059",
+  "d060"
+ ],
+ "updated_deals": [
+  "d014",
+  "d001",
+  "d055",
+  "d023"
+ ],
+ "new_companies": [
+  "AEP"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:09:45"
+}

@@ -23,6 +23,8 @@ def build():
     cfg = json.loads(read("config.json"))
     cdoc = json.loads(read("data", "companies.json"))
     ddoc = json.loads(read("data", "deals.json"))
+    fpath = os.path.join(ROOT, "data", "fundamentals.json")
+    fund = json.loads(read("data", "fundamentals.json")) if os.path.exists(fpath) else {"companies": {}}
     runs_dir = os.path.join(ROOT, "runs")
     runs = []
     for name in sorted(os.listdir(runs_dir)) if os.path.isdir(runs_dir) else []:
@@ -33,7 +35,7 @@ def build():
             runs.append({k: r.get(k) for k in ("id", "at", "since", "until", "candidates", "new_deals", "updated_deals", "new_companies")})
     data = {
         "layers": cdoc["layers"], "companies": cdoc["companies"], "deals": ddoc["deals"], "runs": runs,
-        "holdings": cfg.get("holdings", []), "built_at": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "fundamentals": fund, "holdings": cfg.get("holdings", []), "built_at": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
     }
     # </ would end the inline script early if a headline ever contained </script>.
     blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")

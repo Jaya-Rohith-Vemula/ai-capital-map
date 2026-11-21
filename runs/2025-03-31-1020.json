@@ -1,0 +1,27 @@
+{
+ "id": "2025-03-31-1020",
+ "since": "2025-03-01",
+ "until": "2025-03-31",
+ "completed": true,
+ "started": "2026-11-05T10:20:31",
+ "searched": 239,
+ "candidates": 31,
+ "read": {
+  "blocked": 9,
+  "read": 22
+ },
+ "new_deals": [
+  "d070",
+  "d071"
+ ],
+ "updated_deals": [
+  "d010",
+  "d003"
+ ],
+ "new_companies": [
+  "RWE"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:23:01"
+}

@@ -1,0 +1,42 @@
+{
+ "id": "2025-11-30-1051",
+ "since": "2025-11-01",
+ "until": "2025-11-30",
+ "completed": true,
+ "started": "2026-11-05T10:51:46",
+ "searched": 263,
+ "candidates": 62,
+ "read": {
+  "blocked": 20,
+  "read": 41,
+  "short": 1
+ },
+ "new_deals": [
+  "d100",
+  "d101",
+  "d102",
+  "d103",
+  "d104",
+  "d105",
+  "d106"
+ ],
+ "updated_deals": [
+  "d015",
+  "d016",
+  "d029",
+  "d018",
+  "d026",
+  "d027",
+  "d028"
+ ],
+ "new_companies": [
+  "TREATYOAK",
+  "SCHNEIDER",
+  "TPG",
+  "TCS",
+  "NIPSCO"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:56:05"
+}

@@ -1,0 +1,40 @@
+{
+ "id": "2025-09-30-1042",
+ "since": "2025-09-01",
+ "until": "2025-09-30",
+ "completed": true,
+ "started": "2026-11-05T10:42:00",
+ "searched": 315,
+ "candidates": 74,
+ "read": {
+  "blocked": 32,
+  "failed": 1,
+  "read": 41
+ },
+ "new_deals": [
+  "d092",
+  "d093",
+  "d094",
+  "d095",
+  "d096"
+ ],
+ "updated_deals": [
+  "d009",
+  "d017",
+  "d012",
+  "d086",
+  "d087",
+  "d008",
+  "d004",
+  "d005",
+  "d011",
+  "d049"
+ ],
+ "new_companies": [
+  "NSCALE",
+  "AKER"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:46:35"
+}

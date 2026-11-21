@@ -1,0 +1,50 @@
+{
+ "id": "2026-02-28-1107",
+ "since": "2026-02-01",
+ "until": "2026-02-28",
+ "completed": true,
+ "started": "2026-11-05T11:07:05",
+ "searched": 227,
+ "candidates": 57,
+ "read": {
+  "blocked": 21,
+  "read": 35,
+  "short": 1
+ },
+ "new_deals": [
+  "d122",
+  "d123",
+  "d124",
+  "d125",
+  "d126",
+  "d127",
+  "d128",
+  "d129",
+  "d130",
+  "d131",
+  "d132",
+  "d133",
+  "d134",
+  "d135",
+  "d136",
+  "d137"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "SPACEX",
+  "BLACKSTONE",
+  "TTE",
+  "MUFG",
+  "LUMENTUM",
+  "BAKERHUGHES"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "OpenAI will use 3 gigawatts of dedicated inference capacity and 2 gigawatts of training capacity on Nvidia's Vera Rubin systems, the company said.",
+   "title": "OpenAI announces $110 billion funding round with backing from Amazon, Nvidia, SoftBank - CNBC"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-05T11:11:14"
+}

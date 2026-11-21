@@ -89,6 +89,81 @@ confirmed), `loi` (letter of intent, MOU, milestone-based "up to"),
 **Seed deals** (`origin: seed`) came from Claude's training knowledge (to mid
 2026), not a fetched article: unverified until a news item matches them.
 
+## Planned: follow new companies (decided 2026-11-05, not built)
+
+Adding a company today only adds it to the list Claude matches against;
+nothing searches for it, so its smaller or earlier deals are missed. Planned:
+
+- When a run adds a company, queue a **targeted search** for it (company-name
+  queries such as "<name> deal", "<name> agreement", "<name> invests",
+  month by month from `start`), then read and extract as usual. Articles
+  already in `store/news.db` that mention it are re-checked without
+  downloading again.
+- Followed only if **all** hold:
+  - **it has a stock ticker** (listed, so investable);
+  - **size threshold**: first seen in a deal of about **$1B or more**;
+  - **depth 1**: it was added by the main searches. Companies a targeted
+    search finds are added but not followed, so A → B → C cannot snowball.
+- A targeted search is recorded as its own run (`kind: follow`), outside the
+  unbroken coverage chain that ordinary runs continue from.
+- The same mechanism gives `run.py --company <id> --since <date>` by hand.
+
+## Company financials
+
+Clicking a listed company shows two things:
+
+- **Financials · SEC filings** (`fundamentals.py` → `data/fundamentals.json`):
+  revenue, net income, diluted EPS, capex, operating cash flow, for the last
+  5 fiscal years and 12 quarters, from data.sec.gov companyfacts (XBRL as
+  filed). 10-Qs report cash flows year to date and there is no Q4 filing, so
+  quarters are derived as differences of year-to-date figures. Capex is cash
+  paid for property and equipment; finance leases are not in it. Covers US
+  filers and the foreign ones filing 20-F/40-F (TSMC, ASML, Arm...), in their
+  reporting currency. US government data: fine to publish. SEC's name for the
+  ticker must match ours, since tickers get reused (NXT is NEXTDC on the ASX,
+  Nextpower on Nasdaq). Refreshed weekly at the end of a run.
+- **Market · live**: TradingView's free embeddable widgets (price, P/E, EPS,
+  market cap, valuation and statement summary), loaded in the browser. Their
+  licence allows public embedding, which free API keys (Finnhub, FMP, Alpha
+  Vantage, Yahoo) do not. Symbol: `market` in `companies.json` if set, else
+  the SEC exchange + ticker. Korean (KRX) prices are not shown in embeds;
+  their financials are.
+
+The overview ranks the biggest capex spenders over the last four quarters
+(US dollar filers).
+
+## The public site (web/)
+
+A static React app (Vite, Cytoscape for the graph) meant for Vercel; it reads
+`web/public/data.json`, which `export.py` writes from the ledger. No backend.
+
+What it publishes, decided 2026-11-19: **no deal amounts anywhere.** They
+come from news reports read by Claude, not official filings; reported figures
+are often "up to" ceilings or multi-year totals, and one wrong number would
+cost the map its credibility. The ledger keeps them. Deal summaries are
+rewritten by Claude without amounts (checked by a money regex before use).
+Unverified seed deals are left out. Sources are publisher, date and link
+only: headlines carry amounts and quotes are the publishers' text. SEC
+financials (official) and TradingView widgets are shown.
+
+The site: graph by layer (or a force "web"), hover and click to focus a
+company or deal, filters by deal type, layer, status and "press release
+only", a timeline from Nov 2024 that can play month by month, search (`/`),
+deep links (`#/c/NVDA`, `#/d/d006`), light and dark themes, phone layout.
+
+## Planned: confirm deals from SEC filings (not built)
+
+EDGAR full-text search (efts.sec.gov, free, 2001+) finds a counterparty's
+name in a company's own filings: 8-K material agreements and their press
+release exhibits, contracts filed as 10-Q/10-K exhibits, customer
+concentration and commitment notes, S-1s, 13D/13G stakes. Tried on IREN →
+Microsoft: the 8-K the day of the announcement and the contract itself (EX-10.3
+to a 10-Q). 224 of 268 public deals have at least one SEC filer. Plan: per
+deal, search each filer party's filings from a month before the deal date for
+the other party's name and aliases; Claude checks the matching passage
+describes this deal; a match becomes `evidence: "SEC filing"` with the link,
+the strongest evidence, and a filter on the site.
+
 ## Limits
 
 - Paywalled-only stories stay `headline` evidence until a readable copy or a

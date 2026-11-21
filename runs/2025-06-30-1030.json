@@ -1,0 +1,28 @@
+{
+ "id": "2025-06-30-1030",
+ "since": "2025-06-01",
+ "until": "2025-06-30",
+ "completed": true,
+ "started": "2026-11-05T10:30:35",
+ "searched": 220,
+ "candidates": 44,
+ "read": {
+  "blocked": 11,
+  "read": 33
+ },
+ "new_deals": [
+  "d078",
+  "d079"
+ ],
+ "updated_deals": [
+  "d053",
+  "d047"
+ ],
+ "new_companies": [
+  "SCALEAI",
+  "ARKDC"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:33:48"
+}

@@ -1,0 +1,31 @@
+{
+ "id": "2026-03-31-1111",
+ "since": "2026-03-01",
+ "until": "2026-03-31",
+ "completed": true,
+ "started": "2026-11-05T11:11:14",
+ "searched": 239,
+ "candidates": 47,
+ "read": {
+  "blocked": 10,
+  "read": 37
+ },
+ "new_deals": [
+  "d138",
+  "d139",
+  "d140",
+  "d141",
+  "d142",
+  "d143",
+  "d144",
+  "d145"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "COHR",
+  "AIPCORP"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T11:15:13"
+}

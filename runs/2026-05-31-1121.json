@@ -1,0 +1,40 @@
+{
+ "id": "2026-05-31-1121",
+ "since": "2026-05-01",
+ "until": "2026-05-31",
+ "completed": true,
+ "started": "2026-11-05T11:21:18",
+ "searched": 299,
+ "candidates": 67,
+ "read": {
+  "blocked": 21,
+  "read": 46
+ },
+ "new_deals": [
+  "d162",
+  "d163",
+  "d164",
+  "d165",
+  "d166",
+  "d167",
+  "d168",
+  "d169",
+  "d170",
+  "d171",
+  "d172",
+  "d173"
+ ],
+ "updated_deals": [
+  "d159"
+ ],
+ "new_companies": [
+  "AKAM",
+  "LINEA",
+  "DESRI",
+  "ENLIGHT",
+  "APOLLO"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T11:26:09"
+}

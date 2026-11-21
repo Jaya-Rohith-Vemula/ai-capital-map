@@ -1,0 +1,43 @@
+{
+ "id": "2025-10-31-1046",
+ "since": "2025-10-01",
+ "until": "2025-10-31",
+ "completed": true,
+ "started": "2026-11-05T10:46:35",
+ "searched": 263,
+ "candidates": 70,
+ "read": {
+  "blocked": 18,
+  "read": 51,
+  "short": 1
+ },
+ "new_deals": [
+  "d097",
+  "d098",
+  "d099"
+ ],
+ "updated_deals": [
+  "d017",
+  "d035",
+  "d036",
+  "d006",
+  "d007",
+  "d034",
+  "d025",
+  "d002"
+ ],
+ "new_companies": [
+  "BLACKROCK",
+  "POOLSIDE",
+  "MPS"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "Meta said Tuesday that it formed a joint venture agreement with Blue Owl Capital in a deal worth $27 billion to fund and develop the social media company's massive Hyperion data center in rural Louisiana.",
+   "title": "Meta partners with Blue Owl Capital on $27 billion AI data center project - CNBC"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-05T10:51:46"
+}

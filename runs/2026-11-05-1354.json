@@ -1,0 +1,103 @@
+{
+ "id": "2026-11-05-1354",
+ "since": "2026-11-01",
+ "until": "2026-11-05",
+ "completed": true,
+ "started": "2026-11-05T13:54:17",
+ "searched": 8349,
+ "candidates": 674,
+ "read": {
+  "blocked": 64,
+  "failed": 2,
+  "read": 591,
+  "short": 17
+ },
+ "new_deals": [
+  "d259",
+  "d260",
+  "d261",
+  "d262",
+  "d263",
+  "d264",
+  "d265",
+  "d266",
+  "d267",
+  "d268",
+  "d269",
+  "d270",
+  "d271",
+  "d272",
+  "d273",
+  "d274",
+  "d275",
+  "d276",
+  "d277",
+  "d278",
+  "d279",
+  "d280",
+  "d281",
+  "d282",
+  "d283",
+  "d284",
+  "d285",
+  "d286",
+  "d287",
+  "d288",
+  "d289",
+  "d290",
+  "d291"
+ ],
+ "updated_deals": [
+  "d129",
+  "d232",
+  "d159",
+  "d248",
+  "d251",
+  "d217",
+  "d234"
+ ],
+ "new_companies": [
+  "KBKOOKMIN",
+  "CAPITALPOWER",
+  "HARK",
+  "BESI",
+  "HELIX",
+  "DRAX",
+  "GLOBALWAFERS",
+  "XENERGY",
+  "WMB",
+  "LUMENTUMPLACEHOLDER",
+  "PNW",
+  "COLGROUP",
+  "BOYD",
+  "SOLUNA",
+  "TAALAS",
+  "NEXTDC",
+  "POLARISDS",
+  "NTTDATA"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "Marvell notched one of its biggest wins in August, signing a deal to supply chips that sit alongside Google's AI processors worth up to $120 billion in sales through fiscal 2033, giving the search giant the right to buy a $12.2 billion stake.",
+   "title": "Marvell to buy Lumentum in $115 billion deal in AI data-center bet By Reuters - Investing.com"
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "It agreed to raise its stake in BE Semiconductor Industries ( BESI ) to about 20% from 9%.",
+   "title": "Applied Materials Sinks 7.5% in Intel’s Chip Rout Days After Doubling Its Besi Stake"
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "booked orders covering the facility’s total planned capacity ahead of ground breaking",
+   "title": "Samsung Secures AMD and Nvidia Orders for 2.7 Million-Square-Foot Texas Plant - Retail News Asia"
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "Goldman Sachs Group Inc. and Apollo Global Management Inc. are in talks with investors to sell portions of a roughly $40 billion financing for SpaceX’s AI chips",
+   "title": "SpaceX AI Chip Financing: $40B Deal Hits Investors [2026] - shattered.io"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-05T14:14:32"
+}

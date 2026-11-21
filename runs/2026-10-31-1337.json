@@ -1,0 +1,113 @@
+{
+ "id": "2026-10-31-1337",
+ "since": "2026-10-01",
+ "until": "2026-10-31",
+ "completed": true,
+ "started": "2026-11-05T13:37:48",
+ "searched": 1008,
+ "candidates": 386,
+ "read": {
+  "blocked": 60,
+  "failed": 4,
+  "read": 309,
+  "short": 13
+ },
+ "new_deals": [
+  "d231",
+  "d232",
+  "d233",
+  "d234",
+  "d235",
+  "d236",
+  "d237",
+  "d238",
+  "d239",
+  "d240",
+  "d241",
+  "d242",
+  "d243",
+  "d244",
+  "d245",
+  "d246",
+  "d247",
+  "d248",
+  "d249",
+  "d250",
+  "d251",
+  "d252",
+  "d253",
+  "d254",
+  "d255",
+  "d256",
+  "d257",
+  "d258"
+ ],
+ "updated_deals": [
+  "d132",
+  "d208",
+  "d170",
+  "d028",
+  "d193",
+  "d129",
+  "d228",
+  "d229"
+ ],
+ "new_companies": [
+  "TENCENT",
+  "SNPS",
+  "WEC",
+  "BKH",
+  "GFS",
+  "MAINSPRING",
+  "VANTAGE",
+  "KYEC",
+  "SEMCO",
+  "FIREWORKS",
+  "FORUM",
+  "CANADAGOV",
+  "COHERE",
+  "USDAI",
+  "NEXGEN",
+  "CITI",
+  "TRENCH"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "Oracle is the first hyperscaler outside Google to sell Alphabet's TPUs.",
+   "title": "Oracle Is Up 12% in a Week. Is Its Free Cash Flow Plan Really That Good?"
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "Cerebras gets a sales channel that doesn’t run through OpenAI",
+   "title": "Oracle Is Up 12% in a Week. Is Its Free Cash Flow Plan Really That Good?"
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "On the same day, NVIDIA put another $2 billion into Lumentum’s rival Coherent",
+   "title": "Marvell Is in Talks to Buy an $83 Billion AI Laser Maker"
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "Anthropic's initial public offering (IPO) filing says its five-year equipment leases with Broadcom already call for around $161.2 billion in rent, not counting interest.",
+   "title": "Broadcom Stock Is 29% Below Its Record. After Its New Anthropic Deal, I'd Consider Buying It a Little at a Time."
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "Anthropic, the maker of Claude, struck a deal in August to spend $45 billion renting computing power from Nscale’s West Virginia data center campus.",
+   "title": "Nvidia Weighs Credit Backing for $45B Nscale Deal [2026] - shattered.io"
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "Nvidia’s commitment involves a substantial investment of $3 billion in Meta Platforms",
+   "title": "Nvidia Invests $3 Billion in Meta AI Collaboration Deal - RS Web Solutions"
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "On Monday, Bank of America ( BAC ) , Citigroup ( C ) , Morgan Stanley ( MS ) and Blackstone announced the structure: a new special purpose vehicle borrows the money, buys Broadcom’s AI accelerators and networking gear, and leases them to Anthropic",
+   "title": "Cramer: Broadcom’s $63 Billion Anthropic Financing Works Because “There Is Only One Hock” - TIKR.com"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-05T13:54:17"
+}

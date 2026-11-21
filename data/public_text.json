@@ -1,0 +1,1078 @@
+{
+ "C:RUMGROUP": {
+  "src": "bbba508a00df",
+  "text": "A Trump-linked company is reported to supply compute to Anthropic."
+ },
+ "D:d001": {
+  "src": "41f5f485e197",
+  "text": "Microsoft's 10-Q discloses its funding commitments to OpenAI, which it accounts for under the equity method."
+ },
+ "D:d002": {
+  "src": "19f8995ff2db",
+  "text": "As part of its restructuring, OpenAI committed to buy additional Azure services from Microsoft."
+ },
+ "D:d003": {
+  "src": "e822bb28e10a",
+  "text": "SoftBank completed its investment commitment to OpenAI by sending a final tranche, giving it a stake of about 11%."
+ },
+ "D:d004": {
+  "src": "c1f3ea623de2",
+  "text": "Under a letter of intent, Nvidia intends to invest in OpenAI as systems are deployed."
+ },
+ "D:d005": {
+  "src": "eb1e3de7a564",
+  "text": "Letter of intent to deploy at least 10 GW of Nvidia systems for OpenAI, with the first phase in 2H 2026 on Vera Rubin."
+ },
+ "D:d006": {
+  "src": "7eebd07b176d",
+  "text": "OpenAI will deploy 6 GW of AMD Instinct GPUs, starting with MI450 in 2H 2026."
+ },
+ "D:d007": {
+  "src": "6e817c210489",
+  "text": "AMD granted OpenAI warrants for up to 160M AMD shares, about 10% of the company, vesting as GPU deployment milestones are met."
+ },
+ "D:d008": {
+  "src": "5f54427fa1cc",
+  "text": "OpenAI and Broadcom will co-develop and deploy 10 GW of custom AI accelerators from 2026 to 2029."
+ },
+ "D:d009": {
+  "src": "3b6d00024757",
+  "text": "OpenAI confirmed it signed a roughly five-year compute purchase from Oracle under Stargate, covering 4.5 GW and starting in 2027."
+ },
+ "D:d010": {
+  "src": "e556e2f2af6b",
+  "text": "OpenAI signed an additional agreement with CoreWeave, with payment commitments running through April 2029, per a regulatory filing."
+ },
+ "D:d011": {
+  "src": "2a5b616c09d0",
+  "text": "Meta signed a compute agreement with CoreWeave running to 2031."
+ },
+ "D:d012": {
+  "src": "aea00172b75f",
+  "text": "Nvidia agreed to buy any CoreWeave cloud capacity left unsold through 2032."
+ },
+ "D:d014": {
+  "src": "f4fa8ea8be2b",
+  "text": "Microsoft was CoreWeave's largest customer, with commitments reported through 2030."
+ },
+ "D:d015": {
+  "src": "9348e7ad6282",
+  "text": "Under a five-year GPU cloud contract, IREN hosts Nvidia GB300 capacity for Microsoft at Childress, Texas."
+ },
+ "D:d016": {
+  "src": "e6896898fb17",
+  "text": "IREN buys Nvidia GB300 servers from Dell for the Microsoft contract."
+ },
+ "D:d017": {
+  "src": "559d96a2722b",
+  "text": "Microsoft and Nebius have an AI compute deal."
+ },
+ "D:d018": {
+  "src": "01d7ed98881a",
+  "text": "Meta and Nebius signed a five-year AI infrastructure agreement."
+ },
+ "D:d019": {
+  "src": "fe0b7f63c14f",
+  "text": "Nebius entered definitive agreements for a private placement with participation from Accel, NVIDIA and Orbis-managed accounts."
+ },
+ "D:d023": {
+  "src": "72b292b697d0",
+  "text": "Amazon is making an additional investment in Anthropic."
+ },
+ "D:d024": {
+  "src": "9ec5f12b0a8f",
+  "text": "Google agreed to a new investment in Anthropic, confirmed to CNBC by an unnamed source."
+ },
+ "D:d025": {
+  "src": "6b5db20dc9e1",
+  "text": "Anthropic will use up to one million Google TPUs, over 1 GW of capacity, in 2026."
+ },
+ "D:d026": {
+  "src": "08a888412577",
+  "text": "Microsoft will invest in Anthropic."
+ },
+ "D:d027": {
+  "src": "ff4741f78c7f",
+  "text": "Nvidia will invest in Anthropic."
+ },
+ "D:d028": {
+  "src": "aa3879951150",
+  "text": "Anthropic's prospectus lists an expanded infrastructure deal with Microsoft running through May 2033, up from the earlier Azure commitment."
+ },
+ "D:d029": {
+  "src": "b4623913401c",
+  "text": "Seven-year AWS agreement for Nvidia GB200/GB300 capacity."
+ },
+ "D:d030": {
+  "src": "52c802a045ad",
+  "text": "Reported six-year Google Cloud deal for Meta."
+ },
+ "D:d032": {
+  "src": "9ecbe89d36ec",
+  "text": "Oracle reportedly bought about 400,000 Nvidia GB200s for the Abilene, Texas Stargate site."
+ },
+ "D:d034": {
+  "src": "83722fd0e391",
+  "text": "Nvidia invested in xAI's Series E, and the stake converted to SpaceX shares after the merger."
+ },
+ "D:d035": {
+  "src": "a4dcd5c32537",
+  "text": "SK Hynix will supply HBM/DRAM for Stargate, as part of combined Korean supply deals over four years."
+ },
+ "D:d036": {
+  "src": "1857aa1f4bb8",
+  "text": "Samsung will supply HBM/DRAM for Stargate, as part of combined Korean supply deals over four years."
+ },
+ "D:d047": {
+  "src": "85c72405a776",
+  "text": "Talen supplies 1.92 GW from the Susquehanna nuclear plant to AWS through 2042."
+ },
+ "D:d049": {
+  "src": "91b376b99c82",
+  "text": "Cipher and Fluidstack signed a 168 MW, 10-year AI hosting agreement."
+ },
+ "D:d053": {
+  "src": "da004857607e",
+  "text": "CoreWeave signed two long-term leases at Applied Digital, for 100 MW and 150 MW blocks over about 15 years, with an option for a third 150 MW block."
+ },
+ "D:d054": {
+  "src": "904bf3fc8547",
+  "text": "CoreWeave leases the full 800 MW approved at Galaxy's Helios campus, Texas."
+ },
+ "D:d055": {
+  "src": "767dc564de94",
+  "text": "CoreWeave signed for 500 MW of Core Scientific data center capacity over 12 years."
+ },
+ "D:d059": {
+  "src": "6c5b4ee6bc44",
+  "text": "AEP signed a supply agreement for up to 1 GW of Bloom fuel cells for AI data centers, with an initial 100 MW order placed and more expected in 2025."
+ },
+ "D:d060": {
+  "src": "e4e74c93f09b",
+  "text": "SoftBank will buy shares from OpenAI employees in a tender offer, per CNBC sources."
+ },
+ "D:d061": {
+  "src": "35b911266a66",
+  "text": "Google signed a strategic partnership with Intersect Power and TPG Rise Climate to build colocated renewable power and storage with new US data centers, with Google as offtaker and anchor tenant; Google and TPG led an Intersect funding round."
+ },
+ "D:d062": {
+  "src": "63101f8cdbf0",
+  "text": "Non-binding Master Power Agreement to deploy 12 GW of Oklo Aurora powerhouses through 2044 for Switch data centers via PPAs; binding agreements to follow at project milestones."
+ },
+ "D:d063": {
+  "src": "a3e193b42614",
+  "text": "Nvidia took part as a strategic investor in xAI's Series C round."
+ },
+ "D:d064": {
+  "src": "60e53237bc78",
+  "text": "AMD took part as a strategic investor in xAI's Series C round."
+ },
+ "D:d065": {
+  "src": "ce0e52d39aa1",
+  "text": "Copenhagen Infrastructure Partners and Google signed a PPA for 250 MW of renewable energy in the Netherlands."
+ },
+ "D:d066": {
+  "src": "3fa0efbfc8a4",
+  "text": "Macquarie Asset Management will invest in Applied Digital's HPC subsidiary for a 15% stake, with initial funding for the 400MW Ellendale campus and a right of first refusal on further funding over 30 months."
+ },
+ "D:d067": {
+  "src": "7bee60d5a541",
+  "text": "Bloomberg reports HPE won a deal to build AI servers for X, finalized in late 2024 after competing with Dell and Supermicro; HPE did not comment."
+ },
+ "D:d068": {
+  "src": "61bf6a41f7a1",
+  "text": "Applied Digital's HPC subsidiary closed a financing with SMBC to repay the Macquarie Capital note and advance the Ellendale HPC Campus."
+ },
+ "D:d069": {
+  "src": "25c1cc32343d",
+  "text": "Bloomberg reported xAI is preparing to buy AI servers with Nvidia GB200 GPUs from Dell, to be delivered this year, citing unnamed sources."
+ },
+ "D:d070": {
+  "src": "0793aca1be48",
+  "text": "As part of the five-year CoreWeave deal, OpenAI receives equity in CoreWeave."
+ },
+ "D:d071": {
+  "src": "b35e01477e1d",
+  "text": "Meta will buy 100% of the output of RWE's 200 MWac Waterloo Solar project in Texas under a long-term PPA."
+ },
+ "D:d072": {
+  "src": "81e952e166b3",
+  "text": "AWS and HUMAIN announce a joint investment in AI infrastructure, AWS services, and AI training and talent development in Saudi Arabia and globally."
+ },
+ "D:d073": {
+  "src": "60b2661364a9",
+  "text": "Multi-year partnership in which Supermicro supplies ultra-dense GPU platforms and rack-scale liquid cooling for DataVolt's AI campuses in Saudi Arabia and the US."
+ },
+ "D:d074": {
+  "src": "3900bd640fdf",
+  "text": "AMD signed a collaboration with HUMAIN to provide 500 MW of AI compute capacity for its data centers."
+ },
+ "D:d075": {
+  "src": "fdcf6deb4723",
+  "text": "Humain will receive 18,000 Nvidia GB300 Blackwell chips for a 500 MW AI data center."
+ },
+ "D:d076": {
+  "src": "13a5dc3f3870",
+  "text": "Two long-term PPAs for 650 MW of solar projects in Texas and Kansas (SPP market) support Meta's data centers."
+ },
+ "D:d077": {
+  "src": "ffaafe40ea25",
+  "text": "A J.P. Morgan-led consortium provided a construction loan, arranged by Newmark, for phase two of the Crusoe/Blue Owl/Primary Digital JV's 1.2 GW AI data center in Abilene, Texas."
+ },
+ "D:d078": {
+  "src": "0fa34071226b",
+  "text": "Meta invests in Scale AI for a 49% non-voting stake and hires CEO Alexandr Wang."
+ },
+ "D:d079": {
+  "src": "8e3f2247791f",
+  "text": "Nebius will deploy around 9,000 Nvidia Blackwell B300 GPUs at Ark's Longcross Park campus in Surrey, its first UK entry, starting with about 4,000 Blackwell Ultra GPUs."
+ },
+ "D:d080": {
+  "src": "b29c7d9c9237",
+  "text": "CoreWeave will buy Core Scientific to meet AI power needs."
+ },
+ "D:d081": {
+  "src": "452fbe50ff91",
+  "text": "Hydro Framework Agreement for Google to procure up to 3,000 MW of hydroelectric power from Brookfield, starting with a 20-year supply from the Holtwood and Safe Harbor plants."
+ },
+ "D:d082": {
+  "src": "414c1e506d78",
+  "text": "Founders Fund is reported to be committing to OpenAI's funding round."
+ },
+ "D:d083": {
+  "src": "16532e682b05",
+  "text": "Dragoneer is reported to be committing to OpenAI's funding round."
+ },
+ "D:d084": {
+  "src": "122d02541289",
+  "text": "Samsung will supply Tesla with AI and autonomous driving chips under a contract effective July 26, 2025 through Dec 31, 2033, confirmed by Musk."
+ },
+ "D:d085": {
+  "src": "47a860a9709e",
+  "text": "Nvidia and YTL Power signed a strategic collaboration to use Nvidia GPUs to build AI data centers in Malaysia, plus a Malaysian sovereign LLM."
+ },
+ "D:d086": {
+  "src": "a3f7a9c9f849",
+  "text": "Meta picked Pimco to lead debt financing for the Hyperion data center in Louisiana, which Meta leases under a 20-year lease with a guarantee."
+ },
+ "D:d087": {
+  "src": "3e5a8e6b65da",
+  "text": "Blue Owl contributes equity to the Hyperion joint venture."
+ },
+ "D:d088": {
+  "src": "54258925e42b",
+  "text": "SoftBank recently closed a separate purchase of OpenAI employee shares."
+ },
+ "D:d089": {
+  "src": "7ab1cb9ca730",
+  "text": "Blue Owl funds, Chirisa Technology Parks and Machine Investment Group closed a joint venture to fund CoreWeave's Lancaster, PA developments, which CoreWeave will lease; Blue Owl intends to fund further CTP developments."
+ },
+ "D:d090": {
+  "src": "92eba1efeb37",
+  "text": "Macquarie Group led Fermi America's Series C preferred equity round for the HyperGrid AI private grid campus."
+ },
+ "D:d091": {
+  "src": "540e9046c1b4",
+  "text": "Macquarie's Commodities and Global Markets business solely funded a senior loan facility, with part of it drawn at close."
+ },
+ "D:d092": {
+  "src": "ef25b585c0a5",
+  "text": "CoreWeave signed a new lease at Applied Digital's Polaris Forge 2, increasing the total anticipated contracted lease revenue between the two."
+ },
+ "D:d093": {
+  "src": "12053f9152d4",
+  "text": "Nscale and Aker agreed to a five-year AI compute capacity arrangement from 2026 at a data center in Kvandal, Norway."
+ },
+ "D:d094": {
+  "src": "c37e19fcef0e",
+  "text": "OpenAI and CoreWeave expanded their existing agreement with a new expansion."
+ },
+ "D:d095": {
+  "src": "1d82cea72855",
+  "text": "Aker committed cash and in-kind Narvik land to Nscale's Series B round, in exchange for 9.3% ownership."
+ },
+ "D:d096": {
+  "src": "d5b5d99f5fe0",
+  "text": "Nvidia said it has invested in UK data center startup Nscale."
+ },
+ "D:d097": {
+  "src": "078ff5c72a35",
+  "text": "The BlackRock/GIP-led AI Infrastructure Partnership, with Nvidia, Microsoft, MGX and others, will buy Aligned Data Centers from Macquarie Asset Management, with close expected 1H 2026 subject to regulatory approvals."
+ },
+ "D:d098": {
+  "src": "969086306ab2",
+  "text": "Bloomberg reports Nvidia will invest in AI startup Poolside."
+ },
+ "D:d099": {
+  "src": "13afa0897ac8",
+  "text": "Fermi America entered a long-term capital lease with Mobile Power Solutions for seven GE TM2500 gas turbines totaling 157.5 MW, delivered Q4 2025."
+ },
+ "D:d100": {
+  "src": "ce50f3fe5bbb",
+  "text": "Long-term PPA for 100 MW of solar energy in Grant County, Arkansas."
+ },
+ "D:d101": {
+  "src": "e03831be362c",
+  "text": "Anthropic made a compute commitment of initially up to 1 GW on Nvidia Grace Blackwell and Vera Rubin systems."
+ },
+ "D:d102": {
+  "src": "0846c18feaab",
+  "text": "Anthropic announced a commitment with Fluidstack days before the Microsoft deal, with details only mentioned in passing."
+ },
+ "D:d103": {
+  "src": "49a9f989141a",
+  "text": "Schneider Electric partnered with Switch on power modules and cooling systems."
+ },
+ "D:d104": {
+  "src": "c3d60c440c12",
+  "text": "Schneider Electric agreed to supply Digital Realty with UPS and switchgear."
+ },
+ "D:d105": {
+  "src": "5bb6d3e8336a",
+  "text": "TPG is investing in HyperVault, TCS's AI data center business."
+ },
+ "D:d106": {
+  "src": "3abaf7cd9403",
+  "text": "NIPSCO Generation will build up to 3 GW of gas generation and storage for Amazon data centers in northern Indiana under a 15-year deal paid for by Amazon; power starts Jan 1, 2027, rising to 2.4 GW by end of 2032."
+ },
+ "D:d107": {
+  "src": "0ab000894f2e",
+  "text": "Crusoe is launch customer for Boom's Superpower natural gas turbines, ordering 29 units totaling 1.21 GW for AI data centers."
+ },
+ "D:d108": {
+  "src": "f890afd44fa7",
+  "text": "NextEra and Google Cloud will develop at least three gigawatt-scale data center campuses with associated generation, and Google Cloud will provide AI services to NextEra."
+ },
+ "D:d109": {
+  "src": "96925281a6e0",
+  "text": "Hut 8 signed a 15-year, 245 MW IT lease at its River Bend campus in Louisiana, with renewal options and a right of first offer on up to 1,000 MW more."
+ },
+ "D:d110": {
+  "src": "338d082c7d47",
+  "text": "Google provides a financial backstop covering Fluidstack's obligations for the 15-year base lease term at River Bend."
+ },
+ "D:d111": {
+  "src": "ddb736464e99",
+  "text": "WhiteFiber signed a 10-year, 40 MW colocation agreement at its NC-1 campus in Madison, North Carolina."
+ },
+ "D:d112": {
+  "src": "5117dc869cda",
+  "text": "Alphabet will buy data center and power developer Intersect Power."
+ },
+ "D:d113": {
+  "src": "5142d1c560b1",
+  "text": "Nvidia will buy the assets of AI chip designer Groq for cash, per the CEO of Disruptive, which led Groq's last round."
+ },
+ "D:d114": {
+  "src": "abe302b06e8e",
+  "text": "SoftBank will acquire data center investment firm DigitalBridge."
+ },
+ "D:d115": {
+  "src": "e037262f95e1",
+  "text": "Cisco Investments joined xAI's Series E as a strategic investor supporting its compute buildout."
+ },
+ "D:d116": {
+  "src": "bd1a00bda24d",
+  "text": "Valor Compute Infrastructure raised funding, including from Apollo funds, to buy Nvidia GPUs and lease data center infrastructure to xAI under a triple net lease."
+ },
+ "D:d117": {
+  "src": "48a0a40cf54b",
+  "text": "Cerebras and OpenAI struck a multi-year compute deal, confirmed by Cerebras's CEO."
+ },
+ "D:d118": {
+  "src": "d937edfd2914",
+  "text": "Nvidia is making another investment in CoreWeave."
+ },
+ "D:d119": {
+  "src": "f60d14bf3a9c",
+  "text": "Meta committed to buy fiber-optic cable from Corning through 2030 for its AI data centers, including Prometheus and Hyperion."
+ },
+ "D:d120": {
+  "src": "af010152b28c",
+  "text": "Tesla agreed to invest in xAI Series E Preferred Stock as part of its financing round."
+ },
+ "D:d121": {
+  "src": "f5ce886a092f",
+  "text": "Clearway signed new long-term PPAs of up to 20 years with Google for nearly 1.2 GW of carbon-free energy from projects in Missouri, Texas and West Virginia."
+ },
+ "D:d122": {
+  "src": "7e677ef221c4",
+  "text": "SpaceX acquired xAI, combining the two private firms ahead of a planned IPO."
+ },
+ "D:d123": {
+  "src": "7d1ebc66ef8b",
+  "text": "Nvidia is investing in OpenAI's funding round."
+ },
+ "D:d124": {
+  "src": "70479e54cb3c",
+  "text": "Dragoneer co-led Anthropic's Series G round; its individual amount was not stated."
+ },
+ "D:d125": {
+  "src": "6bc201a22eb4",
+  "text": "Founders Fund co-led Anthropic's Series G round; its individual amount was not stated."
+ },
+ "D:d126": {
+  "src": "0b02db9301a4",
+  "text": "Blackstone is increasing its stake in Anthropic, per a source."
+ },
+ "D:d127": {
+  "src": "8981da8a3254",
+  "text": "Two 15-year solar PPAs totaling 1 GW, at Wichita and Mustang Creek in Texas, will supply Google data centers, with construction from Q2 2026."
+ },
+ "D:d128": {
+  "src": "f37fa92c054e",
+  "text": "MUFG committed an equipment loan to fund three Siemens Energy gas turbines and repay a prior loan for Fermi America's campus."
+ },
+ "D:d129": {
+  "src": "fc2f775050c9",
+  "text": "Marvell will acquire Lumentum in an all-stock deal, with close expected 1H 2028."
+ },
+ "D:d130": {
+  "src": "36f8b9134a62",
+  "text": "HUMAIN invested in xAI's Series E, and its holdings later converted into SpaceX shares after the merger."
+ },
+ "D:d131": {
+  "src": "cbb744cb5a86",
+  "text": "Amazon completed its OpenAI investment in stages, in Q1, Q2 and after June 30, per an SEC filing."
+ },
+ "D:d132": {
+  "src": "682708c32170",
+  "text": "SoftBank closed the third and final tranche of its OpenAI commitment, funded by a bond sale."
+ },
+ "D:d133": {
+  "src": "70c71b8f2161",
+  "text": "Meta and AMD signed a definitive multi-year, multi-generation agreement for Meta to deploy up to 6 GW of AMD Instinct GPUs, starting with custom MI450 in 2H 2026."
+ },
+ "D:d134": {
+  "src": "f9a23af87bc4",
+  "text": "AMD issued Meta a performance-based warrant for up to 160M AMD shares, vesting with GPU shipment milestones and stock price thresholds."
+ },
+ "D:d135": {
+  "src": "0c0077d1ee40",
+  "text": "Baker Hughes secured a 1.21 GW generator order to power Boom Supersonic's AI data center solution."
+ },
+ "D:d136": {
+  "src": "7f47c1ab13af",
+  "text": "Meta reportedly struck a deal with Google to access Google's TPU AI hardware, with terms not given."
+ },
+ "D:d137": {
+  "src": "11b612ad92fd",
+  "text": "OpenAI expanded its AWS agreement over eight years, including at least 2 GW of Trainium compute."
+ },
+ "D:d138": {
+  "src": "9f1d85bd6b06",
+  "text": "Nvidia is investing in Lumentum for US R&D and fab expansion, with a multi-year agreement including purchase commitments and future capacity access rights for laser components."
+ },
+ "D:d139": {
+  "src": "4690d02fffa4",
+  "text": "Nvidia is investing in Coherent for US R&D and fab expansion, with a multiyear agreement including purchase commitments and capacity rights for laser and optical networking products."
+ },
+ "D:d140": {
+  "src": "53d39746318e",
+  "text": "Nvidia will invest in Nebius as part of a strategic partnership to build gigawatt-scale AI factories."
+ },
+ "D:d141": {
+  "src": "e2ae7b0af71f",
+  "text": "New five-year agreement for dedicated capacity including Nvidia Vera Rubin from early 2027, plus options for additional capacity purchases."
+ },
+ "D:d142": {
+  "src": "e6b9757dfe31",
+  "text": "A consortium led by BlackRock-owned GIP and EQT will take AES private, with close expected late 2026 or early 2027."
+ },
+ "D:d143": {
+  "src": "7e8b3f694ef3",
+  "text": "Nscale will acquire AIPCorp, developer of the 8+ GW Monarch Compute Campus in West Virginia."
+ },
+ "D:d144": {
+  "src": "03257bc29167",
+  "text": "Microsoft joins the additional tranche of OpenAI's funding round."
+ },
+ "D:d145": {
+  "src": "374116f65c08",
+  "text": "TPG participates in OpenAI's additional funding commitment, according to CFO Sarah Friar."
+ },
+ "D:d146": {
+  "src": "33d2afc32885",
+  "text": "Sharon AI signs a five-year cloud capacity agreement and deploys 8,000 GPUs in an Australian data center."
+ },
+ "D:d147": {
+  "src": "0bb58954b5c6",
+  "text": "Morgan Stanley, MUFG, Goldman Sachs and JPMorgan arrange a non-recourse delayed draw term loan maturing 2032, anchored by Blackstone Credit and secured by GPU clusters and Meta contracted revenue."
+ },
+ "D:d148": {
+  "src": "5050261e0e9d",
+  "text": "CoreWeave and its customer expand their long-term AI cloud capacity agreement through December 2032, building on an earlier deal."
+ },
+ "D:d149": {
+  "src": "4cc4fbb5620a",
+  "text": "Jane Street signs an AI cloud deal with CoreWeave and increases its stake in the company."
+ },
+ "D:d150": {
+  "src": "1ab6f524cdb1",
+  "text": "Bloomberg reports Anthropic reached a deal with Broadcom; terms were not given."
+ },
+ "D:d151": {
+  "src": "89ec8eb12374",
+  "text": "Marvell completed its purchase of Celestial AI in the first quarter of 2026."
+ },
+ "D:d152": {
+  "src": "ae42532240be",
+  "text": "Amazon invests in Anthropic now, with further investment tied to commercial milestones, adding to its earlier investments."
+ },
+ "D:d153": {
+  "src": "fbe947b68467",
+  "text": "Anthropic commits to a 10-year deal on AWS, including Trainium chips, securing up to 5 GW of capacity."
+ },
+ "D:d154": {
+  "src": "018a70ce0fb0",
+  "text": "Jane Street bought CoreWeave equity alongside its compute deal."
+ },
+ "D:d155": {
+  "src": "a9314a294fe8",
+  "text": "DataBank secured construction financing from banks led by MUFG for three Red Oak, Texas data center buildings leased by a hyperscaler."
+ },
+ "D:d156": {
+  "src": "1640fe3eee20",
+  "text": "SpaceX exercised its option and bought Anysphere (Cursor) in an all-stock deal that closed August 14, 2026."
+ },
+ "D:d157": {
+  "src": "f8ecc05045a5",
+  "text": "Boost Run signed a purchase agreement with Dell for enterprise AI compute and storage hardware and software, with financing via Dell Financial Services."
+ },
+ "D:d158": {
+  "src": "1d24cdb27e02",
+  "text": "Google will invest in Anthropic, with an initial tranche now and the remainder contingent on performance milestones."
+ },
+ "D:d159": {
+  "src": "cac41db743f1",
+  "text": "An amended IPO filing raises Google's commitment compared with the first filing."
+ },
+ "D:d160": {
+  "src": "a4cd27fe7ebf",
+  "text": "Anan will establish and operate a 40 MW server farm for Crusoe in Afula, Israel, with plans to expand."
+ },
+ "D:d161": {
+  "src": "b9a44907845f",
+  "text": "MARA Holdings will buy Long Ridge Energy as part of an AI data center push."
+ },
+ "D:d162": {
+  "src": "361c11b69804",
+  "text": "Nvidia gets a five-year option to buy up to 30M IREN shares, tied to a partnership to deploy up to 5 GW of AI infrastructure, mainly at Sweetwater, Texas."
+ },
+ "D:d163": {
+  "src": "d9765fdd8bf0",
+  "text": "IREN will provide Nvidia managed GPU cloud services for internal AI workloads at Childress, Texas, under a five-year contract."
+ },
+ "D:d164": {
+  "src": "bdb2f4cbb440",
+  "text": "Akamai and Anthropic signed a seven-year cloud infrastructure deal, Akamai's largest customer agreement ever."
+ },
+ "D:d165": {
+  "src": "fa41664e8bf2",
+  "text": "Nvidia and Corning signed a pact allowing Nvidia to invest in Corning via stock warrants."
+ },
+ "D:d166": {
+  "src": "a487f00c34a4",
+  "text": "Nvidia invested in Marvell as part of a strategic partnership on silicon photonics."
+ },
+ "D:d167": {
+  "src": "4d0a7fc46c42",
+  "text": "Google signed a 15-year power purchase agreement for 500 MW from Linea's new Duffy Solar Project in Matagorda, Texas, supporting its ERCOT data centers."
+ },
+ "D:d168": {
+  "src": "2d40e5c7ec98",
+  "text": "New power purchase agreements signed in 2026 total 850 MW (500 MW Oklahoma, 200 MW Texas, 150 MW Mississippi); the partnership totals about 2,575 MW across nine states."
+ },
+ "D:d169": {
+  "src": "bff90cdf62b9",
+  "text": "Blackstone will invest equity in a new AI infrastructure company with Google, which supplies TPUs, with the first 500 MW online by 2027."
+ },
+ "D:d170": {
+  "src": "d9c0bd19caa4",
+  "text": "Anthropic's IPO prospectus says amended SpaceX/xAI compute agreements run through 2029, and either party can exit on 90 days' notice after lock-ins end in January and March 2027."
+ },
+ "D:d171": {
+  "src": "06bc9948c830",
+  "text": "Nebius signed a deal with Bloom Energy; details were not given in the headline."
+ },
+ "D:d172": {
+  "src": "fb79baceb967",
+  "text": "Solar power purchase agreement for 200 MW AC from the Solstice project in LeFlore County, Oklahoma, to support Google data centers."
+ },
+ "D:d173": {
+  "src": "e606e99748e4",
+  "text": "Apollo-managed funds lead an initial capital solution in Broadcom's AI XPV Platform with Blackstone and banks, supporting Anthropic's compute expansion of more than 1 GW starting mid-2026."
+ },
+ "D:d174": {
+  "src": "e79a50386f45",
+  "text": "Google will pay SpaceX monthly from October 2026 through June 2029 for about 110,000 Nvidia GPUs plus CPUs and memory in SpaceX/xAI data centers, with capacity ramping through September at a reduced fee, per a SpaceX filing."
+ },
+ "D:d175": {
+  "src": "6463a3d1f6d6",
+  "text": "Stark Power entered a definitive agreement to acquire 100% of Sagebrush Infrastructure Partners, developer of five hyperscale data center campuses (about 5.6 GW) with co-located gas power plants."
+ },
+ "D:d176": {
+  "src": "927bc6536c46",
+  "text": "Google backstops lease payments tied to five US data centers Anthropic plans to use, underpinning the financing."
+ },
+ "D:d177": {
+  "src": "06718ff691c7",
+  "text": "Reflection AI pays SpaceX monthly from July 1, 2026 through 2029 for access to Nvidia GB300 systems at Colossus."
+ },
+ "D:d178": {
+  "src": "43b7c7cecae0",
+  "text": "Meta contracted about 1.6 GW of AI compute from Crusoe at its Childress and Warrenton sites, per Bloomberg."
+ },
+ "D:d179": {
+  "src": "3756407ced9d",
+  "text": "Realty Income will invest, funded over time, for a 45% stake in a three-asset Northern Virginia hyperscale data center portfolio through a joint venture with Cloud Capital and a global institutional investor."
+ },
+ "D:d180": {
+  "src": "8528b5b46581",
+  "text": "National Grid Ventures will invest for a 35% stake in Joulent, which develops Project Kilby, a 2.67 GW co-located power facility in West Texas with Chevron; final investment decision is expected in 2026."
+ },
+ "D:d181": {
+  "src": "a27ba419112c",
+  "text": "Microsoft signed a 20-year power purchase agreement with Chevron subsidiary Energy Forge One for a co-located natural gas power facility powering its new 2 GW Pecos, Texas data center campus."
+ },
+ "D:d182": {
+  "src": "da2347664477",
+  "text": "A 20-year lease covers a purpose-built AI campus at TeraWulf's Hawesville, Kentucky site, with about 401 MW of critical IT load, online from the second half of 2027."
+ },
+ "D:d183": {
+  "src": "e2f529c454d9",
+  "text": "TeraWulf sold its 50.1% stake in the Abernathy joint venture, a 168 MW Texas facility, to a Fluidstack-led investor group."
+ },
+ "D:d184": {
+  "src": "ebee9ed3fc0d",
+  "text": "Nebius confirmed a compute deal through 2029 giving Reflection access to Nvidia GB300 clusters."
+ },
+ "D:d185": {
+  "src": "e6f4f3362f7e",
+  "text": "AMD will invest in Anthropic alongside an AI server deal."
+ },
+ "D:d186": {
+  "src": "be319b044d2a",
+  "text": "Anthropic will deploy 2 GW of AMD Instinct MI450 GPUs in Helios racks, with the first GW in the first half of 2027."
+ },
+ "D:d187": {
+  "src": "a76213b17ea5",
+  "text": "Bloom Energy will supply behind-the-meter fuel cell systems for a Nebius AI cloud data center development backed by Industrial Development Funding and Oaktree."
+ },
+ "D:d188": {
+  "src": "e1f5e56864af",
+  "text": "UniTest signed a supply agreement with SK Hynix for HBM4 wafer test equipment."
+ },
+ "D:d189": {
+  "src": "2131719bd34e",
+  "text": "Verizon will provide dark fiber connecting Google's data centers, disclosed on its second-quarter call."
+ },
+ "D:d190": {
+  "src": "f6637a87d2fd",
+  "text": "Nvidia and SK Group signed letters of intent for a strategic relationship including long-term HBM supply and SK Telecom's 2 GW Nvidia-based AI data center."
+ },
+ "D:d191": {
+  "src": "0c27ce83eac1",
+  "text": "A five-year memorandum of understanding through 2030 covers HBM supply, foundry and advanced packaging."
+ },
+ "D:d192": {
+  "src": "a7f83bc9ccc5",
+  "text": "Nvidia will invest in Naver, which is building GPU data centers with 200 MW of capacity."
+ },
+ "D:d193": {
+  "src": "26b9c33780d0",
+  "text": "Naver signed a contract with Brookfield for computing infrastructure funding for its AI factory."
+ },
+ "D:d194": {
+  "src": "51067c608d40",
+  "text": "Anthropic's CEO confirmed a supply deal with Samsung at the summit; terms were not given."
+ },
+ "D:d195": {
+  "src": "4e077999c8e3",
+  "text": "Anthropic's CEO confirmed a supply deal with SK Hynix at the summit; terms were not given."
+ },
+ "D:d196": {
+  "src": "50fdcd7dd6bd",
+  "text": "Reuters, citing a source, reports Nvidia will invest in Ilya Sutskever's AI startup."
+ },
+ "D:d197": {
+  "src": "c89fba880fee",
+  "text": "BlackRock-managed funds take 80% of a Meta venture developing the 1 GW El Paso, Texas data center campus, with Meta keeping 20%, partly debt-financed, and Meta receiving a distribution."
+ },
+ "D:d198": {
+  "src": "b18538846b3a",
+  "text": "The FT reported Nvidia entered lease agreements for Hut 8's 1 GW Beacon Point campus in Texas, with a 15-year base contract, and plans to lease the compute to neocloud providers."
+ },
+ "D:d199": {
+  "src": "94a802e7765a",
+  "text": "Morgan Stanley leads a bank group on bridge loan and revolver financing for Nexus Data Centers' Hubbard, Texas AI campus for Anthropic, in advanced talks."
+ },
+ "D:d200": {
+  "src": "4432fcefcd6e",
+  "text": "Google backstops Anthropic's obligations on four data-center leases and related power agreements underpinning the Hubbard, Texas financing, and is expected to receive about 20% equity in the project."
+ },
+ "D:d201": {
+  "src": "6c89f73db268",
+  "text": "Anthropic reportedly signed a six-year compute deal with Volta for a 133 MW Norway data center built with Bitdeer, running on Nvidia Vera Rubin systems."
+ },
+ "D:d202": {
+  "src": "2756cf2d3a69",
+  "text": "A 16-year colocation lease at Bitdeer's Tydal, Norway campus, with an optional 8-year extension, covers 133 MW of gross capacity."
+ },
+ "D:d203": {
+  "src": "1492d4f3a180",
+  "text": "A 20-year lease covers 191 MW at Riot's Rockdale, Texas campus through June 2048, with extension options."
+ },
+ "D:d204": {
+  "src": "7afe8f5c2f63",
+  "text": "Morgan Stanley provides an interim financing facility to fund early development and long-lead equipment at Riot's Rockdale data center campus."
+ },
+ "D:d205": {
+  "src": "a3ea45a2c70e",
+  "text": "IBM to provide Together AI dedicated AI computing capacity on IBM Cloud using Nvidia HGX B300 systems, rolling out around Q1 2027."
+ },
+ "D:d206": {
+  "src": "b24175e59bc7",
+  "text": "Nvidia is a strategic investor in River AI's funding round."
+ },
+ "D:d207": {
+  "src": "af34f6812ba1",
+  "text": "AMD Ventures is a strategic investor in River AI's funding round."
+ },
+ "D:d208": {
+  "src": "b09b89890ce4",
+  "text": "JPMorgan and Goldman Sachs underwrote a term loan to Volta."
+ },
+ "D:d209": {
+  "src": "c4409d646137",
+  "text": "Nvidia to provide financing for OpenAI's Ohio data center, initially 4.25 GW with an option for 3.75 GW more, coming online in phases from 2028."
+ },
+ "D:d210": {
+  "src": "c2236fcaeffd",
+  "text": "Nvidia to invest in SB Energy as part of the Ohio OpenAI data center deal."
+ },
+ "D:d211": {
+  "src": "d4be976eff01",
+  "text": "SB Energy builds and manages the PORTS-Pike campus in Ohio, leased to OpenAI for 20 years."
+ },
+ "D:d212": {
+  "src": "a6516b4ec42f",
+  "text": "AMD is the first tenant at Riot's Rockdale data center campus under a 10-year agreement with three five-year extensions."
+ },
+ "D:d213": {
+  "src": "90cf3478f139",
+  "text": "Nvidia made a strategic investment in Lancium and will collaborate to deploy Nvidia AI infrastructure across Lancium's gigawatt-scale campuses."
+ },
+ "D:d214": {
+  "src": "c37f070470bb",
+  "text": "Nscale's S-1 shows a deal with Anthropic that still needs binding financing for GPUs and data-center infrastructure."
+ },
+ "D:d215": {
+  "src": "44b4f2250cf9",
+  "text": "Woodman placed a purchase order for Nvidia B300 GPU server clusters for its Yokohama AI project, with delivery by mid-November 2026."
+ },
+ "D:d216": {
+  "src": "2edc4d4cb7df",
+  "text": "Blue Owl-managed funds led a compute equipment financing for IREN, made up of a senior secured term loan and senior secured notes, to buy Nvidia Blackwell Ultra GPUs for the Mackenzie campus in British Columbia, drawn in tranches."
+ },
+ "D:d217": {
+  "src": "db49b4a18dbb",
+  "text": "Anthropic's S-1 lists a deal with Lambda running until 2034, and Lambda must secure its facility lease in a timely manner."
+ },
+ "D:d218": {
+  "src": "5ee2d7270601",
+  "text": "Fervo's Cape Station in Utah will supply 396 MW of geothermal power under a PPA for a potential Google data center, online 2028, with an option to expand by about 600 MW by June 2030."
+ },
+ "D:d219": {
+  "src": "adb55a06f5f5",
+  "text": "Nvidia to buy Hugging Face, with additional equity set aside for employee retention; close expected in the first half of 2027."
+ },
+ "D:d220": {
+  "src": "c85b328786df",
+  "text": "SLB to acquire data-center thermal management firm Kelvion from Apollo and Triton-advised funds for cash plus assumed debt."
+ },
+ "D:d221": {
+  "src": "9970af5abee3",
+  "text": "Nscale and Figure formed a multi-year partnership with an initial compute commitment that scales up, using up to 100,000 Nvidia GPUs, with first deployment in 2H 2027 in Barstow, Texas."
+ },
+ "D:d222": {
+  "src": "6438ce60cb41",
+  "text": "Qualcomm issued Amazon warrants for 25 million shares, expiring September 2036, vesting in tranches tied to commercial arrangements and Amazon purchases."
+ },
+ "D:d223": {
+  "src": "1318b47f91e0",
+  "text": "Data center infrastructure partnership in which warrant vesting is tied to Amazon and AWS purchases of Qualcomm server chips and other technology."
+ },
+ "D:d224": {
+  "src": "c33158a9db52",
+  "text": "Verizon signed a supply agreement with Corning for over 80 million miles of optical fiber through 2032, for broadband and AI backbone networks."
+ },
+ "D:d225": {
+  "src": "eeee1b6a00e0",
+  "text": "The Information reports Anthropic struck a compute deal with Trump-linked Rum Group; no terms beyond the headline."
+ },
+ "D:d226": {
+  "src": "ff5a48b86f32",
+  "text": "RWE signed a virtual PPA with Oracle for 433 MW from its existing Panther Creek I, II and III wind farms in West Texas, supporting Oracle's data center operations."
+ },
+ "D:d227": {
+  "src": "15f66f40277d",
+  "text": "New Era Energy & Digital secured a 20-year, 207 MW PPA with Vistra."
+ },
+ "D:d228": {
+  "src": "1e0047f101d3",
+  "text": "Akamai announced a multi-year agreement with Anthropic for cloud computing capacity."
+ },
+ "D:d229": {
+  "src": "9d3ec47cd5de",
+  "text": "Akamai grants Anthropic a warrant for up to a 5% stake alongside the cloud computing deal."
+ },
+ "D:d230": {
+  "src": "48ee8a778a35",
+  "text": "20-year PPA with Constellation for 690 MW from the Calvert Cliffs nuclear plant, including a 190 MW uprate coming online 2030-2032, plus a related retail supply agreement."
+ },
+ "D:d231": {
+  "src": "47703b8a45fa",
+  "text": "Broadcom agreed to lend Anthropic funds via a convertible note to pay for infrastructure, per Anthropic's IPO prospectus."
+ },
+ "D:d232": {
+  "src": "afeaf7642cc3",
+  "text": "Anthropic disclosed five-year equipment leases involving Broadcom and financing entities."
+ },
+ "D:d233": {
+  "src": "1bb979a73622",
+  "text": "BofA, Blackstone, Citi and Morgan Stanley announced an SPV financing to buy Broadcom XPUs and networking to lease to Anthropic; Blackstone is sole second-lien provider and Broadcom gives residual value support."
+ },
+ "D:d234": {
+  "src": "160dadc637bc",
+  "text": "FT reports Oracle cancelled the five-year lease of up to 100,000 AI chips to Tencent in Southeast Asian data centers after US officials raised concerns; neither company confirmed."
+ },
+ "D:d235": {
+  "src": "4dc449d90d08",
+  "text": "Multi-year deal in which Amazon licenses Synopsys IP and expands EDA tool use for AI chip design, while Synopsys adopts Bedrock and AWS compute."
+ },
+ "D:d236": {
+  "src": "549320f93147",
+  "text": "Oracle to pay for 125 to 250 MW of power that We Energies buys from the Point Beach nuclear plant, for its southeastern Wisconsin data centers."
+ },
+ "D:d237": {
+  "src": "86c9b1709f3d",
+  "text": "20-year PPA for 890 MW from upgraded Constellation nuclear plants in PJM, enabling new Constellation investment."
+ },
+ "D:d238": {
+  "src": "b4b143d28d97",
+  "text": "Separate long-term supply agreement for 2,700 MW from Constellation's existing plants in PJM, not tied to a specific source (15 years per other reports)."
+ },
+ "D:d239": {
+  "src": "281144ff2bfc",
+  "text": "Alphabet to directly finance a 564 MW natural gas and microgrid expansion by Black Hills in Cheyenne, Wyoming, including refundable advances; the contract runs to 2048."
+ },
+ "D:d240": {
+  "src": "8ac6de752b77",
+  "text": "Five-year agreement for GlobalFoundries to produce silicon interposers for TSMC's CoWoS packaging in the US, with volume ramp in 1H 2028."
+ },
+ "D:d241": {
+  "src": "0c9baa23b400",
+  "text": "Brookfield's financing framework for Bloom Energy was expanded to convert AI data center interest into financed projects."
+ },
+ "D:d242": {
+  "src": "df04c715eddc",
+  "text": "Apollo anchors Volta's debt deal for a Norway data center."
+ },
+ "D:d243": {
+  "src": "743b46f0b1a2",
+  "text": "Mainspring to provide up to 1.6 GW of linear generators to AEP through 2034, with a first tranche of 190 MW delivering from 2027."
+ },
+ "D:d244": {
+  "src": "4024d466ef90",
+  "text": "JPMorgan and MUFG arranged senior secured construction financing for two Vantage data center campuses, in Texas and Wisconsin, linked to Oracle's expansion."
+ },
+ "D:d245": {
+  "src": "0e71a87afc7c",
+  "text": "Nvidia gives KYEC a capacity reservation advance to build new US chip-testing facilities, with high-volume production targeted for April 2027."
+ },
+ "D:d246": {
+  "src": "07184d0de22f",
+  "text": "Market chatter: Nvidia and Tesla plan a combined investment in Samsung Electro-Mechanics; split not stated."
+ },
+ "D:d247": {
+  "src": "61bb9a44e900",
+  "text": "Market chatter: Tesla and Nvidia plan a combined investment in Samsung Electro-Mechanics; split not stated."
+ },
+ "D:d248": {
+  "src": "76c4a66f607c",
+  "text": "Verizon signed an AI infrastructure deal with AWS; details limited to the headline."
+ },
+ "D:d249": {
+  "src": "809be052b107",
+  "text": "SpaceX signed an equipment-finance lease with Apollo to pay for Nvidia GPUs for xAI, in tranches with lease schedules of about five years."
+ },
+ "D:d250": {
+  "src": "43ab62829165",
+  "text": "36-month reservation of Nvidia B300 GPU capacity at Forum Edge's Dallas facility."
+ },
+ "D:d251": {
+  "src": "bb80efa5508f",
+  "text": "Canada to take an equity stake in Cohere; Cohere commits to jobs and to investing in Canadian computing infrastructure by 2030."
+ },
+ "D:d252": {
+  "src": "3aba8c1e6f99",
+  "text": "AMD to invest in Meta's equity offering as the partnership covering up to 6 GW expands."
+ },
+ "D:d253": {
+  "src": "2e851ee1ea06",
+  "text": "USD.AI led and closed a four-year senior secured term loan for NexGen Cloud to finance 1,728 Nvidia B300 GPUs in Finland, with Silver Point and Victory Park as lenders."
+ },
+ "D:d254": {
+  "src": "62be785604fb",
+  "text": "Nebius announced a 364-day bridge loan from Citi, with the rate stepping up every 90 days."
+ },
+ "D:d255": {
+  "src": "6934d161581f",
+  "text": "GE Vernova to buy high-voltage grid equipment maker Trench Group from Triton Partners."
+ },
+ "D:d256": {
+  "src": "1ebf52194bb9",
+  "text": "Nvidia in talks to guarantee Nscale debt for the 460 MW West Virginia site for Anthropic; nothing signed."
+ },
+ "D:d257": {
+  "src": "75b1db5cda3e",
+  "text": "Nvidia invests in Meta's share sale, part of Meta's equity raise to fund its AI infrastructure build."
+ },
+ "D:d258": {
+  "src": "a1645d0c73cf",
+  "text": "AMD is reportedly effectively guaranteeing a loan so Crusoe can buy AMD chips, per The Information."
+ },
+ "D:d259": {
+  "src": "bb1cb93839b1",
+  "text": "KB Kookmin Bank is lead arranger for syndicated loans to a Brookfield SPC buying GPUs and AI infrastructure to supply Naver Cloud, as part of a larger project."
+ },
+ "D:d260": {
+  "src": "70abfb6da7ec",
+  "text": "Capital Power entered a long-term energy supply agreement with Meta for 250 MW of capacity and energy supporting a Meta data centre in Alberta."
+ },
+ "D:d261": {
+  "src": "5ad290ca802b",
+  "text": "Qualcomm Ventures joined Hark's Series A round."
+ },
+ "D:d262": {
+  "src": "c4d8e31b6ca5",
+  "text": "Nvidia joined Hark's Series A round."
+ },
+ "D:d263": {
+  "src": "ae3ed4a2c376",
+  "text": "AMD joined Hark's Series A round."
+ },
+ "D:d264": {
+  "src": "845fbbcbc8f2",
+  "text": "Barber Lake lease extended to 20 years, combining an amended Fluidstack lease with a 10-year commitment from an AI lab."
+ },
+ "D:d265": {
+  "src": "08fa64669c6f",
+  "text": "Vistra will be preferred power supplier to Helix Digital Infrastructure, backed by KKR, KIA and Nvidia, and committed funding to it."
+ },
+ "D:d266": {
+  "src": "b83d223503a0",
+  "text": "Drax, Brookfield and Radiant will develop a 1 GW+ AI data centre at Drax Power Station in North Yorkshire, with a first phase of up to 100MW."
+ },
+ "D:d267": {
+  "src": "9b753626c30a",
+  "text": "Intel Capital joined Hark's funding round alongside Nvidia and AMD Ventures; its individual amount was not stated."
+ },
+ "D:d268": {
+  "src": "321b1836f717",
+  "text": "Micron is the sole subscriber of GlobalWafers' 10-year convertible bonds, alongside a 10-year long-term supply agreement."
+ },
+ "D:d269": {
+  "src": "14f422f7be86",
+  "text": "Xcel Energy and Google announced the 780 MW Project Skyway data center plan, tying new grid investments to AI computing needs."
+ },
+ "D:d270": {
+  "src": "845148991fbf",
+  "text": "Amazon provides Anthropic a funding facility drawn as AWS delivers compute, with a large portion still undrawn at June 30."
+ },
+ "D:d271": {
+  "src": "bf3bd1161371",
+  "text": "X-energy and AEP signed a joint development agreement for a proposed 12-unit, 960 MW Xe-100 plant in Sullivan County, Indiana."
+ },
+ "D:d272": {
+  "src": "1fd893b29204",
+  "text": "Amazon will help fund development of the 960 MW X-energy/AEP Indiana plant and plans to buy the power."
+ },
+ "D:d273": {
+  "src": "a070fc449d6b",
+  "text": "Williams has a 400 megawatt power deal with Meta, credited for its optimistic guidance."
+ },
+ "D:d274": {
+  "src": "7a51b50ecbfa",
+  "text": "Applied Materials is doubling its stake in Besi to about 20% and partners with it on hybrid bonding."
+ },
+ "D:d275": {
+  "src": "3693255f5506",
+  "text": "Pinnacle West expects to file with the Arizona regulator a 25-year power deal to supply TSMC 1.88 GW."
+ },
+ "D:d276": {
+  "src": "5b2ef562a022",
+  "text": "Eaton agreed to acquire COL Group, expanding European manufacturing and power distribution for data center and utility markets."
+ },
+ "D:d277": {
+  "src": "dabd09799776",
+  "text": "Eaton acquired Boyd Thermal."
+ },
+ "D:d278": {
+  "src": "d4d92cbf204e",
+  "text": "Google signed three credit support agreements backstopping Anthropic's 20-year, roughly 401 MW leases at TeraWulf's Hawesville, Kentucky campus, effective once data halls commence."
+ },
+ "D:d279": {
+  "src": "36da0352e177",
+  "text": "Soluna and Applied Digital will form a JV for a 50 MW AI/HPC data center at Dorothy 3, Briscoe County, Texas; Applied Digital owns 51% and funds development, while Soluna contributes land and power assets, subject to approvals including a county tax abatement."
+ },
+ "D:d280": {
+  "src": "642504070211",
+  "text": "Core Scientific will provide 529 MW of data-center capacity; AMD leased 377 MW itself and backed a cloud provider taking 152 MW, letting AMD secure up to 2.5 GW for customers."
+ },
+ "D:d281": {
+  "src": "5f7a45e34bac",
+  "text": "AMD received warrants to buy up to 30M Core Scientific shares, with rights increasing as more capacity is leased."
+ },
+ "D:d282": {
+  "src": "b00b72fb71db",
+  "text": "Bloomberg reports Alibaba, Tencent and ByteDance ordered about 6M Nvidia RTX Pro 5500 chips combined, but expect to receive only a small fraction soon."
+ },
+ "D:d283": {
+  "src": "2eb11064e58d",
+  "text": "AMD entered a definitive cash-and-stock agreement to acquire Taalas, a developer of specialized inference silicon, including some contingent payments."
+ },
+ "D:d284": {
+  "src": "0fb380d41a3f",
+  "text": "The Department of Energy gave Constellation a conditional loan commitment to expand nuclear output."
+ },
+ "D:d285": {
+  "src": "2f9799572562",
+  "text": "An AI lab, reportedly Anthropic per a CoinDesk headline, signed a 15-year lease with Riot for 910 MW of IT capacity."
+ },
+ "D:d286": {
+  "src": "1609cee1ee79",
+  "text": "A 20-year power purchase agreement covers a 702 MW Bloom fuel-cell project with carbon capture near Cheyenne, Wyoming, in which AEP plans to invest."
+ },
+ "D:d287": {
+  "src": "6ba25961b74c",
+  "text": "Nvidia agreed to guarantee some of Nscale's obligations under the Ionic lease in return for warrants, per Nscale's S-1."
+ },
+ "D:d288": {
+  "src": "6bbef0ad95ba",
+  "text": "Statements of work signed from September 2025 to April 2026 run through December 2033, subject to delivery requirements; Microsoft declined an option to expand the Texas contract."
+ },
+ "D:d289": {
+  "src": "f96333eb4c69",
+  "text": "Digital Realty and Goodman's jointly owned trust made an offer for up to 9.9% of NEXTDC shares; fill and payment are not confirmed."
+ },
+ "D:d290": {
+  "src": "d1c1fe8b31a6",
+  "text": "Core Scientific closed its acquisition of Polaris DS, expanding its HPC and AI data center footprint."
+ },
+ "D:d291": {
+  "src": "834b3d91c471",
+  "text": "NTT DATA agreed with Bloom Energy to deploy 900 MW of onsite fuel cell power across multiple global data center projects, designed to expand toward gigawatt scale."
+ }
+}

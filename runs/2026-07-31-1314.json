@@ -1,0 +1,63 @@
+{
+ "id": "2026-07-31-1314",
+ "since": "2026-07-01",
+ "until": "2026-07-31",
+ "completed": true,
+ "started": "2026-11-05T13:14:26",
+ "searched": 552,
+ "candidates": 127,
+ "read": {
+  "blocked": 29,
+  "failed": 2,
+  "read": 93,
+  "short": 3
+ },
+ "new_deals": [
+  "d180",
+  "d181",
+  "d182",
+  "d183",
+  "d184",
+  "d185",
+  "d186",
+  "d187",
+  "d188",
+  "d189",
+  "d190",
+  "d191",
+  "d192",
+  "d193",
+  "d194",
+  "d195",
+  "d196",
+  "d197",
+  "d198",
+  "d199",
+  "d200"
+ ],
+ "updated_deals": [
+  "d164",
+  "d117",
+  "d131"
+ ],
+ "new_companies": [
+  "NATIONALGRID",
+  "JOULENT",
+  "CHEVRON",
+  "UNITEST",
+  "VZ",
+  "NAVER",
+  "SSI",
+  "MORGANSTANLEY",
+  "NEXUS"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "Nvidia will make a $5 billion equity ​investment in Safe Superintelligence as part of a strategic partnership between the chipmaker and the ‌startup",
+   "title": "Nvidia to invest $5 billion in Ilya Sutskever’s AI startup, source says By Reuters - Investing.com"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-05T13:23:53"
+}

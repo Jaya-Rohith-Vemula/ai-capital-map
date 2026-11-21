@@ -1,0 +1,45 @@
+{
+ "id": "2025-12-31-1056",
+ "since": "2025-12-01",
+ "until": "2025-12-31",
+ "completed": true,
+ "started": "2026-11-05T10:56:05",
+ "searched": 477,
+ "candidates": 98,
+ "read": {
+  "blocked": 21,
+  "failed": 1,
+  "read": 73,
+  "short": 3
+ },
+ "new_deals": [
+  "d107",
+  "d108",
+  "d109",
+  "d110",
+  "d111",
+  "d112",
+  "d113",
+  "d114"
+ ],
+ "updated_deals": [
+  "d003"
+ ],
+ "new_companies": [
+  "BOOM",
+  "XCEL",
+  "HUT8",
+  "WHITEFIBER",
+  "GROQ",
+  "DIGITALBRIDGE"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "a signed, definitive Electric Service Agreement (ESA) with Southwestern Public Service Company (SPS), a subsidiary of Xcel Energy, to provide up to 200 megawatts of electrical capacity",
+   "title": "Fermi America Executes Electric Service Agreement with Southwestern Public Service Company, a Subsidiary of Xcel Energy, Securing Up to 200 MW of Power - PR Newswire"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-05T11:02:48"
+}

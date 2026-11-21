@@ -1,68 +1,2035 @@
 {
-  "layers": [
-    {"id": "capital", "name": "Capital & government"},
-    {"id": "labs", "name": "AI labs"},
-    {"id": "hyperscalers", "name": "Hyperscalers"},
-    {"id": "neoclouds", "name": "Neoclouds & data centers"},
-    {"id": "systems", "name": "Servers & networking"},
-    {"id": "chips", "name": "Chips"},
-    {"id": "memory", "name": "Memory"},
-    {"id": "foundry", "name": "Foundry & equipment"},
-    {"id": "power", "name": "Power & cooling"}
-  ],
-  "companies": [
-    {"id": "SOFTBANK", "name": "SoftBank Group", "ticker": "SFTBY", "layer": "capital", "does": "Japanese investment holding company; lead investor in OpenAI and Stargate, owns most of Arm.", "aliases": ["SoftBank"]},
-    {"id": "USGOV", "name": "US Government", "ticker": null, "layer": "capital", "does": "Federal government; took an equity stake in Intel via CHIPS Act grants.", "aliases": ["U.S. government", "Commerce Department", "Trump administration"]},
-
-    {"id": "OPENAI", "name": "OpenAI", "ticker": null, "layer": "labs", "does": "Maker of ChatGPT and GPT models; the largest buyer of compute through Stargate and cloud contracts.", "aliases": ["OpenAI", "Stargate"]},
-    {"id": "ANTHROPIC", "name": "Anthropic", "ticker": null, "layer": "labs", "does": "Maker of Claude models; trains on Google TPUs, AWS Trainium and Azure.", "aliases": ["Anthropic"]},
-    {"id": "XAI", "name": "xAI", "ticker": null, "layer": "labs", "does": "Elon Musk's AI lab (Grok); runs the Colossus supercomputer in Memphis.", "aliases": ["xAI", "X.AI"]},
-
-    {"id": "MSFT", "name": "Microsoft", "ticker": "MSFT", "layer": "hyperscalers", "does": "Azure cloud; OpenAI's largest backer; rents capacity from neoclouds.", "aliases": ["Microsoft", "Azure"]},
-    {"id": "GOOGL", "name": "Alphabet (Google)", "ticker": "GOOGL", "layer": "hyperscalers", "does": "Google Cloud and its own TPU chips; investor in Anthropic.", "aliases": ["Google", "Alphabet", "Google Cloud"]},
-    {"id": "AMZN", "name": "Amazon (AWS)", "ticker": "AMZN", "layer": "hyperscalers", "does": "AWS cloud and Trainium chips; Anthropic's largest investor.", "aliases": ["Amazon", "AWS", "Amazon Web Services"]},
-    {"id": "META", "name": "Meta Platforms", "ticker": "META", "layer": "hyperscalers", "does": "Facebook/Instagram parent; builds its own AI data centers and rents capacity from neoclouds.", "aliases": ["Meta", "Facebook"]},
-    {"id": "ORCL", "name": "Oracle", "ticker": "ORCL", "layer": "hyperscalers", "does": "Oracle Cloud Infrastructure; builds Stargate sites for OpenAI.", "aliases": ["Oracle", "OCI"]},
-
-    {"id": "CRWV", "name": "CoreWeave", "ticker": "CRWV", "layer": "neoclouds", "does": "GPU cloud (neocloud) renting Nvidia GPUs to OpenAI, Microsoft and Meta.", "aliases": ["CoreWeave"]},
-    {"id": "NBIS", "name": "Nebius Group", "ticker": "NBIS", "layer": "neoclouds", "does": "Amsterdam-based GPU cloud spun out of Yandex.", "aliases": ["Nebius"]},
-    {"id": "IREN", "name": "IREN", "ticker": "IREN", "layer": "neoclouds", "does": "Former bitcoin miner turned AI cloud, with its own power-rich sites in Texas and British Columbia.", "aliases": ["IREN", "Iris Energy"]},
-    {"id": "CIFR", "name": "Cipher Mining", "ticker": "CIFR", "layer": "neoclouds", "does": "Bitcoin miner converting sites to AI data-center leases.", "aliases": ["Cipher Mining", "Cipher"]},
-    {"id": "WULF", "name": "TeraWulf", "ticker": "WULF", "layer": "neoclouds", "does": "Bitcoin miner leasing data-center capacity to AI tenants (Lake Mariner, NY).", "aliases": ["TeraWulf"]},
-    {"id": "APLD", "name": "Applied Digital", "ticker": "APLD", "layer": "neoclouds", "does": "Builds and leases AI data-center campuses (Polaris Forge, North Dakota).", "aliases": ["Applied Digital"]},
-    {"id": "GLXY", "name": "Galaxy Digital", "ticker": "GLXY", "layer": "neoclouds", "does": "Crypto firm converting its Helios campus in Texas to AI data centers.", "aliases": ["Galaxy Digital", "Galaxy"]},
-    {"id": "CORZ", "name": "Core Scientific", "ticker": "CORZ", "layer": "neoclouds", "does": "Bitcoin miner hosting GPUs for CoreWeave.", "aliases": ["Core Scientific"]},
-    {"id": "FLUIDSTACK", "name": "Fluidstack", "ticker": null, "layer": "neoclouds", "does": "Private GPU cloud; leases miner sites with Google backstopping the leases.", "aliases": ["Fluidstack"]},
-    {"id": "EQIX", "name": "Equinix", "ticker": "EQIX", "layer": "neoclouds", "does": "Largest colocation data-center REIT.", "aliases": ["Equinix"]},
-    {"id": "DLR", "name": "Digital Realty", "ticker": "DLR", "layer": "neoclouds", "does": "Data-center REIT leasing wholesale capacity to hyperscalers.", "aliases": ["Digital Realty"]},
-
-    {"id": "DELL", "name": "Dell Technologies", "ticker": "DELL", "layer": "systems", "does": "Builds AI servers (Nvidia GB200/GB300 racks) for neoclouds and enterprises.", "aliases": ["Dell"]},
-    {"id": "SMCI", "name": "Super Micro Computer", "ticker": "SMCI", "layer": "systems", "does": "AI server and rack maker, big supplier to xAI.", "aliases": ["Supermicro", "Super Micro"]},
-    {"id": "ANET", "name": "Arista Networks", "ticker": "ANET", "layer": "systems", "does": "Ethernet switches for AI clusters (Meta, Microsoft).", "aliases": ["Arista"]},
-    {"id": "CRDO", "name": "Credo Technology", "ticker": "CRDO", "layer": "systems", "does": "High-speed connectivity: active electrical cables and SerDes for AI racks.", "aliases": ["Credo"]},
-
-    {"id": "NVDA", "name": "Nvidia", "ticker": "NVDA", "layer": "chips", "does": "Dominant AI GPU maker; also a large investor in its own customers.", "aliases": ["Nvidia", "NVIDIA"]},
-    {"id": "AMD", "name": "AMD", "ticker": "AMD", "layer": "chips", "does": "Instinct MI-series AI GPUs and EPYC CPUs.", "aliases": ["AMD", "Advanced Micro Devices"]},
-    {"id": "AVGO", "name": "Broadcom", "ticker": "AVGO", "layer": "chips", "does": "Custom AI chips (Google TPU, OpenAI) and data-center networking chips.", "aliases": ["Broadcom"]},
-    {"id": "INTC", "name": "Intel", "ticker": "INTC", "layer": "chips", "does": "CPUs and a contract foundry; partly owned by the US government.", "aliases": ["Intel"]},
-    {"id": "ARM", "name": "Arm Holdings", "ticker": "ARM", "layer": "chips", "does": "Licenses the CPU designs inside Nvidia Grace and most custom AI chips.", "aliases": ["Arm"]},
-    {"id": "MRVL", "name": "Marvell Technology", "ticker": "MRVL", "layer": "chips", "does": "Custom AI accelerators (AWS Trainium) and optical interconnect chips.", "aliases": ["Marvell"]},
-
-    {"id": "MU", "name": "Micron", "ticker": "MU", "layer": "memory", "does": "US maker of DRAM and HBM memory for AI GPUs.", "aliases": ["Micron"]},
-    {"id": "SKHYNIX", "name": "SK Hynix", "ticker": "000660.KS", "layer": "memory", "does": "Korean memory maker; leading HBM supplier to Nvidia.", "aliases": ["SK Hynix", "SK hynix"]},
-    {"id": "SAMSUNG", "name": "Samsung Electronics", "ticker": "005930.KS", "layer": "memory", "does": "Korean memory and foundry giant; HBM supplier.", "aliases": ["Samsung"]},
-
-    {"id": "TSM", "name": "TSMC", "ticker": "TSM", "layer": "foundry", "does": "Manufactures nearly every leading AI chip (Nvidia, AMD, Broadcom, Apple).", "aliases": ["TSMC", "Taiwan Semiconductor"]},
-    {"id": "ASML", "name": "ASML", "ticker": "ASML", "layer": "foundry", "does": "Sole maker of the EUV lithography machines needed for leading-edge chips.", "aliases": ["ASML"]},
-    {"id": "AMAT", "name": "Applied Materials", "ticker": "AMAT", "layer": "foundry", "does": "Chip-making equipment: deposition, etch, inspection.", "aliases": ["Applied Materials"]},
-
-    {"id": "VRT", "name": "Vertiv", "ticker": "VRT", "layer": "power", "does": "Data-center power and liquid cooling equipment.", "aliases": ["Vertiv"]},
-    {"id": "ETN", "name": "Eaton", "ticker": "ETN", "layer": "power", "does": "Electrical equipment: switchgear, UPS, power distribution for data centers.", "aliases": ["Eaton"]},
-    {"id": "GEV", "name": "GE Vernova", "ticker": "GEV", "layer": "power", "does": "Gas turbines and grid equipment powering new data centers.", "aliases": ["GE Vernova"]},
-    {"id": "CEG", "name": "Constellation Energy", "ticker": "CEG", "layer": "power", "does": "Largest US nuclear fleet; signs long-term power deals with hyperscalers.", "aliases": ["Constellation", "Constellation Energy"]},
-    {"id": "VST", "name": "Vistra", "ticker": "VST", "layer": "power", "does": "Texas power producer (gas and nuclear) selling to data centers.", "aliases": ["Vistra"]},
-    {"id": "TLN", "name": "Talen Energy", "ticker": "TLN", "layer": "power", "does": "Owns the Susquehanna nuclear plant; supplies Amazon.", "aliases": ["Talen", "Talen Energy"]},
-    {"id": "NEE", "name": "NextEra Energy", "ticker": "NEE", "layer": "power", "does": "Largest US renewable developer; restarting the Duane Arnold nuclear plant for Google.", "aliases": ["NextEra"]},
-    {"id": "BE", "name": "Bloom Energy", "ticker": "BE", "layer": "power", "does": "On-site fuel-cell power for data centers.", "aliases": ["Bloom Energy", "Bloom"]}
-  ]
+ "layers": [
+  {
+   "id": "capital",
+   "name": "Capital & government"
+  },
+  {
+   "id": "labs",
+   "name": "AI labs"
+  },
+  {
+   "id": "hyperscalers",
+   "name": "Hyperscalers"
+  },
+  {
+   "id": "neoclouds",
+   "name": "Neoclouds & data centers"
+  },
+  {
+   "id": "systems",
+   "name": "Servers & networking"
+  },
+  {
+   "id": "chips",
+   "name": "Chips"
+  },
+  {
+   "id": "memory",
+   "name": "Memory"
+  },
+  {
+   "id": "foundry",
+   "name": "Foundry & equipment"
+  },
+  {
+   "id": "power",
+   "name": "Power & cooling"
+  }
+ ],
+ "companies": [
+  {
+   "id": "SOFTBANK",
+   "name": "SoftBank Group",
+   "ticker": "SFTBY",
+   "layer": "capital",
+   "does": "Japanese investment holding company; lead investor in OpenAI and Stargate, owns most of Arm.",
+   "aliases": [
+    "SoftBank"
+   ],
+   "market": "TSE:9984"
+  },
+  {
+   "id": "USGOV",
+   "name": "US Government",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Federal government; took an equity stake in Intel via CHIPS Act grants.",
+   "aliases": [
+    "U.S. government",
+    "Commerce Department",
+    "Trump administration"
+   ]
+  },
+  {
+   "id": "OPENAI",
+   "name": "OpenAI",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Maker of ChatGPT and GPT models; the largest buyer of compute through Stargate and cloud contracts.",
+   "aliases": [
+    "OpenAI",
+    "Stargate"
+   ]
+  },
+  {
+   "id": "ANTHROPIC",
+   "name": "Anthropic",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Maker of Claude models; trains on Google TPUs, AWS Trainium and Azure.",
+   "aliases": [
+    "Anthropic"
+   ]
+  },
+  {
+   "id": "XAI",
+   "name": "xAI",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Elon Musk's AI lab (Grok); runs the Colossus supercomputer in Memphis.",
+   "aliases": [
+    "xAI",
+    "X.AI"
+   ]
+  },
+  {
+   "id": "MSFT",
+   "name": "Microsoft",
+   "ticker": "MSFT",
+   "layer": "hyperscalers",
+   "does": "Azure cloud; OpenAI's largest backer; rents capacity from neoclouds.",
+   "aliases": [
+    "Microsoft",
+    "Azure"
+   ]
+  },
+  {
+   "id": "GOOGL",
+   "name": "Alphabet (Google)",
+   "ticker": "GOOGL",
+   "layer": "hyperscalers",
+   "does": "Google Cloud and its own TPU chips; investor in Anthropic.",
+   "aliases": [
+    "Google",
+    "Alphabet",
+    "Google Cloud"
+   ]
+  },
+  {
+   "id": "AMZN",
+   "name": "Amazon (AWS)",
+   "ticker": "AMZN",
+   "layer": "hyperscalers",
+   "does": "AWS cloud and Trainium chips; Anthropic's largest investor.",
+   "aliases": [
+    "Amazon",
+    "AWS",
+    "Amazon Web Services"
+   ]
+  },
+  {
+   "id": "META",
+   "name": "Meta Platforms",
+   "ticker": "META",
+   "layer": "hyperscalers",
+   "does": "Facebook/Instagram parent; builds its own AI data centers and rents capacity from neoclouds.",
+   "aliases": [
+    "Meta",
+    "Facebook"
+   ]
+  },
+  {
+   "id": "ORCL",
+   "name": "Oracle",
+   "ticker": "ORCL",
+   "layer": "hyperscalers",
+   "does": "Oracle Cloud Infrastructure; builds Stargate sites for OpenAI.",
+   "aliases": [
+    "Oracle",
+    "OCI"
+   ]
+  },
+  {
+   "id": "CRWV",
+   "name": "CoreWeave",
+   "ticker": "CRWV",
+   "layer": "neoclouds",
+   "does": "GPU cloud (neocloud) renting Nvidia GPUs to OpenAI, Microsoft and Meta.",
+   "aliases": [
+    "CoreWeave"
+   ]
+  },
+  {
+   "id": "NBIS",
+   "name": "Nebius Group",
+   "ticker": "NBIS",
+   "layer": "neoclouds",
+   "does": "Amsterdam-based GPU cloud spun out of Yandex.",
+   "aliases": [
+    "Nebius"
+   ]
+  },
+  {
+   "id": "IREN",
+   "name": "IREN",
+   "ticker": "IREN",
+   "layer": "neoclouds",
+   "does": "Former bitcoin miner turned AI cloud, with its own power-rich sites in Texas and British Columbia.",
+   "aliases": [
+    "IREN",
+    "Iris Energy"
+   ]
+  },
+  {
+   "id": "CIFR",
+   "name": "Cipher Mining",
+   "ticker": "CIFR",
+   "layer": "neoclouds",
+   "does": "Bitcoin miner converting sites to AI data-center leases.",
+   "aliases": [
+    "Cipher Mining",
+    "Cipher"
+   ]
+  },
+  {
+   "id": "WULF",
+   "name": "TeraWulf",
+   "ticker": "WULF",
+   "layer": "neoclouds",
+   "does": "Bitcoin miner leasing data-center capacity to AI tenants (Lake Mariner, NY).",
+   "aliases": [
+    "TeraWulf"
+   ]
+  },
+  {
+   "id": "APLD",
+   "name": "Applied Digital",
+   "ticker": "APLD",
+   "layer": "neoclouds",
+   "does": "Builds and leases AI data-center campuses (Polaris Forge, North Dakota).",
+   "aliases": [
+    "Applied Digital"
+   ]
+  },
+  {
+   "id": "GLXY",
+   "name": "Galaxy Digital",
+   "ticker": "GLXY",
+   "layer": "neoclouds",
+   "does": "Crypto firm converting its Helios campus in Texas to AI data centers.",
+   "aliases": [
+    "Galaxy Digital",
+    "Galaxy"
+   ]
+  },
+  {
+   "id": "CORZ",
+   "name": "Core Scientific",
+   "ticker": "CORZ",
+   "layer": "neoclouds",
+   "does": "Bitcoin miner hosting GPUs for CoreWeave.",
+   "aliases": [
+    "Core Scientific"
+   ]
+  },
+  {
+   "id": "FLUIDSTACK",
+   "name": "Fluidstack",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Private GPU cloud; leases miner sites with Google backstopping the leases.",
+   "aliases": [
+    "Fluidstack"
+   ]
+  },
+  {
+   "id": "EQIX",
+   "name": "Equinix",
+   "ticker": "EQIX",
+   "layer": "neoclouds",
+   "does": "Largest colocation data-center REIT.",
+   "aliases": [
+    "Equinix"
+   ]
+  },
+  {
+   "id": "DLR",
+   "name": "Digital Realty",
+   "ticker": "DLR",
+   "layer": "neoclouds",
+   "does": "Data-center REIT leasing wholesale capacity to hyperscalers.",
+   "aliases": [
+    "Digital Realty"
+   ]
+  },
+  {
+   "id": "DELL",
+   "name": "Dell Technologies",
+   "ticker": "DELL",
+   "layer": "systems",
+   "does": "Builds AI servers (Nvidia GB200/GB300 racks) for neoclouds and enterprises.",
+   "aliases": [
+    "Dell"
+   ]
+  },
+  {
+   "id": "SMCI",
+   "name": "Super Micro Computer",
+   "ticker": "SMCI",
+   "layer": "systems",
+   "does": "AI server and rack maker, big supplier to xAI.",
+   "aliases": [
+    "Supermicro",
+    "Super Micro"
+   ]
+  },
+  {
+   "id": "ANET",
+   "name": "Arista Networks",
+   "ticker": "ANET",
+   "layer": "systems",
+   "does": "Ethernet switches for AI clusters (Meta, Microsoft).",
+   "aliases": [
+    "Arista"
+   ]
+  },
+  {
+   "id": "CRDO",
+   "name": "Credo Technology",
+   "ticker": "CRDO",
+   "layer": "systems",
+   "does": "High-speed connectivity: active electrical cables and SerDes for AI racks.",
+   "aliases": [
+    "Credo"
+   ]
+  },
+  {
+   "id": "NVDA",
+   "name": "Nvidia",
+   "ticker": "NVDA",
+   "layer": "chips",
+   "does": "Dominant AI GPU maker; also a large investor in its own customers.",
+   "aliases": [
+    "Nvidia",
+    "NVIDIA"
+   ]
+  },
+  {
+   "id": "AMD",
+   "name": "AMD",
+   "ticker": "AMD",
+   "layer": "chips",
+   "does": "Instinct MI-series AI GPUs and EPYC CPUs.",
+   "aliases": [
+    "AMD",
+    "Advanced Micro Devices"
+   ]
+  },
+  {
+   "id": "AVGO",
+   "name": "Broadcom",
+   "ticker": "AVGO",
+   "layer": "chips",
+   "does": "Custom AI chips (Google TPU, OpenAI) and data-center networking chips.",
+   "aliases": [
+    "Broadcom"
+   ]
+  },
+  {
+   "id": "INTC",
+   "name": "Intel",
+   "ticker": "INTC",
+   "layer": "chips",
+   "does": "CPUs and a contract foundry; partly owned by the US government.",
+   "aliases": [
+    "Intel"
+   ]
+  },
+  {
+   "id": "ARM",
+   "name": "Arm Holdings",
+   "ticker": "ARM",
+   "layer": "chips",
+   "does": "Licenses the CPU designs inside Nvidia Grace and most custom AI chips.",
+   "aliases": [
+    "Arm"
+   ]
+  },
+  {
+   "id": "MRVL",
+   "name": "Marvell Technology",
+   "ticker": "MRVL",
+   "layer": "chips",
+   "does": "Custom AI accelerators (AWS Trainium) and optical interconnect chips.",
+   "aliases": [
+    "Marvell"
+   ]
+  },
+  {
+   "id": "MU",
+   "name": "Micron",
+   "ticker": "MU",
+   "layer": "memory",
+   "does": "US maker of DRAM and HBM memory for AI GPUs.",
+   "aliases": [
+    "Micron"
+   ]
+  },
+  {
+   "id": "SKHYNIX",
+   "name": "SK Hynix",
+   "ticker": "000660.KS",
+   "layer": "memory",
+   "does": "Korean memory maker; leading HBM supplier to Nvidia.",
+   "aliases": [
+    "SK Hynix",
+    "SK hynix"
+   ],
+   "market": "KRX:000660"
+  },
+  {
+   "id": "SAMSUNG",
+   "name": "Samsung Electronics",
+   "ticker": "005930.KS",
+   "layer": "memory",
+   "does": "Korean memory and foundry giant; HBM supplier.",
+   "aliases": [
+    "Samsung"
+   ],
+   "market": "KRX:005930"
+  },
+  {
+   "id": "TSM",
+   "name": "TSMC",
+   "ticker": "TSM",
+   "layer": "foundry",
+   "does": "Manufactures nearly every leading AI chip (Nvidia, AMD, Broadcom, Apple).",
+   "aliases": [
+    "TSMC",
+    "Taiwan Semiconductor"
+   ]
+  },
+  {
+   "id": "ASML",
+   "name": "ASML",
+   "ticker": "ASML",
+   "layer": "foundry",
+   "does": "Sole maker of the EUV lithography machines needed for leading-edge chips.",
+   "aliases": [
+    "ASML"
+   ]
+  },
+  {
+   "id": "AMAT",
+   "name": "Applied Materials",
+   "ticker": "AMAT",
+   "layer": "foundry",
+   "does": "Chip-making equipment: deposition, etch, inspection.",
+   "aliases": [
+    "Applied Materials"
+   ]
+  },
+  {
+   "id": "VRT",
+   "name": "Vertiv",
+   "ticker": "VRT",
+   "layer": "power",
+   "does": "Data-center power and liquid cooling equipment.",
+   "aliases": [
+    "Vertiv"
+   ]
+  },
+  {
+   "id": "ETN",
+   "name": "Eaton",
+   "ticker": "ETN",
+   "layer": "power",
+   "does": "Electrical equipment: switchgear, UPS, power distribution for data centers.",
+   "aliases": [
+    "Eaton"
+   ]
+  },
+  {
+   "id": "GEV",
+   "name": "GE Vernova",
+   "ticker": "GEV",
+   "layer": "power",
+   "does": "Gas turbines and grid equipment powering new data centers.",
+   "aliases": [
+    "GE Vernova"
+   ]
+  },
+  {
+   "id": "CEG",
+   "name": "Constellation Energy",
+   "ticker": "CEG",
+   "layer": "power",
+   "does": "Largest US nuclear fleet; signs long-term power deals with hyperscalers.",
+   "aliases": [
+    "Constellation",
+    "Constellation Energy"
+   ]
+  },
+  {
+   "id": "VST",
+   "name": "Vistra",
+   "ticker": "VST",
+   "layer": "power",
+   "does": "Texas power producer (gas and nuclear) selling to data centers.",
+   "aliases": [
+    "Vistra"
+   ]
+  },
+  {
+   "id": "TLN",
+   "name": "Talen Energy",
+   "ticker": "TLN",
+   "layer": "power",
+   "does": "Owns the Susquehanna nuclear plant; supplies Amazon.",
+   "aliases": [
+    "Talen",
+    "Talen Energy"
+   ]
+  },
+  {
+   "id": "NEE",
+   "name": "NextEra Energy",
+   "ticker": "NEE",
+   "layer": "power",
+   "does": "Largest US renewable developer; restarting the Duane Arnold nuclear plant for Google.",
+   "aliases": [
+    "NextEra"
+   ]
+  },
+  {
+   "id": "BE",
+   "name": "Bloom Energy",
+   "ticker": "BE",
+   "layer": "power",
+   "does": "On-site fuel-cell power for data centers.",
+   "aliases": [
+    "Bloom Energy",
+    "Bloom"
+   ]
+  },
+  {
+   "id": "AEP",
+   "name": "American Electric Power",
+   "ticker": "AEP",
+   "layer": "power",
+   "does": "Utility buying Bloom fuel cells to power AI data centers.",
+   "aliases": [
+    "American Electric Power"
+   ],
+   "first_seen": "2024-11-30-1006"
+  },
+  {
+   "id": "INTERSECT",
+   "name": "Intersect Power",
+   "ticker": null,
+   "layer": "power",
+   "does": "Develops colocated renewable power and storage with data center campuses, partnering with Google.",
+   "aliases": [
+    "Intersect Power"
+   ],
+   "first_seen": "2024-12-31-1009"
+  },
+  {
+   "id": "OKLO",
+   "name": "Oklo",
+   "ticker": "OKLO",
+   "layer": "power",
+   "does": "Advanced nuclear developer building Aurora powerhouse reactors to supply data centers.",
+   "aliases": [
+    "Oklo"
+   ],
+   "first_seen": "2024-12-31-1009"
+  },
+  {
+   "id": "SWITCH",
+   "name": "Switch",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Data center operator providing AI, cloud and enterprise data centers.",
+   "aliases": [
+    "Switch"
+   ],
+   "first_seen": "2024-12-31-1009"
+  },
+  {
+   "id": "CIP",
+   "name": "Copenhagen Infrastructure Partners",
+   "ticker": null,
+   "layer": "power",
+   "does": "Renewable energy developer/investor selling power to data center operators such as Google.",
+   "aliases": [
+    "Copenhagen Infrastructure Partners"
+   ],
+   "first_seen": "2024-12-31-1009"
+  },
+  {
+   "id": "MACQUARIE",
+   "name": "Macquarie Asset Management",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Infrastructure investor providing preferred equity financing for AI and HPC data center developers like Applied Digital.",
+   "aliases": [
+    "Macquarie Asset Management"
+   ],
+   "first_seen": "2025-01-31-1012"
+  },
+  {
+   "id": "HPE",
+   "name": "Hewlett Packard Enterprise",
+   "ticker": "HPE",
+   "layer": "systems",
+   "does": "Builds AI servers for customers such as X/xAI.",
+   "aliases": [
+    "Hewlett Packard Enterprise"
+   ],
+   "first_seen": "2025-01-31-1012"
+  },
+  {
+   "id": "SMBC",
+   "name": "Sumitomo Mitsui Banking Corporation",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Japanese bank providing project financing for AI data center campuses such as Applied Digital's Ellendale.",
+   "aliases": [
+    "Sumitomo Mitsui Banking Corporation"
+   ],
+   "first_seen": "2025-02-28-1017"
+  },
+  {
+   "id": "RWE",
+   "name": "RWE",
+   "ticker": null,
+   "layer": "power",
+   "does": "Renewable energy developer supplying solar power to tech companies like Meta via long-term PPAs.",
+   "aliases": [
+    "RWE"
+   ],
+   "first_seen": "2025-03-31-1020"
+  },
+  {
+   "id": "HUMAIN",
+   "name": "HUMAIN",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Saudi Arabian AI company building AI infrastructure and services, partnering with AWS.",
+   "aliases": [
+    "HUMAIN"
+   ],
+   "first_seen": "2025-05-31-1025"
+  },
+  {
+   "id": "DATAVOLT",
+   "name": "DataVolt",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Saudi data center developer building hyperscale AI campuses in Saudi Arabia and the US.",
+   "aliases": [
+    "DataVolt"
+   ],
+   "first_seen": "2025-05-31-1025"
+  },
+  {
+   "id": "AES",
+   "name": "AES Corporation",
+   "ticker": "AES",
+   "layer": "power",
+   "does": "US power company supplying renewable PPAs to hyperscalers for data center energy.",
+   "aliases": [
+    "AES Corporation"
+   ],
+   "first_seen": "2025-05-31-1025"
+  },
+  {
+   "id": "JPMORGAN",
+   "name": "J.P. Morgan",
+   "ticker": "JPM",
+   "layer": "capital",
+   "does": "Leads bank consortium providing construction loans for AI data center projects.",
+   "aliases": [
+    "J.P. Morgan"
+   ],
+   "first_seen": "2025-05-31-1025"
+  },
+  {
+   "id": "CRUSOE",
+   "name": "Crusoe",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Develops AI data center campuses, including the Abilene, Texas site.",
+   "aliases": [
+    "Crusoe"
+   ],
+   "first_seen": "2025-05-31-1025"
+  },
+  {
+   "id": "SCALEAI",
+   "name": "Scale AI",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Data-labelling and annotation provider for AI model training; Meta took a 49% stake.",
+   "aliases": [
+    "Scale AI"
+   ],
+   "first_seen": "2025-06-30-1030"
+  },
+  {
+   "id": "ARKDC",
+   "name": "Ark Data Centres",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "UK data centre operator hosting high-density AI workloads, including Nebius GPUs at Longcross Park.",
+   "aliases": [
+    "Ark Data Centres"
+   ],
+   "first_seen": "2025-06-30-1030"
+  },
+  {
+   "id": "BROOKFIELD",
+   "name": "Brookfield Asset Management",
+   "ticker": null,
+   "layer": "power",
+   "does": "Asset manager and hydropower owner supplying 3,000 MW of hydroelectric power to Google under a framework agreement.",
+   "aliases": [
+    "Brookfield Asset Management"
+   ],
+   "first_seen": "2025-07-31-1033"
+  },
+  {
+   "id": "FOUNDERSFUND",
+   "name": "Founders Fund",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Venture investor committing capital to OpenAI's funding round.",
+   "aliases": [
+    "Founders Fund"
+   ],
+   "first_seen": "2025-07-31-1033"
+  },
+  {
+   "id": "DRAGONEER",
+   "name": "Dragoneer",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Investment firm committing capital to OpenAI's funding round.",
+   "aliases": [
+    "Dragoneer"
+   ],
+   "first_seen": "2025-07-31-1033"
+  },
+  {
+   "id": "TSLA",
+   "name": "Tesla",
+   "ticker": "TSLA",
+   "layer": "labs",
+   "does": "Buys AI and self-driving chips from Samsung for its vehicles, robots and AI data centers.",
+   "aliases": [
+    "Tesla"
+   ],
+   "first_seen": "2025-07-31-1033"
+  },
+  {
+   "id": "YTL",
+   "name": "YTL Power International",
+   "ticker": "6742.KL",
+   "layer": "neoclouds",
+   "does": "Malaysian utility building AI data centers and cloud infrastructure using Nvidia GPUs.",
+   "aliases": [
+    "YTL Power International"
+   ],
+   "first_seen": "2025-08-31-1037",
+   "market": "MYX:YTLPOWR"
+  },
+  {
+   "id": "PIMCO",
+   "name": "Pacific Investment Management Co.",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Asset manager leading debt financing for Meta's Louisiana data center.",
+   "aliases": [
+    "Pacific Investment Management Co."
+   ],
+   "first_seen": "2025-08-31-1037"
+  },
+  {
+   "id": "BLUEOWL",
+   "name": "Blue Owl Capital",
+   "ticker": "OWL",
+   "layer": "capital",
+   "does": "Alternative asset manager providing equity for large AI data center projects.",
+   "aliases": [
+    "Blue Owl Capital"
+   ],
+   "first_seen": "2025-08-31-1037"
+  },
+  {
+   "id": "CHIRISA",
+   "name": "Chirisa Technology Parks",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Develops hyperscale and AI data center campuses, including CoreWeave's Lancaster, PA site, with Blue Owl funding.",
+   "aliases": [
+    "Chirisa Technology Parks"
+   ],
+   "first_seen": "2025-08-31-1037"
+  },
+  {
+   "id": "FERMI",
+   "name": "Fermi America",
+   "ticker": null,
+   "layer": "power",
+   "does": "Develops the HyperGrid behind-the-meter private power grid campus for AI data centers in Texas.",
+   "aliases": [
+    "Fermi America"
+   ],
+   "first_seen": "2025-08-31-1037"
+  },
+  {
+   "id": "MACQUARIEGROUP",
+   "name": "Macquarie Group",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Financial group providing equity and loan financing to AI power and data-center developers.",
+   "aliases": [
+    "Macquarie Group"
+   ],
+   "first_seen": "2025-08-31-1037"
+  },
+  {
+   "id": "NSCALE",
+   "name": "Nscale",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "UK-based AI cloud provider building GPU data centers, including in Norway, for Microsoft and OpenAI.",
+   "aliases": [
+    "Nscale"
+   ],
+   "first_seen": "2025-09-30-1042"
+  },
+  {
+   "id": "AKER",
+   "name": "Aker ASA",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Norwegian industrial investor; Series B investor in Nscale and 50% partner in the Aker-Nscale Narvik JV.",
+   "aliases": [
+    "Aker ASA"
+   ],
+   "first_seen": "2025-09-30-1042"
+  },
+  {
+   "id": "BLACKROCK",
+   "name": "BlackRock",
+   "ticker": "BLK",
+   "layer": "capital",
+   "does": "Asset manager leading the AI Infrastructure Partnership that is buying Aligned Data Centers.",
+   "aliases": [
+    "BlackRock"
+   ],
+   "first_seen": "2025-10-31-1046"
+  },
+  {
+   "id": "POOLSIDE",
+   "name": "Poolside",
+   "ticker": null,
+   "layer": "labs",
+   "does": "AI startup building foundation models for software development.",
+   "aliases": [
+    "Poolside"
+   ],
+   "first_seen": "2025-10-31-1046"
+  },
+  {
+   "id": "MPS",
+   "name": "Mobile Power Solutions",
+   "ticker": null,
+   "layer": "power",
+   "does": "Supplies mobile gas turbine power units, leasing GE TM2500 turbines.",
+   "aliases": [
+    "Mobile Power Solutions"
+   ],
+   "first_seen": "2025-10-31-1046"
+  },
+  {
+   "id": "TREATYOAK",
+   "name": "Treaty Oak Clean Energy",
+   "ticker": null,
+   "layer": "power",
+   "does": "Developer of solar projects selling power to Google under a long-term PPA.",
+   "aliases": [
+    "Treaty Oak Clean Energy"
+   ],
+   "first_seen": "2025-11-30-1051"
+  },
+  {
+   "id": "SCHNEIDER",
+   "name": "Schneider Electric",
+   "ticker": "SU.PA",
+   "layer": "power",
+   "does": "Supplies power modules, cooling systems, UPS and switchgear for AI data centers.",
+   "aliases": [
+    "Schneider Electric"
+   ],
+   "first_seen": "2025-11-30-1051",
+   "market": "EURONEXT:SU"
+  },
+  {
+   "id": "TPG",
+   "name": "TPG",
+   "ticker": "TPG",
+   "layer": "capital",
+   "does": "Private equity firm investing in AI data center businesses such as TCS HyperVault.",
+   "aliases": [
+    "TPG"
+   ],
+   "first_seen": "2025-11-30-1051"
+  },
+  {
+   "id": "TCS",
+   "name": "Tata Consultancy Services",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Indian IT firm building AI data center capacity through its HyperVault business.",
+   "aliases": [
+    "Tata Consultancy Services"
+   ],
+   "first_seen": "2025-11-30-1051"
+  },
+  {
+   "id": "NIPSCO",
+   "name": "Northern Indiana Public Service Co.",
+   "ticker": null,
+   "layer": "power",
+   "does": "NiSource utility building gas generation and storage to power Amazon data centers in Indiana.",
+   "aliases": [
+    "Northern Indiana Public Service Co."
+   ],
+   "first_seen": "2025-11-30-1051"
+  },
+  {
+   "id": "BOOM",
+   "name": "Boom Supersonic",
+   "ticker": null,
+   "layer": "power",
+   "does": "Builds Superpower 42 MW natural gas turbines for AI data center power, with Crusoe as launch customer.",
+   "aliases": [
+    "Boom Supersonic"
+   ],
+   "first_seen": "2025-12-31-1056"
+  },
+  {
+   "id": "XCEL",
+   "name": "Xcel Energy",
+   "ticker": "XEL",
+   "layer": "power",
+   "does": "Utility whose SPS subsidiary supplies grid power to AI data center campuses such as Fermi America's.",
+   "aliases": [
+    "Xcel Energy"
+   ],
+   "first_seen": "2025-12-31-1056"
+  },
+  {
+   "id": "HUT8",
+   "name": "Hut 8",
+   "ticker": "HUT",
+   "layer": "neoclouds",
+   "does": "Energy infrastructure and data center developer leasing River Bend campus capacity to Fluidstack for Anthropic.",
+   "aliases": [
+    "Hut 8"
+   ],
+   "first_seen": "2025-12-31-1056"
+  },
+  {
+   "id": "WHITEFIBER",
+   "name": "WhiteFiber",
+   "ticker": "WYFI",
+   "layer": "neoclouds",
+   "does": "AI/HPC colocation and data center provider leasing NC-1 campus capacity to Nscale.",
+   "aliases": [
+    "WhiteFiber"
+   ],
+   "first_seen": "2025-12-31-1056"
+  },
+  {
+   "id": "GROQ",
+   "name": "Groq",
+   "ticker": null,
+   "layer": "chips",
+   "does": "Designs high-performance AI accelerator chips; Nvidia agreed to buy its assets.",
+   "aliases": [
+    "Groq"
+   ],
+   "first_seen": "2025-12-31-1056"
+  },
+  {
+   "id": "DIGITALBRIDGE",
+   "name": "DigitalBridge",
+   "ticker": "DBRG",
+   "layer": "capital",
+   "does": "Data center and digital infrastructure investment firm being acquired by SoftBank.",
+   "aliases": [
+    "DigitalBridge"
+   ],
+   "first_seen": "2025-12-31-1056"
+  },
+  {
+   "id": "CSCO",
+   "name": "Cisco Systems",
+   "ticker": "CSCO",
+   "layer": "systems",
+   "does": "Networking vendor whose investment arm is a strategic investor in xAI.",
+   "aliases": [
+    "Cisco Systems"
+   ],
+   "first_seen": "2026-01-31-1102"
+  },
+  {
+   "id": "VALOR",
+   "name": "Valor Equity Partners",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Investment firm that set up Valor Compute Infrastructure to buy Nvidia GPUs and lease them to xAI.",
+   "aliases": [
+    "Valor Equity Partners"
+   ],
+   "first_seen": "2026-01-31-1102"
+  },
+  {
+   "id": "SBENERGY",
+   "name": "SB Energy",
+   "ticker": null,
+   "layer": "power",
+   "does": "SoftBank-affiliated energy company building and operating OpenAI's Stargate data center site in Milam County, Texas.",
+   "aliases": [
+    "SB Energy"
+   ],
+   "first_seen": "2026-01-31-1102"
+  },
+  {
+   "id": "CEREBRAS",
+   "name": "Cerebras Systems",
+   "ticker": null,
+   "layer": "chips",
+   "does": "Makes wafer-scale AI chips and sells compute capacity to AI labs such as OpenAI.",
+   "aliases": [
+    "Cerebras Systems"
+   ],
+   "first_seen": "2026-01-31-1102"
+  },
+  {
+   "id": "CORNING",
+   "name": "Corning",
+   "ticker": "GLW",
+   "layer": "systems",
+   "does": "Supplies fiber-optic cable for AI data centers.",
+   "aliases": [
+    "Corning"
+   ],
+   "first_seen": "2026-01-31-1102"
+  },
+  {
+   "id": "CLEARWAY",
+   "name": "Clearway Energy",
+   "ticker": null,
+   "layer": "power",
+   "does": "Develops and operates clean energy projects and sells power to data center operators such as Google.",
+   "aliases": [
+    "Clearway Energy"
+   ],
+   "first_seen": "2026-01-31-1102"
+  },
+  {
+   "id": "SPACEX",
+   "name": "SpaceX",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Rocket and satellite company that acquired xAI and plans space-based AI data centers.",
+   "aliases": [
+    "SpaceX"
+   ],
+   "first_seen": "2026-02-28-1107"
+  },
+  {
+   "id": "BLACKSTONE",
+   "name": "Blackstone",
+   "ticker": "BX",
+   "layer": "capital",
+   "does": "Investment firm backing AI labs and infrastructure.",
+   "aliases": [
+    "Blackstone"
+   ],
+   "first_seen": "2026-02-28-1107"
+  },
+  {
+   "id": "TTE",
+   "name": "TotalEnergies",
+   "ticker": "TTE",
+   "layer": "power",
+   "does": "Energy company supplying solar PPAs to Google data centers.",
+   "aliases": [
+    "TotalEnergies"
+   ],
+   "first_seen": "2026-02-28-1107"
+  },
+  {
+   "id": "MUFG",
+   "name": "MUFG Bank",
+   "ticker": "MUFG",
+   "layer": "capital",
+   "does": "Bank providing project finance for power and data center developments.",
+   "aliases": [
+    "MUFG Bank"
+   ],
+   "first_seen": "2026-02-28-1107"
+  },
+  {
+   "id": "LUMENTUM",
+   "name": "Lumentum",
+   "ticker": "LITE",
+   "layer": "chips",
+   "does": "Optical components maker for AI data center networking.",
+   "aliases": [
+    "Lumentum"
+   ],
+   "first_seen": "2026-02-28-1107"
+  },
+  {
+   "id": "BAKERHUGHES",
+   "name": "Baker Hughes",
+   "ticker": "BKR",
+   "layer": "power",
+   "does": "Supplies gas turbine generators for Boom Supersonic's AI data center power units.",
+   "aliases": [
+    "Baker Hughes"
+   ],
+   "first_seen": "2026-02-28-1107"
+  },
+  {
+   "id": "COHR",
+   "name": "Coherent",
+   "ticker": "COHR",
+   "layer": "chips",
+   "does": "Makes lasers and optical networking components for AI data centers.",
+   "aliases": [
+    "Coherent"
+   ],
+   "first_seen": "2026-03-31-1111"
+  },
+  {
+   "id": "AIPCORP",
+   "name": "American Intelligence & Power Corporation",
+   "ticker": null,
+   "layer": "power",
+   "does": "Developer of the 8+ GW Monarch gas-powered AI compute campus in West Virginia.",
+   "aliases": [
+    "American Intelligence & Power Corporation"
+   ],
+   "first_seen": "2026-03-31-1111"
+  },
+  {
+   "id": "SHARONAI",
+   "name": "Sharon AI",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Australian neocloud providing GPU AI cloud capacity.",
+   "aliases": [
+    "Sharon AI"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "ESDS",
+   "name": "ESDS Software Solutions",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Cloud provider buying GPU cloud capacity from Sharon AI.",
+   "aliases": [
+    "ESDS Software Solutions"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "JANESTREET",
+   "name": "Jane Street",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Trading firm buying AI cloud capacity from and holding a stake in CoreWeave.",
+   "aliases": [
+    "Jane Street"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "CELESTIALAI",
+   "name": "Celestial AI",
+   "ticker": null,
+   "layer": "chips",
+   "does": "AI optical interconnect startup acquired by Marvell.",
+   "aliases": [
+    "Celestial AI"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "DATABANK",
+   "name": "DataBank",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Dallas-based data center developer and operator building AI-oriented facilities near population hubs.",
+   "aliases": [
+    "DataBank"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "CURSOR",
+   "name": "Cursor",
+   "ticker": null,
+   "layer": "labs",
+   "does": "AI coding startup partnering with SpaceX/xAI's Colossus compute.",
+   "aliases": [
+    "Cursor"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "BOOSTRUN",
+   "name": "Boost Run",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Enterprise AI compute and colocation provider buying Dell hardware, planning SPAC listing with Willow Lane Acquisition Corp.",
+   "aliases": [
+    "Boost Run"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "ANAN",
+   "name": "Anan",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Israeli data center company that will build and operate a 40 MW AI server farm in Afula for Crusoe.",
+   "aliases": [
+    "Anan"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "MARA",
+   "name": "MARA Holdings",
+   "ticker": "MARA",
+   "layer": "neoclouds",
+   "does": "Bitcoin miner pivoting into AI data center infrastructure.",
+   "aliases": [
+    "MARA Holdings"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "LONGRIDGE",
+   "name": "Long Ridge Energy",
+   "ticker": null,
+   "layer": "power",
+   "does": "Power generation operator whose assets support AI data center development.",
+   "aliases": [
+    "Long Ridge Energy"
+   ],
+   "first_seen": "2026-04-30-1115"
+  },
+  {
+   "id": "AKAM",
+   "name": "Akamai Technologies",
+   "ticker": "AKAM",
+   "layer": "neoclouds",
+   "does": "CDN operator expanding into AI cloud, selling compute capacity to Anthropic.",
+   "aliases": [
+    "Akamai Technologies"
+   ],
+   "first_seen": "2026-05-31-1121"
+  },
+  {
+   "id": "LINEA",
+   "name": "Linea Energy",
+   "ticker": null,
+   "layer": "power",
+   "does": "Renewable developer and independent power producer supplying solar power to Google's Texas data centers.",
+   "aliases": [
+    "Linea Energy"
+   ],
+   "first_seen": "2026-05-31-1121"
+  },
+  {
+   "id": "DESRI",
+   "name": "DESRI",
+   "ticker": null,
+   "layer": "power",
+   "does": "Renewable energy producer supplying solar and storage PPAs to Meta's data centers.",
+   "aliases": [
+    "DESRI"
+   ],
+   "first_seen": "2026-05-31-1121"
+  },
+  {
+   "id": "ENLIGHT",
+   "name": "Enlight Renewable Energy",
+   "ticker": "ENLT",
+   "layer": "power",
+   "does": "Renewable energy developer supplying solar power to Google data centers in Oklahoma.",
+   "aliases": [
+    "Enlight Renewable Energy"
+   ],
+   "first_seen": "2026-05-31-1121"
+  },
+  {
+   "id": "APOLLO",
+   "name": "Apollo Global Management",
+   "ticker": "APO",
+   "layer": "capital",
+   "does": "Private credit firm leading debt financing for AI chip and data center purchases.",
+   "aliases": [
+    "Apollo Global Management"
+   ],
+   "first_seen": "2026-05-31-1121"
+  },
+  {
+   "id": "STARK",
+   "name": "Stark Power",
+   "ticker": "STRK",
+   "layer": "power",
+   "does": "Israeli-listed power developer acquiring Sagebrush to build US data center campuses with co-located gas power.",
+   "aliases": [
+    "Stark Power"
+   ],
+   "first_seen": "2026-06-30-1313",
+   "market": false
+  },
+  {
+   "id": "SAGE",
+   "name": "Sagebrush Infrastructure Partners",
+   "ticker": null,
+   "layer": "power",
+   "does": "Developer of hyperscale data center campuses and co-located natural gas power plants in the Central US.",
+   "aliases": [
+    "Sagebrush Infrastructure Partners"
+   ],
+   "first_seen": "2026-06-30-1313"
+  },
+  {
+   "id": "REFLECTION",
+   "name": "Reflection AI",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Open-weight frontier AI model startup renting Colossus compute from SpaceX.",
+   "aliases": [
+    "Reflection AI"
+   ],
+   "first_seen": "2026-06-30-1313"
+  },
+  {
+   "id": "O",
+   "name": "Realty Income",
+   "ticker": "O",
+   "layer": "capital",
+   "does": "REIT investing in hyperscale data center assets via a JV with Cloud Capital.",
+   "aliases": [
+    "Realty Income"
+   ],
+   "first_seen": "2026-06-30-1313"
+  },
+  {
+   "id": "CLOUDCAPITAL",
+   "name": "Cloud Capital",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Investment manager that acquires and operates data centers.",
+   "aliases": [
+    "Cloud Capital"
+   ],
+   "first_seen": "2026-06-30-1313"
+  },
+  {
+   "id": "NATIONALGRID",
+   "name": "National Grid",
+   "ticker": null,
+   "layer": "power",
+   "does": "Utility whose National Grid Ventures arm invests in energy infrastructure for US data centers.",
+   "aliases": [
+    "National Grid"
+   ],
+   "first_seen": "2026-07-31-1314"
+  },
+  {
+   "id": "JOULENT",
+   "name": "Joulent",
+   "ticker": null,
+   "layer": "power",
+   "does": "Develops multi-gigawatt co-located power for AI data centers, including Project Kilby in West Texas.",
+   "aliases": [
+    "Joulent"
+   ],
+   "first_seen": "2026-07-31-1314"
+  },
+  {
+   "id": "CHEVRON",
+   "name": "Chevron",
+   "ticker": "CVX",
+   "layer": "power",
+   "does": "Oil major building co-located natural gas power for Microsoft's data center campus in Texas.",
+   "aliases": [
+    "Chevron"
+   ],
+   "first_seen": "2026-07-31-1314"
+  },
+  {
+   "id": "UNITEST",
+   "name": "UniTest",
+   "ticker": null,
+   "layer": "memory",
+   "does": "Supplies HBM4 wafer burn-in test equipment to SK Hynix.",
+   "aliases": [
+    "UniTest"
+   ],
+   "first_seen": "2026-07-31-1314"
+  },
+  {
+   "id": "VZ",
+   "name": "Verizon Communications",
+   "ticker": "VZ",
+   "layer": "systems",
+   "does": "Telecom carrier supplying dark fiber connectivity for AI data centers.",
+   "aliases": [
+    "Verizon Communications"
+   ],
+   "first_seen": "2026-07-31-1314"
+  },
+  {
+   "id": "NAVER",
+   "name": "Naver",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Korean cloud company building GPU-based AI data centers.",
+   "aliases": [
+    "Naver"
+   ],
+   "first_seen": "2026-07-31-1314"
+  },
+  {
+   "id": "SSI",
+   "name": "Safe Superintelligence",
+   "ticker": null,
+   "layer": "labs",
+   "does": "AI lab founded by Ilya Sutskever.",
+   "aliases": [
+    "Safe Superintelligence"
+   ],
+   "first_seen": "2026-07-31-1314"
+  },
+  {
+   "id": "MORGANSTANLEY",
+   "name": "Morgan Stanley",
+   "ticker": "MS",
+   "layer": "capital",
+   "does": "Investment bank leading bank groups financing AI data center construction.",
+   "aliases": [
+    "Morgan Stanley"
+   ],
+   "first_seen": "2026-07-31-1314"
+  },
+  {
+   "id": "NEXUS",
+   "name": "Nexus Data Centers",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Develops AI data center campuses, including the Hubbard, Texas site for Anthropic.",
+   "aliases": [
+    "Nexus Data Centers"
+   ],
+   "first_seen": "2026-07-31-1314"
+  },
+  {
+   "id": "VOLTA",
+   "name": "Volta Infra Holdings",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "AI cloud startup providing compute capacity, starting with a 133 MW Norway data center.",
+   "aliases": [
+    "Volta Infra Holdings"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "BITDEER",
+   "name": "Bitdeer Technologies Group",
+   "ticker": "BTDR",
+   "layer": "neoclouds",
+   "does": "Crypto-mining company developing and operating AI/HPC data centers, including Tydal, Norway.",
+   "aliases": [
+    "Bitdeer Technologies Group"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "RIOT",
+   "name": "Riot Platforms",
+   "ticker": "RIOT",
+   "layer": "neoclouds",
+   "does": "Bitcoin miner leasing Rockdale, Texas data center capacity to AI tenants.",
+   "aliases": [
+    "Riot Platforms"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "IBM",
+   "name": "IBM",
+   "ticker": "IBM",
+   "layer": "hyperscalers",
+   "does": "Provides IBM Cloud AI compute capacity, now selling Nvidia-based capacity to neocloud Together AI.",
+   "aliases": [
+    "IBM"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "TOGETHERAI",
+   "name": "Together AI",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Neocloud renting GPU infrastructure for open-source model inference to developers and enterprises.",
+   "aliases": [
+    "Together AI"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "RIVERAI",
+   "name": "River AI",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Startup founded by xAI co-founder building tools for enterprises to train and own custom open-weight models.",
+   "aliases": [
+    "River AI"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "LANCIUM",
+   "name": "Lancium",
+   "ticker": null,
+   "layer": "power",
+   "does": "Develops gigawatt-scale powered AI data center campuses with grid interconnects and behind-the-meter generation; Blackstone portfolio company.",
+   "aliases": [
+    "Lancium"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "SUPERX",
+   "name": "SuperX AI Technology",
+   "ticker": "SUPX",
+   "layer": "systems",
+   "does": "Full-stack AI infrastructure provider supplying Nvidia GPU server clusters.",
+   "aliases": [
+    "SuperX AI Technology"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "WOODMAN",
+   "name": "Woodman",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Japanese client building an Nvidia B300-based AI infrastructure project in Yokohama.",
+   "aliases": [
+    "Woodman"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "LAMBDA",
+   "name": "Lambda",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "AI cloud company that buys Nvidia GPUs and rents compute to customers such as Anthropic and Microsoft.",
+   "aliases": [
+    "Lambda"
+   ],
+   "first_seen": "2026-08-31-1323"
+  },
+  {
+   "id": "FERVO",
+   "name": "Fervo Energy",
+   "ticker": null,
+   "layer": "power",
+   "does": "Develops enhanced geothermal power and sells carbon-free electricity to data center operators like Google.",
+   "aliases": [
+    "Fervo Energy"
+   ],
+   "first_seen": "2026-09-30-1330"
+  },
+  {
+   "id": "HUGGINGFACE",
+   "name": "Hugging Face",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Hosts open-source AI models and datasets; being acquired by Nvidia.",
+   "aliases": [
+    "Hugging Face"
+   ],
+   "first_seen": "2026-09-30-1330"
+  },
+  {
+   "id": "SLB",
+   "name": "SLB",
+   "ticker": "SLB",
+   "layer": "power",
+   "does": "Oilfield services firm expanding into data center power and cooling equipment, buying Kelvion.",
+   "aliases": [
+    "SLB"
+   ],
+   "first_seen": "2026-09-30-1330"
+  },
+  {
+   "id": "FIGURE",
+   "name": "Figure",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Humanoid robotics company buying AI compute from Nscale for its Helix models.",
+   "aliases": [
+    "Figure"
+   ],
+   "first_seen": "2026-09-30-1330"
+  },
+  {
+   "id": "QCOM",
+   "name": "Qualcomm",
+   "ticker": "QCOM",
+   "layer": "chips",
+   "does": "Chipmaker selling AI data center server chips and infrastructure, partnered with AWS.",
+   "aliases": [
+    "Qualcomm"
+   ],
+   "first_seen": "2026-09-30-1330"
+  },
+  {
+   "id": "RUMGROUP",
+   "name": "Rum Group",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Trump-linked company reported to supply compute to Anthropic in a $13.7B deal.",
+   "aliases": [
+    "Rum Group"
+   ],
+   "first_seen": "2026-09-30-1330"
+  },
+  {
+   "id": "NEWERA",
+   "name": "New Era Energy & Digital",
+   "ticker": null,
+   "layer": "power",
+   "does": "Energy and digital infrastructure developer that signed a 207 MW PPA with Vistra.",
+   "aliases": [
+    "New Era Energy & Digital"
+   ],
+   "first_seen": "2026-09-30-1330"
+  },
+  {
+   "id": "TENCENT",
+   "name": "Tencent",
+   "ticker": null,
+   "layer": "hyperscalers",
+   "does": "Chinese tech giant renting offshore AI compute capacity for AI training.",
+   "aliases": [
+    "Tencent"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "SNPS",
+   "name": "Synopsys",
+   "ticker": "SNPS",
+   "layer": "chips",
+   "does": "Supplies EDA software and IP used to design AI chips.",
+   "aliases": [
+    "Synopsys"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "WEC",
+   "name": "WEC Energy Group (We Energies)",
+   "ticker": "WEC",
+   "layer": "power",
+   "does": "Wisconsin utility that buys Point Beach nuclear output and passes power to Oracle's data centers.",
+   "aliases": [
+    "WEC Energy Group (We Energies)"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "BKH",
+   "name": "Black Hills Corporation",
+   "ticker": "BKH",
+   "layer": "power",
+   "does": "Utility building gas generation and a microgrid in Cheyenne, Wyoming for Google data centers.",
+   "aliases": [
+    "Black Hills Corporation",
+    "Bright Horizon Energy"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "GFS",
+   "name": "GlobalFoundries",
+   "ticker": "GFS",
+   "layer": "foundry",
+   "does": "Makes silicon interposers in the US for TSMC's CoWoS advanced packaging.",
+   "aliases": [
+    "GlobalFoundries"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "MAINSPRING",
+   "name": "Mainspring Energy",
+   "ticker": null,
+   "layer": "power",
+   "does": "Makes fuel-flexible linear generators for onsite power at data centers and utilities.",
+   "aliases": [
+    "Mainspring Energy"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "VANTAGE",
+   "name": "Vantage Data Centers",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Data center developer building Oracle-linked campuses in Texas and Wisconsin.",
+   "aliases": [
+    "Vantage Data Centers"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "KYEC",
+   "name": "King Yuan Electronics",
+   "ticker": "2449.TW",
+   "layer": "chips",
+   "does": "Chip testing services provider receiving Nvidia capacity advance to build US testing facilities.",
+   "aliases": [
+    "King Yuan Electronics"
+   ],
+   "first_seen": "2026-10-31-1337",
+   "market": "TWSE:2449"
+  },
+  {
+   "id": "SEMCO",
+   "name": "Samsung Electro-Mechanics",
+   "ticker": "009150.KS",
+   "layer": "chips",
+   "does": "Supplies electronic components and substrates for chips.",
+   "aliases": [
+    "Samsung Electro-Mechanics"
+   ],
+   "first_seen": "2026-10-31-1337",
+   "market": "KRX:009150"
+  },
+  {
+   "id": "FIREWORKS",
+   "name": "Fireworks",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "AI inference and training platform renting GPU capacity.",
+   "aliases": [
+    "Fireworks"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "FORUM",
+   "name": "Forum Markets (Forum Edge AI)",
+   "ticker": "FRMM",
+   "layer": "neoclouds",
+   "does": "Operates AI GPU capacity at a Dallas data center via the Forum Edge AI JV.",
+   "aliases": [
+    "Forum Markets (Forum Edge AI)"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "CANADAGOV",
+   "name": "Government of Canada",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Invests public funds via Canada Development Investment Corporation in Canadian AI firms such as Cohere.",
+   "aliases": [
+    "Government of Canada"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "COHERE",
+   "name": "Cohere",
+   "ticker": null,
+   "layer": "labs",
+   "does": "Toronto-based sovereign enterprise AI model developer building Canadian compute.",
+   "aliases": [
+    "Cohere"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "USDAI",
+   "name": "USD.AI",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Platform financing GPU operators through asset-backed GPU loans.",
+   "aliases": [
+    "USD.AI"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "NEXGEN",
+   "name": "NexGen Cloud",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "European AI cloud provider operating Nvidia GPU capacity.",
+   "aliases": [
+    "NexGen Cloud"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "CITI",
+   "name": "Citigroup",
+   "ticker": "C",
+   "layer": "capital",
+   "does": "Bank that lends to AI infrastructure companies, e.g. a bridge loan to Nebius.",
+   "aliases": [
+    "Citigroup"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "TRENCH",
+   "name": "Trench Group",
+   "ticker": null,
+   "layer": "power",
+   "does": "Makes high-voltage grid equipment; being bought by GE Vernova from Triton Partners.",
+   "aliases": [
+    "Trench Group"
+   ],
+   "first_seen": "2026-10-31-1337"
+  },
+  {
+   "id": "KBKOOKMIN",
+   "name": "KB Kookmin Bank",
+   "ticker": null,
+   "layer": "capital",
+   "does": "South Korean bank arranging syndicated GPU financing for Brookfield's Naver AI infrastructure project.",
+   "aliases": [
+    "KB Kookmin Bank"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "CAPITALPOWER",
+   "name": "Capital Power",
+   "ticker": "CPX",
+   "layer": "power",
+   "does": "Canadian power producer supplying long-term energy to Meta's Alberta data centre.",
+   "aliases": [
+    "Capital Power"
+   ],
+   "first_seen": "2026-11-05-1354",
+   "market": "TSX:CPX"
+  },
+  {
+   "id": "HARK",
+   "name": "Hark",
+   "ticker": null,
+   "layer": "labs",
+   "does": "AI startup building foundation models, software and hardware for a personal assistant platform.",
+   "aliases": [
+    "Hark"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "BESI",
+   "name": "BE Semiconductor Industries",
+   "ticker": "BESI",
+   "layer": "chips",
+   "does": "Makes hybrid bonding and advanced packaging equipment for chips.",
+   "aliases": [
+    "BE Semiconductor Industries"
+   ],
+   "first_seen": "2026-11-05-1354",
+   "market": "EURONEXT:BESI"
+  },
+  {
+   "id": "HELIX",
+   "name": "Helix Digital Infrastructure",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Data center venture backed by KKR, Kuwait Investment Authority and Nvidia.",
+   "aliases": [
+    "Helix Digital Infrastructure"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "DRAX",
+   "name": "Drax Group",
+   "ticker": "DRX.L",
+   "layer": "power",
+   "does": "UK power station operator partnering with Brookfield and Radiant to host a 1 GW+ AI data centre at its North Yorkshire site.",
+   "aliases": [
+    "Drax Group"
+   ],
+   "first_seen": "2026-11-05-1354",
+   "market": "LSE:DRX"
+  },
+  {
+   "id": "GLOBALWAFERS",
+   "name": "GlobalWafers",
+   "ticker": "6488.TW",
+   "layer": "foundry",
+   "does": "Silicon wafer maker supplying semiconductor manufacturers, including Micron under a 10-year supply agreement.",
+   "aliases": [
+    "GlobalWafers"
+   ],
+   "first_seen": "2026-11-05-1354",
+   "market": "TPEX:6488"
+  },
+  {
+   "id": "XENERGY",
+   "name": "X-energy",
+   "ticker": "XE",
+   "layer": "power",
+   "does": "Small modular reactor developer (Xe-100) with a joint development deal with AEP and Amazon for an Indiana plant.",
+   "aliases": [
+    "X-energy"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "WMB",
+   "name": "Williams Companies",
+   "ticker": "WMB",
+   "layer": "power",
+   "does": "Natural gas infrastructure company supplying 400 MW of power to Meta.",
+   "aliases": [
+    "Williams Companies"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "LUMENTUMPLACEHOLDER",
+   "name": "placeholder",
+   "ticker": null,
+   "layer": "chips",
+   "does": "placeholder",
+   "aliases": [
+    "placeholder"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "PNW",
+   "name": "Pinnacle West Capital",
+   "ticker": "PNW",
+   "layer": "power",
+   "does": "Arizona utility (Arizona Public Service) supplying power to data centers and chip fabs.",
+   "aliases": [
+    "Pinnacle West Capital"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "COLGROUP",
+   "name": "COL Group",
+   "ticker": null,
+   "layer": "power",
+   "does": "European maker of power distribution equipment for data center and utility markets, being acquired by Eaton.",
+   "aliases": [
+    "COL Group"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "BOYD",
+   "name": "Boyd Thermal",
+   "ticker": null,
+   "layer": "power",
+   "does": "Liquid cooling and thermal management provider for data centers, acquired by Eaton.",
+   "aliases": [
+    "Boyd Thermal"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "SOLUNA",
+   "name": "Soluna Holdings",
+   "ticker": "SLNH",
+   "layer": "neoclouds",
+   "does": "Provides land and power assets for AI/HPC data centers and is JV partner with Applied Digital on the Dorothy 3 site.",
+   "aliases": [
+    "Soluna Holdings"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "TAALAS",
+   "name": "Taalas",
+   "ticker": null,
+   "layer": "chips",
+   "does": "Developer of specialized inference silicon, being acquired by AMD.",
+   "aliases": [
+    "Taalas"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "NEXTDC",
+   "name": "NEXTDC",
+   "ticker": "NXT",
+   "layer": "neoclouds",
+   "does": "Australian listed data center operator, power-constrained, target of a Digital Realty/Goodman stake offer.",
+   "aliases": [
+    "NEXTDC"
+   ],
+   "first_seen": "2026-11-05-1354",
+   "market": "ASX:NXT"
+  },
+  {
+   "id": "POLARISDS",
+   "name": "Polaris DS",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Data center asset acquired by Core Scientific to expand AI and HPC capacity.",
+   "aliases": [
+    "Polaris DS"
+   ],
+   "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "NTTDATA",
+   "name": "NTT DATA",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Global IT services firm that operates data centers (NTT Global Data Centers) and is buying onsite power for AI capacity.",
+   "aliases": [
+    "NTT DATA"
+   ],
+   "first_seen": "2026-11-05-1354"
+  }
+ ]
 }

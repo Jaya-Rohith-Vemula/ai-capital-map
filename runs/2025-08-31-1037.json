@@ -1,0 +1,38 @@
+{
+ "id": "2025-08-31-1037",
+ "since": "2025-08-01",
+ "until": "2025-08-31",
+ "completed": true,
+ "started": "2026-11-05T10:37:54",
+ "searched": 338,
+ "candidates": 51,
+ "read": {
+  "blocked": 8,
+  "read": 42,
+  "short": 1
+ },
+ "new_deals": [
+  "d085",
+  "d086",
+  "d087",
+  "d088",
+  "d089",
+  "d090",
+  "d091"
+ ],
+ "updated_deals": [
+  "d054",
+  "d030"
+ ],
+ "new_companies": [
+  "YTL",
+  "PIMCO",
+  "BLUEOWL",
+  "CHIRISA",
+  "FERMI",
+  "MACQUARIEGROUP"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:42:00"
+}

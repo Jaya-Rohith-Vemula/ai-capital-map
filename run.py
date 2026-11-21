@@ -83,6 +83,27 @@ class Stop(Exception):
     pass
 
 
+def wait_for_reset(e, log):
+    """Sleep until the Claude plan's usage limit resets (plus a margin), or
+    30 minutes when the message gave no time; the caller then retries, and a
+    limit still in force simply comes back here."""
+    margin = dt.timedelta(minutes=3)
+    now = dt.datetime.now().astimezone()
+    if e.resets_at and e.resets_at > now:
+        until = e.resets_at + margin
+        why = f"resets at {e.resets_at.strftime('%a %H:%M')}"
+    else:
+        until = now + dt.timedelta(minutes=30)
+        why = "no reset time in the message, checking again in 30 min"
+    log(f"  Claude usage limit reached ({e.message[:160]}). {why}; waiting until {until.strftime('%a %H:%M')}")
+    log.set(f"waiting for the Claude usage limit to reset, until {until.strftime('%a %H:%M')}")
+    # Short sleeps against the wall clock: a Mac that sleeps through the
+    # reset time wakes up and carries on at once.
+    while dt.datetime.now().astimezone() < until:
+        time.sleep(min(60, max(1, (until - dt.datetime.now().astimezone()).total_seconds())))
+    log("  limit wait over, retrying the batch")
+
+
 def run_window(a, b, cfg, db, cdoc, ddoc, log, use_claude):
     run_id = f"{b.isoformat()}-{dt.datetime.now().strftime('%H%M')}"
     report = {"id": run_id, "since": a.isoformat(), "until": b.isoformat(), "completed": False,
@@ -142,12 +163,19 @@ def run_window(a, b, cfg, db, cdoc, ddoc, log, use_claude):
         log.set(f"{label}: Claude batch {k + 1}/{nb} ({len(batch)} items); {len(report['new_deals'])} new deals so far")
         log(f"  Claude batch {k + 1}/{nb}: {len(batch)} items, {sum(1 for x in batch if x['text'])} with article text")
         result = None
-        for attempt in (1, 2):
+        attempt = 0
+        while attempt < 2:
             try:
                 result = extract.call_claude(extract.build_prompt(batch, cdoc["companies"], cdoc["layers"], ddoc["deals"]),
                                              cfg.get("model", "sonnet"))
                 break
+            except extract.UsageLimit as e:
+                # Not a failure: wait for the plan's limit to reset, then
+                # send the same batch again. Does not use up an attempt.
+                wait_for_reset(e, log)
+                log.set(f"{label}: Claude batch {k + 1}/{nb} (retrying after the limit reset)")
             except Exception as e:
+                attempt += 1
                 log(f"  Claude failed (attempt {attempt}): {e}")
                 report["errors"].append(str(e)[:300])
         if result is None:
@@ -175,6 +203,30 @@ def run_window(a, b, cfg, db, cdoc, ddoc, log, use_claude):
     log(f"  done: {len(report['new_deals'])} new, {len(report['updated_deals'])} updated, "
         f"{len(report['new_companies'])} new companies, {len(report['rejected'])} rejected")
     return report
+
+
+def refresh_fundamentals(log):
+    """SEC financials (revenue, EPS, capex) for the map, at most once a week.
+    Never stops a run: without SEC_USER_AGENT or the network it just says so."""
+    import fundamentals
+    try:
+        fundamentals.main(["--if-older", "7"])
+    except SystemExit as e:
+        log(f"Fundamentals not refreshed: {e}")
+    except Exception as e:
+        log(f"Fundamentals not refreshed: {type(e).__name__}: {e}")
+
+
+def export_public(log):
+    """The website's data (web/public/data.json): no amounts, rewritten summaries.
+    Never stops a run."""
+    import export
+    try:
+        export.main([])
+    except SystemExit as e:
+        log(f"Website data not exported: {e}")
+    except Exception as e:
+        log(f"Website data not exported: {type(e).__name__}: {e}")
 
 
 def main():
@@ -231,6 +283,8 @@ def main():
     finally:
         db.close()
         if code == 0:
+            refresh_fundamentals(log)
+            export_public(log)
             log(f"Finished. Map: {build.build()}")
         log.close()
     return code

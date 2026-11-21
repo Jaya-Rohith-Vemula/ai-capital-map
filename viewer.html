@@ -65,6 +65,17 @@ a:hover { text-decoration: underline; }
 .totals { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .totals .card { margin: 0; }
 .big { font-size: 18px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.fin { display: grid; grid-template-columns: 1fr auto auto; gap: 3px 10px; margin: 6px 0 4px; font-variant-numeric: tabular-nums; }
+.fin div:nth-child(3n+1) { color: var(--dim); }
+.fin div:nth-child(3n+2) { text-align: right; }
+.fin .chg { text-align: right; font-size: 12px; min-width: 46px; }
+.up { color: var(--new); } .down { color: #f07c7c; }
+.bars { display: block; width: 100%; height: 74px; margin: 6px 0 0; }
+.bars rect { fill: #3ec7c1; opacity: .75; } .bars rect:hover { opacity: 1; }
+.bars text { fill: var(--dim); font-size: 10px; }
+.note { color: var(--dim); font-size: 11.5px; margin: 6px 0 0; }
+.tvbox { margin: 8px 0; min-height: 40px; }
+.tvbox .tradingview-widget-copyright { font-size: 11px; color: var(--dim); margin-top: 2px; }
 </style>
 </head>
 <body>
@@ -353,6 +364,7 @@ function showIntro() {
     </div>
     <h2>Biggest receivers</h2>${rankList("in")}
     <h2>Biggest payers</h2>${rankList("out")}
+    ${capexList()}
     <h2>Runs</h2>${DATA.runs.length ? DATA.runs.slice().reverse().map(r =>
       `<div class="card"><b>${esc(r.id)}</b> <span class="muted">news ${esc(r.since)} → ${esc(r.until)}</span><br>
       ${r.new_deals.length} new · ${r.updated_deals.length} updated · ${r.new_companies.length} new companies · ${r.candidates} items read</div>`).join("")
@@ -361,6 +373,12 @@ function showIntro() {
   bindDealClicks(detail);
   detail.querySelectorAll("[data-node]").forEach(el => el.onclick = () => focusNode(el.dataset.node));
 }
+function capexList() {
+  const rows = comps.map(c => [c, capexTTM(c.id)]).filter(r => r[1]).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  return rows.length ? `<h2>Biggest capex · last 4 quarters</h2>` + rows.map(([c, v]) =>
+    `<div class="deal" data-node="${c.id}"><span class="cp">${esc(c.name)}</span><span class="amt">${fmt(v)}</span></div>`).join("")
+    + `<p class="note">From SEC filings, US dollar filers only, as of ${esc(DATA.fundamentals.as_of)}.</p>` : "";
+}
 function rankList(dir) {
   return comps.filter(c => flow[c.id][dir] > 0).sort((a, b) => flow[b.id][dir] - flow[a.id][dir]).slice(0, 8)
     .map(c => `<div class="deal" data-node="${c.id}"><span class="cp">${esc(c.name)}</span><span class="amt">${fmt(flow[c.id][dir])}</span></div>`).join("");
@@ -368,6 +386,7 @@ function rankList(dir) {
 
 function showNode(id) {
   const c = byId[id], f = flow[id];
+  if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + id);
   const mine = deals.filter(d => d.from === id || d.to === id).sort((a, b) => String(b.date).localeCompare(String(a.date)));
   const undIn = mine.filter(d => d.to === id && !d.usd).length, undOut = mine.filter(d => d.from === id && !d.usd).length;
   const layer = layers.find(l => l.id === c.layer);
@@ -382,9 +401,105 @@ function showNode(id) {
       <div class="card"><div class="muted">Money in</div><div class="big">${fmt(f.in) || "—"}</div>${undIn ? `<div class="muted">+ ${undIn} undisclosed</div>` : ""}</div>
       <div class="card"><div class="muted">Money out</div><div class="big">${fmt(f.out) || "—"}</div>${undOut ? `<div class="muted">+ ${undOut} undisclosed</div>` : ""}</div>
     </div>
+    ${finSection(id)}
+    ${c.ticker && tvSymbol(c) ? `<h2>Market · live</h2><div class="tvbox" id="tv-info"></div><div class="tvbox" id="tv-fin"></div>
+      <p class="note">Price, P/E, EPS and market cap from TradingView, loaded when you open a company.</p>` : ""}
     <h2>Money in · ${mine.filter(d => d.to === id).length}</h2>${mine.filter(d => d.to === id).map(d => dealRow(d, id)).join("") || `<div class="empty">None recorded.</div>`}
     <h2>Money out · ${mine.filter(d => d.from === id).length}</h2>${mine.filter(d => d.from === id).map(d => dealRow(d, id)).join("") || `<div class="empty">None recorded.</div>`}`;
   bindDealClicks(detail);
+  if (c.ticker && tvSymbol(c)) {
+    const sym = tvSymbol(c);
+    tvWidget("tv-info", "symbol-info", { symbol: sym, width: "100%", locale: "en", colorTheme: "dark", isTransparent: true }, sym);
+    tvWidget("tv-fin", "financials", { symbol: sym, width: "100%", height: 560, displayMode: "regular", locale: "en", colorTheme: "dark", isTransparent: true }, sym);
+  }
+}
+
+// ---- fundamentals from SEC filings (data/fundamentals.json) ----
+const FUND = (DATA.fundamentals || {}).companies || {};
+const CUR = { USD: "$", EUR: "€", JPY: "¥", GBP: "£" };
+function money(v, cur) {
+  if (v == null) return "—";
+  const a = Math.abs(v), sign = v < 0 ? "−" : "";
+  const s = a >= 1e12 ? (a / 1e12).toFixed(2) + "T" : a >= 1e9 ? (a / 1e9).toFixed(a >= 1e11 ? 0 : 1) + "B"
+    : a >= 1e6 ? (a / 1e6).toFixed(a >= 1e8 ? 0 : 1) + "M" : a.toLocaleString();
+  return sign + (CUR[cur] || (cur ? cur + " " : "")) + s;
+}
+const dayDiff = (a, b) => (new Date(b) - new Date(a)) / 864e5;
+const monYr = e => new Date(e + "T00:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" });
+// Calendar quarter the period mostly falls in (Nvidia's quarter to 25 Jan is Q4).
+const qLabel = e => { const d = new Date(new Date(e + "T00:00:00") - 45 * 864e5); return "Q" + (Math.floor(d.getMonth() / 3) + 1) + " '" + String(d.getFullYear()).slice(2); };
+function chg(now, before) {
+  if (now == null || before == null || before === 0 || (before < 0 && now >= 0) || (before > 0 && now < 0)) return "";
+  const p = (now - before) / Math.abs(before) * 100;
+  return `<span class="${p >= 0 ? "up" : "down"}">${p >= 0 ? "+" : ""}${p.toFixed(0)}%</span>`;
+}
+// Sum of the last four quarters, only when they are four back-to-back quarters.
+function ttm(q, key, from = 0) {
+  const r = q.slice(from, from + 4);
+  if (r.length < 4 || r.some(x => x[key] == null)) return null;
+  const span = dayDiff(r[3].end, r[0].end);
+  return span > 250 && span < 300 ? r.reduce((a, x) => a + x[key], 0) : null;
+}
+function capexTTM(id) { const f = FUND[id]; return f && f.currency === "USD" ? ttm(f.quarterly, "capex") : null; }
+
+function finSection(id) {
+  const f = FUND[id];
+  if (!f) return "";
+  const A = f.annual, Q = f.quarterly, cur = f.currency, y = A[0] || {}, p = A[1] || {};
+  const row = (label, now, before, val) => `<div>${label}</div><div>${val ?? money(now, cur)}</div><div class="chg">${chg(now, before)}</div>`;
+  const capT = ttm(Q, "capex"), capT0 = ttm(Q, "capex", 4), revT = ttm(Q, "revenue");
+  const stale = y.end && dayDiff(y.end, DATA.fundamentals.as_of) > 480;
+  const bars = Q.filter(r => r.capex != null).slice(0, 12).reverse();
+  let svg = "";
+  if (bars.length >= 3) {
+    const max = Math.max(...bars.map(r => r.capex), 1), w = 100 / bars.length;
+    svg = `<svg class="bars" viewBox="0 0 100 74" preserveAspectRatio="none">${bars.map((r, i) => {
+      const h = Math.max(0.5, r.capex / max * 58);
+      return `<rect x="${i * w + w * 0.12}" y="${60 - h}" width="${w * 0.76}" height="${h}"><title>${qLabel(r.end)} (to ${r.end}): ${money(r.capex, cur)}</title></rect>`;
+    }).join("")}</svg>
+    <div style="display:flex;justify-content:space-between" class="note"><span>${qLabel(bars[0].end)}</span><span>capex by quarter</span><span>${qLabel(bars[bars.length - 1].end)}</span></div>`;
+  }
+  return `<h2>Financials · SEC filings</h2>
+    <div class="card">
+      ${y.end ? `<div class="muted">Fiscal year to ${monYr(y.end)}${cur && cur !== "USD" ? " · " + esc(cur) : ""} <span style="float:right">vs prior yr</span></div>
+      <div class="fin">
+        ${row("Revenue", y.revenue, p.revenue)}
+        ${row("Net income", y.net_income, p.net_income)}
+        ${row("Diluted EPS", y.eps, p.eps, y.eps == null ? "—" : (CUR[cur] || "") + y.eps.toFixed(2))}
+        ${row("Capex", y.capex, p.capex)}
+        ${row("Op. cash flow", y.ocf, p.ocf)}
+        ${y.capex != null && y.revenue ? `<div>Capex / revenue</div><div>${(y.capex / y.revenue * 100).toFixed(0)}%</div><div></div>` : ""}
+      </div>` : `<div class="muted">No full fiscal year filed yet.</div>`}
+      ${capT != null ? `<div class="fin" style="border-top:1px solid var(--line);padding-top:6px">
+        ${row("Capex, last 4 qtrs", capT, capT0)}
+        ${revT != null ? row("Revenue, last 4 qtrs", revT, ttm(Q, "revenue", 4)) : ""}</div>` : ""}
+      ${svg}
+      ${stale ? `<p class="note">⚠ The latest financials SEC has in machine-readable form are from ${monYr(y.end)}.</p>` : ""}
+      <p class="note">As filed, latest ${esc(f.last_filed || "")}. Capex = cash paid for property and equipment (finance leases not included).
+        <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${f.cik}&type=10-&dateb=&owner=include&count=40" target="_blank" rel="noopener">Filings on EDGAR</a></p>
+    </div>`;
+}
+
+// ---- TradingView widgets (price, P/E, EPS, market cap); need the internet ----
+const TV_EXCHANGE = { Nasdaq: "NASDAQ", NYSE: "NYSE", CBOE: "CBOE", OTC: "OTC", "NYSE American": "AMEX", "NYSE Arca": "AMEX" };
+function tvSymbol(c) {
+  if (c.market === false) return null;
+  if (c.market) return c.market;
+  const f = FUND[c.id];
+  if (f && TV_EXCHANGE[f.exchange]) return TV_EXCHANGE[f.exchange] + ":" + c.ticker;
+  return c.ticker.includes(".") ? null : c.ticker;
+}
+function tvWidget(boxId, kind, cfg, sym) {
+  const box = document.getElementById(boxId);
+  if (!box) return;
+  if (!navigator.onLine) { box.innerHTML = `<div class="empty">Offline: live market data needs the internet.</div>`; return; }
+  box.innerHTML = `<div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/${esc(sym.replace(":", "-"))}/" rel="noopener nofollow" target="_blank">${esc(sym)} on TradingView</a></div></div>`;
+  const s = document.createElement("script");
+  s.src = `https://s3.tradingview.com/external-embedding/embed-widget-${kind}.js`;
+  s.async = true;
+  s.text = JSON.stringify(cfg);
+  box.firstElementChild.appendChild(s);
 }
 
 function showDeal(id) {
@@ -437,7 +552,7 @@ function focusDeal(id) {
 // ---- interactions ----
 cy.on("tap", "node", e => { if (!e.target.hasClass("layerlabel")) showNode(e.target.id()); });
 cy.on("tap", "edge", e => showDeal(e.target.id()));
-cy.on("tap", e => { if (e.target === cy) showIntro(); });
+cy.on("tap", e => { if (e.target === cy) { history.replaceState(null, "", location.pathname); showIntro(); } });
 cy.on("mouseover", "node", e => {
   const n = e.target; if (n.hasClass("layerlabel")) return;
   const hood = n.closedNeighborhood();
@@ -478,7 +593,14 @@ document.getElementById("stamp").textContent =
 cy.scratch("layout", "columns");
 apply();
 runLayout("columns");
-showIntro();
+// Deep link: map.html#NVDA (company id or ticker) opens that company.
+function fromHash() {
+  const h = decodeURIComponent(location.hash.slice(1)).toLowerCase();
+  const c = h && comps.find(c => c.id.toLowerCase() === h || (c.ticker || "").toLowerCase() === h);
+  if (c) focusNode(c.id); else showIntro();
+}
+window.addEventListener("hashchange", fromHash);
+fromHash();
 </script>
 </body>
 </html>

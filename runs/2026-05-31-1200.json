@@ -1,0 +1,20 @@
+{
+ "id": "2026-05-31-1200",
+ "since": "2026-05-31",
+ "until": "2026-05-31",
+ "completed": true,
+ "started": "2026-11-05T12:00:00",
+ "searched": 535,
+ "candidates": 54,
+ "read": {
+  "blocked": 5,
+  "failed": 1,
+  "read": 48
+ },
+ "new_deals": [],
+ "updated_deals": [],
+ "new_companies": [],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T13:13:16"
+}

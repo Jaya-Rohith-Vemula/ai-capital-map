@@ -1,0 +1,33 @@
+{
+ "id": "2025-07-31-1033",
+ "since": "2025-07-01",
+ "until": "2025-07-31",
+ "completed": true,
+ "started": "2026-11-05T10:33:48",
+ "searched": 247,
+ "candidates": 48,
+ "read": {
+  "blocked": 14,
+  "failed": 1,
+  "read": 33
+ },
+ "new_deals": [
+  "d080",
+  "d081",
+  "d082",
+  "d083",
+  "d084"
+ ],
+ "updated_deals": [
+  "d009"
+ ],
+ "new_companies": [
+  "BROOKFIELD",
+  "FOUNDERSFUND",
+  "DRAGONEER",
+  "TSLA"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:37:54"
+}

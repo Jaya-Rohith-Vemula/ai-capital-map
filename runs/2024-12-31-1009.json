@@ -1,0 +1,33 @@
+{
+ "id": "2024-12-31-1009",
+ "since": "2024-12-01",
+ "until": "2024-12-31",
+ "completed": true,
+ "started": "2026-11-05T10:09:45",
+ "searched": 172,
+ "candidates": 38,
+ "read": {
+  "blocked": 9,
+  "read": 27,
+  "short": 2
+ },
+ "new_deals": [
+  "d061",
+  "d062",
+  "d063",
+  "d064",
+  "d065"
+ ],
+ "updated_deals": [
+  "d019"
+ ],
+ "new_companies": [
+  "INTERSECT",
+  "OKLO",
+  "SWITCH",
+  "CIP"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:12:41"
+}

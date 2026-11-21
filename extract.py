@@ -2,10 +2,12 @@
 returns deals; the code checks them and merges them into the ledger.
 """
 
+import datetime as dt
 import json
 import os
 import re
 import subprocess
+from zoneinfo import ZoneInfo
 
 import news
 
@@ -85,10 +87,69 @@ def build_prompt(batch, companies, layers, deals):
             f"NEWS ITEMS:\n" + "\n\n".join(parts) + "\n\nReturn the deals these items state.")
 
 
+class UsageLimit(Exception):
+    """The Claude plan's 5-hour (or weekly) limit, not a broken request."""
+
+    def __init__(self, message, resets_at):
+        super().__init__(message)
+        self.message, self.resets_at = message, resets_at
+
+
+LIMIT = re.compile(r"limit", re.I)
+LIMIT_CONTEXT = re.compile(r"reset|limit reached|hit your|usage limit|rate limit", re.I)
+DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+RESET = re.compile(r"resets?\s+(?:on\s+)?(?:(mon|tue|wed|thu|fri|sat|sun)[a-z]*,?\s+)?(?:at\s+)?"
+                   r"(\d{1,2})(?::(\d{2}))?\s*(am|pm)?(?:\s*\(([^)]+)\))?", re.I)
+
+
+def reset_time(text, now=None):
+    """When the limit resets, from Claude Code's message: either an epoch
+    after '|' or 'resets 3pm (America/Chicago)', 'resets Mon 9am', 'resets at
+    15:30'. Returns an aware datetime, or None."""
+    now = now or dt.datetime.now().astimezone()
+    m = re.search(r"\|(\d{10})\b", text)
+    if m:
+        return dt.datetime.fromtimestamp(int(m.group(1)), dt.timezone.utc).astimezone()
+    m = RESET.search(text)
+    if not m:
+        return None
+    day, hour, minute, ampm, tzname = m.groups()
+    hour, minute = int(hour), int(minute or 0)
+    if ampm:
+        hour = hour % 12 + (12 if ampm.lower() == "pm" else 0)
+    if hour > 23 or minute > 59:
+        return None
+    tz = now.tzinfo
+    if tzname:
+        try:
+            tz = ZoneInfo(tzname.strip())
+        except Exception:
+            pass
+    local_now = now.astimezone(tz)
+    t = local_now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if day:
+        t += dt.timedelta(days=(DAYS.index(day[:3].lower()) - t.weekday()) % 7)
+    if t <= local_now:
+        t += dt.timedelta(days=7 if day else 1)
+    return t.astimezone()
+
+
+def check_limit(*texts):
+    text = " ".join(t for t in texts if t)
+    if LIMIT.search(text) and LIMIT_CONTEXT.search(text):
+        raise UsageLimit(re.sub(r"\s+", " ", text).strip()[:300], reset_time(text))
+
+
 def call_claude(prompt, model):
     cmd = ["claude", "-p", "--model", model, "--tools", "", "--no-session-persistence",
            "--output-format", "json", "--system-prompt", SYSTEM, "--json-schema", json.dumps(SCHEMA)]
     r = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=1200, cwd=ROOT)
+    try:
+        out = json.loads(r.stdout)
+    except Exception:
+        out = {}
+    check_limit(str(out.get("result", "")) if out.get("is_error") or r.returncode else "", r.stderr if r.returncode else "",
+                r.stdout if r.returncode and not out else "")
     if r.returncode != 0:
         raise RuntimeError(f"claude exited {r.returncode}: {(r.stderr or r.stdout).strip()[:400]}")
     out = json.loads(r.stdout)

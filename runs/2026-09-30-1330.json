@@ -1,0 +1,58 @@
+{
+ "id": "2026-09-30-1330",
+ "since": "2026-09-01",
+ "until": "2026-09-30",
+ "completed": true,
+ "started": "2026-11-05T13:30:33",
+ "searched": 363,
+ "candidates": 96,
+ "read": {
+  "blocked": 26,
+  "read": 67,
+  "short": 3
+ },
+ "new_deals": [
+  "d218",
+  "d219",
+  "d220",
+  "d221",
+  "d222",
+  "d223",
+  "d224",
+  "d225",
+  "d226",
+  "d227",
+  "d228",
+  "d229",
+  "d230"
+ ],
+ "updated_deals": [
+  "d214",
+  "d156",
+  "d170",
+  "d159"
+ ],
+ "new_companies": [
+  "FERVO",
+  "HUGGINGFACE",
+  "SLB",
+  "FIGURE",
+  "QCOM",
+  "RUMGROUP",
+  "NEWERA"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "Anthropic will spend $11.6 billion over seven years on Akamai’s cloud infrastructure, Akamai said Thursday",
+   "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal - TechCrunch"
+  },
+  {
+   "why": "quote not found in item",
+   "quote": "Akamai issued Anthropic a warrant, essentially the right to buy shares at a set price, for nonvoting preferred stock convertible into 7.7 million common shares, or up to about 5% of the company’s outstanding stock, at $111.33 a share.",
+   "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal - TechCrunch"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-05T13:37:48"
+}

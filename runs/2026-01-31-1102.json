@@ -1,0 +1,43 @@
+{
+ "id": "2026-01-31-1102",
+ "since": "2026-01-01",
+ "until": "2026-01-31",
+ "completed": true,
+ "started": "2026-11-05T11:02:48",
+ "searched": 294,
+ "candidates": 61,
+ "read": {
+  "blocked": 17,
+  "read": 40,
+  "short": 4
+ },
+ "new_deals": [
+  "d115",
+  "d116",
+  "d117",
+  "d118",
+  "d119",
+  "d120",
+  "d121"
+ ],
+ "updated_deals": [
+  "d034"
+ ],
+ "new_companies": [
+  "CSCO",
+  "VALOR",
+  "SBENERGY",
+  "CEREBRAS",
+  "CORNING",
+  "CLEARWAY"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "OpenAI and SoftBank announced plans to invest $1 billion in SB Energy as part of a strategic partnership that will support OpenAI's artificial intelligence infrastructure buildout.",
+   "title": "OpenAI and SoftBank announce $1 billion investment in SB Energy as part of massive AI buildout - CNBC"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-05T11:07:05"
+}

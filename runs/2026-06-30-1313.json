@@ -1,0 +1,35 @@
+{
+ "id": "2026-06-30-1313",
+ "since": "2026-06-01",
+ "until": "2026-06-30",
+ "completed": true,
+ "started": "2026-11-05T13:13:16",
+ "searched": 260,
+ "candidates": 59,
+ "read": {
+  "blocked": 16,
+  "read": 42,
+  "short": 1
+ },
+ "new_deals": [
+  "d174",
+  "d175",
+  "d176",
+  "d177",
+  "d178",
+  "d179"
+ ],
+ "updated_deals": [
+  "d173"
+ ],
+ "new_companies": [
+  "STARK",
+  "SAGE",
+  "REFLECTION",
+  "O",
+  "CLOUDCAPITAL"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T13:14:25"
+}

@@ -1,0 +1,36 @@
+{
+ "id": "2025-05-31-1025",
+ "since": "2025-05-01",
+ "until": "2025-05-31",
+ "completed": true,
+ "started": "2026-11-05T10:25:34",
+ "searched": 375,
+ "candidates": 72,
+ "read": {
+  "blocked": 16,
+  "read": 55,
+  "short": 1
+ },
+ "new_deals": [
+  "d072",
+  "d073",
+  "d074",
+  "d075",
+  "d076",
+  "d077"
+ ],
+ "updated_deals": [
+  "d010",
+  "d032"
+ ],
+ "new_companies": [
+  "HUMAIN",
+  "DATAVOLT",
+  "AES",
+  "JPMORGAN",
+  "CRUSOE"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-05T10:30:34"
+}
