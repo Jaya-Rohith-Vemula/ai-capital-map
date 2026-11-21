@@ -54,7 +54,7 @@ kbd { font: 500 11px var(--sans); color: var(--ink-3); border: 1px solid var(--r
 /* ---------- frame ---------- */
 .app {
   height: 100%; display: grid;
-  grid-template-columns: 236px minmax(0, 1fr) 408px;
+  grid-template-columns: 236px minmax(0, 1fr) var(--inspector-w, 408px);
   grid-template-rows: var(--top) minmax(0, 1fr);
   grid-template-areas: "top top top" "filters stage inspector";
 }
@@ -93,6 +93,7 @@ kbd { font: 500 11px var(--sans); color: var(--ink-3); border: 1px solid var(--r
 /* ---------- filters ---------- */
 .filters { grid-area: filters; border-right: 1px solid var(--rule); overflow-y: auto; background: var(--paper); }
 .filters-inner { padding: 18px 18px 40px; }
+.filters-head, .scrim { display: none; }
 .fgroup + .fgroup { margin-top: 22px; }
 .fgroup h3 { margin: 0 0 8px; font: 600 11px/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
 .check { display: flex; align-items: center; gap: 9px; padding: 4px 0; cursor: pointer; color: var(--ink-2); user-select: none; }
@@ -144,10 +145,29 @@ kbd { font: 500 11px var(--sans); color: var(--ink-3); border: 1px solid var(--r
 .shown { color: var(--ink-3); font-size: 12px; white-space: nowrap; font-variant-numeric: tabular-nums; }
 
 /* ---------- inspector ---------- */
-.inspector { grid-area: inspector; display: flex; flex-direction: column; min-height: 0; overflow: hidden; border-left: 1px solid var(--rule); background: var(--paper-2); position: relative; }
+.inspector { grid-area: inspector; display: flex; flex-direction: column; min-height: 0; border-left: 1px solid var(--rule); background: var(--paper-2); position: relative; }
 .inspector-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; position: relative; }
-.inspector.split .inspector-scroll { flex: 1 1 50%; }
-.inspector-market { flex: 1 1 50%; min-height: 0; overflow-y: auto; border-top: 1px solid var(--rule); padding: 14px 26px 20px; }
+.inspector.split .inspector-scroll { flex: 0 0 50%; }
+.inspector-market { flex: 1 1 0; min-height: 0; overflow-y: auto; padding: 14px 26px 20px; }
+
+/* ---------- draggable dividers ---------- */
+.splitter { flex: none; touch-action: none; outline: none; z-index: 5; }
+.splitter::after { content: ""; position: absolute; background: var(--accent); opacity: 0; transition: opacity 0.15s; }
+.splitter:hover::after, .splitter:focus-visible::after, .resizing .splitter:active::after { opacity: 1; }
+.splitter-edge { position: absolute; top: 0; bottom: 0; left: -5px; width: 9px; cursor: col-resize; }
+.splitter-edge::after { top: 0; bottom: 0; left: 3px; width: 3px; }
+.splitter-mid { position: relative; height: 9px; margin: -4px 0; cursor: row-resize; }
+.splitter-mid::before { content: ""; position: absolute; left: 0; right: 0; top: 4px; height: 1px; background: var(--rule); }
+.splitter-mid::after { left: 0; right: 0; top: 3px; height: 3px; }
+/* grip: chevrons either side of the divider line (‹|›, and stacked for the middle), so it reads as draggable */
+.grip { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: grid; place-items: center;
+  color: var(--ink-3); transition: color 0.15s; pointer-events: none; }
+.grip svg { display: block; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.splitter:hover .grip, .splitter:focus-visible .grip, .resizing .splitter:active .grip { color: var(--accent); }
+.resizing { user-select: none; }
+.resizing iframe { pointer-events: none; }
+.resizing-x, .resizing-x * { cursor: col-resize !important; }
+.resizing-y, .resizing-y * { cursor: row-resize !important; }
 .inspector-market h2 { margin-top: 0; }
 .back { position: sticky; top: 0; z-index: 2; display: block; width: 100%; text-align: left; padding: 12px 26px 10px; color: var(--ink-3); font-weight: 500;
   background: linear-gradient(var(--paper-2) 70%, transparent); }
@@ -155,6 +175,7 @@ kbd { font: 500 11px var(--sans); color: var(--ink-3); border: 1px solid var(--r
 .panel-body { padding: 26px 26px 48px; animation: enter 0.32s var(--ease); }
 .back + .panel-body { padding-top: 6px; }
 @keyframes enter { from { opacity: 0; transform: translateY(6px); } }
+@keyframes fade { from { opacity: 0; } }
 .kicker { display: flex; align-items: center; gap: 10px; margin: 0 0 8px; font: 600 11px/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
 .kicker .tag { text-transform: none; letter-spacing: 0; }
 .display { margin: 0 0 12px; font: 400 clamp(30px, 2.6vw, 38px)/1.04 var(--serif); letter-spacing: -0.015em; text-wrap: balance; }
@@ -241,11 +262,13 @@ table.fin { width: 100%; border-collapse: collapse; font-variant-numeric: tabula
 
 /* ---------- smaller screens ---------- */
 @media (max-width: 1180px) {
-  .app { grid-template-columns: minmax(0, 1fr) 380px; grid-template-areas: "top top" "stage inspector"; }
+  .app { grid-template-columns: minmax(0, 1fr) var(--inspector-w, 380px); grid-template-areas: "top top" "stage inspector"; }
   .filters-btn { display: inline-block; }
   .filters { position: fixed; z-index: 40; top: var(--top); left: 0; bottom: 0; width: 260px; box-shadow: var(--shadow);
     transform: translateX(-102%); transition: transform 0.3s var(--ease); }
   .filters-open .filters { transform: none; }
+  .filters-head { display: flex; align-items: center; justify-content: space-between; margin: -6px 0 10px; font: 400 21px/1 var(--serif); }
+  .scrim { display: block; position: fixed; inset: 0; z-index: 39; background: rgba(0, 0, 0, 0.22); animation: fade 0.2s var(--ease); }
 }
 @media (max-width: 820px) {
   :root { --top: 104px; }
@@ -256,7 +279,9 @@ table.fin { width: 100%; border-collapse: collapse; font-variant-numeric: tabula
   .search kbd { display: none; }
   .inspector { border-left: 0; border-top: 1px solid var(--rule); overflow: visible; display: block; }
   .inspector-scroll, .inspector-market { overflow: visible; }
-  .inspector-market { padding: 14px 16px 24px; }
+  .inspector-market { padding: 14px 16px 24px; border-top: 1px solid var(--rule); }
+  .splitter { display: none; }
+  .inspector.split .inspector-scroll { flex-basis: auto !important; }
   .panel-body { padding: 22px 16px 40px; }
   .back { padding: 12px 16px; position: static; }
   .timeline { gap: 10px; bottom: 12px; }

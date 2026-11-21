@@ -6,6 +6,9 @@ import Graph, { type GraphApi } from "./components/Graph";
 import { About, CompanyPanel, DealPanel, Overview } from "./components/Panels";
 import Search from "./components/Search";
 import TradingView, { tvSymbol } from "./components/TradingView";
+import Splitter, { useStored } from "./components/Splitter";
+
+const INSPECTOR_W = 408, SPLIT = 50;
 
 // ---- routing: #/c/NVDA, #/d/d006, #/about ----
 function parseHash(index: Index | null): View {
@@ -68,10 +71,15 @@ function MapApp({ index }: { index: Index }) {
   const [playing, setPlaying] = useState(false);
   const [layout, setLayout] = useState<"columns" | "web">("columns");
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const filtersOpenRef = useRef(filtersOpen);
+  filtersOpenRef.current = filtersOpen;
   const graph = useRef<GraphApi | null>(null);
   const panel = useRef<HTMLDivElement>(null);
   const viewed = view.kind === "company" ? index.byId[view.id] : undefined;
   const market = viewed ? tvSymbol(viewed) : null;
+  const [inspectorW, setInspectorW] = useStored("inspector-width", INSPECTOR_W);
+  const [split, setSplit] = useStored("inspector-split", SPLIT); // top pane, % of height
+  const aside = useRef<HTMLElement>(null);
 
   // ---- navigation ----
   const go = useCallback((v: View) => {
@@ -130,7 +138,7 @@ function MapApp({ index }: { index: Index }) {
     const f = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement).tagName;
       if (tag === "INPUT" || tag === "SELECT" || tag === "TEXTAREA") return;
-      if (e.key === "Escape") go({ kind: "overview" });
+      if (e.key === "Escape") { if (filtersOpenRef.current) setFiltersOpen(false); else go({ kind: "overview" }); }
       if (e.key === "f" || e.key === "F") graph.current?.fit();
       if (e.key === "+" || e.key === "=") graph.current?.zoom(1.3);
       if (e.key === "-") graph.current?.zoom(1 / 1.3);
@@ -156,7 +164,7 @@ function MapApp({ index }: { index: Index }) {
   };
 
   return (
-    <div className={"app" + (filtersOpen ? " filters-open" : "")}>
+    <div className={"app" + (filtersOpen ? " filters-open" : "")} style={{ ["--inspector-w" as string]: `${inspectorW}px` }}>
       <header className="top">
         <button className="brand" onClick={() => go({ kind: "overview" })} aria-label="AI Capital Map, overview">
           <span className="mark" aria-hidden>◐</span><span>AI Capital Map</span>
@@ -174,8 +182,13 @@ function MapApp({ index }: { index: Index }) {
         </nav>
       </header>
 
+      {filtersOpen && <div className="scrim" onClick={() => setFiltersOpen(false)} aria-hidden="true" />}
       <aside className="filters" aria-label="Filters">
         <div className="filters-inner">
+          <div className="filters-head">
+            <span>Filters</span>
+            <button className="ghost icon" onClick={() => setFiltersOpen(false)} aria-label="Close filters">✕</button>
+          </div>
           <div className="fgroup">
             <h3>Kind of deal</h3>
             {Object.entries(TYPES).filter(([k]) => counts[k]).map(([k, t]) => (
@@ -239,8 +252,12 @@ function MapApp({ index }: { index: Index }) {
         </div>
       </main>
 
-      <aside className={"inspector" + (market ? " split" : "")} aria-live="polite">
-        <div className="inspector-scroll" ref={panel}>
+      <aside className={"inspector" + (market ? " split" : "")} ref={aside} aria-live="polite">
+        <Splitter orientation="vertical" className="splitter-edge" label="Resize panel"
+          value={inspectorW} min={300} max={Math.max(320, window.innerWidth - 420)} step={24}
+          fromPointer={e => window.innerWidth - e.clientX}
+          onChange={setInspectorW} onReset={() => setInspectorW(INSPECTOR_W)} />
+        <div className="inspector-scroll" ref={panel} style={market ? { flexBasis: `${split}%` } : undefined}>
         {view.kind !== "overview" && (
           <button className="back" onClick={() => history.length > 1 ? history.back() : go({ kind: "overview" })}>← Back</button>
         )}
@@ -249,6 +266,13 @@ function MapApp({ index }: { index: Index }) {
         {view.kind === "deal" && <DealPanel id={view.id} index={index} visible={visible} theme={theme} nav={nav} />}
         {view.kind === "about" && <About index={index} />}
         </div>
+        {market && <Splitter orientation="horizontal" className="splitter-mid" label="Resize market pane"
+          value={split} min={12} max={88} step={5}
+          fromPointer={e => {
+            const r = aside.current!.getBoundingClientRect();
+            return ((e.clientY - r.top) / r.height) * 100;
+          }}
+          onChange={setSplit} onReset={() => setSplit(SPLIT)} />}
         {market && <section className="inspector-market" key={market}>
           <h2>Market</h2>
           <TradingView symbol={market} theme={theme} />
