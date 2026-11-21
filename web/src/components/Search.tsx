@@ -48,7 +48,7 @@ export default function Search({ index, theme, onPick }: { index: Index; theme: 
           {results.map((c, i) => (
             <li key={c.id} role="option" aria-selected={i === sel} className={i === sel ? "on" : ""}
               onMouseDown={e => { e.preventDefault(); pick(c.id); }} onMouseEnter={() => setSel(i)}>
-              <i className="dot" style={{ background: LAYER_COLORS[theme][(index.layerIndex[c.layer] ?? 0) % 9] }} />
+              <i className="dot" style={{ background: LAYER_COLORS[theme][(index.layerIndex[c.layer] ?? 0) % LAYER_COLORS[theme].length] }} />
               <span>{c.name}</span>{c.ticker && <span className="ticker">{c.ticker}</span>}
             </li>
           ))}

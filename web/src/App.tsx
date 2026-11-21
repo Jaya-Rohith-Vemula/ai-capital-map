@@ -187,7 +187,7 @@ function MapApp({ index }: { index: Index }) {
             {data.layers.map((l, i) => (
               <label key={l.id} className="check">
                 <input type="checkbox" checked={layers.has(l.id)} onChange={() => toggle(layers, setLayers, l.id)} />
-                <i className="dot" style={{ background: LAYER_COLORS[theme][i % 9] }} />{l.name}
+                <i className="dot" style={{ background: LAYER_COLORS[theme][i % LAYER_COLORS[theme].length] }} />{l.name}
               </label>
             ))}
           </div>

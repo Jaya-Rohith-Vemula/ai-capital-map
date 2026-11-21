@@ -29,5 +29,24 @@
     "power purchase agreement data center",
     "strategic investment AI",
     "HBM supply agreement"
-  ]
+  ],
+  "topic_searches": {
+    "cooling": {
+      "news": [
+        "liquid cooling acquisition data center",
+        "data center cooling acquires",
+        "liquid cooling startup funding round",
+        "immersion cooling investment",
+        "Vertiv acquires",
+        "Schneider Electric acquires data center",
+        "data center thermal management acquisition",
+        "data center cooling order billion"
+      ],
+      "press": [
+        "liquid cooling data center acquisition",
+        "liquid cooling data center investment",
+        "data center cooling agreement"
+      ]
+    }
+  }
 }

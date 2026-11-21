@@ -3,8 +3,8 @@
 export type Theme = "light" | "dark";
 
 export const LAYER_COLORS: Record<Theme, string[]> = {
-  light: ["#9A6B2F", "#D0461A", "#2457C5", "#0E8A7E", "#7A4EC2", "#4D8A1F", "#C2367A", "#5B6B7F", "#B58E00"],
-  dark: ["#D6A866", "#FF8052", "#76A0FF", "#44CBB8", "#B394F2", "#93CF5A", "#F477B0", "#A3B1C2", "#EDCB4A"],
+  light: ["#9A6B2F", "#D0461A", "#2457C5", "#0E8A7E", "#7A4EC2", "#4D8A1F", "#C2367A", "#5B6B7F", "#B58E00", "#1F7FA8"],
+  dark: ["#D6A866", "#FF8052", "#76A0FF", "#44CBB8", "#B394F2", "#93CF5A", "#F477B0", "#A3B1C2", "#EDCB4A", "#5EC4EC"],
 };
 
 export const TYPES: Record<string, { label: string; verb: string; light: string; dark: string }> = {

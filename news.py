@@ -85,9 +85,12 @@ def key_for(title):
     return hashlib.sha1(norm(title).encode()).hexdigest()[:16]
 
 
-def is_candidate(title, summary):
+def is_candidate(title, summary, loose=False):
+    """A deal headline: money and a deal word, not commentary. loose (topic
+    searches) drops the money test: an acquisition or funding headline often
+    names no amount."""
     text = title + " " + summary
-    return bool(MONEY.search(text) and DEAL.search(text) and not NOISE.search(title))
+    return bool((loose or MONEY.search(text)) and DEAL.search(text) and not NOISE.search(title))
 
 
 # ---------- finding ----------

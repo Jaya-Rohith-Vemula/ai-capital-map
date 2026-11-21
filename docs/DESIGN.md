@@ -86,6 +86,16 @@ supplier). Types: `equity`, `compute`, `chips`, `lease`, `power`,
 confirmed), `loi` (letter of intent, MOU, milestone-based "up to"),
 `reported` (media, unconfirmed), `completed`, `terminated`.
 
+**Topics** (added 2026-11-21, for cooling): `config.json` `topic_searches`
+holds named search groups. Every run asks them along with the main searches;
+`run.py --topic <name>` asks only that group from `start`, with coverage
+tracked separately (its run records carry `topic`), to fill a new topic's
+history. Topic headlines skip the money test in the candidate filter, since
+equipment M&A and funding headlines often state no amount. Cooling and
+electrical-equipment makers (Vertiv, Eaton, Schneider...) have their own
+layer, `cooling`, split from `power`; their equipment orders use type `chips`
+(hardware).
+
 **Seed deals** (`origin: seed`) came from Claude's training knowledge (to mid
 2026), not a fetched article: unverified until a news item matches them.
 

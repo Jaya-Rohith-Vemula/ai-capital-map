@@ -15,6 +15,7 @@ cd ~/Documents/ai-capital-map
 | `python3 run.py` | The same as `./backfill.sh`, but in the foreground: the log prints to the terminal and it stops if you close the terminal. The Mac is not kept awake. |
 | `python3 run.py --until 2025-01-31` | Stop at a date instead of today. Useful for trying one month. |
 | `python3 run.py --since 2026-10-01` | Start from a given date instead of where coverage ends. A run that starts out of order does not move the main timeline forward past a gap. |
+| `./backfill.sh --topic cooling` | Run only one topic's searches (`topic_searches` in `config.json`) from `start`, with its own coverage: use after adding a topic, to fill its history without re-running everything. Resumes like a normal run. Normal runs include every topic's searches anyway. |
 | `python3 run.py --no-claude` | Search and read the articles only, with no Claude. Fills `store/news.db` without using the Claude plan. Running again later without the flag extracts them. |
 
 What a run does, month by month: search Google News (plus Finnhub for windows of 3 weeks or less) → filter to deal headlines → read the articles we are allowed to → Claude extracts the deals → check and merge into `data/deals.json` → write `runs/<month>.json` → redraw the map. Details: `docs/DESIGN.md`.
@@ -91,7 +92,7 @@ Deploying on Vercel: import the repo, set **Root Directory** to `web` (framework
 | File | What to edit |
 | --- | --- |
 | `data/companies.json` | Add a company (id, name, ticker, layer, what it does, aliases). Edit only while no run is going: a run rewrites this file after every batch. |
-| `config.json` | `holdings` (gold ring on the map), `news_searches` and `press_searches` (what Google is asked), `start` (where coverage begins), `model`, `batch_size`. |
+| `config.json` | `holdings` (gold ring on the map), `news_searches` and `press_searches` (what Google is asked), `topic_searches` (named groups such as `cooling`, asked in every run; their headlines need a deal word but no amount), `start` (where coverage begins), `model`, `batch_size`. |
 | `.env` | `FINNHUB_API_KEY`: optional, used only for short windows. `SEC_USER_AGENT`: your name and email, for `fundamentals.py`. Gitignored. |
 | `data/companies.json` `market` | TradingView symbol for a company listed outside the US or whose ticker means something else there (`"ASX:NXT"`); `false` hides the live market panel. US listings need nothing. |
 

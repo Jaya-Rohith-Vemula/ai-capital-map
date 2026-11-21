@@ -54,6 +54,9 @@ def add_item(db, it):
         " VALUES (?,?,?,?,?,?,?,?,?,?)",
         (it["key"], it["title"], it.get("summary", ""), it.get("source", ""), it["published"], it["feed"],
          it["link"], it.get("url"), int(it.get("candidate", 0)), dt.datetime.now().isoformat(timespec="seconds")))
+    if not cur.rowcount and it.get("candidate"):
+        # Seen before by a stricter search: a loose topic search may promote it.
+        db.execute("UPDATE items SET candidate = 1 WHERE key = ? AND candidate = 0", (it["key"],))
     if not cur.rowcount and it.get("summary"):
         # A Finnhub summary is worth keeping even if Google saw the story first.
         db.execute("UPDATE items SET summary = ? WHERE key = ? AND summary = ''", (it["summary"], it["key"]))

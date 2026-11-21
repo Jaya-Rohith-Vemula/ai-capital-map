@@ -6,6 +6,7 @@ Claude extract the deals, merge them, rebuild the map.
     python3 run.py                     # continue from the last completed run (first time: config "start")
     python3 run.py --until 2025-01-31  # stop at a date (try a month first)
     python3 run.py --no-claude         # search and read only
+    python3 run.py --topic cooling     # only that topic's searches, from config "start" (own coverage)
 
 Each month is its own run record in runs/, written only when the month is
 fully done, so a run that stops (rate limit, error, Ctrl-C) resumes where it
@@ -104,26 +105,42 @@ def wait_for_reset(e, log):
     log("  limit wait over, retrying the batch")
 
 
-def run_window(a, b, cfg, db, cdoc, ddoc, log, use_claude):
-    run_id = f"{b.isoformat()}-{dt.datetime.now().strftime('%H%M')}"
+def queries_for(cfg, topic=None):
+    """(query, loose) pairs. A normal run asks every search, topics included;
+    --topic asks only that topic's. Topic searches are loose: a deal headline
+    without an amount still counts (cooling M&A rarely states one)."""
+    press = lambda qs: [f"{q} {cfg['press_sites']}" for q in qs]
+    topics = cfg.get("topic_searches", {})
+    if topic:
+        t = topics[topic]
+        return [(q, True) for q in t.get("news", []) + press(t.get("press", []))]
+    out = [(q, False) for q in cfg["news_searches"] + press(cfg.get("press_searches", []))]
+    for t in topics.values():
+        out += [(q, True) for q in t.get("news", []) + press(t.get("press", []))]
+    return out
+
+
+def run_window(a, b, cfg, db, cdoc, ddoc, log, use_claude, topic=None):
+    run_id = f"{b.isoformat()}-{dt.datetime.now().strftime('%H%M')}" + (f"-{topic}" if topic else "")
     report = {"id": run_id, "since": a.isoformat(), "until": b.isoformat(), "completed": False,
+              **({"topic": topic} if topic else {}),
               "started": dt.datetime.now().isoformat(timespec="seconds"), "searched": 0, "candidates": 0,
               "read": {}, "new_deals": [], "updated_deals": [], "new_companies": [], "rejected": [], "errors": []}
     label = f"{a} → {b}"
     log(f"=== {label}  (run {run_id})")
 
     # 1. search
-    queries = cfg["news_searches"] + [f"{q} {cfg['press_sites']}" for q in cfg.get("press_searches", [])]
+    queries = queries_for(cfg, topic)
     added = 0
-    for n, q in enumerate(queries, 1):
+    for n, (q, loose) in enumerate(queries, 1):
         log.set(f"{label}: searching {n}/{len(queries)}")
         for it in news.google_search(q, a, b, log):
-            it["candidate"] = news.is_candidate(it["title"], it["summary"])
+            it["candidate"] = news.is_candidate(it["title"], it["summary"], loose)
             added += store.add_item(db, it)
             report["searched"] += 1
         time.sleep(news.PAUSE)
     key = env_key("FINNHUB_API_KEY")
-    if key and (b - a).days <= 21 and a >= dt.date.today() - dt.timedelta(days=360):
+    if key and not topic and (b - a).days <= 21 and a >= dt.date.today() - dt.timedelta(days=360):
         tickers = [c["ticker"] for c in cdoc["companies"] if c.get("ticker") and "." not in c["ticker"]]
         for n, t in enumerate(tickers, 1):
             log.set(f"{label}: Finnhub {n}/{len(tickers)} ({t})")
@@ -234,6 +251,7 @@ def main():
     ap.add_argument("--since", help="YYYY-MM-DD; default: where the last completed run ended")
     ap.add_argument("--until", help="YYYY-MM-DD; default: today")
     ap.add_argument("--no-claude", action="store_true", help="search and read articles only")
+    ap.add_argument("--topic", help="run only this config topic_searches group (e.g. cooling), with its own coverage")
     a = ap.parse_args()
 
     log = Logbook(dt.datetime.now().strftime("%Y-%m-%d-%H%M%S")).start()
@@ -243,20 +261,26 @@ def main():
     ddoc = load(os.path.join(DATA, "deals.json"))
     os.makedirs(RUNS, exist_ok=True)
     db = store.connect()
+    if a.topic and a.topic not in cfg.get("topic_searches", {}):
+        log(f"Unknown topic {a.topic!r}; config topic_searches has: {', '.join(cfg.get('topic_searches', {})) or 'none'}")
+        return 1
 
-    done = completed_runs()
+    # Coverage is per topic: a normal run's timeline ignores topic runs, and a
+    # topic run continues from its own last completed month.
+    done = [r for r in completed_runs() if r.get("topic") == a.topic]
     if a.since:
         since = dt.date.fromisoformat(a.since)
     else:
         # The end of unbroken coverage from config "start": a run done out of
         # order (a test week, say) does not make the backfill skip the gap.
-        since = dt.date.fromisoformat(cfg["start"])
+        end = dt.date.fromisoformat(cfg["start"]) - dt.timedelta(days=1)  # last day covered
         for r in sorted(done, key=lambda r: r["since"]):
-            if dt.date.fromisoformat(r["since"]) <= since + dt.timedelta(days=1):
-                since = max(since, dt.date.fromisoformat(r["until"]))
+            if dt.date.fromisoformat(r["since"]) <= end + dt.timedelta(days=1):
+                end = max(end, dt.date.fromisoformat(r["until"]))
+        since = end + dt.timedelta(days=1)  # the day after, not the last day again
     until = dt.date.fromisoformat(a.until) if a.until else dt.date.today()
     if since > until:
-        log(f"Nothing to do: already up to {since}")
+        log(f"Nothing to do: already up to {since - dt.timedelta(days=1)}")
         return 0
     windows = list(months(since, until))
     log(f"Log file: {log.path}")
@@ -266,7 +290,7 @@ def main():
     try:
         for n, (wa, wb) in enumerate(windows, 1):
             log(f"Month {n}/{len(windows)}")
-            run_window(wa, wb, cfg, db, cdoc, ddoc, log, not a.no_claude)
+            run_window(wa, wb, cfg, db, cdoc, ddoc, log, not a.no_claude, a.topic)
             if not a.no_claude:
                 build.build()
     except news.RateLimited as e:
