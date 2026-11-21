@@ -144,7 +144,11 @@ kbd { font: 500 11px var(--sans); color: var(--ink-3); border: 1px solid var(--r
 .shown { color: var(--ink-3); font-size: 12px; white-space: nowrap; font-variant-numeric: tabular-nums; }
 
 /* ---------- inspector ---------- */
-.inspector { grid-area: inspector; overflow-y: auto; border-left: 1px solid var(--rule); background: var(--paper-2); position: relative; }
+.inspector { grid-area: inspector; display: flex; flex-direction: column; min-height: 0; overflow: hidden; border-left: 1px solid var(--rule); background: var(--paper-2); position: relative; }
+.inspector-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; position: relative; }
+.inspector.split .inspector-scroll { flex: 1 1 50%; }
+.inspector-market { flex: 1 1 50%; min-height: 0; overflow-y: auto; border-top: 1px solid var(--rule); padding: 14px 26px 20px; }
+.inspector-market h2 { margin-top: 0; }
 .back { position: sticky; top: 0; z-index: 2; display: block; width: 100%; text-align: left; padding: 12px 26px 10px; color: var(--ink-3); font-weight: 500;
   background: linear-gradient(var(--paper-2) 70%, transparent); }
 .back:hover { color: var(--ink); }
@@ -250,7 +254,9 @@ table.fin { width: 100%; border-collapse: collapse; font-variant-numeric: tabula
   .brand { font-size: 21px; }
   .search { order: 3; flex: 1 1 100%; }
   .search kbd { display: none; }
-  .inspector { border-left: 0; border-top: 1px solid var(--rule); overflow: visible; }
+  .inspector { border-left: 0; border-top: 1px solid var(--rule); overflow: visible; display: block; }
+  .inspector-scroll, .inspector-market { overflow: visible; }
+  .inspector-market { padding: 14px 16px 24px; }
   .panel-body { padding: 22px 16px 40px; }
   .back { padding: 12px 16px; position: static; }
   .timeline { gap: 10px; bottom: 12px; }

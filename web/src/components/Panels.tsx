@@ -4,7 +4,6 @@ import { dateLabel, money, ttm } from "../data";
 import { EVIDENCE, LAYER_COLORS, STATUSES, TYPES, type Theme } from "../meta";
 import type { Company, Deal } from "../types";
 import Financials from "./Financials";
-import TradingView, { tvSymbol } from "./TradingView";
 
 type Nav = { company: (id: string) => void; deal: (id: string) => void; about: () => void };
 type Common = { index: Index; visible: Set<string>; theme: Theme; nav: Nav };
@@ -144,7 +143,6 @@ export function CompanyPanel({ id, index, visible, theme, nav }: Common & { id: 
   const hidden = index.data.deals.filter(d => (d.from === id || d.to === id) && !visible.has(d.id)).length;
   const incoming = mine.filter(d => d.to === id), outgoing = mine.filter(d => d.from === id);
   if (!c) return <div className="panel-body"><p>Not found.</p></div>;
-  const sym = tvSymbol(c);
   return (
     <div className="panel-body" key={id}>
       <p className="kicker"><LayerTag index={index} layer={c.layer} theme={theme} />{c.ticker && <span className="ticker">{c.ticker}</span>}{!c.ticker && <span className="ticker">Private</span>}</p>
@@ -163,10 +161,6 @@ export function CompanyPanel({ id, index, visible, theme, nav }: Common & { id: 
       {hidden > 0 && <p className="note">{hidden} more hidden by the current filters.</p>}
 
       {c.fin && <Financials fin={c.fin} asOf={index.data.fundamentals_as_of} />}
-      {sym && <section>
-        <h2>Market</h2>
-        <TradingView symbol={sym} theme={theme} />
-      </section>}
     </div>
   );
 }

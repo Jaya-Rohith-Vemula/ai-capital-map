@@ -5,6 +5,7 @@ import type { Data, View } from "./types";
 import Graph, { type GraphApi } from "./components/Graph";
 import { About, CompanyPanel, DealPanel, Overview } from "./components/Panels";
 import Search from "./components/Search";
+import TradingView, { tvSymbol } from "./components/TradingView";
 
 // ---- routing: #/c/NVDA, #/d/d006, #/about ----
 function parseHash(index: Index | null): View {
@@ -68,7 +69,9 @@ function MapApp({ index }: { index: Index }) {
   const [layout, setLayout] = useState<"columns" | "web">("columns");
   const [filtersOpen, setFiltersOpen] = useState(false);
   const graph = useRef<GraphApi | null>(null);
-  const panel = useRef<HTMLElement>(null);
+  const panel = useRef<HTMLDivElement>(null);
+  const viewed = view.kind === "company" ? index.byId[view.id] : undefined;
+  const market = viewed ? tvSymbol(viewed) : null;
 
   // ---- navigation ----
   const go = useCallback((v: View) => {
@@ -236,7 +239,8 @@ function MapApp({ index }: { index: Index }) {
         </div>
       </main>
 
-      <aside className="inspector" ref={panel} aria-live="polite">
+      <aside className={"inspector" + (market ? " split" : "")} aria-live="polite">
+        <div className="inspector-scroll" ref={panel}>
         {view.kind !== "overview" && (
           <button className="back" onClick={() => history.length > 1 ? history.back() : go({ kind: "overview" })}>← Back</button>
         )}
@@ -244,6 +248,11 @@ function MapApp({ index }: { index: Index }) {
         {view.kind === "company" && <CompanyPanel id={view.id} index={index} visible={visible} theme={theme} nav={nav} />}
         {view.kind === "deal" && <DealPanel id={view.id} index={index} visible={visible} theme={theme} nav={nav} />}
         {view.kind === "about" && <About index={index} />}
+        </div>
+        {market && <section className="inspector-market" key={market}>
+          <h2>Market</h2>
+          <TradingView symbol={market} theme={theme} />
+        </section>}
       </aside>
     </div>
   );
