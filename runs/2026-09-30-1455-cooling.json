@@ -1,0 +1,45 @@
+{
+ "id": "2026-09-30-1455-cooling",
+ "since": "2026-09-01",
+ "until": "2026-09-30",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:55:41",
+ "searched": 173,
+ "candidates": 170,
+ "read": {
+  "blocked": 37,
+  "failed": 2,
+  "read": 124,
+  "short": 7
+ },
+ "new_deals": [
+  "d355",
+  "d356",
+  "d357",
+  "d358",
+  "d359",
+  "d360",
+  "d361",
+  "d362",
+  "d363"
+ ],
+ "updated_deals": [
+  "d219"
+ ],
+ "new_companies": [
+  "UIG",
+  "EPCPOWER",
+  "LITEON",
+  "DCX",
+  "FCH",
+  "AIRJOULE",
+  "BITSINK",
+  "KES",
+  "SPX",
+  "FISWATER"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T15:00:48"
+}

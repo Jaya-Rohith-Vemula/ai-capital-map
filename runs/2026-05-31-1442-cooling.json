@@ -1,0 +1,31 @@
+{
+ "id": "2026-05-31-1442-cooling",
+ "since": "2026-05-01",
+ "until": "2026-05-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:42:43",
+ "searched": 127,
+ "candidates": 149,
+ "read": {
+  "blocked": 31,
+  "failed": 1,
+  "read": 116,
+  "short": 1
+ },
+ "new_deals": [
+  "d339",
+  "d340"
+ ],
+ "updated_deals": [
+  "d322"
+ ],
+ "new_companies": [
+  "DOMINION",
+  "ISQUARED",
+  "COGENT"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:44:52"
+}

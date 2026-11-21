@@ -1,0 +1,32 @@
+{
+ "id": "2025-12-31-1429-cooling",
+ "since": "2025-12-01",
+ "until": "2025-12-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:29:12",
+ "searched": 160,
+ "candidates": 131,
+ "read": {
+  "blocked": 22,
+  "failed": 1,
+  "read": 105,
+  "short": 3
+ },
+ "new_deals": [
+  "d318"
+ ],
+ "updated_deals": [
+  "d312",
+  "d112",
+  "d113",
+  "d114"
+ ],
+ "new_companies": [
+  "TRANE",
+  "STELLAR"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:32:17"
+}

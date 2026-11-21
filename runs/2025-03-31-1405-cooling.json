@@ -1,0 +1,24 @@
+{
+ "id": "2025-03-31-1405-cooling",
+ "since": "2025-03-01",
+ "until": "2025-03-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:05:16",
+ "searched": 132,
+ "candidates": 64,
+ "read": {
+  "blocked": 15,
+  "read": 49
+ },
+ "new_deals": [
+  "d296"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "AMPERE"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:07:41"
+}

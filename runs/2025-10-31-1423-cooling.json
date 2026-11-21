@@ -1,0 +1,42 @@
+{
+ "id": "2025-10-31-1423-cooling",
+ "since": "2025-10-01",
+ "until": "2025-10-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:23:53",
+ "searched": 158,
+ "candidates": 113,
+ "read": {
+  "blocked": 19,
+  "read": 92,
+  "short": 2
+ },
+ "new_deals": [
+  "d306",
+  "d307",
+  "d308",
+  "d309",
+  "d310",
+  "d311"
+ ],
+ "updated_deals": [
+  "d087"
+ ],
+ "new_companies": [
+  "JOHNSONCONTROLS",
+  "ACCELSIUS",
+  "LEGRAND",
+  "AVTRON",
+  "RIVOS",
+  "FIRMUS",
+  "CDC",
+  "VOLTAGRID",
+  "INNIO",
+  "CLEANSPARK",
+  "SUBMER"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:27:16"
+}

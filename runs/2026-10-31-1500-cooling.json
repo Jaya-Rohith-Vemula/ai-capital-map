@@ -1,0 +1,49 @@
+{
+ "id": "2026-10-31-1500-cooling",
+ "since": "2026-10-01",
+ "until": "2026-10-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T15:00:48",
+ "searched": 321,
+ "candidates": 469,
+ "read": {
+  "blocked": 78,
+  "failed": 4,
+  "read": 370,
+  "short": 17
+ },
+ "new_deals": [
+  "d364",
+  "d365",
+  "d366",
+  "d367",
+  "d368",
+  "d369",
+  "d370",
+  "d371",
+  "d372"
+ ],
+ "updated_deals": [
+  "d359",
+  "d360"
+ ],
+ "new_companies": [
+  "VULTR",
+  "AIR",
+  "DMATRIX",
+  "EOLE",
+  "BLUUUNIT",
+  "SPACEENG",
+  "GENERALCOMPUTE",
+  "POSITRON",
+  "CANCOIL",
+  "ACUITY",
+  "PARAMETER",
+  "ARCCLOUD",
+  "COMPAL"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T15:08:14"
+}

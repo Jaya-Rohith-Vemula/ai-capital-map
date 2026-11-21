@@ -1,0 +1,26 @@
+{
+ "id": "2024-11-30-1353-cooling",
+ "since": "2024-11-01",
+ "until": "2024-11-30",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T13:53:31",
+ "searched": 93,
+ "candidates": 57,
+ "read": {
+  "blocked": 10,
+  "read": 47
+ },
+ "new_deals": [
+  "d292",
+  "d293"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "FLEX",
+  "JETCOOL"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T13:55:07"
+}

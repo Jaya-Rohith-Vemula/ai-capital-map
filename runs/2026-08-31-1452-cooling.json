@@ -1,0 +1,44 @@
+{
+ "id": "2026-08-31-1452-cooling",
+ "since": "2026-08-01",
+ "until": "2026-08-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:52:07",
+ "searched": 157,
+ "candidates": 139,
+ "read": {
+  "blocked": 38,
+  "failed": 1,
+  "read": 94,
+  "short": 6
+ },
+ "new_deals": [
+  "d348",
+  "d349",
+  "d350",
+  "d351",
+  "d352",
+  "d353",
+  "d354"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "PARTNERSGROUP",
+  "AVK",
+  "WHITEFIBERPLACEHOLDERUNUSED",
+  "KRAMBU",
+  "MOLEXPLACEHOLDERUNUSED",
+  "CAEPLUS",
+  "MADISONAIR",
+  "EBMPAPST",
+  "CLOVERLEAF",
+  "NVT",
+  "MAVERICK",
+  "MOLEXREAL",
+  "EZISIGHT"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:55:41"
+}

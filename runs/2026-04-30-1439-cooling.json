@@ -1,0 +1,40 @@
+{
+ "id": "2026-04-30-1439-cooling",
+ "since": "2026-04-01",
+ "until": "2026-04-30",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:39:50",
+ "searched": 188,
+ "candidates": 125,
+ "read": {
+  "blocked": 32,
+  "failed": 1,
+  "read": 88,
+  "short": 4
+ },
+ "new_deals": [
+  "d331",
+  "d332",
+  "d333",
+  "d334",
+  "d335",
+  "d336",
+  "d337",
+  "d338"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "KEYDAK",
+  "TES",
+  "EPP",
+  "BMARKO",
+  "MOLEX",
+  "TERAMOUNT",
+  "RELATEDDIGITAL",
+  "STL"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:42:43"
+}

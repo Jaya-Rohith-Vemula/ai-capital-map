@@ -1,0 +1,26 @@
+{
+ "id": "2025-06-30-1415-cooling",
+ "since": "2025-06-01",
+ "until": "2025-06-30",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:15:27",
+ "searched": 87,
+ "candidates": 60,
+ "read": {
+  "blocked": 11,
+  "read": 49
+ },
+ "new_deals": [
+  "d299",
+  "d300"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "TAKANOCK",
+  "GRC"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:17:08"
+}

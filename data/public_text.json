@@ -1,4 +1,12 @@
 {
+ "C:PARTNERSGROUP": {
+  "src": "5988700b307c",
+  "text": "Global private markets investor investing in AVK data centre power."
+ },
+ "C:RELATEDDIGITAL": {
+  "src": "6b6694f5e6f3",
+  "text": "Data center developer and investment platform building the Oracle campus in Saline Township, Michigan."
+ },
  "C:RUMGROUP": {
   "src": "bbba508a00df",
   "text": "A Trump-linked company is reported to supply compute to Anthropic."
@@ -256,8 +264,8 @@
   "text": "Meta picked Pimco to lead debt financing for the Hyperion data center in Louisiana, which Meta leases under a 20-year lease with a guarantee."
  },
  "D:d087": {
-  "src": "3e5a8e6b65da",
-  "text": "Blue Owl contributes equity to the Hyperion joint venture."
+  "src": "2b0dfa330ad7",
+  "text": "Meta and funds managed by Blue Owl formed a joint venture to develop and own Hyperion, with Blue Owl holding 80% and Meta keeping 20%."
  },
  "D:d088": {
   "src": "54258925e42b",
@@ -360,8 +368,8 @@
   "text": "Alphabet will buy data center and power developer Intersect Power."
  },
  "D:d113": {
-  "src": "5142d1c560b1",
-  "text": "Nvidia will buy the assets of AI chip designer Groq for cash, per the CEO of Disruptive, which led Groq's last round."
+  "src": "ecd2ecae0aae",
+  "text": "Nvidia agreed to acquire Groq assets, though Groq describes the arrangement as a non-exclusive licensing agreement."
  },
  "D:d114": {
   "src": "abe302b06e8e",
@@ -604,8 +612,8 @@
   "text": "Apollo-managed funds lead an initial capital solution in Broadcom's AI XPV Platform with Blackstone and banks, supporting Anthropic's compute expansion of more than 1 GW starting mid-2026."
  },
  "D:d174": {
-  "src": "e79a50386f45",
-  "text": "Google will pay SpaceX monthly from October 2026 through June 2029 for about 110,000 Nvidia GPUs plus CPUs and memory in SpaceX/xAI data centers, with capacity ramping through September at a reduced fee, per a SpaceX filing."
+  "src": "fabae13c31e1",
+  "text": "SpaceX signed a cloud compute deal with Google ahead of its IPO."
  },
  "D:d175": {
   "src": "6463a3d1f6d6",
@@ -784,12 +792,12 @@
   "text": "Fervo's Cape Station in Utah will supply 396 MW of geothermal power under a PPA for a potential Google data center, online 2028, with an option to expand by about 600 MW by June 2030."
  },
  "D:d219": {
-  "src": "adb55a06f5f5",
-  "text": "Nvidia to buy Hugging Face, with additional equity set aside for employee retention; close expected in the first half of 2027."
+  "src": "68421ef35eca",
+  "text": "Nvidia agreed to buy Hugging Face."
  },
  "D:d220": {
-  "src": "c85b328786df",
-  "text": "SLB to acquire data-center thermal management firm Kelvion from Apollo and Triton-advised funds for cash plus assumed debt."
+  "src": "2737a15e37d0",
+  "text": "SLB is acquiring Kelvion, a maker of data center cooling equipment."
  },
  "D:d221": {
   "src": "9970af5abee3",
@@ -1016,8 +1024,8 @@
   "text": "Eaton agreed to acquire COL Group, expanding European manufacturing and power distribution for data center and utility markets."
  },
  "D:d277": {
-  "src": "dabd09799776",
-  "text": "Eaton acquired Boyd Thermal."
+  "src": "6e214184f411",
+  "text": "Eaton completed its acquisition of Boyd Thermal, adding liquid cooling for data centers."
  },
  "D:d278": {
   "src": "d4d92cbf204e",
@@ -1074,5 +1082,377 @@
  "D:d291": {
   "src": "834b3d91c471",
   "text": "NTT DATA agreed with Bloom Energy to deploy 900 MW of onsite fuel cell power across multiple global data center projects, designed to expand toward gigawatt scale."
+ },
+ "D:d292": {
+  "src": "5630b1adba7e",
+  "text": "Flex acquired liquid cooling company JetCool Technologies to strengthen its data center and power portfolio for AI workloads."
+ },
+ "D:d293": {
+  "src": "82db19ae1e0b",
+  "text": "Bloomberg, citing people familiar with the matter, reports Blackstone recently closed an equity stake in Texas data center firm Lancium."
+ },
+ "D:d294": {
+  "src": "04cca1dc1bc8",
+  "text": "Vertiv's Chinese subsidiary acquired certain assets and technologies of chiller maker BiXin Energy Technology (Suzhou) to broaden Vertiv's chiller portfolio for AI and high-performance compute."
+ },
+ "D:d295": {
+  "src": "433820e2419f",
+  "text": "SoftBank invested in Cipher Mining in a deal giving it a period of exclusivity to acquire the Barber Lake site, possibly for OpenAI's Stargate."
+ },
+ "D:d296": {
+  "src": "28eb813e21ee",
+  "text": "SoftBank will acquire Arm-based datacenter CPU developer Ampere Computing for cash, with Carlyle and Oracle selling their stakes; closing is expected in 2H 2025, subject to regulatory approvals."
+ },
+ "D:d297": {
+  "src": "c97387892c0f",
+  "text": "Duke Energy acquired 11 GE Vernova 7HA natural gas turbines for growing data center and manufacturing power demand, adding to eight acquired previously."
+ },
+ "D:d298": {
+  "src": "4697763af2b9",
+  "text": "Samsung signed a definitive agreement to buy FläktGroup, a German HVAC and data center cooling maker, from Triton."
+ },
+ "D:d299": {
+  "src": "ed5ba4bfe00c",
+  "text": "ArcLight and DigitalBridge committed new capital to Takanock, a data center power infrastructure provider."
+ },
+ "D:d300": {
+  "src": "94c5a457ab83",
+  "text": "Samsung Ventures invested in GRC, an immersion cooling provider for data centers."
+ },
+ "D:d301": {
+  "src": "1456e3bbcacf",
+  "text": "Vertiv completed its acquisition of Great Lakes Data Racks & Cabinets, adding rack, cabinet and integration solutions for high-density AI data centres."
+ },
+ "D:d302": {
+  "src": "330de1d2ff56",
+  "text": "Talen is buying two gas plants, the 1.058GW Moxie Freedom in Pennsylvania and 1.875GW Guernsey County in Ohio, from Caithness and BlackRock, with closing expected in Q4 2025."
+ },
+ "D:d303": {
+  "src": "c97009480b66",
+  "text": "Nvidia and Schneider Electric partnered to co-develop cooling, power, building management and control systems for AI factories."
+ },
+ "D:d304": {
+  "src": "0f10d21c0225",
+  "text": "AEP subsidiary Indiana Michigan Power and Google filed a special customer contract with Indiana's regulator for clean capacity and demand response at the Fort Wayne data center, pending approval."
+ },
+ "D:d305": {
+  "src": "ff119707bd1d",
+  "text": "Applied Digital led the Series A1 funding round for Corintis, which makes microfluidic chip cooling for AI data centers."
+ },
+ "D:d306": {
+  "src": "61f6b86643f6",
+  "text": "Accelsius closed a Series B funding round led by Johnson Controls."
+ },
+ "D:d307": {
+  "src": "3db6001bd195",
+  "text": "Legrand acquired load bank provider Avtron, its fifth data center acquisition in 2025."
+ },
+ "D:d308": {
+  "src": "f13bf5edd728",
+  "text": "Meta acquired AI chip startup Rivos, which had developed a CUDA-compatible RISC-V processor."
+ },
+ "D:d309": {
+  "src": "48a31255f107",
+  "text": "Firmus and CDC Data Centres formed a strategic alliance for Australian AI cloud capacity, starting at Southgate Melbourne with 18,500 Nvidia GB300 GPUs and scalable to 1.6 GW through 2028."
+ },
+ "D:d310": {
+  "src": "166df85a5ef9",
+  "text": "VoltaGrid contracted INNIO to deliver 2.3 GW of Jenbacher power infrastructure, in 92 power racks of about 25 MW each, for AI data centers, INNIO's largest contract ever."
+ },
+ "D:d311": {
+  "src": "a160fab22fe0",
+  "text": "CleanSpark and immersion cooling firm Submer partnered on an infrastructure platform integrating power generation, data center development and AI-service delivery."
+ },
+ "D:d312": {
+  "src": "43b19731618a",
+  "text": "Vertiv completed its acquisition of PurgeRite."
+ },
+ "D:d313": {
+  "src": "8881000bbbd5",
+  "text": "Flex and LG Electronics will jointly develop integrated modular cooling solutions for gigawatt-scale AI data centers."
+ },
+ "D:d314": {
+  "src": "7afc2057b5af",
+  "text": "Daikin Applied Americas acquired Chilldyne, a direct-to-chip liquid cooling firm."
+ },
+ "D:d315": {
+  "src": "0f46f1cfb8ab",
+  "text": "Lambda will lease 21 MW at Prime's LAX01 AI-ready data center in Vernon, California, for Nvidia Blackwell infrastructure."
+ },
+ "D:d316": {
+  "src": "8e89321ae55a",
+  "text": "HUMAIN and Global AI partnered to build large-scale AI data center and compute capacity in the US using Nvidia infrastructure."
+ },
+ "D:d317": {
+  "src": "78d29ff2d31c",
+  "text": "GIC, ADIA and an institutional investor are investing in Vantage to fund the Johor campus buyout and scale its Asia-Pacific platform."
+ },
+ "D:d318": {
+  "src": "aa3431071dc6",
+  "text": "Trane Technologies signed a definitive agreement to acquire Stellar Energy Digital, maker of turnkey liquid-to-chip data center cooling plants and CDUs."
+ },
+ "D:d319": {
+  "src": "42c71161ea59",
+  "text": "Legrand joined Accelsius' Series B funding round."
+ },
+ "D:d320": {
+  "src": "51939d6063df",
+  "text": "Firmus secured a debt financing facility led by Blackstone and Coatue to roll out its AI factory platform across Australia under Project Southgate."
+ },
+ "D:d321": {
+  "src": "1d0840120e86",
+  "text": "Trane Technologies agreed to acquire liquid cooling firm LiquidStack, building on its 2023 minority investment."
+ },
+ "D:d322": {
+  "src": "9c5c5f0d50d9",
+  "text": "Johnson Controls closed its acquisition of Alloy Enterprises, a thermal management firm for data centres."
+ },
+ "D:d323": {
+  "src": "89d5546c4548",
+  "text": "Submer acquired Radian Arc, a sovereign telco-focused GPU cloud infrastructure-as-a-service provider."
+ },
+ "D:d324": {
+  "src": "52bc6cf20815",
+  "text": "Submer and Anant Raj Cloud signed a memorandum of understanding to develop data centers in India."
+ },
+ "D:d325": {
+  "src": "f8ba19ccb36c",
+  "text": "AES and Google signed 20-year power purchase agreements for co-located generation at a new Google data center in Wilbarger County, Texas, with AES owning and operating the assets and providing energy management services."
+ },
+ "D:d326": {
+  "src": "f15960848537",
+  "text": "Vertiv and Generate Capital are collaborating on a Bring Your Own Power & Cooling offering combining Vertiv equipment with Generate's financing and ownership for US data centers."
+ },
+ "D:d327": {
+  "src": "1eab3657abb0",
+  "text": "Smiths acquired DRC Heat Transfer, a data center power and cooling equipment maker, to integrate into Flex-Tek."
+ },
+ "D:d328": {
+  "src": "346ff164d12b",
+  "text": "Blackstone Energy Transition Partners entered a definitive agreement to acquire a majority stake in thermal management firm Advanced Cooling Technologies."
+ },
+ "D:d329": {
+  "src": "e82369bb2e47",
+  "text": "Ecolab completed its acquisition of CoolIT Systems, a direct liquid cooling maker."
+ },
+ "D:d330": {
+  "src": "3564d4a27c48",
+  "text": "Vertiv completed its acquisition of Italian heat-rejection specialist ThermoKey on June 12, 2026."
+ },
+ "D:d331": {
+  "src": "841a44eeeb44",
+  "text": "Legrand acquired Keydak, a Guangzhou rack manufacturer."
+ },
+ "D:d332": {
+  "src": "a8c363e94d1b",
+  "text": "Legrand acquired UK power distribution specialist TES, which earns over half its revenue from data centers."
+ },
+ "D:d333": {
+  "src": "1bbc2831ca8a",
+  "text": "Flex agreed to acquire Electrical Power Products for cash to expand power control systems for data centers and utilities."
+ },
+ "D:d334": {
+  "src": "69f3f070fb54",
+  "text": "Vertiv acquired BMarko Structures, a US structural fabrication provider, for prefab data center infrastructure."
+ },
+ "D:d335": {
+  "src": "faf6443bb3a2",
+  "text": "Molex agreed to acquire Teramount, developer of detachable fiber-to-chip connectivity for co-packaged optics."
+ },
+ "D:d336": {
+  "src": "8de7305bfa9c",
+  "text": "PIMCO-managed funds anchored fixed-rate, long-term debt financing for Related Digital's Saline Township, Michigan campus built for Oracle."
+ },
+ "D:d337": {
+  "src": "e472d259069d",
+  "text": "Blackstone-affiliated funds committed equity alongside Related Digital to fund the Oracle campus in Saline Township, Michigan."
+ },
+ "D:d338": {
+  "src": "6a04f49fc811",
+  "text": "Vertiv acquired cold-plate design specialist Strategic Thermal Labs to strengthen its liquid cooling offering."
+ },
+ "D:d339": {
+  "src": "8002838c24ca",
+  "text": "NextEra will buy Dominion Energy in an all-stock deal, uniting utilities serving AI data center demand including northern Virginia."
+ },
+ "D:d340": {
+  "src": "09efebcd3163",
+  "text": "I Squared Capital will buy ten data centers totaling 53 MW from Cogent for cash to seed a new AI inference colocation platform, with closing expected in Q3 2026."
+ },
+ "D:d341": {
+  "src": "c5af50d6f544",
+  "text": "Wesco completed its acquisition of Newark Engineering Group, a Singapore data center cooling provider."
+ },
+ "D:d342": {
+  "src": "8b67f98b5586",
+  "text": "TDK will acquire Fabric8Labs for upfront cash plus a multi-year earnout, subject to regulatory approvals."
+ },
+ "D:d343": {
+  "src": "583a7c992d81",
+  "text": "Schneider Electric and Foxconn partnered to co-develop and scale AI data center infrastructure, with production of integrated systems starting later this year."
+ },
+ "D:d344": {
+  "src": "e0ebd20d4a97",
+  "text": "SWI Group acquired a significant stake in Genesis Digital Assets, which holds 1.3 GW of grid connections and plans to convert from crypto mining to HPC and AI."
+ },
+ "D:d345": {
+  "src": "5d07278ff552",
+  "text": "Montana-Dakota Utilities signed an electric service agreement to power Applied Digital's Polaris Forge 3 AI campus near Center, North Dakota, with 430 MW at full capacity and operations from August 2027."
+ },
+ "D:d346": {
+  "src": "59cf8e758cd6",
+  "text": "Flex expanded its manufacturing partnership with Cerebras to scale production of CS-3 systems in Milpitas, with about seven times the capacity through 2026."
+ },
+ "D:d347": {
+  "src": "f7b2252042c1",
+  "text": "A memorandum of understanding targets energy-as-a-service for AI data centers, deploying 100MW of Delta Solid-State Transformers and scaling to gigawatt level."
+ },
+ "D:d348": {
+  "src": "06e54aae44db",
+  "text": "Partners Group invests in AVK to support data centre power."
+ },
+ "D:d349": {
+  "src": "4597cdc2d7da",
+  "text": "WhiteFiber becomes exclusive GPU infrastructure operator for 100 MW of Krambu's planned high-density capacity, starting in 2027."
+ },
+ "D:d350": {
+  "src": "3bffdcdb9324",
+  "text": "Molex makes a strategic investment in CAEPlus, developer of BoundaryCool active liquid cooling for AI data centers."
+ },
+ "D:d351": {
+  "src": "710182fe6cb9",
+  "text": "Madison Air will acquire ebm-papst, maker of airflow, fan and motor technology for data center cooling, with closing expected around the end of 2026, subject to approvals."
+ },
+ "D:d352": {
+  "src": "7b091185fe20",
+  "text": "Nvidia makes a minority investment in Cloverleaf Infrastructure as part of a strategic partnership on AI factory infrastructure development."
+ },
+ "D:d353": {
+  "src": "5ee9ca330ad6",
+  "text": "nVent will acquire Maverick Power, with part of the consideration tied to the company's 2027-2028 performance."
+ },
+ "D:d354": {
+  "src": "8ddcb97b38c9",
+  "text": "A SuperX subsidiary signed a supply agreement with Ezisight and received an initial purchase order for 128 B300 AI server clusters, to be delivered in Australia in Q4 2026."
+ },
+ "D:d355": {
+  "src": "fa87e6bdaa87",
+  "text": "Vertiv will acquire UtilityInnovation Group, a microgrid and behind-the-meter power firm, paying cash at closing plus an earnout based on future earnings."
+ },
+ "D:d356": {
+  "src": "e58a4e08629d",
+  "text": "Flex signed a definitive agreement to acquire EPC Power, a power conversion provider for data center and grid uses, with closing expected in Q4 2026."
+ },
+ "D:d357": {
+  "src": "5ab6f7fb46ab",
+  "text": "Liteon bought a 25% stake in DCX, a Polish liquid cooling firm."
+ },
+ "D:d358": {
+  "src": "158139c9bda9",
+  "text": "Blackstone funds signed a definitive agreement to acquire liquid cooling components maker Flow Control Holdings from Audax, which keeps a minority stake; closing is expected in Q4."
+ },
+ "D:d359": {
+  "src": "cf43579f6a04",
+  "text": "AirJoule acquired BitSink, a cooling and electrical distribution firm, for an upfront payment plus a contingent payment."
+ },
+ "D:d360": {
+  "src": "8cb30a15a44c",
+  "text": "Vertiv completed its acquisition of King Environmental Services, which provides fluid management and load-testing for liquid-cooled data centers."
+ },
+ "D:d361": {
+  "src": "1f93175e1b93",
+  "text": "SPX Technologies acquires FIS Water, adding water management and flow-control brands for data center cooling."
+ },
+ "D:d362": {
+  "src": "220f70393f1e",
+  "text": "Samsung Electronics and five affiliates invest in Helix, a company established by KKR."
+ },
+ "D:d363": {
+  "src": "4b9ef2b0f132",
+  "text": "IREN taps Dell for Nvidia Blackwell servers under a supply contract."
+ },
+ "D:d364": {
+  "src": "a35def0dbd33",
+  "text": "HPE secures its first AMD Helios order, placed by Vultr."
+ },
+ "D:d365": {
+  "src": "a9d9874ee582",
+  "text": "LG Electronics USA signed a long-term agreement to supply chillers to AIR Control Concepts for AI data center projects exceeding 5 GW in the US and Canada."
+ },
+ "D:d366": {
+  "src": "bc18fab8f827",
+  "text": "The Information reports, citing three people with knowledge, that Nvidia plans to invest in inference chip startup d-Matrix; the report is unconfirmed."
+ },
+ "D:d367": {
+  "src": "11a8578e7591",
+  "text": "Eole will acquire AI data centre builder WOODMAN as a wholly owned subsidiary through a share exchange, approved by the board on Oct 15 and effective Nov 30."
+ },
+ "D:d368": {
+  "src": "19d9df2cfbe4",
+  "text": "Bluu Unit acquired Space Engineering, adding packaged systems and data center cooling technologies and entry into the UK and Hungary."
+ },
+ "D:d369": {
+  "src": "db7098ff8e9b",
+  "text": "General Compute will buy Positron's Atlas inference systems and has committed to buy its next-generation Titan systems."
+ },
+ "D:d370": {
+  "src": "c8007fb569d1",
+  "text": "Trane Technologies signed a definitive agreement to acquire Cancoil Thermal Corporation, a heat-transfer products maker serving data centers among other markets."
+ },
+ "D:d371": {
+  "src": "063552d87469",
+  "text": "Acuity signed a definitive agreement to buy Parameter Technologies, a data center leak detection and monitoring company, funded by borrowing and cash, with closing expected in fiscal Q2 2027."
+ },
+ "D:d372": {
+  "src": "02f95c0e2d7e",
+  "text": "Two parties signed a non-binding MOU to collaborate on AI computing systems, GPU clusters and data center infrastructure, exploring a roadmap of up to 100 MW without binding commitments."
+ },
+ "D:d373": {
+  "src": "0fb0ed06cc5c",
+  "text": "Omen AI acquired Aquatic Labs for cash and stock to add cooling-fluid sensor technology, and founder Allan Adams becomes chief science officer."
+ },
+ "D:d374": {
+  "src": "555c60d67b13",
+  "text": "A three-year strategic agreement covers supply of silicon and silicon carbide power semiconductors for Vertiv's power products, including 800 VDC."
+ },
+ "D:d375": {
+  "src": "d15af1cf6adc",
+  "text": "Hyosung Goodsprings secured contracts to supply cooling pumps for SKT's 100 MW Ulsan AI data center."
+ },
+ "D:d376": {
+  "src": "de9fe493c88c",
+  "text": "DigitalBridge will acquire ArcLight Capital, a private equity firm focused on power and infrastructure."
+ },
+ "D:d377": {
+  "src": "4457d2df06c4",
+  "text": "Anthropic takes over OnePWR Solutions' existing Caterpillar gas generator orders totaling 1.7 GW, plus engineering and construction work, agreed in late September, per Reuters."
+ },
+ "D:d378": {
+  "src": "1742f76d0bea",
+  "text": "Founders Fund co-led Fractile's Series C funding round."
+ },
+ "D:d379": {
+  "src": "d2e803ca568c",
+  "text": "Dragoneer joined Fractile's Series C funding round."
+ },
+ "D:d380": {
+  "src": "a8b454c83f1b",
+  "text": "BlackRock joined Fractile's Series C funding round."
+ },
+ "D:d381": {
+  "src": "85511022df7c",
+  "text": "Google buys a Crusoe site for its first Wyoming data center."
+ },
+ "D:d382": {
+  "src": "a318a9ef97b1",
+  "text": "Trinity Capital commits debt financing to Phononic to expand growth and manufacturing of solid-state cooling for AI data centers."
+ },
+ "D:d383": {
+  "src": "ee335bd4ca81",
+  "text": "Google signed a geothermal power purchase agreement for 50 MW from Quaise's Project Obsidian in Oregon, starting as early as 2030, supporting its The Dalles data center."
+ },
+ "D:d384": {
+  "src": "59ec0e8d372e",
+  "text": "Vertiv and Solenis form a strategic partnership combining Vertiv thermal infrastructure with Solenis fluid management for liquid cooling in AI data centers."
  }
 }

@@ -34,7 +34,11 @@
   },
   {
    "id": "power",
-   "name": "Power & cooling"
+   "name": "Power"
+  },
+  {
+   "id": "cooling",
+   "name": "Cooling & electrical"
   }
  ],
  "companies": [
@@ -434,7 +438,7 @@
    "id": "VRT",
    "name": "Vertiv",
    "ticker": "VRT",
-   "layer": "power",
+   "layer": "cooling",
    "does": "Data-center power and liquid cooling equipment.",
    "aliases": [
     "Vertiv"
@@ -444,7 +448,7 @@
    "id": "ETN",
    "name": "Eaton",
    "ticker": "ETN",
-   "layer": "power",
+   "layer": "cooling",
    "does": "Electrical equipment: switchgear, UPS, power distribution for data centers.",
    "aliases": [
     "Eaton"
@@ -870,7 +874,7 @@
    "id": "SCHNEIDER",
    "name": "Schneider Electric",
    "ticker": "SU.PA",
-   "layer": "power",
+   "layer": "cooling",
    "does": "Supplies power modules, cooling systems, UPS and switchgear for AI data centers.",
    "aliases": [
     "Schneider Electric"
@@ -1957,7 +1961,7 @@
    "id": "COLGROUP",
    "name": "COL Group",
    "ticker": null,
-   "layer": "power",
+   "layer": "cooling",
    "does": "European maker of power distribution equipment for data center and utility markets, being acquired by Eaton.",
    "aliases": [
     "COL Group"
@@ -1968,7 +1972,7 @@
    "id": "BOYD",
    "name": "Boyd Thermal",
    "ticker": null,
-   "layer": "power",
+   "layer": "cooling",
    "does": "Liquid cooling and thermal management provider for data centers, acquired by Eaton.",
    "aliases": [
     "Boyd Thermal"
@@ -2030,6 +2034,1238 @@
     "NTT DATA"
    ],
    "first_seen": "2026-11-05-1354"
+  },
+  {
+   "id": "FLEX",
+   "name": "Flex",
+   "ticker": "FLEX",
+   "layer": "cooling",
+   "does": "Electronics manufacturer that acquired JetCool to add liquid cooling and power for AI data centers.",
+   "aliases": [
+    "Flex"
+   ],
+   "first_seen": "2024-11-30-1353-cooling"
+  },
+  {
+   "id": "JETCOOL",
+   "name": "JetCool Technologies",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Liquid cooling technology provider for data centers, acquired by Flex.",
+   "aliases": [
+    "JetCool Technologies"
+   ],
+   "first_seen": "2024-11-30-1353-cooling"
+  },
+  {
+   "id": "BSE",
+   "name": "BiXin Energy Technology Co. (BSE)",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Chinese maker of chillers, heat pumps and air-handling units; sold centrifugal chiller technology to Vertiv.",
+   "aliases": [
+    "BiXin Energy Technology Co. (BSE)"
+   ],
+   "first_seen": "2024-12-31-1355-cooling"
+  },
+  {
+   "id": "AMPERE",
+   "name": "Ampere Computing",
+   "ticker": null,
+   "layer": "chips",
+   "does": "Designs Arm-based datacenter CPUs; being acquired by SoftBank.",
+   "aliases": [
+    "Ampere Computing"
+   ],
+   "first_seen": "2025-03-31-1405-cooling"
+  },
+  {
+   "id": "DUKE",
+   "name": "Duke Energy",
+   "ticker": "DUK",
+   "layer": "power",
+   "does": "US utility buying gas turbines and adding generation to serve data center demand.",
+   "aliases": [
+    "Duke Energy"
+   ],
+   "first_seen": "2025-04-30-1407-cooling"
+  },
+  {
+   "id": "FLAKTGROUP",
+   "name": "FläktGroup",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "German HVAC maker supplying data center cooling systems, being acquired by Samsung from Triton.",
+   "aliases": [
+    "FläktGroup"
+   ],
+   "first_seen": "2025-05-31-1414-cooling"
+  },
+  {
+   "id": "TAKANOCK",
+   "name": "Takanock",
+   "ticker": null,
+   "layer": "power",
+   "does": "Provides digital and power infrastructure solutions to ease power constraints for data center sites.",
+   "aliases": [
+    "Takanock"
+   ],
+   "first_seen": "2025-06-30-1415-cooling"
+  },
+  {
+   "id": "GRC",
+   "name": "GRC (Green Revolution Cooling)",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Provides single-phase immersion cooling for data centers.",
+   "aliases": [
+    "GRC (Green Revolution Cooling)"
+   ],
+   "first_seen": "2025-06-30-1415-cooling"
+  },
+  {
+   "id": "GREATLAKES",
+   "name": "Great Lakes Data Racks & Cabinets",
+   "ticker": null,
+   "layer": "systems",
+   "does": "Designs and manufactures customized data center rack enclosures and integrated infrastructure.",
+   "aliases": [
+    "Great Lakes Data Racks & Cabinets"
+   ],
+   "first_seen": "2025-07-31-1417-cooling"
+  },
+  {
+   "id": "CAITHNESS",
+   "name": "Caithness Energy",
+   "ticker": null,
+   "layer": "power",
+   "does": "Power developer that sold gas-fired plants in PJM to Talen to serve data center demand.",
+   "aliases": [
+    "Caithness Energy"
+   ],
+   "first_seen": "2025-07-31-1417-cooling"
+  },
+  {
+   "id": "CORINTIS",
+   "name": "Corintis",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Swiss startup making microfluidic direct-to-chip cooling for AI chips.",
+   "aliases": [
+    "Corintis"
+   ],
+   "first_seen": "2025-09-30-1422-cooling"
+  },
+  {
+   "id": "JOHNSONCONTROLS",
+   "name": "Johnson Controls",
+   "ticker": "JCI",
+   "layer": "cooling",
+   "does": "Smart buildings and HVAC firm investing in data center liquid cooling.",
+   "aliases": [
+    "Johnson Controls"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "ACCELSIUS",
+   "name": "Accelsius",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Makes two-phase direct-to-chip liquid cooling for data centers.",
+   "aliases": [
+    "Accelsius"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "LEGRAND",
+   "name": "Legrand",
+   "ticker": null,
+   "layer": "power",
+   "does": "Industrial electrical equipment maker acquiring data center power and testing firms.",
+   "aliases": [
+    "Legrand"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "AVTRON",
+   "name": "Avtron",
+   "ticker": null,
+   "layer": "power",
+   "does": "Load bank provider for data center power testing.",
+   "aliases": [
+    "Avtron"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "RIVOS",
+   "name": "Rivos",
+   "ticker": null,
+   "layer": "chips",
+   "does": "AI chip startup building RISC-V processors, acquired by Meta.",
+   "aliases": [
+    "Rivos"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "FIRMUS",
+   "name": "Firmus",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Australian AI cloud and AI factory builder.",
+   "aliases": [
+    "Firmus"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "CDC",
+   "name": "CDC Data Centres",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Australian data center operator partnering with Firmus.",
+   "aliases": [
+    "CDC Data Centres"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "VOLTAGRID",
+   "name": "VoltaGrid",
+   "ticker": null,
+   "layer": "power",
+   "does": "US energy developer supplying onsite natural gas power to AI data centers, including planned 2.3 GW for Oracle.",
+   "aliases": [
+    "VoltaGrid"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "INNIO",
+   "name": "INNIO",
+   "ticker": null,
+   "layer": "power",
+   "does": "Austrian maker of Jenbacher gas engines and cogeneration power systems for data centers.",
+   "aliases": [
+    "INNIO"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "CLEANSPARK",
+   "name": "CleanSpark",
+   "ticker": "CLSK",
+   "layer": "neoclouds",
+   "does": "Bitcoin miner pivoting its energy and land portfolio to AI data center capacity.",
+   "aliases": [
+    "CleanSpark"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "SUBMER",
+   "name": "Submer",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Immersion cooling and AI infrastructure deployment provider.",
+   "aliases": [
+    "Submer"
+   ],
+   "first_seen": "2025-10-31-1423-cooling"
+  },
+  {
+   "id": "PURGERITE",
+   "name": "PurgeRite",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Provides mechanical flushing, purging and filtration services for liquid-cooled data centers.",
+   "aliases": [
+    "PurgeRite"
+   ],
+   "first_seen": "2025-11-30-1427-cooling"
+  },
+  {
+   "id": "LGELEC",
+   "name": "LG Electronics",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Makes air and liquid cooling modules, chillers and CDUs for data centers.",
+   "aliases": [
+    "LG Electronics"
+   ],
+   "first_seen": "2025-11-30-1427-cooling"
+  },
+  {
+   "id": "DAIKIN",
+   "name": "Daikin Applied",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "HVAC maker expanding into data center liquid cooling.",
+   "aliases": [
+    "Daikin Applied"
+   ],
+   "first_seen": "2025-11-30-1427-cooling"
+  },
+  {
+   "id": "CHILLDYNE",
+   "name": "Chilldyne",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Provides direct-to-chip liquid cooling systems.",
+   "aliases": [
+    "Chilldyne"
+   ],
+   "first_seen": "2025-11-30-1427-cooling"
+  },
+  {
+   "id": "PRIMEDC",
+   "name": "Prime Data Centers",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Develops and operates hyperscale AI-ready data centers.",
+   "aliases": [
+    "Prime Data Centers"
+   ],
+   "first_seen": "2025-11-30-1427-cooling"
+  },
+  {
+   "id": "GLOBALAI",
+   "name": "Global AI",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Nvidia Cloud Partner building sovereign AI infrastructure.",
+   "aliases": [
+    "Global AI"
+   ],
+   "first_seen": "2025-11-30-1427-cooling"
+  },
+  {
+   "id": "GIC",
+   "name": "GIC",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Singapore sovereign wealth fund investing in data center platforms.",
+   "aliases": [
+    "GIC"
+   ],
+   "first_seen": "2025-11-30-1427-cooling"
+  },
+  {
+   "id": "TRANE",
+   "name": "Trane Technologies",
+   "ticker": "TT",
+   "layer": "cooling",
+   "does": "HVAC maker buying liquid cooling businesses for data center thermal management.",
+   "aliases": [
+    "Trane Technologies"
+   ],
+   "first_seen": "2025-12-31-1429-cooling"
+  },
+  {
+   "id": "STELLAR",
+   "name": "Stellar Energy Digital",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Designs and builds modular liquid-to-chip cooling plants and CDUs for data centers.",
+   "aliases": [
+    "Stellar Energy Digital"
+   ],
+   "first_seen": "2025-12-31-1429-cooling"
+  },
+  {
+   "id": "LIQUIDSTACK",
+   "name": "LiquidStack",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Provides direct-to-chip and immersion liquid cooling for AI data centers.",
+   "aliases": [
+    "LiquidStack"
+   ],
+   "first_seen": "2026-02-28-1435-cooling"
+  },
+  {
+   "id": "KRATOS",
+   "name": "Kratos Industries",
+   "ticker": null,
+   "layer": "power",
+   "does": "Makes low- and medium-voltage power equipment for data centers.",
+   "aliases": [
+    "Kratos Industries"
+   ],
+   "first_seen": "2026-02-28-1435-cooling"
+  },
+  {
+   "id": "ALLOY",
+   "name": "Alloy Enterprises",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Develops direct liquid cooling components for high-performance data centers.",
+   "aliases": [
+    "Alloy Enterprises"
+   ],
+   "first_seen": "2026-02-28-1435-cooling"
+  },
+  {
+   "id": "RADIANARC",
+   "name": "Radian Arc",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Provides sovereign, telco-focused GPU cloud infrastructure-as-a-service.",
+   "aliases": [
+    "Radian Arc"
+   ],
+   "first_seen": "2026-02-28-1435-cooling"
+  },
+  {
+   "id": "ANANTRAJ",
+   "name": "Anant Raj Cloud",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Data center subsidiary of Anant Raj developing AI data centers in India.",
+   "aliases": [
+    "Anant Raj Cloud"
+   ],
+   "first_seen": "2026-02-28-1435-cooling"
+  },
+  {
+   "id": "GENERATE",
+   "name": "Generate Capital",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Infrastructure investment platform financing and owning on-site power for data centers.",
+   "aliases": [
+    "Generate Capital"
+   ],
+   "first_seen": "2026-03-31-1437-cooling"
+  },
+  {
+   "id": "SMITHS",
+   "name": "Smiths Group",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "UK industrial engineering firm that bought DRC Heat Transfer for data center power and cooling equipment.",
+   "aliases": [
+    "Smiths Group"
+   ],
+   "first_seen": "2026-03-31-1437-cooling"
+  },
+  {
+   "id": "DRCHEAT",
+   "name": "DRC Heat Transfer",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Makes power and cooling equipment for data centers.",
+   "aliases": [
+    "DRC Heat Transfer"
+   ],
+   "first_seen": "2026-03-31-1437-cooling"
+  },
+  {
+   "id": "ACT",
+   "name": "Advanced Cooling Technologies",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Makes two-phase liquid cooling and thermal management products for data centers and HPC.",
+   "aliases": [
+    "Advanced Cooling Technologies"
+   ],
+   "first_seen": "2026-03-31-1437-cooling"
+  },
+  {
+   "id": "ECOLAB",
+   "name": "Ecolab",
+   "ticker": "ECL",
+   "layer": "cooling",
+   "does": "Water and chemistry specialist buying CoolIT to enter data center liquid cooling.",
+   "aliases": [
+    "Ecolab"
+   ],
+   "first_seen": "2026-03-31-1437-cooling"
+  },
+  {
+   "id": "COOLIT",
+   "name": "CoolIT Systems",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Direct liquid cooling maker of cold plates and CDUs for AI data centers.",
+   "aliases": [
+    "CoolIT Systems"
+   ],
+   "first_seen": "2026-03-31-1437-cooling"
+  },
+  {
+   "id": "THERMOKEY",
+   "name": "ThermoKey",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Italian heat-exchanger maker for heat rejection in data centers.",
+   "aliases": [
+    "ThermoKey"
+   ],
+   "first_seen": "2026-03-31-1437-cooling"
+  },
+  {
+   "id": "KEYDAK",
+   "name": "Keydak",
+   "ticker": null,
+   "layer": "systems",
+   "does": "Guangzhou-based rack manufacturer for data centers.",
+   "aliases": [
+    "Keydak"
+   ],
+   "first_seen": "2026-04-30-1439-cooling"
+  },
+  {
+   "id": "TES",
+   "name": "TES",
+   "ticker": null,
+   "layer": "power",
+   "does": "UK-based power distribution systems specialist serving data centers.",
+   "aliases": [
+    "TES"
+   ],
+   "first_seen": "2026-04-30-1439-cooling"
+  },
+  {
+   "id": "EPP",
+   "name": "Electrical Power Products",
+   "ticker": null,
+   "layer": "power",
+   "does": "Engineered power control systems maker for data centers, utilities and industrial customers.",
+   "aliases": [
+    "Electrical Power Products"
+   ],
+   "first_seen": "2026-04-30-1439-cooling"
+  },
+  {
+   "id": "BMARKO",
+   "name": "BMarko Structures",
+   "ticker": null,
+   "layer": "systems",
+   "does": "US maker of custom structural fabrication and prefab data center enclosures.",
+   "aliases": [
+    "BMarko Structures"
+   ],
+   "first_seen": "2026-04-30-1439-cooling"
+  },
+  {
+   "id": "MOLEX",
+   "name": "Molex",
+   "ticker": null,
+   "layer": "systems",
+   "does": "Connectivity maker building co-packaged optics solutions for AI data centers.",
+   "aliases": [
+    "Molex"
+   ],
+   "first_seen": "2026-04-30-1439-cooling"
+  },
+  {
+   "id": "TERAMOUNT",
+   "name": "Teramount",
+   "ticker": null,
+   "layer": "chips",
+   "does": "Israeli developer of detachable fiber-to-chip coupling for co-packaged optics.",
+   "aliases": [
+    "Teramount"
+   ],
+   "first_seen": "2026-04-30-1439-cooling"
+  },
+  {
+   "id": "RELATEDDIGITAL",
+   "name": "Related Digital",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Data center developer and investment platform building the $16B Oracle campus in Saline Township, Michigan.",
+   "aliases": [
+    "Related Digital"
+   ],
+   "first_seen": "2026-04-30-1439-cooling"
+  },
+  {
+   "id": "STL",
+   "name": "Strategic Thermal Labs",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Georgetown, Texas firm specializing in cold-plate design and server-side liquid cooling, acquired by Vertiv.",
+   "aliases": [
+    "Strategic Thermal Labs"
+   ],
+   "first_seen": "2026-04-30-1439-cooling"
+  },
+  {
+   "id": "DOMINION",
+   "name": "Dominion Energy",
+   "ticker": "D",
+   "layer": "power",
+   "does": "Utility powering northern Virginia, the world's largest data center market.",
+   "aliases": [
+    "Dominion Energy"
+   ],
+   "first_seen": "2026-05-31-1442-cooling"
+  },
+  {
+   "id": "ISQUARED",
+   "name": "I Squared Capital",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Infrastructure investor launching a US AI inference and edge colocation data center platform.",
+   "aliases": [
+    "I Squared Capital"
+   ],
+   "first_seen": "2026-05-31-1442-cooling"
+  },
+  {
+   "id": "COGENT",
+   "name": "Cogent Communications",
+   "ticker": "CCOI",
+   "layer": "neoclouds",
+   "does": "Fiber provider selling ten data centers to I Squared.",
+   "aliases": [
+    "Cogent Communications"
+   ],
+   "first_seen": "2026-05-31-1442-cooling"
+  },
+  {
+   "id": "WESCO",
+   "name": "Wesco International",
+   "ticker": "WCC",
+   "layer": "systems",
+   "does": "Electrical and datacom distributor expanding into data center cooling and lifecycle services.",
+   "aliases": [
+    "Wesco International"
+   ],
+   "first_seen": "2026-06-30-1444-cooling"
+  },
+  {
+   "id": "NEWARK",
+   "name": "Newark Engineering Group",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Singapore provider of engineered data center cooling and lifecycle services.",
+   "aliases": [
+    "Newark Engineering Group"
+   ],
+   "first_seen": "2026-06-30-1444-cooling"
+  },
+  {
+   "id": "TDK",
+   "name": "TDK Corporation",
+   "ticker": "6762",
+   "layer": "systems",
+   "does": "Electronics component maker expanding into data center thermal and power components.",
+   "aliases": [
+    "TDK Corporation"
+   ],
+   "first_seen": "2026-06-30-1444-cooling"
+  },
+  {
+   "id": "FABRIC8LABS",
+   "name": "Fabric8Labs",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Electrochemical additive manufacturing for liquid cooling components in data centers.",
+   "aliases": [
+    "Fabric8Labs"
+   ],
+   "first_seen": "2026-06-30-1444-cooling"
+  },
+  {
+   "id": "FOXCONN",
+   "name": "Foxconn (Hon Hai Technology Group)",
+   "ticker": "2317",
+   "layer": "systems",
+   "does": "Builds AI server racks and infrastructure systems.",
+   "aliases": [
+    "Foxconn (Hon Hai Technology Group)"
+   ],
+   "first_seen": "2026-06-30-1444-cooling"
+  },
+  {
+   "id": "SWI",
+   "name": "SWI Group",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Conglomerate and investment program buying into AI-ready data center infrastructure.",
+   "aliases": [
+    "SWI Group"
+   ],
+   "first_seen": "2026-06-30-1444-cooling"
+  },
+  {
+   "id": "GDA",
+   "name": "Genesis Digital Assets",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Private digital infrastructure firm with 1.3 GW of grid connections shifting from crypto mining to AI/HPC.",
+   "aliases": [
+    "Genesis Digital Assets"
+   ],
+   "first_seen": "2026-06-30-1444-cooling"
+  },
+  {
+   "id": "MDU",
+   "name": "MDU Resources Group (Montana-Dakota Utilities)",
+   "ticker": "MDU",
+   "layer": "power",
+   "does": "Utility supplying power to Applied Digital's Polaris Forge 3 AI campus in North Dakota.",
+   "aliases": [
+    "MDU Resources Group (Montana-Dakota Utilities)"
+   ],
+   "first_seen": "2026-06-30-1444-cooling"
+  },
+  {
+   "id": "DELTA",
+   "name": "Delta Electronics",
+   "ticker": null,
+   "layer": "power",
+   "does": "Power management maker supplying solid-state transformers for AI data centers.",
+   "aliases": [
+    "Delta Electronics"
+   ],
+   "first_seen": "2026-07-31-1448-cooling"
+  },
+  {
+   "id": "XLABS",
+   "name": "X LABS",
+   "ticker": null,
+   "layer": "power",
+   "does": "Investment manager and developer of islanded grids delivering energy-as-a-service to AI data centers.",
+   "aliases": [
+    "X LABS"
+   ],
+   "first_seen": "2026-07-31-1448-cooling"
+  },
+  {
+   "id": "PARTNERSGROUP",
+   "name": "Partners Group",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Global private markets investor putting $1B into AVK data centre power.",
+   "aliases": [
+    "Partners Group"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "AVK",
+   "name": "AVK",
+   "ticker": null,
+   "layer": "power",
+   "does": "Provider of power systems for data centres.",
+   "aliases": [
+    "AVK"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "WHITEFIBERPLACEHOLDERUNUSED",
+   "name": "unused",
+   "ticker": null,
+   "layer": "capital",
+   "does": "unused",
+   "aliases": [
+    "unused"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "KRAMBU",
+   "name": "Krambu",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Data center developer and operator providing high-density liquid-cooled capacity.",
+   "aliases": [
+    "Krambu"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "MOLEXPLACEHOLDERUNUSED",
+   "name": "unused",
+   "ticker": null,
+   "layer": "capital",
+   "does": "unused",
+   "aliases": [
+    "unused"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "CAEPLUS",
+   "name": "CAEPlus",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Early-stage developer of active liquid cooling (BoundaryCool) for AI chips.",
+   "aliases": [
+    "CAEPlus"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "MADISONAIR",
+   "name": "Madison Air Solutions",
+   "ticker": "MAIR",
+   "layer": "cooling",
+   "does": "Air quality and airflow solutions provider serving data centers.",
+   "aliases": [
+    "Madison Air Solutions"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "EBMPAPST",
+   "name": "ebm-papst",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "German maker of EC fans and motors for HVAC and data center cooling.",
+   "aliases": [
+    "ebm-papst"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "CLOVERLEAF",
+   "name": "Cloverleaf Infrastructure",
+   "ticker": null,
+   "layer": "power",
+   "does": "Developer of GW-scale digital infrastructure sites for AI factories.",
+   "aliases": [
+    "Cloverleaf Infrastructure"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "NVT",
+   "name": "nVent Electric",
+   "ticker": "NVT",
+   "layer": "cooling",
+   "does": "Electrical connection, protection and liquid cooling supplier for data centers.",
+   "aliases": [
+    "nVent Electric"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "MAVERICK",
+   "name": "Maverick Power",
+   "ticker": null,
+   "layer": "power",
+   "does": "Power distribution and switchgear provider for data centers.",
+   "aliases": [
+    "Maverick Power"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "MOLEXREAL",
+   "name": "placeholder",
+   "ticker": null,
+   "layer": "capital",
+   "does": "unused",
+   "aliases": [
+    "placeholder"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "EZISIGHT",
+   "name": "Ezisight Australia (Ultimate AI Datacentre)",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Australian compute service provider buying B300 AI servers to expand its GPU compute pool.",
+   "aliases": [
+    "Ezisight Australia (Ultimate AI Datacentre)"
+   ],
+   "first_seen": "2026-08-31-1452-cooling"
+  },
+  {
+   "id": "UIG",
+   "name": "UtilityInnovation Group",
+   "ticker": null,
+   "layer": "power",
+   "does": "Microgrid controls and behind-the-meter power architecture designer for data centers.",
+   "aliases": [
+    "UtilityInnovation Group"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "EPCPOWER",
+   "name": "EPC Power",
+   "ticker": null,
+   "layer": "power",
+   "does": "Makes power conversion hardware for 800V data center and grid applications.",
+   "aliases": [
+    "EPC Power"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "LITEON",
+   "name": "Liteon Technology",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Taiwanese electronics maker investing in data center liquid cooling.",
+   "aliases": [
+    "Liteon Technology"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "DCX",
+   "name": "DCX Liquid Cooling Systems",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Polish provider of liquid cooling systems for AI and HPC data centers.",
+   "aliases": [
+    "DCX Liquid Cooling Systems"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "FCH",
+   "name": "Flow Control Holdings",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "US maker of flow control components for data center liquid cooling.",
+   "aliases": [
+    "Flow Control Holdings"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "AIRJOULE",
+   "name": "AirJoule Technologies",
+   "ticker": "AIRJ",
+   "layer": "cooling",
+   "does": "Atmospheric water and cooling firm expanding into AI data center cooling.",
+   "aliases": [
+    "AirJoule Technologies"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "BITSINK",
+   "name": "BitSink",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Designs and manufactures liquid cooling and power distribution for high-density computing.",
+   "aliases": [
+    "BitSink"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "KES",
+   "name": "King Environmental Services",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Ireland-based provider of fluid management, commissioning and load-testing services for liquid-cooled data centers.",
+   "aliases": [
+    "King Environmental Services"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "SPX",
+   "name": "SPX Technologies",
+   "ticker": "SPXC",
+   "layer": "cooling",
+   "does": "Industrial maker expanding its data center cooling platform through acquisitions.",
+   "aliases": [
+    "SPX Technologies"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "FISWATER",
+   "name": "FIS Water",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Water management and flow-control brands serving data center and industrial cooling.",
+   "aliases": [
+    "FIS Water"
+   ],
+   "first_seen": "2026-09-30-1455-cooling"
+  },
+  {
+   "id": "VULTR",
+   "name": "Vultr",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Cloud/GPU infrastructure provider ordering AMD Helios racks from HPE.",
+   "aliases": [
+    "Vultr"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "AIR",
+   "name": "AIR Control Concepts",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "HVAC, electrical and controls platform overseeing AI data center projects; buys chillers from LG.",
+   "aliases": [
+    "AIR Control Concepts"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "DMATRIX",
+   "name": "d-Matrix",
+   "ticker": null,
+   "layer": "chips",
+   "does": "Inference chip startup.",
+   "aliases": [
+    "d-Matrix"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "EOLE",
+   "name": "Eole",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Tokyo-based firm building AI computing infrastructure and neocloud business in Japan.",
+   "aliases": [
+    "Eole"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "BLUUUNIT",
+   "name": "Bluu Unit",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Supplier of packaged systems and data center cooling technologies.",
+   "aliases": [
+    "Bluu Unit"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "SPACEENG",
+   "name": "Space Engineering",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Maker of packaged systems and data center cooling technologies in the UK and Hungary.",
+   "aliases": [
+    "Space Engineering"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "GENERALCOMPUTE",
+   "name": "General Compute",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Neocloud that finances, deploys and operates alternative inference silicon and sells dedicated inference capacity.",
+   "aliases": [
+    "General Compute"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "POSITRON",
+   "name": "Positron AI",
+   "ticker": null,
+   "layer": "chips",
+   "does": "Builds memory-first AI inference systems (Atlas, Titan).",
+   "aliases": [
+    "Positron AI"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "CANCOIL",
+   "name": "Cancoil Thermal Corporation",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Canadian maker of heat-transfer products such as fluid coolers and air-cooled condensers, used in data centers.",
+   "aliases": [
+    "Cancoil Thermal Corporation"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "ACUITY",
+   "name": "Acuity Inc.",
+   "ticker": "AYI",
+   "layer": "cooling",
+   "does": "Industrial technology company expanding into data center controls and monitoring.",
+   "aliases": [
+    "Acuity Inc."
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "PARAMETER",
+   "name": "Parameter Technologies",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Makes leak detection, environmental and battery monitoring for data centers (RLE, CellWatch).",
+   "aliases": [
+    "Parameter Technologies"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "ARCCLOUD",
+   "name": "ARC Cloud",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "AI cloud and GPU cluster provider expanding data center capacity across the US.",
+   "aliases": [
+    "ARC Cloud"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "COMPAL",
+   "name": "Compal Electronics",
+   "ticker": "2324",
+   "layer": "systems",
+   "does": "Taiwanese electronics manufacturer building AI computing systems and servers.",
+   "aliases": [
+    "Compal Electronics"
+   ],
+   "first_seen": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "OMENAI",
+   "name": "Omen AI",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Builds sensors that continuously monitor cooling fluids in AI data centers.",
+   "aliases": [
+    "Omen AI"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "AQUATICLABS",
+   "name": "Aquatic Labs",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Developer of fluid sensing technology, acquired by Omen AI for cooling-fluid monitoring.",
+   "aliases": [
+    "Aquatic Labs"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "INFINEON",
+   "name": "Infineon Technologies",
+   "ticker": "IFX",
+   "layer": "chips",
+   "does": "Supplies silicon and silicon carbide power semiconductors used in data center power systems.",
+   "aliases": [
+    "Infineon Technologies"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "SKT",
+   "name": "SK Telecom",
+   "ticker": null,
+   "layer": "neoclouds",
+   "does": "Korean telecom building AI data centers, including Ulsan, targeting 15 GW by 2035.",
+   "aliases": [
+    "SK Telecom"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "HYOSUNGGS",
+   "name": "Hyosung Goodsprings",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Pump maker supplying cooling pumps for AI data centers.",
+   "aliases": [
+    "Hyosung Goodsprings"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "ARCLIGHT",
+   "name": "ArcLight Capital",
+   "ticker": null,
+   "layer": "capital",
+   "does": "Power and infrastructure private equity investor.",
+   "aliases": [
+    "ArcLight Capital"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "ONEPWR",
+   "name": "OnePWR Solutions",
+   "ticker": null,
+   "layer": "power",
+   "does": "Texas-based supplier holding Caterpillar gas generator orders for AI data centers.",
+   "aliases": [
+    "OnePWR Solutions"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "FRACTILE",
+   "name": "Fractile",
+   "ticker": null,
+   "layer": "chips",
+   "does": "UK AI inference chip startup building hardware for inference at scale.",
+   "aliases": [
+    "Fractile"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "TRINITYCAP",
+   "name": "Trinity Capital",
+   "ticker": "TRIN",
+   "layer": "capital",
+   "does": "Alternative asset manager providing private credit and tech lending, including to AI data center cooling firms.",
+   "aliases": [
+    "Trinity Capital"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "PHONONIC",
+   "name": "Phononic",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Makes solid-state thermoelectric cooling and thermal control systems for AI data centers.",
+   "aliases": [
+    "Phononic"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "QUAISE",
+   "name": "Quaise Energy",
+   "ticker": null,
+   "layer": "power",
+   "does": "Superhot geothermal developer supplying power for data centers, including Google.",
+   "aliases": [
+    "Quaise Energy"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
+  },
+  {
+   "id": "SOLENIS",
+   "name": "Solenis",
+   "ticker": null,
+   "layer": "cooling",
+   "does": "Provides fluid and water management solutions, partnering with Vertiv on liquid cooling fluid management for AI data centers.",
+   "aliases": [
+    "Solenis"
+   ],
+   "first_seen": "2026-11-21-1508-cooling"
   }
  ]
 }

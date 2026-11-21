@@ -1,0 +1,38 @@
+{
+ "id": "2026-03-31-1437-cooling",
+ "since": "2026-03-01",
+ "until": "2026-03-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:37:34",
+ "searched": 151,
+ "candidates": 80,
+ "read": {
+  "blocked": 17,
+  "failed": 1,
+  "read": 60,
+  "short": 2
+ },
+ "new_deals": [
+  "d326",
+  "d327",
+  "d328",
+  "d329",
+  "d330"
+ ],
+ "updated_deals": [
+  "d277"
+ ],
+ "new_companies": [
+  "GENERATE",
+  "SMITHS",
+  "DRCHEAT",
+  "ACT",
+  "ECOLAB",
+  "COOLIT",
+  "THERMOKEY"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:39:49"
+}

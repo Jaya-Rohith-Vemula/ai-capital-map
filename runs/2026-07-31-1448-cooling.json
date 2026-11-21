@@ -1,0 +1,31 @@
+{
+ "id": "2026-07-31-1448-cooling",
+ "since": "2026-07-01",
+ "until": "2026-07-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:48:21",
+ "searched": 202,
+ "candidates": 170,
+ "read": {
+  "blocked": 32,
+  "failed": 3,
+  "read": 127,
+  "short": 8
+ },
+ "new_deals": [
+  "d346",
+  "d347"
+ ],
+ "updated_deals": [
+  "d329",
+  "d341"
+ ],
+ "new_companies": [
+  "DELTA",
+  "XLABS"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:52:07"
+}

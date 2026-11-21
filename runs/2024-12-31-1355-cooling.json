@@ -1,0 +1,29 @@
+{
+ "id": "2024-12-31-1355-cooling",
+ "since": "2024-12-01",
+ "until": "2024-12-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T13:55:07",
+ "searched": 74,
+ "candidates": 57,
+ "read": {
+  "blocked": 11,
+  "read": 44,
+  "short": 2
+ },
+ "new_deals": [],
+ "updated_deals": [],
+ "new_companies": [
+  "BSE"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "Vertiv's Chinese subsidiary has acquired centrifugal chiller technology and assets from BiXin Energy Technology Co. (BSE).",
+   "title": "Vertiv acquires centrifugal chiller tech and assets from BSE - Data Center Dynamics"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-21T13:56:35"
+}

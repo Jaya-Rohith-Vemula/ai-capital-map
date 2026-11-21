@@ -1,0 +1,27 @@
+{
+ "id": "2025-05-31-1414-cooling",
+ "since": "2025-05-01",
+ "until": "2025-05-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:14:20",
+ "searched": 134,
+ "candidates": 102,
+ "read": {
+  "blocked": 23,
+  "read": 78,
+  "short": 1
+ },
+ "new_deals": [
+  "d298"
+ ],
+ "updated_deals": [
+  "d032"
+ ],
+ "new_companies": [
+  "FLAKTGROUP"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:15:27"
+}

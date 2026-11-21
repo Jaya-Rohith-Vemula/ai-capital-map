@@ -1,0 +1,42 @@
+{
+ "id": "2026-02-28-1435-cooling",
+ "since": "2026-02-01",
+ "until": "2026-02-28",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:35:02",
+ "searched": 147,
+ "candidates": 88,
+ "read": {
+  "blocked": 23,
+  "read": 64,
+  "short": 1
+ },
+ "new_deals": [
+  "d320",
+  "d321",
+  "d322",
+  "d323",
+  "d324",
+  "d325"
+ ],
+ "updated_deals": [
+  "d319"
+ ],
+ "new_companies": [
+  "LIQUIDSTACK",
+  "KRATOS",
+  "ALLOY",
+  "RADIANARC",
+  "ANANTRAJ"
+ ],
+ "rejected": [
+  {
+   "why": "quote not found in item",
+   "quote": "the acquisition of Kratos Industries (Kratos), a manufacturer of low-voltage (LV) and medium-voltage (MV) power equipment",
+   "title": "Legrand Announces Acquisition of Kratos Industries and Strategic Investment in Accelsius Two-Phase Liquid Cooling Technology - PR Newswire"
+  }
+ ],
+ "errors": [],
+ "finished": "2026-11-21T14:37:34"
+}

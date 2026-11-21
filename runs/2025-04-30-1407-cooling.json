@@ -1,0 +1,24 @@
+{
+ "id": "2025-04-30-1407-cooling",
+ "since": "2025-04-01",
+ "until": "2025-04-30",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:07:41",
+ "searched": 119,
+ "candidates": 64,
+ "read": {
+  "blocked": 7,
+  "read": 57
+ },
+ "new_deals": [
+  "d297"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "DUKE"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:10:03"
+}

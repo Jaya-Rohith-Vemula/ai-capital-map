@@ -1065,10 +1065,19 @@
      "quote": "Oracle to buy $40 billion of Nvidia chips for OpenAI's US data center, FT reports - Reuters",
      "evidence": "headline",
      "run": "2025-05-31-1025"
+    },
+    {
+     "url": "https://www.tomshardware.com/pc-components/gpus/oracle-has-reportedly-placed-an-order-for-usd40-billion-in-nvidia-ai-gpus-for-a-new-openai-data-center",
+     "title": "Oracle has reportedly placed an order for $40 billion in Nvidia AI GPUs for a new OpenAI data center - Tom's Hardware",
+     "source": "Tom's Hardware",
+     "published": "2025-05-24",
+     "quote": "Oracle has reportedly purchased about 400,000 Nvidia GB200 AI chips, worth about $40 billion, for deployment in Abilene, Texas.",
+     "evidence": "article",
+     "run": "2025-05-31-1414-cooling"
     }
    ],
-   "evidence": "headline",
-   "updated_in": "2025-05-31-1025"
+   "evidence": "article",
+   "updated_in": "2025-05-31-1414-cooling"
   },
   {
    "id": "d033",
@@ -1508,6 +1517,15 @@
      "quote": "Applied Digital said it expects $7 billion in rental revenue during the approximately 15-year period.",
      "evidence": "article",
      "run": "2025-06-30-1030"
+    },
+    {
+     "url": "https://investorsobserver.com/news/stock-update/applied-digital-apld-emerges-as-ai-data-center-tycoon/",
+     "title": "Applied Digital (APLD) emerges as AI data center tycoon - Investorsobserver",
+     "source": "Investorsobserver",
+     "published": "2025-08-01",
+     "quote": "At signing, the contract was expected to generate $7 billion over its lifetime.",
+     "evidence": "article",
+     "run": "2025-08-31-1419-cooling"
     }
    ],
    "evidence": "article",
@@ -2460,13 +2478,13 @@
    "from": "BLUEOWL",
    "to": "META",
    "type": "equity",
-   "usd": 3000000000,
-   "usd_text": "$3B",
+   "usd": 7000000000,
+   "usd_text": "~$7B",
    "date": "2025-08-08",
    "status": "announced",
-   "summary": "Blue Owl contributes $3B equity to the Hyperion joint venture.",
+   "summary": "Meta and Blue Owl-managed funds formed a JV to develop and own Hyperion; Blue Owl owns 80%, contributed about $7B cash, Meta keeps 20% and got ~$3B distribution. Total development costs ~$27B.",
    "origin": "news",
-   "evidence": "article",
+   "evidence": "press release",
    "verified": true,
    "first_seen": "2025-08-31-1037",
    "sources": [
@@ -2487,6 +2505,15 @@
      "quote": "Blue Owl Capital is contributing US$3 billion in equity to the joint venture.",
      "evidence": "article",
      "run": "2025-09-30-1042"
+    },
+    {
+     "url": "https://www.prnewswire.com/news-releases/meta-announces-joint-venture-with-funds-managed-by-blue-owl-capital-to-develop-hyperion-data-center-302590584.html",
+     "title": "Meta Announces Joint Venture with Funds Managed by Blue Owl Capital to Develop Hyperion Data Center - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2025-10-21",
+     "quote": "The funds managed by Blue Owl Capital made a cash contribution of approximately $7 billion to the joint venture",
+     "evidence": "press release",
+     "run": "2025-10-31-1423-cooling"
     }
    ],
    "history": [
@@ -2495,9 +2522,15 @@
      "usd_text": "$3B",
      "status": "reported",
      "until": "2025-09-30-1042"
+    },
+    {
+     "usd": 3000000000,
+     "usd_text": "$3B",
+     "status": "announced",
+     "until": "2025-10-31-1423-cooling"
     }
    ],
-   "updated_in": "2025-09-30-1042"
+   "updated_in": "2025-10-31-1423-cooling"
   },
   {
    "id": "d088",
@@ -2756,6 +2789,15 @@
      "quote": "An investor group, including BlackRock and Nvidia, will buy Aligned Data Centers from Macquarie Asset Management in a deal worth $40 billion",
      "evidence": "article",
      "run": "2025-10-31-1046"
+    },
+    {
+     "url": "https://www.crn.com/news/data-center/2025/aligned-data-centers-set-to-be-acquired-for-40-billion",
+     "title": "Aligned Data Centers Set To Be Acquired For $40 Billion - CRN",
+     "source": "CRN",
+     "published": "2025-10-15",
+     "quote": "Aligned Data Centers is set to be acquired in a $40 billion deal backed by the Artificial Intelligence Infrastructure Partnership",
+     "evidence": "article",
+     "run": "2025-10-31-1423-cooling"
     }
    ]
   },
@@ -2921,6 +2963,15 @@
      "quote": "today announced a two-phase supply capacity agreement (SCA) totaling $1.9 billion in sales",
      "evidence": "press release",
      "run": "2025-11-30-1051"
+    },
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/schneider-electric-and-switch-pen-19bn-cooling-deal/",
+     "title": "Schneider Electric and Switch pen $1.9bn cooling deal - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-11-19",
+     "quote": "have agreed an expanded $1.9 billion contract",
+     "evidence": "article",
+     "run": "2025-11-30-1427-cooling"
     }
    ],
    "updated_in": "2025-11-30-1051"
@@ -3162,7 +3213,7 @@
    "status": "announced",
    "summary": "Alphabet to buy data center and power developer Intersect Power for $4.75B.",
    "origin": "news",
-   "evidence": "headline",
+   "evidence": "article",
    "verified": true,
    "first_seen": "2025-12-31-1056",
    "sources": [
@@ -3174,8 +3225,36 @@
      "quote": "Alphabet to Buy Data Center Partner Intersect for $4.75 Billion",
      "evidence": "headline",
      "run": "2025-12-31-1056"
+    },
+    {
+     "url": "https://www.crn.com/news/cloud/2025/google-to-buy-data-center-firm-intersect-for-4-7b-to-expand-capacity-and-drive-innovation-says-ceo",
+     "title": "Google To Buy Data Center Firm Intersect For $4.7B To ‘Expand Capacity’ And Drive ‘Innovation,’ Says CEO - CRN",
+     "source": "CRN",
+     "published": "2025-12-22",
+     "quote": "Google’s $4.75 billion deal to acquire Intersect is expected to close in the first half of 2026.",
+     "evidence": "article",
+     "run": "2025-12-31-1429-cooling"
+    },
+    {
+     "url": "https://www.powermag.com/alphabet-buying-clean-energy-developer-to-support-data-centers/",
+     "title": "Alphabet Buying Clean Energy Developer to Support Data Centers - POWER Magazine",
+     "source": "POWER Magazine",
+     "published": "2025-12-22",
+     "quote": "Alphabet, the parent of technology giant Google, has announced a definitive agreement to acquire Intersect, which provides data center and energy infrastructure solutions, for $4.75 billion in cash, plus the assumption of debt.",
+     "evidence": "article",
+     "run": "2025-12-31-1429-cooling"
+    },
+    {
+     "url": "https://www.energy-storage.news/google-acquires-data-centre-and-energy-developer-intersect-for-us4-75-billion/",
+     "title": "Google acquires data centre and energy developer Intersect for US$4.75 billion - Energy-Storage.News",
+     "source": "Energy-Storage.News",
+     "published": "2026-01-05",
+     "quote": "Google acquires data centre and energy developer Intersect for US$4.75 billion",
+     "evidence": "headline",
+     "run": "2026-01-31-1432-cooling"
     }
-   ]
+   ],
+   "updated_in": "2025-12-31-1429-cooling"
   },
   {
    "id": "d113",
@@ -3185,8 +3264,8 @@
    "usd": 20000000000,
    "usd_text": "$20B",
    "date": "2025-12-24",
-   "status": "reported",
-   "summary": "Nvidia to buy assets of AI chip designer Groq for $20B cash, per the CEO of Disruptive, which led Groq's last round.",
+   "status": "announced",
+   "summary": "Nvidia agreeing to acquire Groq assets in ~$20B deal; Groq calls it a non-exclusive licensing agreement.",
    "origin": "news",
    "evidence": "article",
    "verified": true,
@@ -3200,8 +3279,26 @@
      "quote": "Nvidia has agreed to buy assets from Groq, a designer of high-performance artificial intelligence accelerator chips, for $20 billion in cash",
      "evidence": "article",
      "run": "2025-12-31-1056"
+    },
+    {
+     "url": "https://www.tradingview.com/news/zacks:a0cea5257094b:0-3-leading-ai-stocks-investors-can-buy-for-2026-nvda-avgo-vrt/",
+     "title": "3 Leading AI Stocks Investors Can Buy for 2026 (NVDA, AVGO, VRT) - TradingView",
+     "source": "TradingView",
+     "published": "2025-12-26",
+     "quote": "Nvidia advanced its largest acquisition to date, agreeing to acquire assets from AI chip startup Groq in a deal valued at approximately $20 billion.",
+     "evidence": "article",
+     "run": "2025-12-31-1429-cooling"
     }
-   ]
+   ],
+   "history": [
+    {
+     "usd": 20000000000,
+     "usd_text": "$20B",
+     "status": "reported",
+     "until": "2025-12-31-1429-cooling"
+    }
+   ],
+   "updated_in": "2025-12-31-1429-cooling"
   },
   {
    "id": "d114",
@@ -3214,7 +3311,7 @@
    "status": "announced",
    "summary": "SoftBank to acquire data center investment firm DigitalBridge for $4B.",
    "origin": "news",
-   "evidence": "headline",
+   "evidence": "article",
    "verified": true,
    "first_seen": "2025-12-31-1056",
    "sources": [
@@ -3226,8 +3323,18 @@
      "quote": "SoftBank Will Acquire DigitalBridge for $4 Billion",
      "evidence": "headline",
      "run": "2025-12-31-1056"
+    },
+    {
+     "url": "https://www.datacenterfrontier.com/machine-learning/article/55340594/softbank-to-acquire-digitalbridge-for-4-billion-doubling-down-on-ai-infrastructure",
+     "title": "SoftBank to Acquire DigitalBridge for $4 Billion, Doubling Down on AI Infrastructure - Data Center Frontier",
+     "source": "Data Center Frontier",
+     "published": "2025-12-29",
+     "quote": "On December 29, SoftBank Group announced it has entered into a definitive agreement to acquire DigitalBridge for a total enterprise value of approximately $4.0 billion.",
+     "evidence": "article",
+     "run": "2025-12-31-1429-cooling"
     }
-   ]
+   ],
+   "updated_in": "2025-12-31-1429-cooling"
   },
   {
    "id": "d115",
@@ -3389,6 +3496,15 @@
      "quote": "Meta has committed to paying Corning up to $6 billion through 2030 for fiber-optic cable in its AI data centers",
      "evidence": "article",
      "run": "2026-01-31-1102"
+    },
+    {
+     "url": "https://www.networkworld.com/article/4123460/meta-corning-fiber-deal-signals-a-new-bottleneck-in-ai-infrastructure.html",
+     "title": "Meta-Corning fiber deal signals a new bottleneck in AI infrastructure - Network World",
+     "source": "Network World",
+     "published": "2026-01-28",
+     "quote": "Meta has announced a $6 billion, multi-year fiber supply agreement with Corning",
+     "evidence": "article",
+     "run": "2026-01-31-1432-cooling"
     }
    ]
   },
@@ -3790,6 +3906,15 @@
      "quote": "Marvell agrees to buy Lumentum in $115B stock deal",
      "evidence": "headline",
      "run": "2026-11-05-1354"
+    },
+    {
+     "url": "https://www.techzine.eu/news/infrastructure/145477/marvell-acquires-lumentum-for-115-billion/",
+     "title": "Marvell acquires Lumentum for $115 billion - Techzine Global",
+     "source": "Techzine Global",
+     "published": "2026-11-02",
+     "quote": "Marvell acquires Lumentum for $115 billion",
+     "evidence": "headline",
+     "run": "2026-11-21-1508-cooling"
     }
    ],
    "history": [
@@ -5246,11 +5371,11 @@
    "from": "GOOGL",
    "to": "SPACEX",
    "type": "compute",
-   "usd": 30000000000,
-   "usd_text": "$920M/month (~$30B)",
+   "usd": null,
+   "usd_text": "$920M/month",
    "date": "2026-06-05",
    "status": "announced",
-   "summary": "Google pays SpaceX $920M per month from Oct 2026 through June 2029 for about 110,000 Nvidia GPUs plus CPUs and memory in SpaceX/xAI data centers; capacity ramps through September at reduced fee. Disclosed in SpaceX regulatory filing.",
+   "summary": "SpaceX cloud compute deal with Google at $920M per month, ahead of IPO.",
    "origin": "news",
    "evidence": "article",
    "verified": true,
@@ -5264,8 +5389,26 @@
      "quote": "Google has committed to paying SpaceX $920 million per month from October 2026 through June 2029",
      "evidence": "article",
      "run": "2026-06-30-1313"
+    },
+    {
+     "url": "https://datacenters.economictimes.indiatimes.com/news/ai-compute-infrastructure/spacex-secures-920-million-cloud-deal-with-google-ahead-of-ipo/131580174",
+     "title": "SpaceX secures $920 million cloud deal with Google ahead of IPO - ET Datacenters",
+     "source": "ET Datacenters",
+     "published": "2026-06-09",
+     "quote": "SpaceX secures $920 million cloud deal with Google ahead of IPO",
+     "evidence": "headline",
+     "run": "2026-06-30-1444-cooling"
     }
-   ]
+   ],
+   "history": [
+    {
+     "usd": 30000000000,
+     "usd_text": "$920M/month (~$30B)",
+     "status": "announced",
+     "until": "2026-06-30-1444-cooling"
+    }
+   ],
+   "updated_in": "2026-06-30-1444-cooling"
   },
   {
    "id": "d175",
@@ -6641,11 +6784,11 @@
    "from": "NVDA",
    "to": "HUGGINGFACE",
    "type": "acquisition",
-   "usd": 12900000000,
-   "usd_text": "$12.9B",
+   "usd": 13000000000,
+   "usd_text": "$13B",
    "date": "2026-09-03",
    "status": "announced",
-   "summary": "Nvidia to buy Hugging Face: $11.9B to shareholders plus $1B equity for employee retention; close expected 1H 2027.",
+   "summary": "Nvidia agreed to buy Hugging Face for $13bn.",
    "origin": "news",
    "evidence": "article",
    "verified": true,
@@ -6668,19 +6811,37 @@
      "quote": "The proposed purchase price stands at $12.93 billion, with Nvidia expecting the transaction to close in the first half of 2027.",
      "evidence": "article",
      "run": "2026-10-31-1337"
+    },
+    {
+     "url": "https://www.trendingtopics.eu/nvidia-buys-hugging-face-for-13-billion-plus-9-more-big-ma-deals-of-the-week/",
+     "title": "Nvidia Buys Hugging Face for $13 Billion, Plus 9 More Big M&A Deals of the Week - www.trendingtopics.eu",
+     "source": "www.trendingtopics.eu",
+     "published": "2026-09-05",
+     "quote": "Nvidia has agreed to buy AI model platform Hugging Face for $13bn",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
     }
-   ]
+   ],
+   "history": [
+    {
+     "usd": 12900000000,
+     "usd_text": "$12.9B",
+     "status": "announced",
+     "until": "2026-09-30-1455-cooling"
+    }
+   ],
+   "updated_in": "2026-09-30-1455-cooling"
   },
   {
    "id": "d220",
    "from": "SLB",
    "to": "APOLLO",
    "type": "acquisition",
-   "usd": 3400000000,
-   "usd_text": "$3.4B cash + $0.7B debt",
+   "usd": 4100000000,
+   "usd_text": "$4.1B",
    "date": "2026-08-31",
    "status": "announced",
-   "summary": "SLB to acquire data-center thermal management firm Kelvion from Apollo and Triton-advised funds for ~$3.4B cash plus ~$0.7B assumed debt.",
+   "summary": "SLB acquires Kelvion, data center cooling maker; same deal as ledger entry.",
    "origin": "news",
    "evidence": "article",
    "verified": true,
@@ -6694,8 +6855,53 @@
      "quote": "it will acquire Kelvion from Apollo Global and funds advised by Triton for around $3.4 billion in cash and the assumption of approximately $0.7 billion of debt",
      "evidence": "article",
      "run": "2026-09-30-1330"
+    },
+    {
+     "url": "https://www.slb.com/newsroom/press-release/2026/pr-2026-0831",
+     "title": "SLB to Acquire Kelvion, Expanding its Role Across Data Center Infrastructure - SLB",
+     "source": "SLB",
+     "published": "2026-08-31",
+     "quote": "for approximately $3.4 billion in cash and will assume approximately $0.7 billion of debt",
+     "evidence": "article",
+     "run": "2026-08-31-1452-cooling"
+    },
+    {
+     "url": "https://www.rigzone.com/news/slb_expands_data_center_role_with_3b_kelvion_deal-01-sep-2026-184506-article/",
+     "title": "SLB Expands Data Center Role with $3B Kelvion Deal - Rigzone",
+     "source": "Rigzone",
+     "published": "2026-09-01",
+     "quote": "for approximately $3.4 billion in cash, and SLB will assume approximately $0.7 billion of debt",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    },
+    {
+     "url": "https://energiesmedia.com/slb-acquires-kelvion-thermal-management/",
+     "title": "SLB agrees to acquire thermal management company Kelvion for $3.4 billion to expand its data center infrastructure business - Energies Media",
+     "source": "Energies Media",
+     "published": "2026-09-12",
+     "quote": "SLB announced Monday it has signed a definitive agreement to acquire Kelvion — a global provider of thermal management and heat exchange technologies — for approximately $3.4 billion in cash.",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    },
+    {
+     "url": "https://scanx.trade/stock-market-news/companies/slb-acquire-kelvion-apollo-4-1-billion/49719639",
+     "title": "SLB acquires Kelvion for $4.1B to expand AI data center cooling capabilities - scanx.trade",
+     "source": "scanx.trade",
+     "published": "2026-11-12",
+     "quote": "SLB acquires Kelvion for $4.1B to expand AI data center cooling capabilities",
+     "evidence": "headline",
+     "run": "2026-11-21-1508-cooling"
     }
-   ]
+   ],
+   "history": [
+    {
+     "usd": 3400000000,
+     "usd_text": "$3.4B cash + $0.7B debt",
+     "status": "announced",
+     "until": "2026-11-21-1508-cooling"
+    }
+   ],
+   "updated_in": "2026-11-21-1508-cooling"
   },
   {
    "id": "d221",
@@ -7895,6 +8101,15 @@
      "quote": "It has also agreed to acquire Trench Group for $9 billion in a massive growth move.",
      "evidence": "article",
      "run": "2026-10-31-1337"
+    },
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/ge-vernova-order-backlog-hits-197bn-as-data-center-demand-drives-gas-turbine-sales/",
+     "title": "GE Vernova order backlog hits $197bn as data center demand drives gas turbine sales - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-11-02",
+     "quote": "The company also announced the acquisition of Trench, a manufacturer of high-voltage grid components, for a reported $9bn.",
+     "evidence": "article",
+     "run": "2026-11-21-1508-cooling"
     }
    ]
   },
@@ -8485,11 +8700,11 @@
    "from": "ETN",
    "to": "BOYD",
    "type": "acquisition",
-   "usd": 9550000000,
-   "usd_text": "$9.55B",
+   "usd": null,
+   "usd_text": "$9.5B",
    "date": "2026-03-12",
    "status": "completed",
-   "summary": "Eaton acquired Boyd Thermal for $9.55B, net of cash acquired.",
+   "summary": "Eaton completed its acquisition of Boyd Thermal, adding liquid cooling for data centers.",
    "origin": "news",
    "evidence": "article",
    "verified": true,
@@ -8503,8 +8718,50 @@
      "quote": "On March 12, 2026, Eaton acquired Boyd Thermal for $9.55 billion, net of cash acquired.",
      "evidence": "article",
      "run": "2026-11-05-1354"
+    },
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/eaton-acquires-boyd-thermal-for-95bn-to-further-liquid-cooling-portfolio/",
+     "title": "Eaton acquires Boyd Thermal for $9.5bn to further liquid cooling portfolio - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-11-03",
+     "quote": "signed an agreement to acquire the Boyd Thermal business of Boyd Corporation from Goldman Sachs Asset Management for $9.5 billion",
+     "evidence": "article",
+     "run": "2025-11-30-1427-cooling"
+    },
+    {
+     "url": "https://www.paulweiss.com/insights/client-news/eaton-acquires-liquid-cooling-business-boyd-thermal",
+     "title": "Eaton Acquires Liquid Cooling Business Boyd Thermal in $9.5 Billion Deal - Paul, Weiss",
+     "source": "Paul, Weiss",
+     "published": "2026-03-12",
+     "quote": "Paul, Weiss advised intelligent power management company Eaton on its $9.5 billion acquisition of the Boyd Thermal business of Boyd Corporation from Goldman Sachs Asset Management.",
+     "evidence": "article",
+     "run": "2026-03-31-1437-cooling"
+    },
+    {
+     "url": "https://finance.yahoo.com/markets/stocks/articles/eaton-etn-buys-boyd-thermal-061625953.html",
+     "title": "Eaton (ETN) Buys Boyd Thermal To Deepen Data Center And Aerospace Cooling Reach - Yahoo Finance",
+     "source": "Yahoo Finance",
+     "published": "2026-06-18",
+     "quote": "Eaton (NYSE:ETN) has completed its acquisition of Boyd Thermal, a provider of advanced thermal management solutions.",
+     "evidence": "article",
+     "run": "2026-06-30-1444-cooling"
     }
-   ]
+   ],
+   "history": [
+    {
+     "usd": 9550000000,
+     "usd_text": "$9.55B",
+     "status": "completed",
+     "until": "2026-03-31-1437-cooling"
+    },
+    {
+     "usd": 9500000000,
+     "usd_text": "$9.5B",
+     "status": "announced",
+     "until": "2026-06-30-1444-cooling"
+    }
+   ],
+   "updated_in": "2026-06-30-1444-cooling"
   },
   {
    "id": "d278",
@@ -8885,6 +9142,2737 @@
      "quote": "today announced an agreement with Bloom Energy (NYSE: BE), a global leader in power solutions, to deploy 900 megawatts (MW) of onsite power across multiple data center projects, globally.",
      "evidence": "article",
      "run": "2026-11-05-1354"
+    }
+   ]
+  },
+  {
+   "id": "d292",
+   "from": "FLEX",
+   "to": "JETCOOL",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2024-11-14",
+   "status": "completed",
+   "summary": "Flex acquired liquid cooling company JetCool Technologies to bolster its data center and power portfolio for AI workloads. Price not stated.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2024-11-30-1353-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/flex-acquires-jetcool-to-expand-data-center-and-power-portfolio-302306177.html",
+     "title": "Flex Acquires JetCool to Expand Data Center and Power Portfolio - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2024-11-14",
+     "quote": "Flex (NASDAQ: FLEX ) announced today it has acquired JetCool Technologies",
+     "evidence": "press release",
+     "run": "2024-11-30-1353-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d293",
+   "from": "BLACKSTONE",
+   "to": "LANCIUM",
+   "type": "equity",
+   "usd": 500000000,
+   "usd_text": "$500M",
+   "date": "2024-11-25",
+   "status": "reported",
+   "summary": "Bloomberg, citing people familiar, reports Blackstone recently closed a $500M equity stake in Texan data center firm Lancium.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2024-11-30-1353-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/blackstone-invests-500-million-in-lancium-report/",
+     "title": "Blackstone invests $500 million in Lancium – report - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2024-11-25",
+     "quote": "Blackstone has reportedly invested $500 million into Texan data center firm Lancium.",
+     "evidence": "article",
+     "run": "2024-11-30-1353-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d294",
+   "from": "VRT",
+   "to": "BSE",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2025-01-07",
+   "status": "announced",
+   "summary": "Vertiv's Chinese subsidiary acquires certain assets and technologies of BiXin Energy Technology (Suzhou), a chiller maker, to broaden Vertiv's chiller portfolio for AI and high-performance compute. Price not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-01-31-1356-cooling",
+   "sources": [
+    {
+     "url": "https://www.expresscomputer.in/news/vertiv-acquires-centrifugal-chiller-technology-to-broaden-its-global-solutions-portfolio-in-support-of-high-performance-compute-and-ai/120916/",
+     "title": "Vertiv acquires centrifugal chiller technology to broaden its global solutions portfolio in support of high-performance Compute and AI - Express Computer",
+     "source": "Express Computer",
+     "published": "2025-01-07",
+     "quote": "Vertiv announced the acquisition by its Chinese subsidiary of certain assets and technologies of BiXin Energy Technology (Suzhou) Co., Ltd (BSE)",
+     "evidence": "article",
+     "run": "2025-01-31-1356-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d295",
+   "from": "SOFTBANK",
+   "to": "CIFR",
+   "type": "equity",
+   "usd": 50000000,
+   "usd_text": "$50M",
+   "date": "2025-02",
+   "status": "announced",
+   "summary": "SoftBank invested $50M in Cipher Mining in a deal giving it a period of exclusivity to acquire the Barber Lake site, possibly for OpenAI's Stargate.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-02-28-1358-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/cipher-mining-acquires-more-than-500-acres-across-two-sites-in-texas-for-crypto-and-hpc-use/",
+     "title": "Cipher Mining acquires more than 500 acres across two sites in Texas for crypto and HPC use - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-02-27",
+     "quote": "SoftBank recently invested $50 million in Cipher in a deal that gave it a period of exclusivity to acquire the Barber Lake site",
+     "evidence": "article",
+     "run": "2025-02-28-1358-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d296",
+   "from": "SOFTBANK",
+   "to": "AMPERE",
+   "type": "acquisition",
+   "usd": 6500000000,
+   "usd_text": "$6.5B",
+   "date": "2025-03-20",
+   "status": "announced",
+   "summary": "SoftBank to acquire Arm-based datacenter CPU developer Ampere Computing for $6.5B cash. Carlyle and Oracle sell stakes. Subject to regulatory approvals, expected to close 2H 2025.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-03-31-1405-cooling",
+   "sources": [
+    {
+     "url": "https://www.tomshardware.com/tech-industry/softbank-to-acquire-arm-cpus-for-datacenter-firm-ampere-in-usd6-5-billion-cash-deal",
+     "title": "SoftBank to acquire Arm CPUs for datacenter firm Ampere in $6.5 billion cash deal - Tom's Hardware",
+     "source": "Tom's Hardware",
+     "published": "2025-03-20",
+     "quote": "SoftBank Group today said it would acquire Ampere Computing, a developer of Arm-based datacenter CPUs, for $6.5 billion in cash.",
+     "evidence": "article",
+     "run": "2025-03-31-1405-cooling"
+    },
+    {
+     "url": "https://www.datacenterfrontier.com/design/article/55277106/with-ampere-deal-softbank-tightens-its-grip-on-ai-data-centers",
+     "title": "With Ampere Deal, SoftBank Tightens Its Grip on AI Data Centers - Data Center Frontier",
+     "source": "Data Center Frontier",
+     "published": "2025-04-04",
+     "quote": "Softbank Group announced its plan to acquire ARM processor design company Ampere computing in a $6.5 billion cash deal",
+     "evidence": "article",
+     "run": "2025-04-30-1407-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d297",
+   "from": "DUKE",
+   "to": "GEV",
+   "type": "chips",
+   "usd": null,
+   "usd_text": "11 turbines",
+   "date": "2025-04-28",
+   "status": "announced",
+   "summary": "Duke Energy acquired 11 GE Vernova 7HA natural gas turbines for growing data center and manufacturing power demand. Adds to eight previously acquired. Price not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-04-30-1407-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/duke-energy-buys-11-ge-vernova-natural-gas-turbines-to-help-meet-growing-data-center-power-demand/",
+     "title": "Duke Energy buys 11 GE Vernova natural gas turbines to help meet growing data center power demand - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-04-28",
+     "quote": "US utility company Duke Energy has acquired 11 natural gas turbines from GE Vernova to address growing demand from the data center and manufacturing sectors.",
+     "evidence": "article",
+     "run": "2025-04-30-1407-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d298",
+   "from": "SAMSUNG",
+   "to": "FLAKTGROUP",
+   "type": "acquisition",
+   "usd": 1700000000,
+   "usd_text": "€1.5B (~$1.7B)",
+   "date": "2025-05-14",
+   "status": "announced",
+   "summary": "Samsung signed a definitive agreement to buy FläktGroup, a German HVAC and data center cooling maker, from Triton for €1.5B.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-05-31-1414-cooling",
+   "sources": [
+    {
+     "url": "https://news.samsung.com/global/samsung-electronics-acquires-leading-global-hvac-solutions-provider-flaktgroup",
+     "title": "Samsung Electronics Acquires Leading Global HVAC Solutions Provider FläktGroup - samsung.com",
+     "source": "samsung.com",
+     "published": "2025-05-14",
+     "quote": "Samsung Electronics today announced that it has signed an agreement to acquire all shares of FläktGroup, a leading global HVAC solutions provider, for €1.5 billion from European investment firm Triton.",
+     "evidence": "article",
+     "run": "2025-05-31-1414-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d299",
+   "from": "DIGITALBRIDGE",
+   "to": "TAKANOCK",
+   "type": "equity",
+   "usd": 500000000,
+   "usd_text": "$500M",
+   "date": "2025-06-25",
+   "status": "announced",
+   "summary": "ArcLight and DigitalBridge commit a combined $500M of new capital to Takanock, a data center power infrastructure provider.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2025-06-30-1415-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/takanock-secures-500-million-commitment-from-arclight-and-digitalbridge-302490366.html",
+     "title": "TAKANOCK SECURES $500 MILLION COMMITMENT FROM ARCLIGHT AND DIGITALBRIDGE - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2025-06-25",
+     "quote": "new capital commitments totaling $500 million from ArcLight and DigitalBridge",
+     "evidence": "press release",
+     "run": "2025-06-30-1415-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d300",
+   "from": "SAMSUNG",
+   "to": "GRC",
+   "type": "equity",
+   "usd": null,
+   "usd_text": "undisclosed",
+   "date": "2025-06-06",
+   "status": "announced",
+   "summary": "Samsung Ventures invested in GRC, an immersion cooling provider for data centers; amount not shared.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-06-30-1415-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/immersion-cooling-firm-grc-secures-investment-from-samsung-ventures/",
+     "title": "Immersion cooling firm GRC secures investment from Samsung Ventures - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-06-06",
+     "quote": "it has secured investment from Samsung Ventures to support its growth",
+     "evidence": "article",
+     "run": "2025-06-30-1415-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d301",
+   "from": "VRT",
+   "to": "GREATLAKES",
+   "type": "acquisition",
+   "usd": 200000000,
+   "usd_text": "US$200m",
+   "date": "2025-07-17",
+   "status": "completed",
+   "summary": "Vertiv completed its US$200m acquisition of Great Lakes Data Racks & Cabinets, adding rack, cabinet and integration solutions for high-density AI data centres.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2025-07-31-1417-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/vertiv-to-acquire-custom-rack-solutions-manufacturer-302507825.html",
+     "title": "Vertiv To Acquire Custom Rack Solutions Manufacturer - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2025-07-17",
+     "quote": "today announced it has entered into an agreement to acquire the Great Lakes Data Racks & Cabinets family of companies (collectively \"Great Lakes\") for $200 million",
+     "evidence": "press release",
+     "run": "2025-07-31-1417-cooling"
+    },
+    {
+     "url": "https://datacentremagazine.com/news/why-has-vertiv-acquired-great-lakes-data-racks-cabinets",
+     "title": "Why has Vertiv Acquired Great Lakes Data Racks & Cabinets? - Data Centre Magazine",
+     "source": "Data Centre Magazine",
+     "published": "2025-08-21",
+     "quote": "Vertiv completes its US$200m acquisition of Great Lakes Data Racks, boosting its integrated infrastructure offering for data centres",
+     "evidence": "article",
+     "run": "2025-08-31-1419-cooling"
+    }
+   ],
+   "history": [
+    {
+     "usd": 200000000,
+     "usd_text": "$200M",
+     "status": "announced",
+     "until": "2025-08-31-1419-cooling"
+    }
+   ],
+   "updated_in": "2025-08-31-1419-cooling"
+  },
+  {
+   "id": "d302",
+   "from": "TLN",
+   "to": "CAITHNESS",
+   "type": "acquisition",
+   "usd": 3500000000,
+   "usd_text": "$3.5B",
+   "date": "2025-07-28",
+   "status": "announced",
+   "summary": "Talen buys two gas plants, 1.058GW Moxie Freedom (PA) and 1.875GW Guernsey County (OH), from Caithness (and BlackRock) for $3.5B total; close expected Q4 2025.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-07-31-1417-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/talen-energy-acquires-two-gas-plants-within-pjm-market-in-data-center-power-push/",
+     "title": "Talen Energy acquires two gas plants within PJM market in data center power push - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-07-28",
+     "quote": "The acquisitions were completed for a total of $3.5 billion, with the deal expected to close in Q4 of 2025.",
+     "evidence": "article",
+     "run": "2025-07-31-1417-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d303",
+   "from": "NVDA",
+   "to": "SCHNEIDER",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2025-08-04",
+   "status": "announced",
+   "summary": "Nvidia and Schneider Electric partner to co-develop cooling, power, building management and control systems for AI factories.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-08-31-1419-cooling",
+   "sources": [
+    {
+     "url": "https://energydigital.com/news/schneider-electrics-bid-to-power-ai-factories-with-nvidia",
+     "title": "Schneider Electric's Partnership with Nvidia for AI Power - Energy Digital Magazine",
+     "source": "Energy Digital Magazine",
+     "published": "2025-08-04",
+     "quote": "Nvidia is partnering with leading players in the data centre industry, including Schneider Electric, to co-develop advanced cooling power, building management and control systems tailored for both digital and physical AI data centres.",
+     "evidence": "article",
+     "run": "2025-08-31-1419-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d304",
+   "from": "GOOGL",
+   "to": "AEP",
+   "type": "power",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2025-08-06",
+   "status": "announced",
+   "summary": "AEP subsidiary Indiana Michigan Power and Google filed a special customer contract with Indiana regulator for clean capacity arrangement and demand response at Fort Wayne data center; MW redacted, pending approval.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-08-31-1419-cooling",
+   "sources": [
+    {
+     "url": "https://www.powermag.com/google-im-strike-landmark-deal-to-share-clean-capacity-and-flex-ai-load/",
+     "title": "Google, I&M Strike Landmark Deal to Share Clean Capacity and Flex AI Load - POWER Magazine",
+     "source": "POWER Magazine",
+     "published": "2025-08-06",
+     "quote": "AEP on Aug. 4 announced that the two companies filed a petition to the Indiana Utilities Regulatory Commission (IURC) that seeks approval for the special contract.",
+     "evidence": "article",
+     "run": "2025-08-31-1419-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d305",
+   "from": "APLD",
+   "to": "CORINTIS",
+   "type": "equity",
+   "usd": 25000000,
+   "usd_text": "$25M",
+   "date": "2025-09-28",
+   "status": "announced",
+   "summary": "Applied Digital led Corintis' $25M Series A1 round, bringing total funding to $58M. Corintis makes microfluidic chip-cooling for AI data centers.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-09-30-1422-cooling",
+   "sources": [
+    {
+     "url": "https://www.linkedin.com/posts/analytics-india-magazine_switzerland-based-corintis-has-raised-24-activity-7378289225248661504-ITCf",
+     "title": "Switzerland-based Corintis has raised $24 million in a Series A funding round led by BlueYard Capital to scale its breakthrough microfluidic cooling technology for advanced semiconductors. Already being tested by Microsoft, the system is claimed to be three t - LinkedIn",
+     "source": "LinkedIn",
+     "published": "2025-09-28",
+     "quote": "has secured $25M in new funding, led by Applied Digital",
+     "evidence": "article",
+     "run": "2025-09-30-1422-cooling"
+    },
+    {
+     "url": "https://ir.applieddigital.com/news-events/press-releases/detail/138/applied-digital-leads-25-million-funding-round-for",
+     "title": "Applied Digital Leads $25 Million Funding Round for Corintis to Advance Innovation in Data Center Technology - Applied Digital Corporation (APLD)",
+     "source": "Applied Digital Corporation (APLD)",
+     "published": "2025-12-02",
+     "quote": "announced today it served as the lead investor in a $25 million funding round for Corintis",
+     "evidence": "article",
+     "run": "2025-12-31-1429-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d306",
+   "from": "JOHNSONCONTROLS",
+   "to": "ACCELSIUS",
+   "type": "equity",
+   "usd": 65000000,
+   "usd_text": "$65M",
+   "date": "2025-10-06",
+   "status": "completed",
+   "summary": "Accelsius closed a $65M Series B led by Johnson Controls.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2025-10-31-1423-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/johnson-controls-announces-investment-in-data-center-liquid-cooling-company-accelsius-302575620.html",
+     "title": "Johnson Controls announces investment in data center liquid cooling company Accelsius - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2025-10-06",
+     "quote": "Johnson Controls, the leader in smart, healthy and sustainable buildings, today announced a multi-million dollar strategic investment in Accelsius",
+     "evidence": "press release",
+     "run": "2025-10-31-1423-cooling"
+    },
+    {
+     "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOSTNoek9hVnEycDY5em01ZmxmQXFGeWRLNXduZzZGQ3RGZU1oai1QaGhaTENkclRzNWNuclJyTUdQQU83TWcxQVE3YjZZVFpLOGYyeHBFcjVGbXZ6OFFyVERhWk9DLUplMGZNLUM2bFNwZUZ4bS1QaTJLQnBEV2lkRkxxSHJ4N1FJYjR5YkFwX0NLdF9qS3hyUmktM1hYSFN2MURqRWI4bU51RXBVWkZaZm1uZVhwQlhVd1BsMTZfck9GeDUycUZZOFdrcjh0MXVnYUVpeXRWNXpJaGRXd2dxaWRKZXBqRXRJTkNCbGp4cXJUQlE3ME1Ia05RQ2dET1BtWHlDLWdESWRxUmszMUxmMGs5V0tYNEtMZ1hCRUhhbElOa0Noa29XQmM2U3cyT2M?oc=5",
+     "title": "Accelsius Closes $65 Million Series B Funding Led by Johnson Controls; Legrand Joining Round to Scale Liquid Cooling for Gigawatt-Class AI Factories - Business Wire",
+     "source": "Business Wire",
+     "published": "2026-01-12",
+     "quote": "Accelsius Closes $65 Million Series B Funding Led by Johnson Controls",
+     "evidence": "headline",
+     "run": "2026-01-31-1432-cooling"
+    }
+   ],
+   "history": [
+    {
+     "usd": null,
+     "usd_text": "multi-million",
+     "status": "announced",
+     "until": "2026-01-31-1432-cooling"
+    }
+   ],
+   "updated_in": "2026-01-31-1432-cooling"
+  },
+  {
+   "id": "d307",
+   "from": "LEGRAND",
+   "to": "AVTRON",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2025-10-07",
+   "status": "announced",
+   "summary": "Legrand acquired load bank provider Avtron, its fifth data center acquisition in 2025. Terms not shared.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-10-31-1423-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/legrand-acquires-load-bank-provider-avtron/",
+     "title": "Legrand acquires load bank provider Avtron - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-10-07",
+     "quote": "Industrial firm Legrand has continued its recent data center-focused acquisition spree with the purchase of load bank provider Avtron.",
+     "evidence": "article",
+     "run": "2025-10-31-1423-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d308",
+   "from": "META",
+   "to": "RIVOS",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated (Rivos valued at $2B)",
+   "date": "2025-10-08",
+   "status": "completed",
+   "summary": "Meta acquired AI chip startup Rivos, which had a CUDA-compatible RISC-V processor. Rivos was valued at $2B per the article; price not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-10-31-1423-cooling",
+   "sources": [
+    {
+     "url": "https://www.hpcwire.com/2025/10/08/what-metas-purchase-of-rivos-says-about-risc-v/",
+     "title": "What Meta’s Purchase of Rivos Says About RISC-V - HPCwire",
+     "source": "HPCwire",
+     "published": "2025-10-08",
+     "quote": "News dropped last week that Meta has acquired Rivos, an AI chip startup that has taped out a CUDA-compatible RISC-V processor with favorable efficiency parameters.",
+     "evidence": "article",
+     "run": "2025-10-31-1423-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d309",
+   "from": "FIRMUS",
+   "to": "CDC",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "AU$4.5 billion",
+   "date": "2025-10-16",
+   "status": "announced",
+   "summary": "Firmus and CDC Data Centres strategic alliance for Australian AI cloud capacity; AU$4.5B first stage at Southgate Melbourne with 18,500 Nvidia GB300 GPUs, scalable to A$73.3B and 1.6 GW through 2028.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-10-31-1423-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/ai-cloud-firm-partners-with-cdc-for-australian-data-center-capacity/",
+     "title": "AI cloud firm partners with CDC for Australian data center capacity - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-10-16",
+     "quote": "The project will total an initial investment of AU$4.5 billion (US$2.9bn), with potential to scale up to A$73.3 billion (US$47.68bn) and 1.6GW of operational capacity through 2028.",
+     "evidence": "article",
+     "run": "2025-10-31-1423-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d310",
+   "from": "VOLTAGRID",
+   "to": "INNIO",
+   "type": "chips",
+   "usd": null,
+   "usd_text": "2.3 GW",
+   "date": "2025-10-24",
+   "status": "announced",
+   "summary": "VoltaGrid contracts INNIO to deliver 2.3 GW of Jenbacher power infrastructure (92 power racks of ~25 MW each), INNIO's largest contract ever, for AI data centers.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-10-31-1423-cooling",
+   "sources": [
+    {
+     "url": "https://www.microgridknowledge.com/chp-microgrids/news/55325697/innio-secures-largest-contract-ever-to-power-ai-data-centers-with-23-gw-infrastructure",
+     "title": "INNIO Secures its Largest Contract Ever to Energize AI Data Centers with 2.3 GW of Jenbacher Power - Microgrid Knowledge",
+     "source": "Microgrid Knowledge",
+     "published": "2025-10-24",
+     "quote": "U.S. energy developer VoltaGrid is contracting Austrian-based INNIO to deliver a mammoth 2.3-GW in power infrastructure to energize the AI era.",
+     "evidence": "article",
+     "run": "2025-10-31-1423-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d311",
+   "from": "CLEANSPARK",
+   "to": "SUBMER",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2025-10-29",
+   "status": "announced",
+   "summary": "CleanSpark and immersion cooling firm Submer partner on an infrastructure platform integrating power generation, data center development and AI-service delivery.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-10-31-1423-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/cleanspark-partners-with-immersion-cooling-firm-submer-for-ai-data-center-pivot/",
+     "title": "CleanSpark partners with immersion cooling firm Submer for AI data center pivot - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-10-29",
+     "quote": "Cryptomine firm CleanSpark is partnering with immersion cooling provider Submer.",
+     "evidence": "article",
+     "run": "2025-10-31-1423-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d312",
+   "from": "VRT",
+   "to": "PURGERITE",
+   "type": "acquisition",
+   "usd": 1000000000,
+   "usd_text": "$1bn",
+   "date": "2025-11-03",
+   "status": "completed",
+   "summary": "Vertiv completed its roughly $1B acquisition of PurgeRite.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2025-11-30-1427-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/vertiv-announces-intent-to-acquire-purgerite-a-leading-provider-of-specialized-fluid-management-services-to-expand-liquid-cooling-services-portfolio-302602394.html",
+     "title": "Vertiv Announces Intent to Acquire PurgeRite, a Leading Provider of Specialized Fluid Management Services, to Expand Liquid Cooling Services Portfolio - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2025-11-03",
+     "quote": "from Milton Street Capital LLC for approximately $1.0 billion in cash consideration at closing",
+     "evidence": "press release",
+     "run": "2025-11-30-1427-cooling"
+    },
+    {
+     "url": "https://capacityglobal.com/news/vertiv-purgerite-acquisition/",
+     "title": "Vertiv completes $1bn acquisition of PurgeRite - Capacity Media",
+     "source": "Capacity Media",
+     "published": "2025-12-05",
+     "quote": "Vertiv completes $1bn acquisition of PurgeRite",
+     "evidence": "headline",
+     "run": "2025-12-31-1429-cooling"
+    },
+    {
+     "url": "https://www.datacenterknowledge.com/cooling/vertiv-places-1b-bet-on-liquid-cooling-with-purgerite-purchase",
+     "title": "Vertiv Places $1B Bet on Liquid Cooling with PurgeRite Purchase - Data Center Knowledge",
+     "source": "Data Center Knowledge",
+     "published": "2026-01-05",
+     "quote": "Digital infrastructure giant Vertiv has completed its $1 billion acquisition of PurgeRite",
+     "evidence": "article",
+     "run": "2026-01-31-1432-cooling"
+    }
+   ],
+   "history": [
+    {
+     "usd": 1000000000,
+     "usd_text": "~$1.0B",
+     "status": "announced",
+     "until": "2025-12-31-1429-cooling"
+    }
+   ],
+   "updated_in": "2025-12-31-1429-cooling"
+  },
+  {
+   "id": "d313",
+   "from": "FLEX",
+   "to": "LGELEC",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2025-11-03",
+   "status": "announced",
+   "summary": "Flex and LG Electronics to jointly develop integrated modular cooling solutions for gigawatt AI data centers.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2025-11-30-1427-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/flex-and-lg-partner-to-develop-advanced-thermal-management-solutions-for-gigawatt-data-centers-302601940.html",
+     "title": "Flex and LG Partner to Develop Advanced Thermal Management Solutions for Gigawatt Data Centers - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2025-11-03",
+     "quote": "announced a new partnership with LG Electronics (LG)",
+     "evidence": "press release",
+     "run": "2025-11-30-1427-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d314",
+   "from": "DAIKIN",
+   "to": "CHILLDYNE",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2025-11-05",
+   "status": "completed",
+   "summary": "Daikin Applied Americas acquired direct-to-chip liquid cooling firm Chilldyne; terms not shared.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-11-30-1427-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/daikin-acquires-liquid-cooling-firm-chilldyne/",
+     "title": "Daikin acquires liquid cooling firm Chilldyne - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2025-11-05",
+     "quote": "Daikin Applied Americas today announced the acquisition of Chilldyne",
+     "evidence": "article",
+     "run": "2025-11-30-1427-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d315",
+   "from": "LAMBDA",
+   "to": "PRIMEDC",
+   "type": "lease",
+   "usd": null,
+   "usd_text": "21 MW",
+   "date": "2025-11-13",
+   "status": "announced",
+   "summary": "Lambda to lease 21 MW at Prime's LAX01 AI-ready data center in Vernon, California for Nvidia Blackwell infrastructure.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2025-11-30-1427-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/prime-data-centers-and-lambda-partner-to-power-the-next-era-of-superintelligence-with-ai-optimized-infrastructure-in-southern-california-302613971.html",
+     "title": "Prime Data Centers and Lambda Partner to Power the Next Era of Superintelligence with AI-Optimized Infrastructure in Southern California - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2025-11-13",
+     "quote": "Lambda will initially lease a portion of the facility representing 21 MW of power.",
+     "evidence": "press release",
+     "run": "2025-11-30-1427-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d316",
+   "from": "HUMAIN",
+   "to": "GLOBALAI",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2025-11-19",
+   "status": "announced",
+   "summary": "HUMAIN and Global AI partner to build large-scale AI data center and compute capacity in the US using Nvidia infrastructure.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2025-11-30-1427-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/humain-forges-partnership-with-global-ai-to-build-large-scale-ai-data-centers--compute-capacity-in-the-us-and-globally-with-the-latest-nvidia-ai-infrastructure-302620669.html",
+     "title": "HUMAIN Forges Partnership with Global AI to Build Large-Scale AI Data Centers & Compute Capacity in the U.S. and Globally with the Latest NVIDIA AI Infrastructure - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2025-11-19",
+     "quote": "announced that it is entering into a strategic partnership with Global AI",
+     "evidence": "press release",
+     "run": "2025-11-30-1427-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d317",
+   "from": "GIC",
+   "to": "VANTAGE",
+   "type": "equity",
+   "usd": 1600000000,
+   "usd_text": "US$1.6B",
+   "date": "2025-11-24",
+   "status": "completed",
+   "summary": "US$1.6B investment from GIC, ADIA and an institutional investor into Vantage to fund Johor campus buyout and scale Asia-Pacific platform.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-11-30-1427-cooling",
+   "sources": [
+    {
+     "url": "https://www.businesstimes.com.sg/startups-tech/vantage-data-centers-completes-js-sez-campus-buyout-after-us1-6-billion-gic-led-injection",
+     "title": "Vantage Data Centers completes JS-SEZ campus buyout after US$1.6 billion GIC-led injection - The Business Times",
+     "source": "The Business Times",
+     "published": "2025-11-24",
+     "quote": "funded by a US$1.6 billion investment from GIC",
+     "evidence": "article",
+     "run": "2025-11-30-1427-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d318",
+   "from": "TRANE",
+   "to": "STELLAR",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2025-12-02",
+   "status": "announced",
+   "summary": "Trane Technologies signed a definitive agreement to acquire Stellar Energy Digital, maker of turnkey liquid-to-chip data center cooling plants and CDUs. Price not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2025-12-31-1429-cooling",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/news/trane-technologies-acquire-stellar-energy-213000627.html",
+     "title": "Trane Technologies to Acquire Stellar Energy Digital Business - Yahoo Finance",
+     "source": "Yahoo Finance",
+     "published": "2025-12-02",
+     "quote": "entered into a definitive agreement with Stellar Energy International, Ltd. to acquire the Stellar Energy Digital business",
+     "evidence": "article",
+     "run": "2025-12-31-1429-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d319",
+   "from": "LEGRAND",
+   "to": "ACCELSIUS",
+   "type": "equity",
+   "usd": null,
+   "usd_text": "undisclosed (part of $65M)",
+   "date": "2026-01-12",
+   "status": "announced",
+   "summary": "Legrand joined Accelsius' $65M Series B; individual amount not stated.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-01-31-1432-cooling",
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOSTNoek9hVnEycDY5em01ZmxmQXFGeWRLNXduZzZGQ3RGZU1oai1QaGhaTENkclRzNWNuclJyTUdQQU83TWcxQVE3YjZZVFpLOGYyeHBFcjVGbXZ6OFFyVERhWk9DLUplMGZNLUM2bFNwZUZ4bS1QaTJLQnBEV2lkRkxxSHJ4N1FJYjR5YkFwX0NLdF9qS3hyUmktM1hYSFN2MURqRWI4bU51RXBVWkZaZm1uZVhwQlhVd1BsMTZfck9GeDUycUZZOFdrcjh0MXVnYUVpeXRWNXpJaGRXd2dxaWRKZXBqRXRJTkNCbGp4cXJUQlE3ME1Ia05RQ2dET1BtWHlDLWdESWRxUmszMUxmMGs5V0tYNEtMZ1hCRUhhbElOa0Noa29XQmM2U3cyT2M?oc=5",
+     "title": "Accelsius Closes $65 Million Series B Funding Led by Johnson Controls; Legrand Joining Round to Scale Liquid Cooling for Gigawatt-Class AI Factories - Business Wire",
+     "source": "Business Wire",
+     "published": "2026-01-12",
+     "quote": "Legrand Joining Round to Scale Liquid Cooling for Gigawatt-Class AI Factories",
+     "evidence": "headline",
+     "run": "2026-01-31-1432-cooling"
+    },
+    {
+     "url": "https://www.prnewswire.com/news-releases/legrand-announces-acquisition-of-kratos-industries-and-strategic-investment-in-accelsius-two-phase-liquid-cooling-technology-302686678.html",
+     "title": "Legrand Announces Acquisition of Kratos Industries and Strategic Investment in Accelsius Two-Phase Liquid Cooling Technology - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-02-12",
+     "quote": "participating in the Series B funding round for Accelsius",
+     "evidence": "press release",
+     "run": "2026-02-28-1435-cooling"
+    }
+   ],
+   "updated_in": "2026-02-28-1435-cooling"
+  },
+  {
+   "id": "d320",
+   "from": "BLACKSTONE",
+   "to": "FIRMUS",
+   "type": "financing",
+   "usd": 10000000000,
+   "usd_text": "$10B",
+   "date": "2026-02-09",
+   "status": "announced",
+   "summary": "Firmus secured a $10B debt financing facility led by Blackstone and Coatue to roll out its AI factory platform across Australia (Project Southgate).",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-02-28-1435-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/firmus-secures-10bn-debt-financing-facility-for-project-southgate-ai-factory-roll-out/",
+     "title": "Firmus secures $10bn debt financing facility for Project Southgate AI factory roll out - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-02-09",
+     "quote": "Australian neocloud Firmus has secured $10 billion in a debt financing facility led by investment firms Blackstone and Coatue.",
+     "evidence": "article",
+     "run": "2026-02-28-1435-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d321",
+   "from": "TRANE",
+   "to": "LIQUIDSTACK",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-02-10",
+   "status": "announced",
+   "summary": "Trane Technologies agreed to acquire liquid cooling firm LiquidStack; builds on its 2023 minority investment. Price not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-02-28-1435-cooling",
+   "sources": [
+    {
+     "url": "https://datacentremagazine.com/news/trane-to-acquire-liquidstack-for-ai-data-centre-cooling",
+     "title": "Trane to Acquire LiquidStack for AI Data Centre Cooling - Data Centre Magazine",
+     "source": "Data Centre Magazine",
+     "published": "2026-02-10",
+     "quote": "Trane Technologies has agreed to acquire LiquidStack",
+     "evidence": "article",
+     "run": "2026-02-28-1435-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d322",
+   "from": "JOHNSONCONTROLS",
+   "to": "ALLOY",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-02-18",
+   "status": "completed",
+   "summary": "Johnson Controls closed its acquisition of Alloy Enterprises, thermal management firm for data centres.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-02-28-1435-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/johnson-controls-signs-agreement-to-acquire-alloy-enterprises-strengthening-data-center-thermal-management-leadership-302691945.html",
+     "title": "Johnson Controls signs agreement to acquire Alloy Enterprises, strengthening data center thermal management leadership - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-02-18",
+     "quote": "has signed an agreement to acquire Alloy Enterprises",
+     "evidence": "press release",
+     "run": "2026-02-28-1435-cooling"
+    },
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/johnson-controls-to-acquire-alloy-enterprises/",
+     "title": "Johnson Controls to acquire Alloy Enterprises - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-02-19",
+     "quote": "The company this week announced it has signed an agreement to acquire Alloy Enterprises",
+     "evidence": "article",
+     "run": "2026-02-28-1435-cooling"
+    },
+    {
+     "url": "https://datacentremagazine.com/news/johnson-controls-acquires-alloy-enterprises-for-cooling",
+     "title": "Johnson Controls Acquires Alloy Enterprises for Cooling - Data Centre Magazine",
+     "source": "Data Centre Magazine",
+     "published": "2026-05-14",
+     "quote": "Johnson Controls has officially closed its Alloy Enterprises deal to expand thermal management technology for AI-led data centre demand",
+     "evidence": "article",
+     "run": "2026-05-31-1442-cooling"
+    }
+   ],
+   "history": [
+    {
+     "usd": null,
+     "usd_text": "not stated",
+     "status": "announced",
+     "until": "2026-05-31-1442-cooling"
+    }
+   ],
+   "updated_in": "2026-05-31-1442-cooling"
+  },
+  {
+   "id": "d323",
+   "from": "SUBMER",
+   "to": "RADIANARC",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-02-10",
+   "status": "completed",
+   "summary": "Submer acquired Radian Arc, a sovereign telco-focused GPU cloud IaaS provider. Price not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-02-28-1435-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/submer-acquires-cloud-gaming-firm-radian-arc/",
+     "title": "Submer acquires cloud gaming firm Radian Arc - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-02-10",
+     "quote": "Liquid cooling firm Submer has acquired a GPU-as-a-Service provider.",
+     "evidence": "article",
+     "run": "2026-02-28-1435-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d324",
+   "from": "SUBMER",
+   "to": "ANANTRAJ",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-02-10",
+   "status": "loi",
+   "summary": "Submer and Anant Raj Cloud signed an MoU to develop data centers in India; details vague.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-02-28-1435-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/immersion-cooling-firm-submer-partners-with-indian-real-estate-developer-anant-raj-for-data-center-venture/",
+     "title": "Immersion cooling firm Submer partners with Indian real estate developer Anant Raj for data center venture - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-02-10",
+     "quote": "Submer, an immersion cooling provider, announced yesterday that it would be developing data centers in India with Anant Raj Cloud",
+     "evidence": "article",
+     "run": "2026-02-28-1435-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d325",
+   "from": "GOOGL",
+   "to": "AES",
+   "type": "power",
+   "usd": null,
+   "usd_text": "20-year PPAs",
+   "date": "2026-02-24",
+   "status": "announced",
+   "summary": "AES and Google signed 20-year PPAs for co-located generation at a new Google data center in Wilbarger County, Texas. AES owns and operates the assets and provides energy management services.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-02-28-1435-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/aes-announces-landmark-agreements-with-google-in-texas-302695111.html",
+     "title": "AES Announces Landmark Agreements with Google in Texas - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-02-24",
+     "quote": "the two companies entered into 20-year Power Purchase Agreements (PPA) for co-located power generation",
+     "evidence": "press release",
+     "run": "2026-02-28-1435-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d326",
+   "from": "VRT",
+   "to": "GENERATE",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-03-04",
+   "status": "announced",
+   "summary": "Vertiv and Generate Capital collaborate on Bring Your Own Power & Cooling offering, combining Vertiv power and cooling with Generate's financing and ownership for US data centers.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-03-31-1437-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/vertiv-and-generate-capital-collaborate-to-accelerate-data-center-capacity-with-complete-power-and-cooling-infrastructure-302703174.html",
+     "title": "Vertiv and Generate Capital Collaborate to Accelerate Data Center Capacity with Complete Power and Cooling Infrastructure - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-03-04",
+     "quote": "Vertiv (NYSE: VRT ), a global leader in critical digital infrastructure, and  Generate Capital, PBC  (\"Generate\"), a leading infrastructure investment platform, today announced a strategic collaboration",
+     "evidence": "press release",
+     "run": "2026-03-31-1437-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d327",
+   "from": "SMITHS",
+   "to": "DRCHEAT",
+   "type": "acquisition",
+   "usd": 219000000,
+   "usd_text": "£164M ($219M)",
+   "date": "2026-03-09",
+   "status": "announced",
+   "summary": "Smiths acquired DRC Heat Transfer, a data center power and cooling equipment maker, to integrate into Flex-Tek.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-03-31-1437-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/power-and-cooling-vendor-drc-heat-transfer-acquired-by-uk-based-smiths-for-164m/",
+     "title": "Power and cooling vendor DRC Heat Transfer acquired by UK-based Smiths for £164m - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-03-09",
+     "quote": "DRC Heat Transfer, which makes power and cooling equipment for data centers, has been acquired by UK industrial engineering firm Smiths for £164 million ($219m).",
+     "evidence": "article",
+     "run": "2026-03-31-1437-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d328",
+   "from": "BLACKSTONE",
+   "to": "ACT",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-03-11",
+   "status": "announced",
+   "summary": "Blackstone Energy Transition Partners entered a definitive agreement to acquire a majority stake in thermal management firm Advanced Cooling Technologies. Price not stated.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-03-31-1437-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/blackstone-energy-transition-partners-announces-agreement-to-acquire-majority-stake-in-advanced-cooling-technologies-302711030.html",
+     "title": "Blackstone Energy Transition Partners Announces Agreement to Acquire Majority Stake in Advanced Cooling Technologies - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-03-11",
+     "quote": "funds managed by Blackstone Energy Transition Partners (\"Blackstone\") have entered into a definitive agreement to acquire a majority stake in ACT",
+     "evidence": "press release",
+     "run": "2026-03-31-1437-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d329",
+   "from": "ECOLAB",
+   "to": "COOLIT",
+   "type": "acquisition",
+   "usd": 4750000000,
+   "usd_text": "$4.75B",
+   "date": "2026-03-19",
+   "status": "completed",
+   "summary": "Ecolab completed acquisition of CoolIT Systems, direct liquid cooling maker, for about $4.75B.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-03-31-1437-cooling",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/sectors/technology/articles/ecl-boost-data-center-ai-142700968.html",
+     "title": "ECL to Boost Data Center AI Cooling Platform With CoolIT Acquisition - Yahoo Finance",
+     "source": "Yahoo Finance",
+     "published": "2026-03-23",
+     "quote": "Ecolab will acquire CoolIT for approximately $4.75 billion in cash",
+     "evidence": "article",
+     "run": "2026-03-31-1437-cooling"
+    },
+    {
+     "url": "https://www.esgtoday.com/kkr-impact-fund-earns-15x-investment-on-sale-of-liquid-data-center-cooling-provider-coolit-to-ecolab/",
+     "title": "KKR Impact Fund Earns 15x Investment on Sale of Data Center Cooling Provider CoolIT to Ecolab - ESG Today",
+     "source": "ESG Today",
+     "published": "2026-03-26",
+     "quote": "Ecolab announced today an agreement to acquire liquid data center cooling solutions provider CoolIT from KKR, in a deal valuing the company at $4.75 billion",
+     "evidence": "article",
+     "run": "2026-03-31-1437-cooling"
+    },
+    {
+     "url": "https://finance.biggo.com/news/376f15ed-537b-4dd3-ba37-d7300c0e0a80",
+     "title": "NVIDIA Endorsement! Ecolab Drops $4.75 Billion on CoolIT, Targeting the AI Liquid Cooling Megatrend - BigGo Finance",
+     "source": "BigGo Finance",
+     "published": "2026-07-09",
+     "quote": "Ecolab Inc. has completed the acquisition of CoolIT Systems, a leader in direct liquid cooling for data centers, for approximately $4.75 billion",
+     "evidence": "article",
+     "run": "2026-07-31-1448-cooling"
+    }
+   ],
+   "history": [
+    {
+     "usd": 4750000000,
+     "usd_text": "$4.75B",
+     "status": "announced",
+     "until": "2026-07-31-1448-cooling"
+    }
+   ],
+   "updated_in": "2026-07-31-1448-cooling"
+  },
+  {
+   "id": "d330",
+   "from": "VRT",
+   "to": "THERMOKEY",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-03-24",
+   "status": "completed",
+   "summary": "Vertiv completed its acquisition of Italian heat-rejection specialist ThermoKey on June 12, 2026. Price not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-03-31-1437-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterknowledge.com/cooling/vertiv-targets-ai-cooling-bottleneck-with-thermokey-deal",
+     "title": "Vertiv Targets AI Cooling Bottleneck with ThermoKey Deal - Data Center Knowledge",
+     "source": "Data Center Knowledge",
+     "published": "2026-03-24",
+     "quote": "announcing plans to acquire Italy-based heat-exchanger specialist ThermoKey",
+     "evidence": "article",
+     "run": "2026-03-31-1437-cooling"
+    },
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/vertiv-acquires-data-center-cooling-firm-thermokey/",
+     "title": "Vertiv acquires data center cooling firm ThermoKey - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-03-26",
+     "quote": "The company this week announced it has entered into an agreement to acquire ThermoKey, a provider of heat rejection and heat-exchange technologies.",
+     "evidence": "article",
+     "run": "2026-03-31-1437-cooling"
+    },
+    {
+     "url": "https://refindustry.com/news/vertiv-acquires-italy-s-thermokey-to-expand-data-center-cooling/",
+     "title": "Vertiv acquires Italy’s ThermoKey to expand data center cooling - Refindustry",
+     "source": "Refindustry",
+     "published": "2026-06-16",
+     "quote": "Vertiv acquires Italy’s ThermoKey to expand data center cooling",
+     "evidence": "headline",
+     "run": "2026-06-30-1444-cooling"
+    },
+    {
+     "url": "https://finance.yahoo.com/technology/ai/articles/why-vertiv-vrt-moving-deeper-191905162.html",
+     "title": "Why Vertiv (VRT) Is Moving Deeper Across the Full AI Data Center Thermal Chain - Yahoo Finance",
+     "source": "Yahoo Finance",
+     "published": "2026-06-17",
+     "quote": "it completed the acquisition of ThermoKey S.p.A.",
+     "evidence": "article",
+     "run": "2026-06-30-1444-cooling"
+    }
+   ],
+   "history": [
+    {
+     "usd": null,
+     "usd_text": "not stated",
+     "status": "announced",
+     "until": "2026-06-30-1444-cooling"
+    }
+   ],
+   "updated_in": "2026-06-30-1444-cooling"
+  },
+  {
+   "id": "d331",
+   "from": "LEGRAND",
+   "to": "KEYDAK",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-04-01",
+   "status": "completed",
+   "summary": "Legrand acquired Keydak, a Guangzhou rack manufacturer (>€60M revenue). Terms not shared.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-04-30-1439-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/legrand-acquires-keydak-in-china-and-tes-in-uk/",
+     "title": "Legrand acquires Keydak in China and TES in UK - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-04-01",
+     "quote": "In China, Legrand has acquired Keydak, a rack manufacturer based in Guangzhou.",
+     "evidence": "article",
+     "run": "2026-04-30-1439-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d332",
+   "from": "LEGRAND",
+   "to": "TES",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-04-01",
+   "status": "completed",
+   "summary": "Legrand acquired UK power distribution specialist TES, over half of revenue from data centers. Terms not shared.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-04-30-1439-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/legrand-acquires-keydak-in-china-and-tes-in-uk/",
+     "title": "Legrand acquires Keydak in China and TES in UK - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-04-01",
+     "quote": "In the UK, Legrand has acquired TES, a European specialist in power distribution systems, with more than half of its revenue derived from data centers.",
+     "evidence": "article",
+     "run": "2026-04-30-1439-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d333",
+   "from": "FLEX",
+   "to": "EPP",
+   "type": "acquisition",
+   "usd": 1100000000,
+   "usd_text": "US$1.1b",
+   "date": "2026-04-08",
+   "status": "announced",
+   "summary": "Flex agreed to acquire Electrical Power Products for about US$1.1B cash to expand power control systems for data centers and utilities.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-04-30-1439-cooling",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/markets/stocks/articles/flex-buys-electrical-power-products-211016317.html",
+     "title": "Flex Buys Electrical Power Products To Deepen AI Linked Power Exposure - Yahoo Finance",
+     "source": "Yahoo Finance",
+     "published": "2026-04-08",
+     "quote": "Flex (NasdaqGS:FLEX) has agreed to acquire Electrical Power Products for about US$1.1b in cash.",
+     "evidence": "article",
+     "run": "2026-04-30-1439-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d334",
+   "from": "VRT",
+   "to": "BMARKO",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-04-13",
+   "status": "completed",
+   "summary": "Vertiv acquired BMarko Structures, a US structural fabrication provider, for prefab data center infrastructure. Price not stated.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-04-30-1439-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/vertiv-acquires-bmarko-structures-to-expand-capacity-for-manufactured-and-converged-infrastructure-solutions-302739968.html",
+     "title": "Vertiv Acquires BMarko Structures to Expand Capacity for Manufactured and Converged Infrastructure Solutions - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-04-13",
+     "quote": "today announced the acquisition of BMarko Structures LLC (\"BMarko\"), a U.S.-based provider of custom-engineered structural fabrication.",
+     "evidence": "press release",
+     "run": "2026-04-30-1439-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d335",
+   "from": "MOLEX",
+   "to": "TERAMOUNT",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-04-15",
+   "status": "announced",
+   "summary": "Molex agreed to acquire Teramount, developer of detachable fiber-to-chip connectivity for co-packaged optics. Price not stated.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-04-30-1439-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/molex-announces-agreement-to-acquire-teramount-ltd-to-accelerate-scalable-co-packaged-optics-adoption-302742582.html",
+     "title": "Molex Announces Agreement to Acquire Teramount Ltd. to Accelerate Scalable Co-Packaged Optics Adoption - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-04-15",
+     "quote": "Molex , a global electronics leader and connectivity innovator, today announced an agreement to acquire Teramount Ltd.",
+     "evidence": "press release",
+     "run": "2026-04-30-1439-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d336",
+   "from": "PIMCO",
+   "to": "RELATEDDIGITAL",
+   "type": "financing",
+   "usd": null,
+   "usd_text": "$16B project",
+   "date": "2026-04-24",
+   "status": "announced",
+   "summary": "PIMCO-managed funds anchor fixed-rate, long-term debt financing for Related Digital's $16B Saline Township, Michigan campus built for Oracle. Debt amount not stated.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-04-30-1439-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/related-digital-announces-financing-for-16-billion-oracle-data-center-project-in-saline-township-michigan-302753421.html",
+     "title": "Related Digital Announces Financing for $16 Billion Oracle Data Center Project in Saline Township, Michigan - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-04-24",
+     "quote": "The financing includes equity from Related Digital and funds affiliated with Blackstone, and fixed-rate, long term debt financing anchored by PIMCO-managed funds and accounts.",
+     "evidence": "press release",
+     "run": "2026-04-30-1439-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d337",
+   "from": "BLACKSTONE",
+   "to": "RELATEDDIGITAL",
+   "type": "equity",
+   "usd": null,
+   "usd_text": "undisclosed (part of $16B project)",
+   "date": "2026-04-24",
+   "status": "announced",
+   "summary": "Blackstone-affiliated funds commit equity alongside Related Digital to fund the $16B Oracle campus in Saline Township, Michigan. Amount not stated.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-04-30-1439-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/related-digital-announces-financing-for-16-billion-oracle-data-center-project-in-saline-township-michigan-302753421.html",
+     "title": "Related Digital Announces Financing for $16 Billion Oracle Data Center Project in Saline Township, Michigan - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-04-24",
+     "quote": "The financing includes equity from Related Digital and funds affiliated with Blackstone, and fixed-rate, long term debt financing anchored by PIMCO-managed funds and accounts.",
+     "evidence": "press release",
+     "run": "2026-04-30-1439-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d338",
+   "from": "VRT",
+   "to": "STL",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-04-27",
+   "status": "completed",
+   "summary": "Vertiv acquired cold-plate design specialist Strategic Thermal Labs to strengthen its liquid cooling offering. Price not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-04-30-1439-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/vertiv-acquires-strategic-thermal-labs-to-strengthen-liquid-cooling-offering/",
+     "title": "Vertiv acquires Strategic Thermal Labs to strengthen liquid cooling offering - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-04-28",
+     "quote": "Power technology firm Vertiv has acquired cold-plate design specialist Strategic Thermal Labs (STL) to strengthen its liquid cooling offering.",
+     "evidence": "article",
+     "run": "2026-04-30-1439-cooling"
+    },
+    {
+     "url": "https://dallasinnovates.com/cowtown-angels-portfolio-co-strategic-thermal-labs-acquired-by-ohio-based-vertiv/",
+     "title": "Cowtown Angels Portfolio Co. Strategic Thermal Labs Acquired by Ohio-Based Vertiv - Dallas Innovates",
+     "source": "Dallas Innovates",
+     "published": "2026-05-12",
+     "quote": "Strategic Thermal Labs&#8217; acquisition by Vertiv (NYSE: VRT)",
+     "evidence": "article",
+     "run": "2026-05-31-1442-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d339",
+   "from": "NEE",
+   "to": "DOMINION",
+   "type": "acquisition",
+   "usd": 67000000000,
+   "usd_text": "nearly $67B",
+   "date": "2026-05-18",
+   "status": "announced",
+   "summary": "NextEra to buy Dominion Energy in an all-stock deal, uniting utilities serving AI data center demand including northern Virginia.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-05-31-1442-cooling",
+   "sources": [
+    {
+     "url": "https://www.cnbc.com/2026/05/18/nextera-nee-dominion-energy-d-data-center-ai.html",
+     "title": "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers - CNBC",
+     "source": "CNBC",
+     "published": "2026-05-18",
+     "quote": "NextEra Energy will buy Dominion Energy in an all-stock deal valued at nearly $67 billion",
+     "evidence": "article",
+     "run": "2026-05-31-1442-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d340",
+   "from": "ISQUARED",
+   "to": "COGENT",
+   "type": "acquisition",
+   "usd": 225000000,
+   "usd_text": "$225M",
+   "date": "2026-05-27",
+   "status": "announced",
+   "summary": "I Squared Capital to buy ten data centers (53 MW) from Cogent for $225M cash to seed a new AI inference colocation platform; close expected Q3 2026.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-05-31-1442-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/i-squared-capital-buys-10-data-centers-from-cogent-aims-to-launch-new-us-based-operator/",
+     "title": "I Squared Capital buys 10 data centers from Cogent, aims to launch new US-based operator - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-05-27",
+     "quote": "entered into a purchase and sale agreement for I Squared to acquire a portfolio of ten data center facilities from Cogent for $225 million in cash",
+     "evidence": "article",
+     "run": "2026-05-31-1442-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d341",
+   "from": "WESCO",
+   "to": "NEWARK",
+   "type": "acquisition",
+   "usd": 136000000,
+   "usd_text": "S$175M ($136M)",
+   "date": "2026-06-08",
+   "status": "completed",
+   "summary": "Wesco completed acquisition of Singapore data center cooling provider Newark Engineering Group for S$175M.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-06-30-1444-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/wesco-enters-into-definitive-agreement-to-acquire-newark-engineering-group-expanding-data-center-cooling-and-lifecycle-services-302794377.html",
+     "title": "Wesco Enters into Definitive Agreement to Acquire Newark Engineering Group, Expanding Data Center Cooling and Lifecycle Services - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-06-08",
+     "quote": "Under the terms of the agreement, Wesco will acquire 100% of Newark for a cash-free, debt-free purchase price of 175 million Singapore dollars (approximately $136 million USD).",
+     "evidence": "press release",
+     "run": "2026-06-30-1444-cooling"
+    },
+    {
+     "url": "https://technode.global/2026/07/02/wesco-international-acquires-singapores-newark-engineering-for-136m-to-expand-data-center-cooling-in-southeast-asia/",
+     "title": "Wesco International acquires Singapore's Newark Engineering for $136M, to expand data center cooling in Southeast Asia - TNGlobal",
+     "source": "TNGlobal",
+     "published": "2026-07-02",
+     "quote": "The United States-based Wesco International has completed the acquisition of Newark Engineering Group",
+     "evidence": "article",
+     "run": "2026-07-31-1448-cooling"
+    }
+   ],
+   "history": [
+    {
+     "usd": 136000000,
+     "usd_text": "S$175M (~$136M)",
+     "status": "announced",
+     "until": "2026-07-31-1448-cooling"
+    }
+   ],
+   "updated_in": "2026-07-31-1448-cooling"
+  },
+  {
+   "id": "d342",
+   "from": "TDK",
+   "to": "FABRIC8LABS",
+   "type": "acquisition",
+   "usd": 400000000,
+   "usd_text": "up to $400M",
+   "date": "2026-06-10",
+   "status": "announced",
+   "summary": "TDK to acquire Fabric8Labs for up to $400M, upfront cash plus multi-year earnout; subject to regulatory approvals.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-06-30-1444-cooling",
+   "sources": [
+    {
+     "url": "https://www.citybiz.co/article/858484/tdk-to-acquire-fabric8labs-in-deal-valued-at-up-to-400-million/",
+     "title": "TDK to Acquire Fabric8Labs in Deal Valued at Up to $400 Million - citybiz",
+     "source": "citybiz",
+     "published": "2026-06-10",
+     "quote": "TDK Corporation has entered into a definitive agreement to acquire Fabric8Labs , a San Diego -based advanced manufacturing company specializing in metal 3D printing technology, in a transaction valued at up to $400 million.",
+     "evidence": "article",
+     "run": "2026-06-30-1444-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d343",
+   "from": "SCHNEIDER",
+   "to": "FOXCONN",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-06-15",
+   "status": "announced",
+   "summary": "Schneider Electric and Foxconn partner to co-develop and scale AI data center infrastructure; production of integrated systems from later this year.",
+   "origin": "news",
+   "evidence": "headline",
+   "verified": true,
+   "first_seen": "2026-06-30-1444-cooling",
+   "sources": [
+    {
+     "url": "https://aibusiness.com/data-centers/schneider-electric-foxconn-partner-build-next-gen-data-centers",
+     "title": "Schneider Electric, Foxconn Partner to Build Next-Gen Data Centers - AI Business",
+     "source": "AI Business",
+     "published": "2026-06-15",
+     "quote": "Schneider Electric, Foxconn Partner to Build Next-Gen Data Centers",
+     "evidence": "headline",
+     "run": "2026-06-30-1444-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d344",
+   "from": "SWI",
+   "to": "GDA",
+   "type": "equity",
+   "usd": 500000000,
+   "usd_text": "US$500M",
+   "date": "2026-06-17",
+   "status": "announced",
+   "summary": "SWI Group acquires a significant stake in Genesis Digital Assets, which holds 1.3 GW of grid connections. Plans to convert from crypto mining to HPC and AI.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-06-30-1444-cooling",
+   "sources": [
+    {
+     "url": "https://w.media/swi-group-acquires-us-500-million-stake-in-genesis-digital-assets/",
+     "title": "SWI Group acquires US$ 500 million stake in Genesis Digital Assets - W.Media",
+     "source": "W.Media",
+     "published": "2026-06-17",
+     "quote": "has acquired a significant stake for US$ 500 million in Genesis Digital Assets Limited (GDA)",
+     "evidence": "article",
+     "run": "2026-06-30-1444-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d345",
+   "from": "APLD",
+   "to": "MDU",
+   "type": "power",
+   "usd": null,
+   "usd_text": "430 MW",
+   "date": "2026-06-22",
+   "status": "announced",
+   "summary": "Montana-Dakota Utilities signed an electric service agreement to power Applied Digital's Polaris Forge 3 AI campus near Center, ND; 430 MW at full capacity, operations from August 2027.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-06-30-1444-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/montana-dakota-utilities-announces-electric-service-agreement-with-applied-digital-for-proposed-ai-factory-302806791.html",
+     "title": "Montana-Dakota Utilities Announces Electric Service Agreement with Applied Digital for Proposed AI Factory - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-06-22",
+     "quote": "has entered into an electric service agreement (ESA) with Applied Digital Corporation",
+     "evidence": "press release",
+     "run": "2026-06-30-1444-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d346",
+   "from": "CEREBRAS",
+   "to": "FLEX",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-07-09",
+   "status": "announced",
+   "summary": "Expanded manufacturing partnership: Flex to scale production of Cerebras CS-3 systems in Milpitas, ~7x capacity increase through 2026.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-07-31-1448-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/flex-and-cerebras-expand-partnership-to-scale-american-manufacturing-of-cerebras-ai-supercomputers-302821206.html",
+     "title": "Flex and Cerebras Expand Partnership to Scale American Manufacturing of Cerebras AI Supercomputers - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-07-09",
+     "quote": "Flex and Cerebras Systems Inc. today announced an expanded manufacturing partnership to scale production of the Cerebras CS-3",
+     "evidence": "press release",
+     "run": "2026-07-31-1448-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d347",
+   "from": "XLABS",
+   "to": "DELTA",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "100 MW SSTs",
+   "date": "2026-07-14",
+   "status": "loi",
+   "summary": "MOU for energy-as-a-service to AI data centers, targeting deployment of 100MW of Delta Solid-State Transformers, scaling to gigawatt level.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-07-31-1448-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/delta-electronics-americas-and-x-labs-sign-technology-partnership-mou-to-power-next-gen-ai-data-centers-302824704.html",
+     "title": "Delta Electronics (Americas) and X LABS Sign Technology Partnership MOU to Power Next-Gen AI Data Centers - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-07-14",
+     "quote": "a Memorandum of Understanding (MOU) with X LABS, an investment manager and developer of islanded grids",
+     "evidence": "press release",
+     "run": "2026-07-31-1448-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d348",
+   "from": "PARTNERSGROUP",
+   "to": "AVK",
+   "type": "equity",
+   "usd": 1000000000,
+   "usd_text": "$1B",
+   "date": "2026-08-07",
+   "status": "announced",
+   "summary": "Partners Group invests $1B in AVK for data centre power. Few details given in headline.",
+   "origin": "news",
+   "evidence": "headline",
+   "verified": true,
+   "first_seen": "2026-08-31-1452-cooling",
+   "sources": [
+    {
+     "url": "https://datacenters.economictimes.indiatimes.com/news/energy-cooling-sustainability/partners-group-invests-1-billion-in-avk-for-data-centre-power/133020262",
+     "title": "Partners Group invests $1 billion in AVK for data centre power - ET Datacenters",
+     "source": "ET Datacenters",
+     "published": "2026-08-07",
+     "quote": "Partners Group invests $1 billion in AVK for data centre power",
+     "evidence": "headline",
+     "run": "2026-08-31-1452-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d349",
+   "from": "WHITEFIBER",
+   "to": "KRAMBU",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "100 MW",
+   "date": "2026-08-12",
+   "status": "announced",
+   "summary": "WhiteFiber becomes exclusive GPU infrastructure operator for 100 MW of Krambu planned high-density capacity, starting 2027.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-08-31-1452-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/whitefiber-and-krambu-partner-to-bring-100mw-of-high-density-gpu-infrastructure-capacity-to-market-in-2027-302849939.html",
+     "title": "WhiteFiber and Krambu Partner to Bring 100MW of High-Density GPU Infrastructure Capacity to Market in 2027 - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-08-12",
+     "quote": "WhiteFiber will serve as Krambu's exclusive GPU infrastructure operator for 100MW of planned capacity",
+     "evidence": "press release",
+     "run": "2026-08-31-1452-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d350",
+   "from": "MOLEX",
+   "to": "CAEPLUS",
+   "type": "equity",
+   "usd": null,
+   "usd_text": "undisclosed",
+   "date": "2026-08-17",
+   "status": "announced",
+   "summary": "Molex makes strategic investment in CAEPlus, developer of active liquid cooling (BoundaryCool) for AI data centers. Amount not stated.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-08-31-1452-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/molex-invests-in-caeplus-to-advance-thermal-management-with-active-liquid-cooling-solutions-for-ai-data-centers-302852878.html",
+     "title": "Molex Invests in CAEPlus to Advance Thermal Management with Active Liquid Cooling Solutions for AI Data Centers - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-08-17",
+     "quote": "today announced a strategic investment in CAEPlus, Inc.",
+     "evidence": "press release",
+     "run": "2026-08-31-1452-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d351",
+   "from": "MADISONAIR",
+   "to": "EBMPAPST",
+   "type": "acquisition",
+   "usd": 5400000000,
+   "usd_text": "$5.4B",
+   "date": "2026-08-17",
+   "status": "announced",
+   "summary": "Madison Air to acquire ebm-papst (airflow/fan and motor tech, data center cooling) at $5.4B enterprise value; close around end 2026 subject to approvals.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-08-31-1452-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/madison-air-to-acquire-ebm-papst-expanding-return-on-air-capabilities-and-accelerating-durable-growth-in-air-quality-solutions-302852470.html",
+     "title": "Madison Air to Acquire ebm-papst, Expanding Return on Air™ Capabilities and Accelerating Durable Growth in Air Quality Solutions - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-08-17",
+     "quote": "today announced it has entered into a definitive agreement to acquire ebm-papst at an enterprise purchase price of $5.4 billion",
+     "evidence": "press release",
+     "run": "2026-08-31-1452-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d352",
+   "from": "NVDA",
+   "to": "CLOVERLEAF",
+   "type": "equity",
+   "usd": null,
+   "usd_text": "undisclosed",
+   "date": "2026-08-21",
+   "status": "announced",
+   "summary": "Nvidia makes minority investment in Cloverleaf Infrastructure as part of strategic partnership for AI factory infrastructure development.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-08-31-1452-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/cloverleaf-infrastructure-forms-strategic-partnership-with-nvidia-to-accelerate-data-center-infrastructure-development-302857329.html",
+     "title": "Cloverleaf Infrastructure Forms Strategic Partnership with NVIDIA to Accelerate Data Center Infrastructure Development - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-08-21",
+     "quote": "NVIDIA made a minority investment in Cloverleaf to further support the build out of AI factories",
+     "evidence": "press release",
+     "run": "2026-08-31-1452-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d353",
+   "from": "NVT",
+   "to": "MAVERICK",
+   "type": "acquisition",
+   "usd": 1750000000,
+   "usd_text": "$1.75B upfront, up to $2.3B",
+   "date": "2026-08-24",
+   "status": "announced",
+   "summary": "nVent to acquire Maverick Power for $1.75B upfront plus up to $550M earnout on 2027-2028 performance.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-08-31-1452-cooling",
+   "sources": [
+    {
+     "url": "https://pulse2.com/nvent-to-acquire-maverick-power-for-up-to-2-3-billion-to-expand-data-center-power-infrastructure-platform/",
+     "title": "nVent To Acquire Maverick Power For Up To $2.3 Billion To Expand Data Center Power Infrastructure Platform - Pulse 2.0",
+     "source": "Pulse 2.0",
+     "published": "2026-08-24",
+     "quote": "nVent Electric has agreed to acquire Maverick Power for $1.75 billion upfront",
+     "evidence": "article",
+     "run": "2026-08-31-1452-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d354",
+   "from": "EZISIGHT",
+   "to": "SUPERX",
+   "type": "chips",
+   "usd": null,
+   "usd_text": "128 B300 server units",
+   "date": "2026-08-28",
+   "status": "announced",
+   "summary": "SuperX subsidiary signed supply agreement and got initial purchase order from Ezisight for 128 units of B300 AI server clusters, delivery Q4 2026 in Australia.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-08-31-1452-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/superx-secures-128-units-of-b300-ai-server-purchase-order-from-ezisight-marking-its-official-entry-into-the-australian-market-302862781.html",
+     "title": "SuperX Secures 128 Units of B300 AI Server Purchase Order from Ezisight, Marking Its Official Entry into the Australian Market - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-08-28",
+     "quote": "The order covers the supply of 128 units of B300 AI server clusters.",
+     "evidence": "press release",
+     "run": "2026-08-31-1452-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d355",
+   "from": "VRT",
+   "to": "UIG",
+   "type": "acquisition",
+   "usd": 1450000000,
+   "usd_text": "$1.45B + up to $1.15B earnout",
+   "date": "2026-09-02",
+   "status": "announced",
+   "summary": "Vertiv to acquire UtilityInnovation Group, microgrid and behind-the-meter power firm, for about $1.45B cash at closing plus up to $1.15B EBITDA-based earnout.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-09-30-1455-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/vertiv-announces-agreement-to-acquire-utilityinnovation-group-to-accelerate-time-to-power-for-ai-data-centers-302867612.html",
+     "title": "Vertiv Announces Agreement to Acquire UtilityInnovation Group to Accelerate Time to Power for AI Data Centers - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-09-02",
+     "quote": "for approximately $1.45 billion in cash at closing, with additional consideration of up to $1.15 billion in cash",
+     "evidence": "press release",
+     "run": "2026-09-30-1455-cooling"
+    },
+    {
+     "url": "https://datacentrenews.uk/story/vertiv-to-buy-utilityinnovation-group-for-usd-1-45bn",
+     "title": "Vertiv to buy UtilityInnovation Group for USD $1.45bn - DataCentreNews UK",
+     "source": "DataCentreNews UK",
+     "published": "2026-09-04",
+     "quote": "Vertiv has agreed to acquire UtilityInnovation Group for about USD $1.45 billion in cash",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    },
+    {
+     "url": "https://www.commsbusiness.co.uk/content/news/vertiv-acquires-utility-innovation-holdings",
+     "title": "Vertiv acquires Utility Innovation Holdings - Comms Business",
+     "source": "Comms Business",
+     "published": "2026-11-04",
+     "quote": "Vertiv acquires Utility Innovation Holdings",
+     "evidence": "headline",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d356",
+   "from": "FLEX",
+   "to": "EPCPOWER",
+   "type": "acquisition",
+   "usd": 4400000000,
+   "usd_text": "$4.4B",
+   "date": "2026-09-03",
+   "status": "announced",
+   "summary": "Flex signed definitive agreement to acquire EPC Power, power conversion provider for data center and grid. Close expected Q4 2026.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-09-30-1455-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/flex-to-acquire-epc-power-adding-leading-power-conversion-capabilities-for-ai-data-centers-and-grid-applications-302869402.html",
+     "title": "Flex to Acquire EPC Power, Adding Leading Power Conversion Capabilities for AI Data Centers and Grid Applications - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-09-03",
+     "quote": "it has entered into a definitive agreement to acquire EPC Power  at a value of $4.4 billion",
+     "evidence": "press release",
+     "run": "2026-09-30-1455-cooling"
+    },
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/flex-acquires-data-center-power-conversion-manufacturer-epc-power-in-44bn-deal/",
+     "title": "Flex acquires data center power conversion manufacturer EPC Power in $4.4bn deal - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-09-04",
+     "quote": "Flex has agreed to acquire EPC Power, a North American designer and manufacturer of power conversion equipment for data centers, energy storage, and microgrids, for a reported $4.4 billion.",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d357",
+   "from": "LITEON",
+   "to": "DCX",
+   "type": "equity",
+   "usd": 176000000,
+   "usd_text": "$176M",
+   "date": "2026-09-04",
+   "status": "announced",
+   "summary": "Liteon bought a 25% stake in Polish liquid cooling firm DCX for $176M.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-09-30-1455-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/taiwan-based-liteon-purchases-25-percent-stake-in-polish-liquid-cooling-firm-dcx/",
+     "title": "Taiwan-based Liteon purchases 25 percent stake in Polish liquid cooling firm, DCX - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-09-04",
+     "quote": "Taiwan-based Liteon Technology has purchased a 25 percent stake in DCX Liquid Cooling Systems, a Polish liquid cooling system provider, for $176 million.",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d358",
+   "from": "BLACKSTONE",
+   "to": "FCH",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not disclosed",
+   "date": "2026-09-10",
+   "status": "announced",
+   "summary": "Blackstone funds signed a definitive agreement to acquire Flow Control Holdings, liquid cooling components maker, from Audax; Audax keeps a minority stake. Close expected Q4.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-09-30-1455-cooling",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/markets/stocks/articles/blackstone-acquire-flow-control-holdings-140000167.html",
+     "title": "Blackstone to Acquire Flow Control Holdings, a Leader in Highly Engineered Data Center Liquid Cooling Components - Yahoo Finance",
+     "source": "Yahoo Finance",
+     "published": "2026-09-10",
+     "quote": "have entered into a definitive agreement to acquire Flow Control Holdings (\"FCH\")",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d359",
+   "from": "AIRJOULE",
+   "to": "BITSINK",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "$27M upfront",
+   "date": "2026-09-14",
+   "status": "completed",
+   "summary": "AirJoule acquired BitSink, cooling and electrical distribution firm, for $27M upfront plus contingent amount; same deal as d359.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-09-30-1455-cooling",
+   "sources": [
+    {
+     "url": "https://www.quiverquant.com/news/AirJoule+Technologies+Acquires+BitSink+to+Expand+Into+AI+and+HPC+Data+Center+Cooling+and+Power+Infrastructure",
+     "title": "AirJoule Technologies Acquires BitSink to Expand Into AI and HPC Data Center Cooling and Power Infrastructure - Quiver Quantitative",
+     "source": "Quiver Quantitative",
+     "published": "2026-09-14",
+     "quote": "AirJoule Technologies acquired 100% of the equity interests of BitSink for aggregate upfront consideration of $18 million in cash and $9 million in AIRJ common stock with no debt.",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    },
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/airjoule-acquires-cooling-firm-bitsink/",
+     "title": "AirJoule acquires cooling firm BitSink - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-09-16",
+     "quote": "AirJoule has acquired cooling and electrical switchgear firm BitSink in a deal that could be worth up to $67 million.",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    },
+    {
+     "url": "https://delawarebusinesstimes.com/insider-only/airjoule-acquires-new-company/",
+     "title": "AirJoule acquires new company to expand data center infrastructure - Delaware Business Times",
+     "source": "Delaware Business Times",
+     "published": "2026-10-06",
+     "quote": "in a deal worth $27 million upfront",
+     "evidence": "article",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ],
+   "history": [
+    {
+     "usd": 27000000,
+     "usd_text": "$27M",
+     "status": "completed",
+     "until": "2026-09-30-1455-cooling"
+    },
+    {
+     "usd": 67000000,
+     "usd_text": "up to $67M",
+     "status": "completed",
+     "until": "2026-10-31-1500-cooling"
+    }
+   ],
+   "updated_in": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "d360",
+   "from": "VRT",
+   "to": "KES",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not disclosed",
+   "date": "2026-09-24",
+   "status": "completed",
+   "summary": "Vertiv completed its acquisition of King Environmental Services, fluid management and load-testing for liquid-cooled data centers. Terms not disclosed.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-09-30-1455-cooling",
+   "sources": [
+    {
+     "url": "https://www.securities.io/vertiv-agrees-to-acquire-irelands-king-environmental-services/",
+     "title": "Vertiv Agrees to Acquire Ireland’s King Environmental Services - Securities.io",
+     "source": "Securities.io",
+     "published": "2026-09-24",
+     "quote": "it has entered into an agreement to acquire King Environmental Services Ltd.",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    },
+    {
+     "url": "https://app.dealroom.co/news/note/vertiv-buys-europe-s-kes-to-expand-ai-data-centre-liquid-cooling",
+     "title": "Vertiv buys Europe's KES to expand AI data centre liquid cooling - Dealroom",
+     "source": "Dealroom",
+     "published": "2026-10-15",
+     "quote": "Vertiv (NYSE: VRT) has agreed to acquire King Environmental Services (KES)",
+     "evidence": "article",
+     "run": "2026-10-31-1500-cooling"
+    },
+    {
+     "url": "https://www.citybiz.co/article/924473/vertiv-acquires-king-environmental-services-to-expand-data-center-cooling-services-across-emea/",
+     "title": "Vertiv Acquires King Environmental Services to Expand Data Center Cooling Services Across EMEA - citybiz",
+     "source": "citybiz",
+     "published": "2026-10-26",
+     "quote": "has completed its acquisition of King Environmental Services Ltd. (KES)",
+     "evidence": "article",
+     "run": "2026-10-31-1500-cooling"
+    },
+    {
+     "url": "https://www.commsbusiness.co.uk/content/news/vertiv-holdings-acquires-king-environmental-services",
+     "title": "Vertiv Holdings acquires King Environmental Services - Comms Business",
+     "source": "Comms Business",
+     "published": "2026-11-02",
+     "quote": "Vertiv Holdings acquires King Environmental Services",
+     "evidence": "headline",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ],
+   "history": [
+    {
+     "usd": null,
+     "usd_text": "not disclosed",
+     "status": "announced",
+     "until": "2026-10-31-1500-cooling"
+    }
+   ],
+   "updated_in": "2026-10-31-1500-cooling"
+  },
+  {
+   "id": "d361",
+   "from": "SPX",
+   "to": "FISWATER",
+   "type": "acquisition",
+   "usd": 410000000,
+   "usd_text": "$410M",
+   "date": "2026-09-25",
+   "status": "announced",
+   "summary": "SPX Technologies acquires FIS Water, adding water management and flow-control brands for data center cooling.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-09-30-1455-cooling",
+   "sources": [
+    {
+     "url": "https://refindustry.com/news/spx-technologies-acquires-fis-water-to-expand-cooling-platform/",
+     "title": "SPX Technologies acquires FIS Water to expand cooling platform - Refindustry",
+     "source": "Refindustry",
+     "published": "2026-09-25",
+     "quote": "The $410 million deal adds water management and flow-control brands serving data centers and industrial cooling applications.",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d362",
+   "from": "SAMSUNG",
+   "to": "HELIX",
+   "type": "equity",
+   "usd": 1000000000,
+   "usd_text": "$1B",
+   "date": "2026-09-29",
+   "status": "announced",
+   "summary": "Samsung Electronics and five affiliates invest a combined $1B in KKR-established Helix; Samsung Electronics contributes $500M.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-09-30-1455-cooling",
+   "sources": [
+    {
+     "url": "https://news.samsung.com/global/samsung-to-invest-usd-1-billion-in-ai-infrastructure-company-helix",
+     "title": "Samsung To Invest USD 1 Billion in AI Infrastructure Company Helix - samsung.com",
+     "source": "samsung.com",
+     "published": "2026-09-29",
+     "quote": "Samsung Electronics, Samsung C&T, Samsung SDS, Samsung SDI, Samsung Life Insurance and Samsung Fire & Marine Insurance today announced they are investing a combined USD 1 billion in Helix Digital Infrastructure",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d363",
+   "from": "IREN",
+   "to": "DELL",
+   "type": "chips",
+   "usd": 1600000000,
+   "usd_text": "$1.6bn",
+   "date": "2026-09-15",
+   "status": "announced",
+   "summary": "IREN taps Dell for Nvidia Blackwell servers under a $1.6bn contract (headline only).",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-09-30-1455-cooling",
+   "sources": [
+    {
+     "url": "https://bebeez.eu/2026/09/15/dutch-ai-chip-startup-euclyd-raises-231-million-in-funding-round-co-led-by-samsung/",
+     "title": "Dutch AI chip startup Euclyd raises $231 million in funding round co-led by Samsung - BeBeez International",
+     "source": "BeBeez International",
+     "published": "2026-09-15",
+     "quote": "Iren taps Dell Technologies for Nvidia Blackwell servers under $1.6bn contract",
+     "evidence": "article",
+     "run": "2026-09-30-1455-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d364",
+   "from": "VULTR",
+   "to": "HPE",
+   "type": "chips",
+   "usd": null,
+   "usd_text": "1.2 billion",
+   "date": "2026-10-01",
+   "status": "announced",
+   "summary": "HPE secures first AMD Helios order from Vultr, valued at 1.2 billion (currency not stated in headline).",
+   "origin": "news",
+   "evidence": "headline",
+   "verified": true,
+   "first_seen": "2026-10-31-1500-cooling",
+   "sources": [
+    {
+     "url": "https://www.techzine.eu/news/infrastructure/144695/hpe-secures-first-amd-helios-order-1-2-billion-from-vultr/",
+     "title": "HPE secures first AMD Helios order, 1.2 billion from Vultr - Techzine Global",
+     "source": "Techzine Global",
+     "published": "2026-10-01",
+     "quote": "HPE secures first AMD Helios order, 1.2 billion from Vultr",
+     "evidence": "headline",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d365",
+   "from": "AIR",
+   "to": "LGELEC",
+   "type": "chips",
+   "usd": null,
+   "usd_text": "5 GW of projects",
+   "date": "2026-10-05",
+   "status": "announced",
+   "summary": "LG Electronics USA signed a long-term supply agreement to provide chillers to AIR Control Concepts for AI data center projects exceeding 5 GW in the US and Canada.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-10-31-1500-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/air-and-lg-supply-agreement-aims-to-advance-ai-data-center-cooling-business-in-north-america-302898388.html",
+     "title": "AIR AND LG SUPPLY AGREEMENT AIMS TO ADVANCE AI DATA CENTER COOLING BUSINESS IN NORTH AMERICA - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-10-05",
+     "quote": "LG Electronics USA has signed a major supply agreement with AIR Control Concepts (AIR), the largest global platform of leading HVAC, electrical, service, and controls companies, to provide advanced chillers for data centers in the United States and Canada.",
+     "evidence": "press release",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d366",
+   "from": "NVDA",
+   "to": "DMATRIX",
+   "type": "equity",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-10-09",
+   "status": "reported",
+   "summary": "The Information reports Nvidia plans to invest in inference chip startup d-Matrix, per three people with knowledge. Amount not given; unconfirmed.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-10-31-1500-cooling",
+   "sources": [
+    {
+     "url": "https://www.datacenterdynamics.com/en/news/report-nvidia-plans-to-invest-in-inference-chip-startup-d-matrix/",
+     "title": "Report: Nvidia plans to invest in inference chip startup d-Matrix - Data Center Dynamics",
+     "source": "Data Center Dynamics",
+     "published": "2026-10-09",
+     "quote": "Nvidia is planning to invest in inference chip startup d-Matrix",
+     "evidence": "article",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d367",
+   "from": "EOLE",
+   "to": "WOODMAN",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "share exchange",
+   "date": "2026-10-15",
+   "status": "announced",
+   "summary": "Eole to acquire AI data centre builder WOODMAN as a wholly owned subsidiary via share exchange. Board approved Oct 15, effective Nov 30.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-10-31-1500-cooling",
+   "sources": [
+    {
+     "url": "https://app.dealroom.co/news/note/japan-s-eole-acquires-ai-data-centre-builder-woodman-in-share-swap",
+     "title": "Japan's Eole acquires AI data centre builder WOODMAN in share swap - Dealroom",
+     "source": "Dealroom",
+     "published": "2026-10-15",
+     "quote": "Tokyo-based Eole will acquire WOODMAN",
+     "evidence": "article",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d368",
+   "from": "BLUUUNIT",
+   "to": "SPACEENG",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "undisclosed",
+   "date": "2026-10-15",
+   "status": "completed",
+   "summary": "Bluu Unit acquired Space Engineering, adding packaged systems and data center cooling technologies and entry to UK and Hungary. Value undisclosed.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-10-31-1500-cooling",
+   "sources": [
+    {
+     "url": "https://app.dealroom.co/news/note/bluu-unit-buys-space-engineering-to-enter-uk-and-hungary",
+     "title": "Bluu Unit buys Space Engineering to enter UK and Hungary - Dealroom",
+     "source": "Dealroom",
+     "published": "2026-10-15",
+     "quote": "Bluu Unit has acquired Space Engineering",
+     "evidence": "article",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d369",
+   "from": "GENERALCOMPUTE",
+   "to": "POSITRON",
+   "type": "chips",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-10-20",
+   "status": "announced",
+   "summary": "General Compute will buy Positron's Atlas inference systems and has committed to buy next-generation Titan systems. No amount stated.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-10-31-1500-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/positron-ai-and-general-compute-partner-to-expand-access-to-memory-first-ai-inference-infrastructure-302913449.html",
+     "title": "Positron AI and General Compute Partner to Expand Access to Memory-First AI Inference Infrastructure - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-10-20",
+     "quote": "General Compute purchases Positron's Atlas systems and commits to large-scale next-generation Titan systems",
+     "evidence": "press release",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d370",
+   "from": "TRANE",
+   "to": "CANCOIL",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-10-21",
+   "status": "announced",
+   "summary": "Trane Technologies signed a definitive agreement to acquire Cancoil Thermal Corporation, a heat-transfer products maker serving data centers among other markets. Price not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-10-31-1500-cooling",
+   "sources": [
+    {
+     "url": "https://finance.yahoo.com/markets/stocks/articles/trane-technologies-acquire-cancoil-strengthening-203000885.html",
+     "title": "Trane Technologies to Acquire Cancoil, Strengthening Supply Chain Resiliency and Thermal Management Expertise - Yahoo Finance",
+     "source": "Yahoo Finance",
+     "published": "2026-10-21",
+     "quote": "today announced it has entered into a definitive agreement to acquire Cancoil Thermal Corporation, a leading North American manufacturer of heat-transfer products.",
+     "evidence": "article",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d371",
+   "from": "ACUITY",
+   "to": "PARAMETER",
+   "type": "acquisition",
+   "usd": 675000000,
+   "usd_text": "$675M",
+   "date": "2026-10-26",
+   "status": "announced",
+   "summary": "Acuity signed a definitive agreement to buy Parameter Technologies, data center leak detection and monitoring. Funded with ~$500M borrowing and $175M cash; close expected fiscal Q2 2027.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-10-31-1500-cooling",
+   "sources": [
+    {
+     "url": "https://www.citybiz.co/article/924072/acuity-to-acquire-parameter-technologies-for-675-million-expanding-data-center-monitoring-business/",
+     "title": "Acuity to Acquire Parameter Technologies for $675 Million, Expanding Data Center Monitoring Business - citybiz",
+     "source": "citybiz",
+     "published": "2026-10-26",
+     "quote": "has entered into a definitive agreement to acquire Parameter Technologies for $675 million",
+     "evidence": "article",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d372",
+   "from": "ARCCLOUD",
+   "to": "COMPAL",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "up to 100 MW roadmap",
+   "date": "2026-10-27",
+   "status": "loi",
+   "summary": "Non-binding MOU for strategic collaboration on AI computing systems, GPU clusters and data center infrastructure; explores a data center roadmap of up to 100 MW. No binding investment or purchase commitment.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-10-31-1500-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/arc-cloud-and-compal-forge-strategic-partnership-to-accelerate-large-scale-ai-infrastructure-302919959.html",
+     "title": "ARC Cloud and Compal Forge Strategic Partnership to Accelerate Large-Scale AI Infrastructure - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-10-27",
+     "quote": "The MOU establishes a framework for cooperation and does not constitute a binding investment or purchase commitment.",
+     "evidence": "press release",
+     "run": "2026-10-31-1500-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d373",
+   "from": "OMENAI",
+   "to": "AQUATICLABS",
+   "type": "acquisition",
+   "usd": 16000000,
+   "usd_text": "$16M",
+   "date": "2026-11-02",
+   "status": "announced",
+   "summary": "Omen AI acquired Aquatic Labs for $16M in cash and stock to add cooling-fluid sensor tech; founder Allan Adams becomes chief science officer.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/omen-ai-acquires-aquatic-labs-bringing-ocean-sensing-expertise-to-automate-data-center-cooling-302926594.html",
+     "title": "Omen AI Acquires Aquatic Labs, Bringing Ocean-Sensing Expertise to Automate Data Center Cooling - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-11-02",
+     "quote": "today announced its acquisition of Aquatic Labs for $16 million in cash and stock",
+     "evidence": "press release",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d374",
+   "from": "VRT",
+   "to": "INFINEON",
+   "type": "chips",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-11-04",
+   "status": "announced",
+   "summary": "Three-year strategic agreement for supply of silicon and silicon carbide power semiconductors for Vertiv's power products incl. 800 VDC.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/vertiv-and-infineon-deepen-strategic-partnership-for-critical-power-infrastructure-302928515.html",
+     "title": "Vertiv and Infineon Deepen Strategic Partnership for Critical Power Infrastructure - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-11-04",
+     "quote": "today announced a three-year strategic agreement with Infineon Technologies AG",
+     "evidence": "press release",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d375",
+   "from": "SKT",
+   "to": "HYOSUNGGS",
+   "type": "chips",
+   "usd": null,
+   "usd_text": "~4 billion won (est.)",
+   "date": "2026-11-04",
+   "status": "announced",
+   "summary": "Hyosung Goodsprings secured contracts to supply cooling pumps for SKT's 100MW Ulsan AI data center; value estimated around 4 billion won.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://www.thelec.net/news/articleView.html?idxno=15276",
+     "title": "Hyosung to Supply Cooling Pumps for SKT’s Ulsan AI Data Center - THE ELEC, Korea Electronics Industry Media",
+     "source": "THE ELEC, Korea Electronics Industry Media",
+     "published": "2026-11-04",
+     "quote": "has secured contracts to supply sensorless inline pumps for both the 40MW first-phase facility (Building A) and the 60MW second-phase facility (Building B)",
+     "evidence": "article",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d376",
+   "from": "DIGITALBRIDGE",
+   "to": "ARCLIGHT",
+   "type": "acquisition",
+   "usd": 1050000000,
+   "usd_text": "$1.05bn",
+   "date": "2026-11-05",
+   "status": "announced",
+   "summary": "DigitalBridge to acquire power and infrastructure PE firm ArcLight Capital for $1.05B.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://www.privateequityinternational.com/digitalbridge-to-acquire-energy-pe-firm-arclight-for-1-05bn-kkr-sells-circors-aircraft-parts-group-to-strategic-for-2-55bn/",
+     "title": "DigitalBridge to acquire energy PE firm ArcLight for $1.05bn; KKR sells Circor’s aircraft parts group to strategic for $2.55bn - PEI Private Equity",
+     "source": "PEI Private Equity",
+     "published": "2026-11-05",
+     "quote": "ArcLight Capital announces plans to be acquired by data center company DigitalBridge for $1.05 billion",
+     "evidence": "article",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d377",
+   "from": "ANTHROPIC",
+   "to": "ONEPWR",
+   "type": "chips",
+   "usd": 3400000000,
+   "usd_text": "$3.4B",
+   "date": "2026-11-09",
+   "status": "reported",
+   "summary": "Anthropic takes over OnePWR Solutions' existing Caterpillar gas generator orders, 1.7 GW, plus engineering and construction work, agreed late September per Reuters.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://www.tomshardware.com/tech-industry/data-centers/anthropic-skips-six-year-waitlist-with-massive-usd3-4-billion-gas-turbine-generator-deal-firm-takes-over-onepwrs-orders-secures-1-7gw-of-capacity-to-power-ai-data-centers",
+     "title": "Anthropic skips six-year waitlist with massive $3.4 billion gas turbine generator deal — firm takes over OnePWR's orders, secures 1.7GW of capacity to power AI data centers - Tom's Hardware",
+     "source": "Tom's Hardware",
+     "published": "2026-11-09",
+     "quote": "Anthropic, the AI company behind Claude, has agreed to spend $3.4 billion securing 1.7 gigawatts (GW) of gas-fired generators for its AI data centres",
+     "evidence": "article",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d378",
+   "from": "FOUNDERSFUND",
+   "to": "FRACTILE",
+   "type": "equity",
+   "usd": null,
+   "usd_text": "undisclosed (part of $720M)",
+   "date": "2026-11-12",
+   "status": "announced",
+   "summary": "Founders Fund co-led Fractile's $720M Series C at $7B valuation; amount not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://bebeez.eu/2026/11/12/uk-chip-startup-fractile-valued-at-7bn-following-720m-series-c-funding-round/",
+     "title": "UK chip startup Fractile valued at $7bn following $720m Series C funding round - BeBeez International",
+     "source": "BeBeez International",
+     "published": "2026-11-12",
+     "quote": "The round was led by Thrive Capital, Founders Fund, Lightspeed, and Redpoint, with new investors Dragoneer, DST Global, BlackRock, T. Rowe Price, and CapitalG joining the round",
+     "evidence": "article",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d379",
+   "from": "DRAGONEER",
+   "to": "FRACTILE",
+   "type": "equity",
+   "usd": null,
+   "usd_text": "undisclosed (part of $720M)",
+   "date": "2026-11-12",
+   "status": "announced",
+   "summary": "Dragoneer joined Fractile's $720M Series C; amount not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://bebeez.eu/2026/11/12/uk-chip-startup-fractile-valued-at-7bn-following-720m-series-c-funding-round/",
+     "title": "UK chip startup Fractile valued at $7bn following $720m Series C funding round - BeBeez International",
+     "source": "BeBeez International",
+     "published": "2026-11-12",
+     "quote": "The round was led by Thrive Capital, Founders Fund, Lightspeed, and Redpoint, with new investors Dragoneer, DST Global, BlackRock, T. Rowe Price, and CapitalG joining the round",
+     "evidence": "article",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d380",
+   "from": "BLACKROCK",
+   "to": "FRACTILE",
+   "type": "equity",
+   "usd": null,
+   "usd_text": "undisclosed (part of $720M)",
+   "date": "2026-11-12",
+   "status": "announced",
+   "summary": "BlackRock joined Fractile's $720M Series C; amount not stated.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://bebeez.eu/2026/11/12/uk-chip-startup-fractile-valued-at-7bn-following-720m-series-c-funding-round/",
+     "title": "UK chip startup Fractile valued at $7bn following $720m Series C funding round - BeBeez International",
+     "source": "BeBeez International",
+     "published": "2026-11-12",
+     "quote": "The round was led by Thrive Capital, Founders Fund, Lightspeed, and Redpoint, with new investors Dragoneer, DST Global, BlackRock, T. Rowe Price, and CapitalG joining the round",
+     "evidence": "article",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d381",
+   "from": "GOOGL",
+   "to": "CRUSOE",
+   "type": "acquisition",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-11-14",
+   "status": "announced",
+   "summary": "Google buys a Crusoe site for its first Wyoming data center. Price and terms not stated in the item.",
+   "origin": "news",
+   "evidence": "headline",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://www.magzter.com/stories/technology/Techlife-News/GOOGLE-BUYS-CRUSOE-SITE-FOR-ITS-FIRST-WYOMING-DATA-CENTER",
+     "title": "GOOGLE BUYS CRUSOE SITE FOR ITS FIRST WYOMING DATA CENTER | Techlife News - technology - Magzter",
+     "source": "Magzter",
+     "published": "2026-11-14",
+     "quote": "GOOGLE BUYS CRUSOE SITE FOR ITS FIRST WYOMING DATA CENTER",
+     "evidence": "headline",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d382",
+   "from": "TRINITYCAP",
+   "to": "PHONONIC",
+   "type": "financing",
+   "usd": 100000000,
+   "usd_text": "$100M",
+   "date": "2026-11-17",
+   "status": "announced",
+   "summary": "Trinity Capital commits $100M debt financing to Phononic to expand growth and manufacturing of solid-state cooling for AI data centers.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/trinity-capital-inc-provides-100-million-in-debt-financing-to-accelerate-phononics-growth-and-manufacturing-expansion-for-ai-data-centers-302941276.html",
+     "title": "Trinity Capital Inc. Provides $100 Million in Debt Financing to Accelerate Phononic's Growth and Manufacturing Expansion for AI Data Centers - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-11-17",
+     "quote": "the commitment of $100 million in debt financing to Phononic",
+     "evidence": "press release",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d383",
+   "from": "GOOGL",
+   "to": "QUAISE",
+   "type": "power",
+   "usd": null,
+   "usd_text": "50 MW",
+   "date": "2026-11-18",
+   "status": "announced",
+   "summary": "Google signs geothermal PPA for 50 MW from Quaise's Project Obsidian in Oregon, from as early as 2030, supporting The Dalles data center.",
+   "origin": "news",
+   "evidence": "article",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://www.renewableenergymagazine.com/geothermal/quaise-energy-signs-50-mw-geothermal-power-20261118",
+     "title": "Quaise Energy Signs 50 MW Geothermal Power Purchase Agreement with Google - Renewable Energy Magazine",
+     "source": "Renewable Energy Magazine",
+     "published": "2026-11-18",
+     "quote": "Beginning as early as 2030, Google will purchase 50 MW of power from Project Obsidian.",
+     "evidence": "article",
+     "run": "2026-11-21-1508-cooling"
+    },
+    {
+     "url": "https://datacenters.economictimes.indiatimes.com/news/energy-cooling-sustainability/google-signs-50-mw-geothermal-power-deal-for-oregon-data-centers/135982110",
+     "title": "Google signs 50 MW geothermal power deal for Oregon data centers - ET Datacenters",
+     "source": "ET Datacenters",
+     "published": "2026-11-19",
+     "quote": "Google signs 50 MW geothermal power deal for Oregon data centers",
+     "evidence": "headline",
+     "run": "2026-11-21-1508-cooling"
+    }
+   ]
+  },
+  {
+   "id": "d384",
+   "from": "VRT",
+   "to": "SOLENIS",
+   "type": "partnership",
+   "usd": null,
+   "usd_text": "not stated",
+   "date": "2026-11-19",
+   "status": "announced",
+   "summary": "Strategic partnership combining Vertiv thermal infrastructure with Solenis fluid management for liquid cooling in AI data centers.",
+   "origin": "news",
+   "evidence": "press release",
+   "verified": true,
+   "first_seen": "2026-11-21-1508-cooling",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/solenis-and-vertiv-partner-to-advance-liquid-cooling-management-for-ai-data-centers-302945426.html",
+     "title": "Solenis and Vertiv Partner to Advance Liquid Cooling Management for AI Data Centers - PR Newswire",
+     "source": "PR Newswire",
+     "published": "2026-11-19",
+     "quote": "today announced a strategic partnership with Vertiv",
+     "evidence": "press release",
+     "run": "2026-11-21-1508-cooling"
     }
    ]
   }

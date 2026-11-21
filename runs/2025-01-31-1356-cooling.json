@@ -1,0 +1,24 @@
+{
+ "id": "2025-01-31-1356-cooling",
+ "since": "2025-01-01",
+ "until": "2025-01-31",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T13:56:35",
+ "searched": 82,
+ "candidates": 84,
+ "read": {
+  "blocked": 11,
+  "failed": 1,
+  "read": 70,
+  "short": 2
+ },
+ "new_deals": [
+  "d294"
+ ],
+ "updated_deals": [],
+ "new_companies": [],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T13:58:15"
+}

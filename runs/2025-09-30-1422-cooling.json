@@ -1,0 +1,25 @@
+{
+ "id": "2025-09-30-1422-cooling",
+ "since": "2025-09-01",
+ "until": "2025-09-30",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:22:12",
+ "searched": 108,
+ "candidates": 93,
+ "read": {
+  "blocked": 32,
+  "failed": 1,
+  "read": 60
+ },
+ "new_deals": [
+  "d305"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "CORINTIS"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:23:53"
+}

@@ -1,0 +1,36 @@
+{
+ "id": "2025-11-30-1427-cooling",
+ "since": "2025-11-01",
+ "until": "2025-11-30",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:27:16",
+ "searched": 159,
+ "candidates": 89,
+ "read": {
+  "blocked": 24,
+  "read": 63,
+  "short": 2
+ },
+ "new_deals": [
+  "d312",
+  "d313",
+  "d314",
+  "d315",
+  "d316",
+  "d317"
+ ],
+ "updated_deals": [],
+ "new_companies": [
+  "PURGERITE",
+  "LGELEC",
+  "DAIKIN",
+  "CHILLDYNE",
+  "PRIMEDC",
+  "GLOBALAI",
+  "GIC"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:29:12"
+}

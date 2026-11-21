@@ -1,0 +1,40 @@
+{
+ "id": "2026-06-30-1444-cooling",
+ "since": "2026-06-01",
+ "until": "2026-06-30",
+ "completed": true,
+ "topic": "cooling",
+ "started": "2026-11-21T14:44:52",
+ "searched": 225,
+ "candidates": 103,
+ "read": {
+  "blocked": 20,
+  "read": 80,
+  "short": 3
+ },
+ "new_deals": [
+  "d341",
+  "d342",
+  "d343",
+  "d344",
+  "d345"
+ ],
+ "updated_deals": [
+  "d174",
+  "d330",
+  "d277"
+ ],
+ "new_companies": [
+  "WESCO",
+  "NEWARK",
+  "TDK",
+  "FABRIC8LABS",
+  "FOXCONN",
+  "SWI",
+  "GDA",
+  "MDU"
+ ],
+ "rejected": [],
+ "errors": [],
+ "finished": "2026-11-21T14:48:21"
+}
