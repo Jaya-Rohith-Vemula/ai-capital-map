@@ -40,7 +40,31 @@ NOISE = re.compile(r"price target|\bmaintains\b|reiterat|\bupgrades?\b|\bdowngra
 
 
 class RateLimited(Exception):
-    """Google said slow down. The run stops cleanly and the window stays open."""
+    """Google kept saying slow down through every retry. The run stops cleanly
+    and the window stays open."""
+
+
+# On 429/503 from Google: wait and retry, doubling (15 s ... 8 min, ~16 min
+# in all), before giving up the run. A Retry-After header wins when given.
+BACKOFF = [15, 30, 60, 120, 240, 480]
+on_wait = lambda msg: None  # run.py points this at its log
+
+
+def google_http(what, url, data=None, headers=None):
+    for n, wait in enumerate(BACKOFF + [None], 1):
+        try:
+            return http(url, data, headers)
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 503):
+                raise
+            if wait is None:
+                raise RateLimited(f"{what} answered {e.code} through {len(BACKOFF)} retries")
+            try:
+                wait = max(wait, min(900, int(e.headers.get("Retry-After") or 0)))
+            except ValueError:
+                pass
+            on_wait(f"  {what} answered {e.code}; retry {n}/{len(BACKOFF)} in {wait} s")
+            time.sleep(wait)
 
 
 def http(url, data=None, headers=None, timeout=25):
@@ -77,10 +101,8 @@ def google_search(query, since, until, log):
     url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
         {"q": f"{query} {window}", "hl": "en-US", "gl": "US", "ceid": "US:en"})
     try:
-        _, body = http(url)
+        _, body = google_http("Google News search", url)
     except urllib.error.HTTPError as e:
-        if e.code in (429, 503):
-            raise RateLimited(f"Google News search answered {e.code}")
         log(f"  search failed ({e.code}): {query}")
         return []
     except Exception as e:
@@ -126,19 +148,17 @@ def resolve_google(link):
     endpoint for the publisher URL (two requests)."""
     gid = urllib.parse.urlparse(link).path.rstrip("/").split("/")[-1]
     try:
-        _, page = http(f"https://news.google.com/rss/articles/{gid}")
+        _, page = google_http("Google link resolver", f"https://news.google.com/rss/articles/{gid}")
         sig = re.search(r'data-n-a-sg="([^"]+)"', page).group(1)
         ts = re.search(r'data-n-a-ts="([^"]+)"', page).group(1)
         time.sleep(PAUSE)
         inner = ["garturlreq", [["X", "X", ["X", "X"], None, None, 1, 1, "US:en", None, 1, None, None, None, None, None, 0, 1],
                                 "X", "X", 1, [1, 1, 1], 1, 1, None, 0, 0, None, 0], gid, int(ts), sig]
         body = urllib.parse.urlencode({"f.req": json.dumps([[["Fbv4je", json.dumps(inner), None, "generic"]]])}).encode()
-        _, out = http("https://news.google.com/_/DotsSplashUi/data/batchexecute", body,
-                      {"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
+        _, out = google_http("Google link resolver", "https://news.google.com/_/DotsSplashUi/data/batchexecute", body,
+                             {"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
         return json.loads(json.loads(out.split("\n\n")[1])[0][2])[1]
-    except urllib.error.HTTPError as e:
-        if e.code in (429, 503):
-            raise RateLimited(f"Google link resolver answered {e.code}")
+    except RateLimited:
         raise
 
 

@@ -237,6 +237,7 @@ def main():
     a = ap.parse_args()
 
     log = Logbook(dt.datetime.now().strftime("%Y-%m-%d-%H%M%S")).start()
+    news.on_wait = log
     cfg = load(os.path.join(ROOT, "config.json"))
     cdoc = load(os.path.join(DATA, "companies.json"))
     ddoc = load(os.path.join(DATA, "deals.json"))
@@ -269,7 +270,7 @@ def main():
             if not a.no_claude:
                 build.build()
     except news.RateLimited as e:
-        log(f"STOPPED: {e}. Progress is kept; run again in an hour or so to continue.")
+        log(f"STOPPED: {e}. Progress is kept; run again later to continue.")
         code = 2
     except Stop as e:
         log(f"STOPPED: {e}")
